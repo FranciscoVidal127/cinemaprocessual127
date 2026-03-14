@@ -9,7 +9,7 @@ export function Sobre() {
         <div className="page-header-inner">
           <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Sobre</h1>
-          <p className="page-intro">Ator e cineasta baseado no Rio de Janeiro.</p>
+          <p className="page-intro">Rio de Janeiro. Atuação, realização, escrita.</p>
         </div>
       </header>
 

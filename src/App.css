@@ -33,8 +33,9 @@
 
 .header--scrolled {
   border-bottom-color: var(--border);
-  background-color: rgba(245, 244, 240, 0.97);
-  backdrop-filter: blur(12px);
+  background-color: rgba(245, 244, 240, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .header-inner {
@@ -233,11 +234,11 @@
 
 .footer-statement {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 19px;
   font-style: italic;
-  line-height: 1.65;
-  color: rgba(245, 244, 240, 0.65);
-  letter-spacing: -0.01em;
+  line-height: 1.6;
+  color: rgba(245, 244, 240, 0.6);
+  letter-spacing: -0.02em;
   text-align: center;
 }
 
@@ -390,10 +391,10 @@
   font-family: var(--font-serif);
   font-size: 20px;
   font-style: italic;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  max-width: 54ch;
-  margin-top: 28px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 52ch;
+  margin-top: 24px;
   letter-spacing: -0.01em;
 }
 

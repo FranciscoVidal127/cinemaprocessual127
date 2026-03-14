@@ -9,7 +9,7 @@ export function Fotos() {
         <div className="page-header-inner">
           <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Fotos</h1>
-          <p className="page-intro">Retratos, ensaios e imagens de trabalho.</p>
+          <p className="page-intro">Retratos e ensaios fotográficos.</p>
         </div>
       </header>
 

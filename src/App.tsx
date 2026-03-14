@@ -40,7 +40,7 @@ function Header() {
       <div className="header-inner">
         <a href="/" className="nav-brand">
           <span className="nav-brand-name">Francisco Vidal</span>
-          <span className="nav-brand-sub">ator · cineasta · escritor</span>
+          <span className="nav-brand-sub">ator · cineasta · tradutor</span>
         </a>
 
         <nav className="nav-links" aria-label="Navegação principal">
@@ -93,13 +93,13 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-left">
           <p className="footer-name">Francisco Vidal</p>
-          <p className="footer-desc">Ator · Cineasta · Tradutor · Escritor de Cinema</p>
+          <p className="footer-desc">Rio de Janeiro, Brasil</p>
         </div>
         <div className="footer-center">
-          <p className="footer-statement">Cinema, atuação e escrita como prática contínua de presença e transformação.</p>
+          <p className="footer-statement">Presença diante da câmera. Processo de realização. Escrita crítica. Uma prática singular, contínua.</p>
         </div>
         <div className="footer-right">
-          <p className="footer-location">Rio de Janeiro</p>
+          <p className="footer-location">Contato</p>
           <a href="mailto:franciscovidalcs@gmail.com" className="footer-email">franciscovidalcs@gmail.com</a>
           <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="footer-instagram">@franciscovidalcs</a>
         </div>

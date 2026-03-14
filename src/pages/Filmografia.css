@@ -3,7 +3,7 @@
 }
 
 .filmografia-list-section {
-  padding: var(--space-2xl) 0 var(--space-4xl);
+  padding: var(--space-3xl) 0 var(--space-4xl);
 }
 
 .filmografia-list {
@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: 48px 340px 1fr 40px;
   gap: var(--space-xl);
-  padding: var(--space-2xl) 0;
+  padding: var(--space-3xl) 0;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
@@ -50,13 +50,17 @@
   height: auto;
   aspect-ratio: 2/3;
   object-fit: cover;
-  filter: grayscale(0.1) contrast(1.05);
-  transition: transform 0.5s ease;
+  filter: grayscale(0.2) contrast(1.08);
+  transition: transform 0.6s ease, filter 0.4s ease;
   display: block;
 }
 
 .filmografia-entry:hover .filmografia-entry-image img {
-  transform: scale(1.02);
+  filter: grayscale(0) contrast(1.05);
+}
+
+.filmografia-entry:hover .filmografia-entry-image img {
+  transform: scale(1.025);
 }
 
 .filmografia-entry-body {
@@ -112,11 +116,11 @@
 
 .filmografia-entry-synopsis {
   font-family: var(--font-serif);
-  font-size: 17px;
+  font-size: 18px;
   font-style: italic;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--text-secondary);
-  max-width: 56ch;
+  max-width: 54ch;
   letter-spacing: -0.01em;
 }
 

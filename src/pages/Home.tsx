@@ -81,7 +81,7 @@ export function Home() {
                 />
               </div>
               <p className="hero-statement">
-                Ator, cineasta, tradutor e escritor de cinema. Uma prática que atravessa a presença diante da câmera, o processo de realização e a escrita crítica.
+                Presença diante da câmera, processo de realização, escrita crítica. Uma prática única, contínua.
               </p>
               <div className="hero-roles">
                 <span>Atuação</span>
@@ -115,7 +115,7 @@ export function Home() {
                 <div className="home-film-image">
                   <img src={featuredFilme.image} alt={featuredFilme.title} />
                   <div className="home-film-overlay">
-                    <span>Ver ficha completa →</span>
+                    <span>Ficha completa →</span>
                   </div>
                 </div>
                 <div className="home-film-info">
@@ -141,7 +141,7 @@ export function Home() {
           <div className="container">
             <div className="home-writing-header">
               <span className="label">Escrita recente</span>
-              <Link to="/escrita" className="home-writing-all">Ver todos os textos →</Link>
+              <Link to="/escrita" className="home-writing-all">Arquivo completo →</Link>
             </div>
 
             <div className="home-writing-grid">
@@ -153,7 +153,7 @@ export function Home() {
                   <span>{formatDate(featuredEscrito.date)}</span>
                   {featuredEscrito.readTime && <span>{featuredEscrito.readTime} de leitura</span>}
                 </div>
-                <span className="home-writing-read">Ler texto →</span>
+                <span className="home-writing-read">Ler →</span>
               </Link>
 
               {otherEscritos.length > 0 && (
@@ -174,27 +174,22 @@ export function Home() {
         </section>
       )}
 
-      {/* ── UNIVERSE STRIP ── */}
-      <section className="home-universe">
+      {/* ── STRIP ── */}
+      <section className="home-strip">
         <div className="container">
-          <div className="home-universe-inner">
-            <p className="home-universe-text">
-              Um universo onde atuação, realização, crítica, tradução e processo pertencem ao mesmo mundo.
-            </p>
-            <div className="home-universe-links">
-              <Link to="/sobre" className="home-universe-link">
-                <span className="home-universe-link-title">Trajetória</span>
-                <span className="home-universe-link-desc">Formação, projetos, processo</span>
-              </Link>
-              <Link to="/fotos" className="home-universe-link">
-                <span className="home-universe-link-title">Fotos</span>
-                <span className="home-universe-link-desc">Retratos e ensaios</span>
-              </Link>
-              <Link to="/reel" className="home-universe-link">
-                <span className="home-universe-link-title">Reel</span>
-                <span className="home-universe-link-desc">Trabalhos audiovisuais</span>
-              </Link>
-            </div>
+          <div className="home-strip-inner">
+            <Link to="/sobre" className="home-strip-link">
+              <span className="home-strip-link-title">Trajetória</span>
+              <span className="home-strip-link-arrow">→</span>
+            </Link>
+            <Link to="/fotos" className="home-strip-link">
+              <span className="home-strip-link-title">Fotos</span>
+              <span className="home-strip-link-arrow">→</span>
+            </Link>
+            <Link to="/reel" className="home-strip-link">
+              <span className="home-strip-link-title">Reel</span>
+              <span className="home-strip-link-arrow">→</span>
+            </Link>
           </div>
         </div>
       </section>
