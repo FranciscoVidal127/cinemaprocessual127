@@ -46,7 +46,7 @@ export function Home() {
           readTime: post.read_time || '',
           excerpt: post.excerpt || '',
           slug: post.slug,
-          tags: post.tags || [],
+          tags: Array.isArray(post.tags) ? post.tags : (post.tags ? [post.tags] : []),
           origem: post.origem || ''
         }));
         setRecentEscritos(dbPosts);
