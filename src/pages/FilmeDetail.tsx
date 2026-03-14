@@ -26,20 +26,18 @@ export function FilmeDetail() {
 
   if (loading) {
     return (
-      <div className="filme-detail-not-found">
-        <div className="container">
-          <p>Carregando...</p>
-        </div>
+      <div className="filme-detail-loading">
+        <div className="container">Carregando...</div>
       </div>
     );
   }
 
   if (!filme) {
     return (
-      <div className="filme-detail-not-found">
+      <div className="filme-detail-loading">
         <div className="container">
-          <h1>Filme não encontrado</h1>
-          <Link to="/" className="back-link">← Voltar</Link>
+          <p>Filme não encontrado.</p>
+          <Link to="/filmografia" className="filme-back">← Filmografia</Link>
         </div>
       </div>
     );
@@ -47,93 +45,121 @@ export function FilmeDetail() {
 
   return (
     <div className="filme-detail">
-      <header className="filme-header">
+
+      <header className="filme-detail-header">
         <div className="container">
-          <Link to="/" className="back-link">← Voltar</Link>
+          <Link to="/filmografia" className="filme-back">← Filmografia</Link>
         </div>
       </header>
 
-      <div className="filme-detail-content">
-        <div className="container-wide">
+      <section className="filme-detail-hero">
+        <div className="container">
           <div className="filme-detail-grid">
-            <div className="filme-poster-column">
-              <img src={filme.image} alt={filme.title} className="filme-poster" />
+            <div className="filme-detail-poster">
+              <img src={filme.image} alt={filme.title} />
             </div>
-
-            <div className="filme-info-column">
-              <div className="filme-meta-line">
-                {filme.type} · {filme.year}
-                {filme.genre && ` · ${filme.genre}`}
-                {filme.status && ` · ${filme.status}`}
+            <div className="filme-detail-info">
+              <div className="filme-detail-eyebrow">
+                <span className="label">{filme.type}</span>
+                {filme.status && <span className="filme-detail-status">{filme.status}</span>}
               </div>
 
-              <h1 className="filme-title">{filme.title}</h1>
+              <h1 className="filme-detail-title">{filme.title}</h1>
 
-              <div className="filme-credits">
-                <p className="filme-director">Dir. {filme.director}</p>
-                <p className="filme-role">Papel: {filme.role}</p>
+              <div className="filme-detail-meta">
+                <div className="filme-detail-meta-row">
+                  <span className="filme-detail-meta-label">Ano</span>
+                  <span className="filme-detail-meta-value">{filme.year}</span>
+                </div>
+                <div className="filme-detail-meta-row">
+                  <span className="filme-detail-meta-label">Direção</span>
+                  <span className="filme-detail-meta-value">{filme.director}</span>
+                </div>
+                <div className="filme-detail-meta-row">
+                  <span className="filme-detail-meta-label">Papel</span>
+                  <span className="filme-detail-meta-value">{filme.role}</span>
+                </div>
+                {filme.genre && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">Formato</span>
+                    <span className="filme-detail-meta-value">{filme.genre}</span>
+                  </div>
+                )}
+                {filme.country && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">País</span>
+                    <span className="filme-detail-meta-value">{filme.country}</span>
+                  </div>
+                )}
+                {filme.duration && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">Duração</span>
+                    <span className="filme-detail-meta-value">{filme.duration}</span>
+                  </div>
+                )}
               </div>
 
-              <div className="filme-separator"></div>
+              <div className="filme-detail-divider" />
 
-              <div className="filme-synopsis">
+              <div className="filme-detail-synopsis">
                 <p>{filme.description}</p>
               </div>
 
               {filme.festivals && (
-                <div className="filme-festival-badge">
-                  {filme.festivals}
+                <div className="filme-detail-festival">
+                  <span className="label">Festival</span>
+                  <p>{filme.festivals}</p>
                 </div>
               )}
 
               {filme.cast && filme.cast.length > 0 && (
-                <>
-                  <div className="filme-separator"></div>
-                  <div className="filme-cast">
-                    <h2 className="section-heading">ELENCO</h2>
-                    <p className="cast-line">{filme.cast.join(', ')}</p>
-                  </div>
-                </>
-              )}
-
-              {filme.stills && filme.stills.length > 0 && (
-                <>
-                  <div className="filme-separator"></div>
-                  <div className="filme-stills">
-                    <h2 className="section-heading">STILLS</h2>
-                    <div className="stills-grid">
-                      {filme.stills.map((still: { src: string; alt: string }, idx: number) => (
-                        <div key={idx} className="still-item">
-                          <img src={still.src} alt={still.alt} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {filme.scenes && filme.scenes.length > 0 && (
-                <>
-                  <div className="filme-separator"></div>
-                  <div className="filme-scenes">
-                    <h2 className="section-heading">CENAS</h2>
-                    <p className="scenes-intro">Cenas selecionadas — {filme.role} (Francisco Vidal)</p>
-                    <div className="scenes-grid">
-                      {filme.scenes.map((scene: { title: string; subtitle: string; youtubeUrl: string }, idx: number) => (
-                        <div key={idx} className="scene-item">
-                          <h3 className="scene-title">{scene.title}</h3>
-                          <p className="scene-subtitle">{scene.subtitle}</p>
-                          <YouTubeEmbed url={scene.youtubeUrl} title={scene.title} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </>
+                <div className="filme-detail-cast">
+                  <span className="label">Elenco</span>
+                  <p>{filme.cast.join(', ')}</p>
+                </div>
               )}
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {filme.stills && filme.stills.length > 0 && (
+        <section className="filme-detail-stills">
+          <div className="container">
+            <h2 className="filme-detail-section-title">Stills</h2>
+            <div className="filme-stills-grid">
+              {filme.stills.map((still: { src: string; alt: string }, idx: number) => (
+                <div key={idx} className="filme-still">
+                  <img src={still.src} alt={still.alt} loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {filme.scenes && filme.scenes.length > 0 && (
+        <section className="filme-detail-scenes">
+          <div className="container">
+            <h2 className="filme-detail-section-title">Cenas</h2>
+            <p className="filme-scenes-intro">
+              Cenas selecionadas — {filme.role} (Francisco Vidal)
+            </p>
+            <div className="filme-scenes-grid">
+              {filme.scenes.map((scene: { title: string; subtitle: string; youtubeUrl: string }, idx: number) => (
+                <div key={idx} className="filme-scene">
+                  <div className="filme-scene-info">
+                    <span className="label">{scene.title}</span>
+                    <p className="filme-scene-subtitle">{scene.subtitle}</p>
+                  </div>
+                  <YouTubeEmbed url={scene.youtubeUrl} title={scene.title} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
     </div>
   );
 }

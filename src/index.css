@@ -1,27 +1,31 @@
 :root {
-  --bg: #FAFAF8;
+  --bg: #F5F4F0;
+  --bg-dark: #111110;
   --surface: #FFFFFF;
-  --surface-elevated: #FCFCFB;
-  --text: #1A1A1A;
-  --text-secondary: #3D3D3D;
-  --text-muted: #6B6B6B;
-  --text-light: #8B8B8B;
-  --border: #E5E5E0;
-  --border-subtle: #F0F0ED;
-  --link: #1A1A1A;
-  --link-hover: #3D3D3D;
-  --accent: #2B2B2B;
+  --surface-elevated: #F0EFE9;
+  --surface-dark: #1C1B19;
+  --text: #111110;
+  --text-secondary: #383734;
+  --text-muted: #6B6965;
+  --text-light: #9B9895;
+  --text-inverse: #F5F4F0;
+  --border: #D9D8D2;
+  --border-subtle: #E8E7E1;
+  --border-dark: #2E2D2A;
+  --link: #111110;
+  --link-hover: #383734;
+  --accent: #8B0000;
 
-  --font-serif: 'Crimson Text', 'Libre Baskerville', 'Lora', Charter, 'Bitstream Charter', 'Georgia', serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'SF Pro Text', system-ui, sans-serif;
-  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, 'Courier New', monospace;
 
-  --container: 1200px;
-  --container-narrow: 900px;
-  --container-wide: 1400px;
-  --reading-width: 68ch;
-  --reading-width-wide: 75ch;
+  --container: 1280px;
+  --container-narrow: 860px;
+  --container-wide: 1440px;
+  --reading-width: 66ch;
 
+  --space-2xs: 4px;
   --space-xs: 8px;
   --space-sm: 16px;
   --space-md: 24px;
@@ -29,12 +33,11 @@
   --space-xl: 64px;
   --space-2xl: 96px;
   --space-3xl: 128px;
-  --space-4xl: 160px;
+  --space-4xl: 180px;
 
   --radius: 0;
-  --radius-sm: 2px;
-  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -49,7 +52,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--text);
   background-color: var(--bg);
@@ -62,34 +65,34 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: var(--text);
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
 }
 
 h1 {
-  font-size: clamp(52px, 7vw, 92px);
-  line-height: 1.02;
+  font-size: clamp(56px, 8vw, 108px);
+  line-height: 0.98;
   letter-spacing: -0.04em;
 }
 
 h2 {
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
 }
 
 h3 {
-  font-size: clamp(28px, 3.5vw, 42px);
+  font-size: clamp(24px, 3vw, 38px);
   line-height: 1.2;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 h4 {
-  font-size: clamp(20px, 2.5vw, 24px);
+  font-size: clamp(18px, 2vw, 22px);
   line-height: 1.35;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
 }
 
 a {
@@ -114,33 +117,14 @@ img {
 }
 
 @media (max-width: 980px) {
-  h1 {
-    font-size: 42px;
-  }
-
-  h2 {
-    font-size: 32px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  body {
-    font-size: 16px;
-  }
+  h1 { font-size: clamp(44px, 10vw, 72px); }
+  h2 { font-size: 34px; }
+  h3 { font-size: 24px; }
+  body { font-size: 15px; }
 }
 
 @media (max-width: 640px) {
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 22px;
-  }
+  h1 { font-size: clamp(38px, 11vw, 56px); }
+  h2 { font-size: 28px; }
+  h3 { font-size: 22px; }
 }

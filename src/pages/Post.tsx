@@ -41,17 +41,9 @@ export function Post() {
   const [content, setContent] = useState<string>('');
   const [metadata, setMetadata] = useState<PostMetadata | null>(null);
   const [loading, setLoading] = useState(true);
-  const [readingMode, setReadingMode] = useState(false);
   const [readProgress, setReadProgress] = useState(0);
   const [headings, setHeadings] = useState<Heading[]>([]);
   const articleRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const savedMode = localStorage.getItem('readingMode');
-    if (savedMode === 'true') {
-      setReadingMode(true);
-    }
-  }, []);
 
   useEffect(() => {
     async function loadPost() {
@@ -106,7 +98,6 @@ export function Post() {
             if (match) {
               const key = match[1];
               let value = match[2].replace(/^["']|["']$/g, '');
-
               if (key === 'tags') {
                 const tagsArray = value.replace(/^\[|\]$/g, '').split(',').map((t: string) => t.trim().replace(/^["']|["']$/g, ''));
                 meta[key] = tagsArray;
@@ -148,26 +139,17 @@ export function Post() {
   useEffect(() => {
     function handleScroll() {
       if (!articleRef.current) return;
-
       const article = articleRef.current;
       const scrollTop = window.scrollY;
       const docHeight = article.offsetHeight;
       const winHeight = window.innerHeight;
       const scrollPercent = scrollTop / (docHeight - winHeight);
-      const scrollPercentRounded = Math.min(100, Math.max(0, scrollPercent * 100));
-
-      setReadProgress(scrollPercentRounded);
+      setReadProgress(Math.min(100, Math.max(0, scrollPercent * 100)));
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  function toggleReadingMode() {
-    const newMode = !readingMode;
-    setReadingMode(newMode);
-    localStorage.setItem('readingMode', String(newMode));
-  }
 
   if (loading) {
     return (
@@ -180,7 +162,7 @@ export function Post() {
   if (!metadata) {
     return (
       <div className="post-page">
-        <div className="post-not-found">Post não encontrado</div>
+        <div className="post-not-found">Texto não encontrado.</div>
       </div>
     );
   }
@@ -188,112 +170,78 @@ export function Post() {
   const showTOC = headings.length >= 3;
 
   return (
-    <div className="post-page" data-reading={readingMode}>
+    <div className="post-page">
       <div className="read-progress" style={{ width: `${readProgress}%` }} />
 
-      {!readingMode && (
-        <header className="post-header">
-          <Link to="/#escrita" className="back-link">← Francisco Vidal</Link>
-        </header>
-      )}
+      <header className="post-nav">
+        <div className="container">
+          <Link to="/escrita" className="post-back">← Escrita</Link>
+        </div>
+      </header>
 
       <article className="essay" ref={articleRef}>
-        <header className="essay-header">
-          <div className="eyebrow">
-            {metadata.category || 'ESCRITA'} • {metadata.date}
+        <div className="essay-header-wrap">
+          <div className="essay-header-inner">
+            <div className="essay-eyebrow">
+              <span className="essay-category">{metadata.category}</span>
+              {metadata.date && <span className="essay-date">{metadata.date}</span>}
+            </div>
+
+            <h1 className="essay-title">{metadata.title}</h1>
+
+            {metadata.subtitle && (
+              <p className="essay-subtitle">{metadata.subtitle}</p>
+            )}
+
+            <div className="essay-meta">
+              <span className="essay-author">{metadata.origem || 'por Francisco Vidal'}</span>
+              <span className="essay-meta-sep">·</span>
+              <span className="essay-time">{metadata.readTime} de leitura</span>
+            </div>
           </div>
-
-          <h1 className="essay-title">{metadata.title}</h1>
-
-          {metadata.subtitle && (
-            <p className="lead">{metadata.subtitle}</p>
-          )}
-
-          <div className="meta">
-            <span className="meta-author">
-              {metadata.origem || 'por Francisco Vidal'}
-            </span>
-            <span className="meta-divider">•</span>
-            <span className="meta-time">{metadata.readTime} de leitura</span>
-            <button className="reading-toggle" onClick={toggleReadingMode}>
-              {readingMode ? 'Sair do modo leitura' : 'Modo leitura'}
-            </button>
-          </div>
-
-          <hr className="rule" />
-        </header>
+        </div>
 
         {slug === 'sobre-o-vazio-jeanne-dielman' && (
           <figure className="essay-hero-image">
-            <div className="essay-hero-frame">
-              <img
-                src="/images/jeannedielman1.png"
-                alt="Jeanne Dielman (still do filme)"
-                loading="lazy"
-              />
-            </div>
+            <img src="/images/jeannedielman1.png" alt="Jeanne Dielman (still do filme)" loading="lazy" />
           </figure>
         )}
 
         {slug === 'inconsciente-maquinico' && (
           <>
             <figure className="essay-hero-image">
-              <div className="essay-hero-frame">
-                <img
-                  src="/images/inconscientemaquinico1.png"
-                  alt="Capa de O Inconsciente Maquínico, Félix Guattari"
-                  loading="eager"
-                />
-              </div>
+              <img src="/images/inconscientemaquinico1.png" alt="Capa de O Inconsciente Maquínico" loading="eager" />
             </figure>
-            <figure className="essay-hero-image essay-hero-image--stacked">
-              <div className="essay-hero-frame">
-                <img
-                  src="/images/guattarisorindo.png"
-                  alt="Félix Guattari (foto)"
-                  loading="lazy"
-                />
-              </div>
+            <figure className="essay-inline-image">
+              <img src="/images/guattarisorindo.png" alt="Félix Guattari" loading="lazy" />
             </figure>
           </>
         )}
 
         {slug === 'festival-ecra-2023' && (
           <figure className="essay-hero-image">
-            <div className="essay-hero-frame">
-              <img
-                src="/images/ecra-1.png"
-                alt="Festival Ecrã 2023"
-                loading="lazy"
-              />
-            </div>
+            <img src="/images/ecra-1.png" alt="Festival Ecrã 2023" loading="lazy" />
           </figure>
         )}
 
         {slug === 'uma-entrevista-em-pijamas' && (
-          <figure className="essay-editorial-image">
-            <div className="essay-editorial-frame">
-              <img
-                src="/images/Akerman.png"
-                alt="Chantal Akerman"
-                loading="lazy"
-              />
-            </div>
+          <figure className="essay-inline-image">
+            <img src="/images/Akerman.png" alt="Chantal Akerman" loading="lazy" />
           </figure>
         )}
 
         {showTOC && (
-          <nav className="toc">
-            <div className="toc-title">Sumário</div>
-            <ol className="toc-list">
-              {headings.map((heading) => (
-                <li key={heading.id} className={`toc-item toc-level-${heading.level}`}>
-                  <a href={`#${heading.id}`} className="toc-link">
-                    {heading.text}
-                  </a>
-                </li>
-              ))}
-            </ol>
+          <nav className="essay-toc">
+            <div className="essay-toc-inner">
+              <p className="essay-toc-label">Sumário</p>
+              <ol className="essay-toc-list">
+                {headings.map((heading) => (
+                  <li key={heading.id} className={`essay-toc-item level-${heading.level}`}>
+                    <a href={`#${heading.id}`}>{heading.text}</a>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </nav>
         )}
 
@@ -307,19 +255,13 @@ export function Post() {
 
               if (slug === 'uma-entrevista-em-pijamas' && line.includes('**Início**')) {
                 elements.push(
-                  <p key={idx} className="essay-p" style={{ textAlign: 'center', fontWeight: 'bold', margin: '1.8em 0 1.2em 0' }}>
+                  <p key={idx} className="essay-p essay-p--centered">
                     Início
                   </p>
                 );
                 elements.push(
-                  <figure key={`${idx}-inline-img`} className="essay-editorial-inline">
-                    <div className="essay-editorial-frame">
-                      <img
-                        src="/images/Akerbrenez.png"
-                        alt="Chantal Akerman e Nicole Brenez"
-                        loading="lazy"
-                      />
-                    </div>
+                  <figure key={`${idx}-inline`} className="essay-inline-image">
+                    <img src="/images/Akerbrenez.png" alt="Chantal Akerman e Nicole Brenez" loading="lazy" />
                   </figure>
                 );
                 continue;
@@ -335,21 +277,12 @@ export function Post() {
                 if (idx < lines.length) {
                   htmlBlock += lines[idx];
                 }
-
                 const srcMatch = htmlBlock.match(/src="([^"]+)"/);
                 const altMatch = htmlBlock.match(/alt="([^"]*)"/);
-                const classMatch = htmlBlock.match(/className="([^"]+)"/);
-
                 if (srcMatch) {
-                  const imgSrc = srcMatch[1];
-                  const imgAlt = altMatch ? altMatch[1] : '';
-                  const figureClass = classMatch ? classMatch[1] : 'essay-editorial-inline';
-
                   elements.push(
-                    <figure key={idx} className={figureClass}>
-                      <div className="essay-editorial-frame">
-                        <img src={imgSrc} alt={imgAlt} loading="lazy" />
-                      </div>
+                    <figure key={idx} className="essay-inline-image">
+                      <img src={srcMatch[1]} alt={altMatch ? altMatch[1] : ''} loading="lazy" />
                     </figure>
                   );
                 }
@@ -357,18 +290,16 @@ export function Post() {
               }
 
               if (line.trim() === '---') {
-                elements.push(<hr key={idx} className="section-break" />);
+                elements.push(<hr key={idx} className="essay-rule" />);
                 continue;
               }
 
               if (line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)) {
                 const match = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
                 if (match) {
-                  const alt = match[1];
-                  const src = match[2];
                   elements.push(
-                    <figure key={idx} className="essay-image">
-                      <img src={src} alt={alt} />
+                    <figure key={idx} className="essay-inline-image">
+                      <img src={match[2]} alt={match[1]} />
                     </figure>
                   );
                   continue;
@@ -377,47 +308,20 @@ export function Post() {
 
               if (line.startsWith('### ')) {
                 const text = line.replace('### ', '');
-                const id = slugify(text);
-                elements.push(
-                  <h3 key={idx} id={id} className="essay-h3">
-                    {text}
-                  </h3>
-                );
+                elements.push(<h3 key={idx} id={slugify(text)} className="essay-h3">{text}</h3>);
                 continue;
               }
 
               if (line.startsWith('## ')) {
                 const text = line.replace('## ', '');
-                const id = slugify(text);
-                elements.push(
-                  <h2 key={idx} id={id} className="essay-h2">
-                    {text}
-                  </h2>
-                );
+                elements.push(<h2 key={idx} id={slugify(text)} className="essay-h2">{text}</h2>);
                 continue;
               }
 
               if (line.startsWith('# ')) {
                 const text = line.replace('# ', '').trim();
                 if (text) {
-                  elements.push(
-                    <p key={idx} className="essay-p">
-                      {text.split(/(\*\*[^*]+\*\*)|(\*[^*]+\*)|(\[([^\]]+)\]\(([^)]+)\))/).map((part, i) => {
-                        if (!part) return null;
-                        if (part.startsWith('**') && part.endsWith('**')) {
-                          return <strong key={i}>{part.slice(2, -2)}</strong>;
-                        }
-                        if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
-                          return <em key={i}>{part.slice(1, -1)}</em>;
-                        }
-                        const linkMatch = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
-                        if (linkMatch) {
-                          return <a key={i} href={linkMatch[2]} target="_blank" rel="noopener noreferrer">{linkMatch[1]}</a>;
-                        }
-                        return part;
-                      })}
-                    </p>
-                  );
+                  elements.push(<p key={idx} className="essay-p">{renderInline(text)}</p>);
                 }
                 continue;
               }
@@ -425,16 +329,10 @@ export function Post() {
               if (line.match(/^\*\*[^*]+\*\*:/)) {
                 const match = line.match(/^\*\*([^*]+)\*\*:\s*(.*)$/);
                 if (match) {
-                  const speaker = match[1];
-                  const text = match[2];
                   elements.push(
                     <p key={idx} className="interview-answer">
-                      <span className="speaker">{speaker}:</span> {text.split(/(\*[^*]+\*)/).map((part, i) => {
-                        if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
-                          return <em key={i}>{part.slice(1, -1)}</em>;
-                        }
-                        return part;
-                      })}
+                      <span className="interview-speaker">{match[1]}:</span>{' '}
+                      {renderInline(match[2])}
                     </p>
                   );
                   continue;
@@ -442,10 +340,9 @@ export function Post() {
               }
 
               if (line.startsWith('*') && line.endsWith('*') && !line.startsWith('**')) {
-                const text = line.slice(1, -1);
                 elements.push(
                   <p key={idx} className="interview-question">
-                    {text}
+                    {line.slice(1, -1)}
                   </p>
                 );
                 continue;
@@ -468,22 +365,7 @@ export function Post() {
               }
 
               elements.push(
-                <p key={idx} className="essay-p">
-                  {line.split(/(\*\*[^*]+\*\*)|(\*[^*]+\*)|(\[([^\]]+)\]\(([^)]+)\))/).map((part, i) => {
-                    if (!part) return null;
-                    if (part.startsWith('**') && part.endsWith('**')) {
-                      return <strong key={i}>{part.slice(2, -2)}</strong>;
-                    }
-                    if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
-                      return <em key={i}>{part.slice(1, -1)}</em>;
-                    }
-                    const linkMatch = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
-                    if (linkMatch) {
-                      return <a key={i} href={linkMatch[2]} target="_blank" rel="noopener noreferrer">{linkMatch[1]}</a>;
-                    }
-                    return part;
-                  })}
-                </p>
+                <p key={idx} className="essay-p">{renderInline(line)}</p>
               );
             }
 
@@ -492,23 +374,33 @@ export function Post() {
         </section>
 
         {slug === 'sobre-o-vazio-jeanne-dielman' && (
-          <figure className="essay-hero-image essay-hero-image--end">
-            <div className="essay-hero-frame">
-              <img
-                src="/images/jeannedielman2.png"
-                alt="Jeanne Dielman (still do filme)"
-                loading="lazy"
-              />
-            </div>
+          <figure className="essay-hero-image">
+            <img src="/images/jeannedielman2.png" alt="Jeanne Dielman" loading="lazy" />
           </figure>
         )}
 
-        {!readingMode && (
-          <footer className="essay-footer">
-            <Link to="/#escrita" className="essay-back">← Voltar para Escrita</Link>
-          </footer>
-        )}
+        <footer className="essay-footer">
+          <Link to="/escrita" className="essay-back-link">← Voltar para Escrita</Link>
+        </footer>
       </article>
     </div>
   );
+}
+
+function renderInline(text: string): React.ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|\[([^\]]+)\]\(([^)]+)\))/g);
+  return parts.map((part, i) => {
+    if (!part) return null;
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
+      return <em key={i}>{part.slice(1, -1)}</em>;
+    }
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      return <a key={i} href={linkMatch[2]} target="_blank" rel="noopener noreferrer">{linkMatch[1]}</a>;
+    }
+    return part;
+  });
 }

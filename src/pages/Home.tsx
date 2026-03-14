@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/content';
-import { YouTubeEmbed } from '../components/YouTubeEmbed';
 import { supabase } from '../lib/supabase';
+import './Home.css';
 
 type Escrito = {
   id: number;
@@ -17,16 +17,15 @@ type Escrito = {
 };
 
 export function Home() {
-  const [escritaFilter, setEscritaFilter] = useState<string>('Todos');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [allEscritos, setAllEscritos] = useState<Escrito[]>([]);
+  const [recentEscritos, setRecentEscritos] = useState<Escrito[]>([]);
 
   useEffect(() => {
     async function loadPosts() {
       const { data, error } = await supabase
         .from('posts')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false })
+        .limit(4);
 
       if (!error && data) {
         const dbPosts: Escrito[] = data.map((post) => ({
@@ -40,231 +39,156 @@ export function Home() {
           tags: post.tags || [],
           origem: post.origem || ''
         }));
-        setAllEscritos(dbPosts);
+        setRecentEscritos(dbPosts);
       }
     }
     loadPosts();
   }, []);
 
-  const filteredEscrita = allEscritos.filter(item => {
-    const matchesFilter = escritaFilter === 'Todos' || item.category === escritaFilter;
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;
-  });
-
-  const categories = ['Todos', ...Array.from(new Set(allEscritos.map(e => e.category)))];
+  const featuredFilme = siteData.filmografia[0];
+  const featuredEscrito = recentEscritos[0];
+  const otherEscritos = recentEscritos.slice(1, 4);
 
   return (
-    <>
-      <section id="inicio" className="hero">
-        <div className="container">
-          <div className="hero-grid">
-            <div className="hero-content">
-              <h1>{siteData.hero.name}</h1>
-              <p className="hero-title">{siteData.hero.title}</p>
-              <p className="hero-bio">{siteData.hero.bio}</p>
-              <div className="hero-ctas">
-                <a href="#reel" className="cta-primary">Ver Reel →</a>
-                <a href="#contato" className="cta-secondary">Contato</a>
+    <div className="home">
+
+      {/* ── HERO ── */}
+      <section className="hero">
+        <div className="hero-inner">
+          <div className="hero-top">
+            <span className="hero-eyebrow label">Rio de Janeiro · Brasil</span>
+          </div>
+          <div className="hero-body">
+            <div className="hero-name-block">
+              <h1 className="hero-name">Francisco<br />Vidal</h1>
+            </div>
+            <div className="hero-right">
+              <div className="hero-image-wrap">
+                <img
+                  src={siteData.hero.image}
+                  alt="Francisco Vidal"
+                  className="hero-image"
+                />
+              </div>
+              <p className="hero-statement">
+                Ator, cineasta, tradutor e escritor de cinema. Uma prática que atravessa a presença diante da câmera, o processo de realização e a escrita crítica.
+              </p>
+              <div className="hero-roles">
+                <span>Atuação</span>
+                <span className="hero-roles-dot">·</span>
+                <span>Realização</span>
+                <span className="hero-roles-dot">·</span>
+                <span>Crítica</span>
+                <span className="hero-roles-dot">·</span>
+                <span>Tradução</span>
               </div>
             </div>
-            <div className="hero-image">
-              <img src={siteData.hero.image} alt={siteData.hero.name} />
-            </div>
+          </div>
+          <div className="hero-nav">
+            <Link to="/reel" className="hero-nav-link">Reel →</Link>
+            <Link to="/filmografia" className="hero-nav-link">Filmografia →</Link>
+            <Link to="/escrita" className="hero-nav-link">Escrita →</Link>
+            <Link to="/sobre" className="hero-nav-link">Sobre →</Link>
           </div>
         </div>
       </section>
 
-      <section id="reel" className="section reel-section">
-        <div className="container">
-          <h2 className="section-title">Reel</h2>
-          <p className="reel-description">{siteData.reel.description}</p>
-          <div className="reel-grid">
-            {siteData.reel.videos.map((videoUrl, index) => (
-              <YouTubeEmbed
-                key={index}
-                url={videoUrl}
-                title={`Reel Francisco Vidal ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="sobre" className="section sobre-section">
-        <div className="container">
-          <h2 className="section-title">Sobre</h2>
-          <nav className="sobre-menu">
-            <a href="#sobre-intro" className="sobre-menu-link">Sobre</a>
-            <span className="sobre-menu-separator">/</span>
-            <a href="#trajetoria" className="sobre-menu-link">Trajetória</a>
-          </nav>
-          <div id="sobre-intro" className="sobre-grid">
-            <div className="sobre-text">
-              {siteData.sobre.text.map((paragraph, idx) => (
-                <p key={idx}>{paragraph}</p>
-              ))}
-            </div>
-            <div className="sobre-image">
-              <img src={siteData.sobre.image} alt="Francisco Vidal" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="trajetoria" className="section trajetoria-section">
-        <div className="container">
-          <h2 className="section-title">Trajetória</h2>
-
-          <div className="trajetoria-content">
-            <p className="trajetoria-intro">Francisco Vidal é ator e cineasta baseado no Rio de Janeiro.</p>
-
-            <div className="trajetoria-block">
-              <h3 className="trajetoria-subtitle">Entrada no cinema (bastidores → atuação)</h3>
-              <p>Em 2023, trabalhou com tradução e pós-produção no longa <em>Canto das Amapolas</em> (dir. Paula Gaitán), experiência que consolidou sua relação com o cinema como linguagem e processo e impulsionou sua transição para a atuação.</p>
-            </div>
-
-            <div className="trajetoria-block">
-              <h3 className="trajetoria-subtitle">Créditos como ator (estreias em longa-metragem)</h3>
-              <ul className="trajetoria-list">
-                <li><strong>O Inspetor Geral</strong> — dir. Gregório Gananian | prod. Zaum | filmado maio–junho/2024 | em pós-produção.</li>
-                <li><strong>O Mundo dos Mortos</strong> — dir. Pedro Tavares | prod. 7 a 1 Filmes e Cavideo | exibido na Mostra Olhos Livres — Festival de Cinema de Tiradentes (2025).</li>
-              </ul>
-            </div>
-
-            <div className="trajetoria-block">
-              <h3 className="trajetoria-subtitle">Atuação + set hoje</h3>
-              <p>Atualmente trabalha como assistente de direção na pós-produção de <em>O Inspetor Geral</em> e filmou <em>Acronon</em> (2026) (dir. Gregório Gananian), com Clara Choveaux no elenco.</p>
-            </div>
-
-            <div className="trajetoria-block">
-              <h3 className="trajetoria-subtitle">Pesquisa de atuação (presença e escuta)</h3>
-              <p>Seu trabalho busca uma atuação de alta presença e escuta, com flexibilidade para diferentes estilos de direção autoral — mantendo precisão, adaptação e disponibilidade.</p>
-            </div>
-
-            <div className="trajetoria-block">
-              <h3 className="trajetoria-subtitle">Formação (2025–2026 | cronológica)</h3>
-              <ul className="trajetoria-list">
-                <li>06 mai → 03 jul 2025 — <strong>O Poder da Câmera: Atuação para TV e Cinema</strong> (Ricardo Conti + Heitor Martinez) — 48h</li>
-                <li>20 mai → 11 jul 2025 — <strong>Laboratório de Atuação para Câmera</strong> (Gustavo Pace) — 40h</li>
-                <li>31 mai e 19 jul 2025 — <strong>Interpretação para TV e Cinema</strong> (Andrea Avancini) — 21h</li>
-                <li>04 jun → 23 jul 2025 — <strong>O Teatro do Não Eu</strong> (Rafael Infante) — 36h</li>
-                <li>17 set → 17 dez 2025 — <strong>O Teatro do Não Eu — Módulo II</strong> (Rafael Infante) — 46h</li>
-                <li>18 dez 2025 — <strong>Atuando para o Audiovisual</strong> (Mentoria Walter Lima) — 12h</li>
-                <li>12 → 16 jan 2026 — <strong>Workshop: Desenvolvimento de Cenas, Personagens e Repertório</strong> (Rafael Infante) — 14h</li>
-                <li><strong>Em curso:</strong> LABO com Patrick Sampaio — prática contínua (gravar/assistir/regravar + Métodos)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="filmografia" className="section filmografia-section">
-        <div className="container">
-          <h2 className="section-title">Filmografia</h2>
-          <div className="filmografia-grid">
-            {siteData.filmografia.map(filme => (
-              <Link
-                key={filme.id}
-                to={`/filme/${filme.slug}`}
-                className="filme-card"
-              >
-                <div className="filme-image">
-                  <img src={filme.image} alt={filme.title} />
+      {/* ── FEATURED FILM ── */}
+      {featuredFilme && (
+        <section className="home-film">
+          <div className="container">
+            <div className="home-film-inner">
+              <div className="home-film-label">
+                <span className="label">Filmografia recente</span>
+              </div>
+              <Link to={`/filme/${featuredFilme.slug}`} className="home-film-card">
+                <div className="home-film-image">
+                  <img src={featuredFilme.image} alt={featuredFilme.title} />
+                  <div className="home-film-overlay">
+                    <span>Ver ficha completa →</span>
+                  </div>
                 </div>
-                <div className="filme-info">
-                  <h3>{filme.title}</h3>
-                  <p className="filme-meta">{filme.year} · {filme.type}</p>
-                  <p className="filme-role">Papel: {filme.role}</p>
-                  {filme.director && <p className="filme-director">Dir. {filme.director}</p>}
-                  <p className="filme-description">{filme.description}</p>
-                  {filme.festivals && (
-                    <div className="filme-festivals">
-                      <span className="festival-tag">{filme.festivals}</span>
-                    </div>
+                <div className="home-film-info">
+                  <p className="home-film-meta">
+                    {featuredFilme.year} · Dir. {featuredFilme.director}
+                  </p>
+                  <h2 className="home-film-title">{featuredFilme.title}</h2>
+                  <p className="home-film-role">{featuredFilme.role}</p>
+                  <p className="home-film-synopsis">{featuredFilme.description}</p>
+                  {featuredFilme.festivals && (
+                    <p className="home-film-festival">{featuredFilme.festivals}</p>
                   )}
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="fotos" className="section fotos-section">
-        <div className="container">
-          <h2 className="section-title">Fotos</h2>
-          <div className="fotos-grid">
-            {siteData.fotos.map(foto => (
-              <div key={foto.id} className="foto-item">
-                <img src={foto.url} alt={foto.alt} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="escrita" className="section escrita-section">
-        <div className="container">
-          <h2 className="section-title">Escrita</h2>
-
-          <div className="escrita-filters">
-            <input
-              type="text"
-              className="search-input"
-              placeholder="Buscar textos..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <div className="category-filters">
-              {categories.map(cat => (
-                <button
-                  key={cat}
-                  className={`filter-btn ${escritaFilter === cat ? 'active' : ''}`}
-                  onClick={() => setEscritaFilter(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
             </div>
           </div>
+        </section>
+      )}
 
-          <div className="escrita-list">
-            {filteredEscrita.map(item => (
-              <article key={item.id} className="escrita-item">
-                <div className="escrita-meta">
-                  <span className="escrita-category">{item.category}</span>
-                  <span className="escrita-date">{item.date}</span>
-                  <span className="escrita-read-time">{item.readTime}</span>
+      {/* ── FEATURED WRITING ── */}
+      {featuredEscrito && (
+        <section className="home-writing">
+          <div className="container">
+            <div className="home-writing-header">
+              <span className="label">Escrita recente</span>
+              <Link to="/escrita" className="home-writing-all">Ver todos os textos →</Link>
+            </div>
+
+            <div className="home-writing-grid">
+              <Link to={`/post/${featuredEscrito.slug}`} className="home-writing-featured">
+                <span className="home-writing-category">{featuredEscrito.category}</span>
+                <h2 className="home-writing-title">{featuredEscrito.title}</h2>
+                <p className="home-writing-excerpt">{featuredEscrito.excerpt}</p>
+                <div className="home-writing-meta">
+                  <span>{featuredEscrito.date}</span>
+                  {featuredEscrito.readTime && <span>{featuredEscrito.readTime} de leitura</span>}
                 </div>
-                <h3 className="escrita-title">{item.title}</h3>
-                <p className="escrita-excerpt">{item.excerpt}</p>
-                {item.slug ? (
-                  <a href={`/post/${item.slug}`} className="escrita-link">Ler →</a>
-                ) : (
-                  <span className="escrita-link-disabled">Em breve</span>
-                )}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+                <span className="home-writing-read">Ler texto →</span>
+              </Link>
 
-      <section id="contato" className="section contato-section">
+              {otherEscritos.length > 0 && (
+                <div className="home-writing-list">
+                  {otherEscritos.map(item => (
+                    <Link key={item.id} to={`/post/${item.slug}`} className="home-writing-item">
+                      <div className="home-writing-item-top">
+                        <span className="home-writing-item-category">{item.category}</span>
+                        <span className="home-writing-item-date">{item.date}</span>
+                      </div>
+                      <h3 className="home-writing-item-title">{item.title}</h3>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── UNIVERSE STRIP ── */}
+      <section className="home-universe">
         <div className="container">
-          <h2 className="section-title">Contato</h2>
-          <div className="contato-content">
-            <div className="contato-links">
-              <a href={`mailto:${siteData.contato.email}`} className="contato-link">
-                {siteData.contato.email}
-              </a>
-              <a href={siteData.contato.instagram} target="_blank" rel="noopener noreferrer" className="contato-link">
-                Instagram
-              </a>
+          <div className="home-universe-inner">
+            <p className="home-universe-text">
+              Um universo onde atuação, realização, crítica, tradução e processo pertencem ao mesmo mundo.
+            </p>
+            <div className="home-universe-links">
+              <Link to="/sobre" className="home-universe-link">
+                <span className="home-universe-link-title">Trajetória</span>
+                <span className="home-universe-link-desc">Formação, projetos, processo</span>
+              </Link>
+              <Link to="/fotos" className="home-universe-link">
+                <span className="home-universe-link-title">Fotos</span>
+                <span className="home-universe-link-desc">Retratos e ensaios</span>
+              </Link>
+              <Link to="/reel" className="home-universe-link">
+                <span className="home-universe-link-title">Reel</span>
+                <span className="home-universe-link-desc">Trabalhos audiovisuais</span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-    </>
+
+    </div>
   );
 }
