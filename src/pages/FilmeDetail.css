@@ -4,8 +4,15 @@
 
 .filme-detail-loading {
   padding: var(--space-3xl) 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+.filme-detail-loading-text {
   font-family: var(--font-serif);
   font-size: 18px;
+  font-style: italic;
   color: var(--text-muted);
 }
 
@@ -227,10 +234,6 @@
     position: relative;
     top: 0;
     max-width: 360px;
-  }
-
-  .filme-detail-poster img {
-    aspect-ratio: 16/9;
   }
 
   .filme-stills-grid {

@@ -300,6 +300,46 @@
   max-width: 66ch;
 }
 
+/* ===================== BLOCKQUOTE & LIST ===================== */
+
+.essay-blockquote {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  padding: 12px 0 12px 28px;
+  border-left: 2px solid var(--border);
+  margin-bottom: 1.6em;
+  max-width: 62ch;
+  letter-spacing: -0.01em;
+}
+
+.essay-list {
+  padding-left: 28px;
+  margin-bottom: 1.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 66ch;
+}
+
+.essay-list-item {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.72;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  list-style: disc;
+}
+
+@media (max-width: 640px) {
+  .essay-blockquote,
+  .essay-list-item {
+    font-size: 17px;
+  }
+}
+
 /* ===================== INTERVIEW ===================== */
 
 .interview-question {

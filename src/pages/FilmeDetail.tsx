@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getFilmeBySlug } from '../lib/supabase';
+import { siteData } from '../data/content';
 import { YouTubeEmbed } from '../components/YouTubeEmbed';
 import './FilmeDetail.css';
 
@@ -14,9 +15,29 @@ export function FilmeDetail() {
       if (!slug) return;
       try {
         const filmeData = await getFilmeBySlug(slug);
-        setFilme(filmeData);
-      } catch (error) {
-        console.error('Erro ao carregar filme:', error);
+        if (filmeData) {
+          setFilme(filmeData);
+        } else {
+          const staticFilme = siteData.filmografia.find(f => f.slug === slug);
+          if (staticFilme) {
+            setFilme({
+              ...staticFilme,
+              cast: staticFilme.cast || [],
+              stills: staticFilme.stills || [],
+              scenes: staticFilme.scenes || [],
+            });
+          }
+        }
+      } catch {
+        const staticFilme = siteData.filmografia.find(f => f.slug === slug);
+        if (staticFilme) {
+          setFilme({
+            ...staticFilme,
+            cast: staticFilme.cast || [],
+            stills: staticFilme.stills || [],
+            scenes: staticFilme.scenes || [],
+          });
+        }
       } finally {
         setLoading(false);
       }

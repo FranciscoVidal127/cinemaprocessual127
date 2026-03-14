@@ -284,6 +284,68 @@
   color: rgba(245, 244, 240, 0.25);
 }
 
+/* ===================== NOT FOUND ===================== */
+
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.not-found-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 48ch;
+}
+
+.not-found-code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.not-found-title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--text);
+}
+
+.not-found-text {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+}
+
+.not-found-link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+  width: fit-content;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.not-found-link:hover {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
 /* ===================== PAGE SECTIONS ===================== */
 
 .page-section {

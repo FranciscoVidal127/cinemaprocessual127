@@ -9,6 +9,7 @@
 .filmografia-list {
   display: flex;
   flex-direction: column;
+  border-top: 1px solid var(--border);
 }
 
 .filmografia-entry {
@@ -165,6 +166,6 @@
   }
 
   .filmografia-entry-image img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 2/3;
   }
 }

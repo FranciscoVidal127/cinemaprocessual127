@@ -559,7 +559,8 @@
   }
 
   .home-film-image img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 3/4;
+    max-height: 420px;
   }
 
   .home-film-inner,

@@ -2,9 +2,13 @@ import { BrowserRouter, Routes, Route, useLocation, NavLink } from 'react-router
 import { useState, useEffect } from 'react';
 import { Home } from './pages/Home';
 import { Sobre } from './pages/Sobre';
-import { Escrita } from './pages/Escrita';
+import { Reel } from './pages/Reel';
+import { Filmografia } from './pages/Filmografia';
 import { FilmeDetail } from './pages/FilmeDetail';
+import { Fotos } from './pages/Fotos';
+import { Escrita } from './pages/Escrita';
 import { Post } from './pages/Post';
+import { NotFound } from './pages/NotFound';
 import './App.css';
 
 function Header() {
@@ -23,6 +27,11 @@ function Header() {
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   const isHome = location.pathname === '/';
 
@@ -102,10 +111,6 @@ function Footer() {
   );
 }
 
-import { Reel } from './pages/Reel';
-import { Filmografia } from './pages/Filmografia';
-import { Fotos } from './pages/Fotos';
-
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="app">
@@ -128,6 +133,7 @@ function App() {
         <Route path="/escrita" element={<Layout><Escrita /></Layout>} />
         <Route path="/filme/:slug" element={<Layout><FilmeDetail /></Layout>} />
         <Route path="/post/:slug" element={<Layout><Post /></Layout>} />
+        <Route path="*" element={<Layout><NotFound /></Layout>} />
       </Routes>
     </BrowserRouter>
   );

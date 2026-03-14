@@ -9,11 +9,12 @@
 .reel-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
+  gap: 3px;
+  background-color: var(--bg-dark);
 }
 
 .reel-item {
-  background-color: #000;
+  background-color: #0a0a09;
 }
 
 .video-wrapper {

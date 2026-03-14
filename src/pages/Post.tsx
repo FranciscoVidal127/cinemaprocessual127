@@ -249,11 +249,26 @@ export function Post() {
           {(() => {
             const lines = content.split('\n');
             const elements: JSX.Element[] = [];
+            let listBuffer: string[] = [];
+
+            function flushList(key: number) {
+              if (listBuffer.length > 0) {
+                elements.push(
+                  <ul key={`list-${key}`} className="essay-list">
+                    {listBuffer.map((item, i) => (
+                      <li key={i} className="essay-list-item">{renderInline(item)}</li>
+                    ))}
+                  </ul>
+                );
+                listBuffer = [];
+              }
+            }
 
             for (let idx = 0; idx < lines.length; idx++) {
               const line = lines[idx];
 
               if (slug === 'uma-entrevista-em-pijamas' && line.includes('**Início**')) {
+                flushList(idx);
                 elements.push(
                   <p key={idx} className="essay-p essay-p--centered">
                     Início
@@ -268,6 +283,7 @@ export function Post() {
               }
 
               if (line.trim().startsWith('<figure')) {
+                flushList(idx);
                 let htmlBlock = line + '\n';
                 idx++;
                 while (idx < lines.length && !lines[idx].includes('</figure>')) {
@@ -290,43 +306,66 @@ export function Post() {
               }
 
               if (line.trim() === '---') {
+                flushList(idx);
                 elements.push(<hr key={idx} className="essay-rule" />);
                 continue;
               }
 
               if (line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)) {
+                flushList(idx);
                 const match = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
                 if (match) {
                   elements.push(
                     <figure key={idx} className="essay-inline-image">
-                      <img src={match[2]} alt={match[1]} />
+                      <img src={match[2]} alt={match[1]} loading="lazy" />
                     </figure>
                   );
                   continue;
                 }
               }
 
-              if (line.startsWith('### ')) {
-                const text = line.replace('### ', '');
-                elements.push(<h3 key={idx} id={slugify(text)} className="essay-h3">{text}</h3>);
+              if (line.startsWith('#### ') || line.startsWith('### ')) {
+                flushList(idx);
+                const text = line.replace(/^#{3,4} /, '');
+                elements.push(<h3 key={idx} id={slugify(text)} className="essay-h3">{renderInline(text)}</h3>);
                 continue;
               }
 
               if (line.startsWith('## ')) {
+                flushList(idx);
                 const text = line.replace('## ', '');
-                elements.push(<h2 key={idx} id={slugify(text)} className="essay-h2">{text}</h2>);
+                elements.push(<h2 key={idx} id={slugify(text)} className="essay-h2">{renderInline(text)}</h2>);
                 continue;
               }
 
               if (line.startsWith('# ')) {
-                const text = line.replace('# ', '').trim();
+                flushList(idx);
+                const text = line.replace(/^#+ /, '').trim();
                 if (text) {
                   elements.push(<p key={idx} className="essay-p">{renderInline(text)}</p>);
                 }
                 continue;
               }
 
+              if (line.startsWith('> ')) {
+                flushList(idx);
+                const text = line.replace(/^> /, '');
+                elements.push(
+                  <blockquote key={idx} className="essay-blockquote">
+                    {renderInline(text)}
+                  </blockquote>
+                );
+                continue;
+              }
+
+              if (line.match(/^[-*] /)) {
+                const text = line.replace(/^[-*] /, '');
+                listBuffer.push(text);
+                continue;
+              }
+
               if (line.match(/^\*\*[^*]+\*\*:/)) {
+                flushList(idx);
                 const match = line.match(/^\*\*([^*]+)\*\*:\s*(.*)$/);
                 if (match) {
                   elements.push(
@@ -340,6 +379,7 @@ export function Post() {
               }
 
               if (line.startsWith('*') && line.endsWith('*') && !line.startsWith('**')) {
+                flushList(idx);
                 elements.push(
                   <p key={idx} className="interview-question">
                     {line.slice(1, -1)}
@@ -349,6 +389,7 @@ export function Post() {
               }
 
               if (line.startsWith('[') && line.includes('](')) {
+                flushList(idx);
                 const match = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
                 if (match) {
                   elements.push(
@@ -361,14 +402,17 @@ export function Post() {
               }
 
               if (line.trim() === '') {
+                flushList(idx);
                 continue;
               }
 
+              flushList(idx);
               elements.push(
                 <p key={idx} className="essay-p">{renderInline(line)}</p>
               );
             }
 
+            flushList(lines.length);
             return elements;
           })()}
         </section>

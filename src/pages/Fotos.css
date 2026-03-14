@@ -9,12 +9,13 @@
 .fotos-mosaic {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
+  gap: 3px;
+  background-color: var(--bg);
 }
 
 .foto-cell {
   overflow: hidden;
-  background-color: #111;
+  background-color: var(--surface-elevated);
   position: relative;
 }
 
@@ -23,13 +24,13 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(0.12) contrast(1.05);
-  transition: transform 0.6s ease, filter 0.4s ease;
+  filter: grayscale(0.08) contrast(1.04);
+  transition: transform 0.7s ease, filter 0.5s ease;
 }
 
 .foto-cell:hover img {
-  transform: scale(1.04);
-  filter: grayscale(0) contrast(1.06);
+  transform: scale(1.03);
+  filter: grayscale(0) contrast(1.05);
 }
 
 .foto-cell--1 {
@@ -57,8 +58,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .foto-cell {
-    aspect-ratio: 3/4 !important;
+  .foto-cell--1,
+  .foto-cell--2,
+  .foto-cell--4 {
+    aspect-ratio: 3/4;
+  }
+
+  .foto-cell--3 {
+    aspect-ratio: 1/1;
+  }
+
+  .foto-cell--5 {
+    aspect-ratio: 3/4;
   }
 }
 
@@ -67,7 +78,11 @@
     grid-template-columns: 1fr;
   }
 
-  .foto-cell {
-    aspect-ratio: 4/3 !important;
+  .foto-cell--1,
+  .foto-cell--2,
+  .foto-cell--3,
+  .foto-cell--4,
+  .foto-cell--5 {
+    aspect-ratio: 4/3;
   }
 }
