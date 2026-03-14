@@ -2,7 +2,7 @@
 
 <figure className="essay-hero-image">
   <div className="essay-hero-frame">
-    <img src="/images/ecra-1.png" alt="Festival Ecrã 2023" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-1.png" alt="Festival Ecrã 2023" loading="lazy" />
   </div>
 </figure>
 
@@ -16,7 +16,7 @@ Este foi o primeiro filme de Lewis Klahr que assisti na minha vida, o que me imp
 
 <figure className="essay-hero-image">
   <div className="essay-hero-frame">
-    <img src="/images/ecra-2.png" alt="Festival Ecrã 2023" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-2.png" alt="Festival Ecrã 2023" loading="lazy" />
   </div>
 </figure>
 
@@ -26,7 +26,7 @@ Como um álbum visual de estética cyberpunk carioca, o primeiro longa metragem 
 
 <figure className="essay-hero-image">
   <div className="essay-hero-frame">
-    <img src="/images/ecra-3.png" alt="Festival Ecrã 2023" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-3.png" alt="Festival Ecrã 2023" loading="lazy" />
   </div>
 </figure>
 
@@ -36,7 +36,7 @@ A trajetória de Bressane e suas obsessões coladas dentro de uma cartografia au
 
 <figure className="essay-hero-image">
   <div className="essay-hero-frame">
-    <img src="/images/ecra-4.png" alt="Festival Ecrã 2023" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-4.png" alt="Festival Ecrã 2023" loading="lazy" />
   </div>
 </figure>
 
@@ -46,7 +46,7 @@ Uma investigação arqueológica construída a partir de imagens de arquivo de c
 
 <figure className="essay-hero-image">
   <div className="essay-hero-frame">
-    <img src="/images/ecra-5.png" alt="Festival Ecrã 2023" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-5.png" alt="Festival Ecrã 2023" loading="lazy" />
   </div>
 </figure>
 ***VERMELHO BRUTO** | Idem | Amanda Devulsky | Brasil | 2022 | 203 min.* 
@@ -61,7 +61,7 @@ Se trata, um pouco parecido com o filme de Bressane, da criação de uma cartogr
 
 <figure className="essay-hero-image">
   <div className="essay-hero-frame">
-    <img src="/images/ecra-7.png" alt="Festival Ecrã 2023" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-7.png" alt="Festival Ecrã 2023" loading="lazy" />
   </div>
 </figure>
 
@@ -71,7 +71,7 @@ O filme final do cineasta Luis Ospina é composto pela montagem de doze obras do
 
 <figure className="essay-hero-image">
   <div className="essay-hero-frame">
-    <img src="/images/ecra-6.png" alt="Festival Ecrã 2023" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-6.png" alt="Festival Ecrã 2023" loading="lazy" />
   </div>
 </figure>
 

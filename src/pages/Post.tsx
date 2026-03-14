@@ -203,30 +203,30 @@ export function Post() {
 
         {slug === 'sobre-o-vazio-jeanne-dielman' && (
           <figure className="essay-hero-image">
-            <img src="/images/jeannedielman1.png" alt="Jeanne Dielman (still do filme)" loading="lazy" />
+            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/jeannedielman1.png" alt="Jeanne Dielman (still do filme)" loading="lazy" />
           </figure>
         )}
 
         {slug === 'inconsciente-maquinico' && (
           <>
             <figure className="essay-hero-image">
-              <img src="/images/inconscientemaquinico1.png" alt="Capa de O Inconsciente Maquínico" loading="eager" />
+              <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconscientemaquinico1.png" alt="Capa de O Inconsciente Maquínico" loading="eager" />
             </figure>
             <figure className="essay-inline-image">
-              <img src="/images/guattarisorindo.png" alt="Félix Guattari" loading="lazy" />
+              <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/guattarisorindo.png" alt="Félix Guattari" loading="lazy" />
             </figure>
           </>
         )}
 
         {slug === 'festival-ecra-2023' && (
           <figure className="essay-hero-image">
-            <img src="/images/ecra-1.png" alt="Festival Ecrã 2023" loading="lazy" />
+            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-1.png" alt="Festival Ecrã 2023" loading="lazy" />
           </figure>
         )}
 
         {slug === 'uma-entrevista-em-pijamas' && (
           <figure className="essay-inline-image">
-            <img src="/images/Akerman.png" alt="Chantal Akerman" loading="lazy" />
+            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerman.png" alt="Chantal Akerman" loading="lazy" />
           </figure>
         )}
 
@@ -261,7 +261,7 @@ export function Post() {
                 );
                 elements.push(
                   <figure key={`${idx}-inline`} className="essay-inline-image">
-                    <img src="/images/Akerbrenez.png" alt="Chantal Akerman e Nicole Brenez" loading="lazy" />
+                    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez.png" alt="Chantal Akerman e Nicole Brenez" loading="lazy" />
                   </figure>
                 );
                 continue;
@@ -375,7 +375,7 @@ export function Post() {
 
         {slug === 'sobre-o-vazio-jeanne-dielman' && (
           <figure className="essay-hero-image">
-            <img src="/images/jeannedielman2.png" alt="Jeanne Dielman" loading="lazy" />
+            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/jeannedielman2.png" alt="Jeanne Dielman" loading="lazy" />
           </figure>
         )}
 

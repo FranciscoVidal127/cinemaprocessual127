@@ -9,19 +9,19 @@ origem: Entrevista realizada por Francisco Vidal
 
 <figure className="essay-hero-image essay-hero-image--stacked">
   <div className="essay-hero-frame">
-    <img src="/images/Greg8-1.png" alt="Imagem 1 — post Greg8" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-1.png" alt="Imagem 1 — post Greg8" loading="lazy" />
   </div>
 </figure>
 
 <figure className="essay-hero-image essay-hero-image--stacked">
   <div className="essay-hero-frame">
-    <img src="/images/Greg8-2.png" alt="Imagem 2 — post Greg8" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-2.png" alt="Imagem 2 — post Greg8" loading="lazy" />
   </div>
 </figure>
 
 <figure className="essay-hero-image essay-hero-image--stacked essay-hero-image--stacked-last">
   <div className="essay-hero-frame">
-    <img src="/images/Greg8-3.png" alt="Imagem 3 — post Greg8" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-3.png" alt="Imagem 3 — post Greg8" loading="lazy" />
   </div>
 </figure>
 

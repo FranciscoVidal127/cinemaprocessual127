@@ -37,7 +37,7 @@ A economia das coisas moleculares, relativa aos fluxos e aos códigos, para não
 <figure className="essay-hero-image essay-inline-figure essay-inline-figure--narrow">
   <div className="essay-hero-frame">
     <img
-      src="/images/inconsciente-1.png"
+      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-1.png"
       alt="Fluxo e códigos atualizados — proposições maquínicas abstratas"
       loading="lazy"
     />
@@ -153,7 +153,7 @@ As máquinas abstratas, sendo incompostas sobre um plano intensional, não se po
 <figure className="essay-hero-image essay-inline-figure essay-inline-figure--wide">
   <div className="essay-hero-frame">
     <img
-      src="/images/inconsciente-2.png"
+      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-2.png"
       alt="Rizoma do cerco fóbico do Pequeno Hans"
       loading="lazy"
     />
@@ -185,7 +185,7 @@ Uma esquizo-análise micropolítica não aceitará jamais como um fato consumado
 <figure className="essay-hero-image essay-inline-figure essay-inline-figure--wide">
   <div className="essay-hero-frame">
     <img
-      src="/images/inconsciente-3.png"
+      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-3.png"
       alt="Rizoma do corte leninista e a produção do estalinismo"
       loading="lazy"
     />
@@ -287,7 +287,7 @@ De onde o esquema seguinte:
 <figure className="essay-hero-image essay-inline-figure essay-inline-figure--wide">
   <div className="essay-hero-frame">
     <img
-      src="/images/inconsciente-4.png"
+      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-4.png"
       alt="Esquema: pontos de singularidade, desejo, territorialidades e núcleos maquínicos"
       loading="lazy"
     />

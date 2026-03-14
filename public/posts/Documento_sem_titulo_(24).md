@@ -4,7 +4,7 @@
 
 # *Entrevista realizada com Chantal Akerman por Nicole Brenez em Julho de 2011*
 
-![Chantal Akerman](/images/Akerman.png)
+![Chantal Akerman](https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerman.png)
 
 #
 

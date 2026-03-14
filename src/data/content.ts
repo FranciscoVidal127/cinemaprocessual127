@@ -46,7 +46,7 @@ export const siteData = {
     name: "Francisco Vidal",
     title: "Ator · Cineasta · Tradutor · Escritor de Cinema",
     bio: "Cinema, atuação e pensamento como prática contínua. Entre a presença diante da câmera, o processo de realização e a escrita crítica.",
-    image: "/images/image-copy-2.png"
+    image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/image-copy-2.png"
   },
 
   reel: {
@@ -66,7 +66,7 @@ export const siteData = {
       "O que ele procura na atuação é alta presença e escuta: o corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador. Não como uma identidade fixa, mas como um ator em processo, que usa o ofício como ferramenta de transformação: aprender a chegar, a adaptar, a sustentar o momento.",
       "2025 foi um divisor de águas. Francisco intensificou a formação em atuação para câmera e repertório em cursos e laboratórios contínuos, aprofundando técnica, precisão e prontidão para o set — e segue em prática permanente no LABO, com Patrick Sampaio, no eixo de \"gravar, assistir e regravar\", como método de refino real do gesto diante da câmera."
     ],
-    image: "/images/captura_de_tela_de_2026-02-06_18-14-50.png"
+    image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/captura_de_tela_de_2026-02-06_18-14-50.png"
   },
 
   filmografia: [
@@ -82,7 +82,7 @@ export const siteData = {
       type: "Cinema",
       festivals: "28ª Mostra de Cinema de Tiradentes — Mostra Olhos Livres",
       description: "No segundo dia após a morte de Cristo, humanos, anjos e demônios questionam o futuro da existência enquanto vagam pela Terra agora abandonada.",
-      image: "/images/mundo-mortos.jpg",
+      image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/mundo-mortos.jpg",
       cast: [
         "Estêvão Nogueira",
         "Morgana Corrêa",
@@ -90,9 +90,9 @@ export const siteData = {
         "Francisco Vidal"
       ],
       stills: [
-        { src: "/images/still-1.jpg", alt: "O Mundo dos Mortos - Still 1" },
-        { src: "/images/still-2.jpg", alt: "O Mundo dos Mortos - Still 2" },
-        { src: "/images/still-3.jpg", alt: "O Mundo dos Mortos - Still 3" }
+        { src: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "O Mundo dos Mortos - Still 1" },
+        { src: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "O Mundo dos Mortos - Still 2" },
+        { src: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "O Mundo dos Mortos - Still 3" }
       ],
       scenes: [
         { title: "Cena 01", subtitle: "O Mundo dos Mortos (2025) — Fábio", youtubeUrl: "https://www.youtube.com/watch?v=2x_u4B0Tj1w" },
@@ -114,7 +114,7 @@ export const siteData = {
       status: "Em pós-produção",
       festivals: "",
       description: "Adaptação cinematográfica da clássica peça de Nikolai Gogol sobre corrupção e engano na Rússia czarista.",
-      image: "/images/Captura_de_tela_de_2026-02-10_07-41-26.png",
+      image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Captura_de_tela_de_2026-02-10_07-41-26.png",
       cast: ["Clara Choveaux", "Ivon Patrócínio", "Cláudia Ohana", "Francisco Vidal"],
       stills: [],
       scenes: []
@@ -122,12 +122,12 @@ export const siteData = {
   ] as Filme[],
 
   fotos: [
-    { id: 1, url: "/images/photoshoot-1.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 2, url: "/images/photoshoot-2.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 3, url: "/images/photoshoot-3.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 4, url: "/images/photoshoot-4.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 5, url: "/images/photoshoot-5.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 6, url: "/images/photoshoot-6jpg", alt: "Francisco Vidal - Photoshoot" }
+    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-1.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-2.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-3.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-4.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-5.jpg", alt: "Francisco Vidal - Photoshoot" },
+    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-6jpg", alt: "Francisco Vidal - Photoshoot" }
   ],
 
   escritos: [] as Escrito[],
