@@ -211,34 +211,6 @@ export function Post() {
           </div>
         </div>
 
-        {slug === 'sobre-o-vazio-jeanne-dielman' && (
-          <figure className="essay-hero-image">
-            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/jeannedielman1.png" alt="Jeanne Dielman (still do filme)" loading="lazy" />
-          </figure>
-        )}
-
-        {slug === 'inconsciente-maquinico' && (
-          <>
-            <figure className="essay-hero-image">
-              <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconscientemaquinico1.png" alt="Capa de O Inconsciente Maquínico" loading="eager" />
-            </figure>
-            <figure className="essay-inline-image">
-              <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/guattarisorindo.png" alt="Félix Guattari" loading="lazy" />
-            </figure>
-          </>
-        )}
-
-        {slug === 'festival-ecra-2023' && (
-          <figure className="essay-hero-image">
-            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/ecra-1.png" alt="Festival Ecrã 2023" loading="lazy" />
-          </figure>
-        )}
-
-        {slug === 'uma-entrevista-em-pijamas' && (
-          <figure className="essay-inline-image">
-            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerman.png" alt="Chantal Akerman" loading="lazy" />
-          </figure>
-        )}
 
         {showTOC && (
           <nav className="essay-toc">
@@ -277,31 +249,19 @@ export function Post() {
             for (let idx = 0; idx < lines.length; idx++) {
               const line = lines[idx];
 
-              if (slug === 'uma-entrevista-em-pijamas' && line.includes('**Início**')) {
-                flushList(idx);
-                elements.push(
-                  <p key={idx} className="essay-p essay-p--centered">
-                    Início
-                  </p>
-                );
-                elements.push(
-                  <figure key={`${idx}-inline`} className="essay-inline-image">
-                    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez.png" alt="Chantal Akerman e Nicole Brenez" loading="lazy" />
-                  </figure>
-                );
-                continue;
-              }
 
               if (line.trim().startsWith('<figure')) {
                 flushList(idx);
                 let htmlBlock = line + '\n';
-                idx++;
-                while (idx < lines.length && !lines[idx].includes('</figure>')) {
-                  htmlBlock += lines[idx] + '\n';
+                if (!line.includes('</figure>')) {
                   idx++;
-                }
-                if (idx < lines.length) {
-                  htmlBlock += lines[idx];
+                  while (idx < lines.length && !lines[idx].includes('</figure>')) {
+                    htmlBlock += lines[idx] + '\n';
+                    idx++;
+                  }
+                  if (idx < lines.length) {
+                    htmlBlock += lines[idx];
+                  }
                 }
                 const srcMatch = htmlBlock.match(/src="([^"]+)"/);
                 const altMatch = htmlBlock.match(/alt="([^"]*)"/);
@@ -321,9 +281,9 @@ export function Post() {
                 continue;
               }
 
-              if (line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)) {
+              if (line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/)) {
                 flushList(idx);
-                const match = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+                const match = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
                 if (match) {
                   elements.push(
                     <figure key={idx} className="essay-inline-image">
@@ -426,12 +386,6 @@ export function Post() {
             return elements;
           })()}
         </section>
-
-        {slug === 'sobre-o-vazio-jeanne-dielman' && (
-          <figure className="essay-hero-image">
-            <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/jeannedielman2.png" alt="Jeanne Dielman" loading="lazy" />
-          </figure>
-        )}
 
         <footer className="essay-footer">
           <Link to="/escrita" className="essay-back-link">← Voltar para Escrita</Link>
