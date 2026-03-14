@@ -10,7 +10,7 @@ export function Filmografia() {
         <div className="page-header-inner">
           <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Filmografia</h1>
-          <p className="page-intro">Longas-metragens como ator.</p>
+          <p className="page-intro">Trabalhos em cinema. Presença diante da câmera como prática contínua.</p>
         </div>
       </header>
 

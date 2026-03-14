@@ -76,7 +76,7 @@ export function Escrita() {
           <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Escrita</h1>
           <p className="page-intro">
-            Entrevistas, ensaios, crítica de cinema, traduções e cadernos de processo.
+            Ensaios, entrevistas, crítica de cinema, tradução e cadernos de processo — a escrita como outra forma de atenção ao cinema.
           </p>
         </div>
       </header>

@@ -158,6 +158,10 @@ export function Home() {
                 </div>
                 <div className="hero-image-grain" aria-hidden="true" />
               </div>
+              <div className="hero-image-note" aria-hidden="true">
+                <span className="hero-image-note-line" />
+                <span className="hero-image-note-text">O corpo como membrana</span>
+              </div>
             </div>
 
           </div>

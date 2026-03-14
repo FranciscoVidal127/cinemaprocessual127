@@ -74,7 +74,7 @@
 /* ===================== ARCHIVE LIST ===================== */
 
 .escrita-archive {
-  padding: var(--space-3xl) 0 var(--space-4xl);
+  padding: var(--space-xl) 0 var(--space-4xl);
 }
 
 .escrita-loading,
@@ -97,10 +97,10 @@
   display: grid;
   grid-template-columns: 48px 1fr auto;
   gap: var(--space-xl);
-  padding: var(--space-2xl) 0 var(--space-3xl);
+  padding: var(--space-xl) 0 var(--space-2xl);
   border-bottom: 1px solid var(--border);
   align-items: start;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.2s ease;
 }
 
 .escrita-entry:last-child {
@@ -108,7 +108,7 @@
 }
 
 .escrita-entry:hover {
-  opacity: 0.85;
+  opacity: 0.78;
 }
 
 .escrita-entry-number {
@@ -158,10 +158,10 @@
 
 .escrita-entry-title {
   font-family: var(--font-serif);
-  font-size: clamp(24px, 2.8vw, 38px);
+  font-size: clamp(26px, 3vw, 44px);
   font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
   color: var(--text);
 }
 
@@ -178,11 +178,13 @@
   font-family: var(--font-serif);
   font-size: 17px;
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.78;
   color: var(--text-secondary);
   max-width: 62ch;
   letter-spacing: -0.01em;
-  margin-top: 4px;
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .escrita-entry-tags {
