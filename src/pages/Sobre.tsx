@@ -129,6 +129,37 @@ export function Sobre() {
         </div>
       </section>
 
+      <section className="sobre-encontro">
+        <div className="container">
+          <div className="sobre-encontro-inner">
+            <div className="sobre-encontro-left">
+              <span className="label">Disponibilidade</span>
+            </div>
+            <div className="sobre-encontro-right">
+              <h2 className="sobre-encontro-title">Aberto ao encontro</h2>
+              <div className="sobre-encontro-body">
+                <p>Estou em atividade contínua como ator e estou disponível para projetos de cinema — de longas e curtas de ficção a documentários e trabalhos experimentais. Tenho interesse particular em diretores com visão autoral, em projetos que levem a linguagem cinematográfica a sério.</p>
+                <p>Também escrevo sobre cinema e estou aberto a colaborações editoriais, diálogos sobre crítica e tradução, e encontros que não se enquadram em categorias óbvias.</p>
+                <p>Se o que você viu aqui ressoa com algo que você faz ou quer fazer — escreva.</p>
+              </div>
+              <div className="sobre-encontro-links">
+                <a href="mailto:franciscovidalcs@gmail.com" className="sobre-encontro-email">
+                  franciscovidalcs@gmail.com
+                </a>
+                <a
+                  href="https://www.instagram.com/franciscovidalcs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sobre-encontro-instagram"
+                >
+                  @franciscovidalcs
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

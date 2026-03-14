@@ -186,10 +186,10 @@ export function Home() {
             </div>
             <div className="home-statement-body">
               <blockquote className="home-statement-quote">
-                "O que ele procura na atuação é alta presença e escuta: o corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador."
+                "O que procuro na atuação é alta presença e escuta: o corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador."
               </blockquote>
               <p className="home-statement-text">
-                Francisco Vidal é ator e cineasta baseado no Rio de Janeiro. Sua prática atravessa a frente da câmera, a direção e a escrita — não como disciplinas separadas, mas como um único movimento de atenção ao cinema.
+                Ator e cineasta baseado no Rio de Janeiro. Minha prática atravessa a frente da câmera, a direção e a escrita — não como disciplinas separadas, mas como um único movimento de atenção ao cinema. Estou em processo contínuo, aberto a projetos que me interesse profundamente.
               </p>
               <Link to="/sobre" className="home-statement-link">
                 Trajetória completa →
@@ -298,18 +298,25 @@ export function Home() {
       <section className="home-contact">
         <div className="container">
           <div className="home-contact-inner">
-            <span className="label">Contato</span>
-            <a href="mailto:franciscovidalcs@gmail.com" className="home-contact-email">
-              franciscovidalcs@gmail.com
-            </a>
-            <a
-              href="https://www.instagram.com/franciscovidalcs/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="home-contact-social"
-            >
-              @franciscovidalcs
-            </a>
+            <div className="home-contact-text">
+              <p className="home-contact-heading">Encontro</p>
+              <p className="home-contact-body">
+                Se o que você vê aqui ressoa com um projeto, uma ideia, ou uma pergunta — escreva. Estou disponível para colaborações em cinema, diálogos sobre escrita e encontros artísticos que façam sentido.
+              </p>
+            </div>
+            <div className="home-contact-links">
+              <a href="mailto:franciscovidalcs@gmail.com" className="home-contact-email">
+                franciscovidalcs@gmail.com
+              </a>
+              <a
+                href="https://www.instagram.com/franciscovidalcs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home-contact-social"
+              >
+                @franciscovidalcs
+              </a>
+            </div>
           </div>
         </div>
       </section>

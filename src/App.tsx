@@ -93,19 +93,20 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-left">
           <p className="footer-name">Francisco Vidal</p>
+          <p className="footer-desc">Ator · Cineasta · Tradutor</p>
           <p className="footer-desc">Rio de Janeiro, Brasil</p>
         </div>
         <div className="footer-center">
-          <p className="footer-statement">Presença diante da câmera. Processo de realização. Escrita crítica. Uma prática singular, contínua.</p>
+          <p className="footer-statement">Atuação, realização, escrita — uma prática contínua e aberta ao encontro.</p>
         </div>
         <div className="footer-right">
-          <p className="footer-location">Contato</p>
+          <p className="footer-location">Escreva</p>
           <a href="mailto:franciscovidalcs@gmail.com" className="footer-email">franciscovidalcs@gmail.com</a>
           <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="footer-instagram">@franciscovidalcs</a>
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Francisco Vidal</span>
+        <span>© {new Date().getFullYear()} Francisco Vidal · Rio de Janeiro</span>
       </div>
     </footer>
   );
