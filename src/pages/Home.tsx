@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/content';
 import { supabase } from '../lib/supabase';
@@ -26,8 +26,35 @@ type Escrito = {
   origem: string;
 };
 
+function useParallax(speed = 0.18) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (ref.current) {
+            ref.current.style.transform = `translateY(${window.scrollY * speed}px)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [speed]);
+
+  return ref;
+}
+
 export function Home() {
   const [recentEscritos, setRecentEscritos] = useState<Escrito[]>([]);
+  const [heroLoaded, setHeroLoaded] = useState(false);
+  const parallaxRef = useParallax(0.18);
 
   useEffect(() => {
     async function loadPosts() {
@@ -62,80 +89,152 @@ export function Home() {
   return (
     <div className="home">
 
-      {/* ── HERO ── */}
+      {/* HERO */}
       <section className="hero">
+        <span className="hero-bg-text" aria-hidden="true">cinema</span>
+
         <div className="hero-inner">
-          <div className="hero-top">
-            <span className="hero-eyebrow label">Rio de Janeiro · Brasil</span>
-          </div>
-          <div className="hero-body">
-            <div className="hero-name-block">
-              <h1 className="hero-name">Francisco<br />Vidal</h1>
-            </div>
-            <div className="hero-right">
-              <div className="hero-image-wrap">
-                <img
-                  src={siteData.hero.image}
-                  alt="Francisco Vidal"
-                  className="hero-image"
-                />
+          <div className="hero-grid">
+
+            <div className="hero-left">
+              <div className="hero-location">
+                <span className="hero-location-dot" aria-hidden="true" />
+                <span>Rio de Janeiro · Brasil</span>
               </div>
+
+              <h1 className="hero-name">
+                <span className="hero-name-first">Francisco</span>
+                <span className="hero-name-last">Vidal</span>
+              </h1>
+
               <p className="hero-statement">
-                Presença diante da câmera, processo de realização, escrita crítica. Uma prática única, contínua.
+                Presença diante da câmera, processo de realização, escrita crítica —
+                uma prática única e contínua.
               </p>
-              <div className="hero-roles">
+
+              <div className="hero-roles" aria-label="Áreas de atuação">
                 <span>Atuação</span>
-                <span className="hero-roles-dot">·</span>
+                <span className="hero-roles-sep" aria-hidden="true">—</span>
                 <span>Realização</span>
-                <span className="hero-roles-dot">·</span>
+                <span className="hero-roles-sep" aria-hidden="true">—</span>
                 <span>Crítica</span>
-                <span className="hero-roles-dot">·</span>
+                <span className="hero-roles-sep" aria-hidden="true">—</span>
                 <span>Tradução</span>
               </div>
+
+              <nav className="hero-nav" aria-label="Navegação rápida">
+                <Link to="/reel" className="hero-nav-link">
+                  <span className="hero-nav-label">Reel</span>
+                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
+                </Link>
+                <Link to="/filmografia" className="hero-nav-link">
+                  <span className="hero-nav-label">Filmografia</span>
+                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
+                </Link>
+                <Link to="/escrita" className="hero-nav-link">
+                  <span className="hero-nav-label">Escrita</span>
+                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
+                </Link>
+                <Link to="/sobre" className="hero-nav-link">
+                  <span className="hero-nav-label">Sobre</span>
+                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
+                </Link>
+              </nav>
             </div>
+
+            <div className="hero-right">
+              <div className="hero-image-container">
+                <div className="hero-image-parallax" ref={parallaxRef}>
+                  <img
+                    src={siteData.hero.image}
+                    alt="Francisco Vidal"
+                    className={`hero-image${heroLoaded ? ' hero-image--loaded' : ''}`}
+                    onLoad={() => setHeroLoaded(true)}
+                  />
+                </div>
+                <div className="hero-image-caption" aria-hidden="true">
+                  <span>Ator · Cineasta</span>
+                  <span>Rio de Janeiro</span>
+                </div>
+                <div className="hero-image-grain" aria-hidden="true" />
+              </div>
+            </div>
+
           </div>
-          <div className="hero-nav">
-            <Link to="/reel" className="hero-nav-link">Reel →</Link>
-            <Link to="/filmografia" className="hero-nav-link">Filmografia →</Link>
-            <Link to="/escrita" className="hero-nav-link">Escrita →</Link>
-            <Link to="/sobre" className="hero-nav-link">Sobre →</Link>
+        </div>
+
+        <div className="hero-scroll-cue" aria-hidden="true">
+          <span className="hero-scroll-line" />
+        </div>
+      </section>
+
+      {/* TICKER */}
+      <div className="ticker" aria-hidden="true">
+        <div className="ticker-track">
+          {['Cinema', 'Atuação', 'Pensamento', 'Corpo', 'Processo', 'Escrita', 'Encontro', 'Presença', 'Cinema', 'Atuação', 'Pensamento', 'Corpo', 'Processo', 'Escrita', 'Encontro', 'Presença'].map((word, i) => (
+            <span key={i} className="ticker-word">{word}<span className="ticker-dot">·</span></span>
+          ))}
+        </div>
+      </div>
+
+      {/* STATEMENT */}
+      <section className="home-statement">
+        <div className="container">
+          <div className="home-statement-inner">
+            <div className="home-statement-marker">
+              <span className="label">Sobre</span>
+            </div>
+            <div className="home-statement-body">
+              <blockquote className="home-statement-quote">
+                "O que ele procura na atuação é alta presença e escuta: o corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador."
+              </blockquote>
+              <p className="home-statement-text">
+                Francisco Vidal é ator e cineasta baseado no Rio de Janeiro. Sua prática atravessa a frente da câmera, a direção e a escrita — não como disciplinas separadas, mas como um único movimento de atenção ao cinema.
+              </p>
+              <Link to="/sobre" className="home-statement-link">
+                Trajetória completa →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── FEATURED FILM ── */}
+      {/* FEATURED FILM */}
       {featuredFilme && (
         <section className="home-film">
           <div className="container">
-            <div className="home-film-inner">
-              <div className="home-film-label">
-                <span className="label">Filmografia recente</span>
-              </div>
-              <Link to={`/filme/${featuredFilme.slug}`} className="home-film-card">
-                <div className="home-film-image">
-                  <img src={featuredFilme.image} alt={featuredFilme.title} />
-                  <div className="home-film-overlay">
-                    <span>Ficha completa →</span>
-                  </div>
-                </div>
-                <div className="home-film-info">
-                  <p className="home-film-meta">
-                    {featuredFilme.year} · Dir. {featuredFilme.director}
-                  </p>
-                  <h2 className="home-film-title">{featuredFilme.title}</h2>
-                  <p className="home-film-role">{featuredFilme.role}</p>
-                  <p className="home-film-synopsis">{featuredFilme.description}</p>
-                  {featuredFilme.festivals && (
-                    <p className="home-film-festival">{featuredFilme.festivals}</p>
-                  )}
-                </div>
-              </Link>
+            <div className="home-film-header">
+              <span className="label">Filmografia recente</span>
+              <Link to="/filmografia" className="home-film-all">Ver todos →</Link>
             </div>
           </div>
+
+          <Link to={`/filme/${featuredFilme.slug}`} className="home-film-card">
+            <div className="home-film-image-wrap">
+              <img src={featuredFilme.image} alt={featuredFilme.title} className="home-film-image" />
+              <div className="home-film-image-vignette" aria-hidden="true" />
+            </div>
+            <div className="home-film-overlay-panel">
+              <div className="home-film-overlay-inner">
+                <p className="home-film-meta">
+                  {featuredFilme.year} · Dir. {featuredFilme.director}
+                </p>
+                <h2 className="home-film-title">{featuredFilme.title}</h2>
+                <p className="home-film-role">
+                  <em>{featuredFilme.role}</em>
+                </p>
+                <p className="home-film-synopsis">{featuredFilme.description}</p>
+                {featuredFilme.festivals && (
+                  <p className="home-film-festivals">{featuredFilme.festivals}</p>
+                )}
+                <span className="home-film-cta">Ficha completa →</span>
+              </div>
+            </div>
+          </Link>
         </section>
       )}
 
-      {/* ── FEATURED WRITING ── */}
+      {/* WRITING */}
       {featuredEscrito && (
         <section className="home-writing">
           <div className="container">
@@ -146,25 +245,28 @@ export function Home() {
 
             <div className="home-writing-grid">
               <Link to={`/post/${featuredEscrito.slug}`} className="home-writing-featured">
+                <span className="home-writing-num" aria-hidden="true">01</span>
                 <span className="home-writing-category">{featuredEscrito.category}</span>
                 <h2 className="home-writing-title">{featuredEscrito.title}</h2>
                 <p className="home-writing-excerpt">{featuredEscrito.excerpt}</p>
-                <div className="home-writing-meta">
-                  <span>{formatDate(featuredEscrito.date)}</span>
-                  {featuredEscrito.readTime && <span>{featuredEscrito.readTime} de leitura</span>}
+                <div className="home-writing-foot">
+                  <span className="home-writing-date">{formatDate(featuredEscrito.date)}</span>
+                  <span className="home-writing-read">Ler →</span>
                 </div>
-                <span className="home-writing-read">Ler →</span>
               </Link>
 
               {otherEscritos.length > 0 && (
                 <div className="home-writing-list">
-                  {otherEscritos.map(item => (
+                  {otherEscritos.map((item, i) => (
                     <Link key={item.id} to={`/post/${item.slug}`} className="home-writing-item">
-                      <div className="home-writing-item-top">
-                        <span className="home-writing-item-category">{item.category}</span>
-                        <span className="home-writing-item-date">{formatDate(item.date)}</span>
+                      <span className="home-writing-item-num" aria-hidden="true">0{i + 2}</span>
+                      <div className="home-writing-item-body">
+                        <div className="home-writing-item-meta">
+                          <span className="home-writing-item-category">{item.category}</span>
+                          <span className="home-writing-item-date">{formatDate(item.date)}</span>
+                        </div>
+                        <h3 className="home-writing-item-title">{item.title}</h3>
                       </div>
-                      <h3 className="home-writing-item-title">{item.title}</h3>
                     </Link>
                   ))}
                 </div>
@@ -174,22 +276,40 @@ export function Home() {
         </section>
       )}
 
-      {/* ── STRIP ── */}
-      <section className="home-strip">
+      {/* PHOTOS */}
+      <section className="home-fotos">
+        <div className="home-fotos-inner">
+          <div className="home-fotos-track">
+            {[...siteData.fotos, ...siteData.fotos].map((foto, i) => (
+              <div key={i} className="home-fotos-item">
+                <img src={foto.url} alt={foto.alt} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="container">
-          <div className="home-strip-inner">
-            <Link to="/sobre" className="home-strip-link">
-              <span className="home-strip-link-title">Trajetória</span>
-              <span className="home-strip-link-arrow">→</span>
-            </Link>
-            <Link to="/fotos" className="home-strip-link">
-              <span className="home-strip-link-title">Fotos</span>
-              <span className="home-strip-link-arrow">→</span>
-            </Link>
-            <Link to="/reel" className="home-strip-link">
-              <span className="home-strip-link-title">Reel</span>
-              <span className="home-strip-link-arrow">→</span>
-            </Link>
+          <Link to="/fotos" className="home-fotos-link">
+            Ver fotos →
+          </Link>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="home-contact">
+        <div className="container">
+          <div className="home-contact-inner">
+            <span className="label">Contato</span>
+            <a href="mailto:franciscovidalcs@gmail.com" className="home-contact-email">
+              franciscovidalcs@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/franciscovidalcs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="home-contact-social"
+            >
+              @franciscovidalcs
+            </a>
           </div>
         </div>
       </section>
