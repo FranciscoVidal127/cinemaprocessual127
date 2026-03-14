@@ -1,20 +1,25 @@
 :root {
-  --bg: #F5F4F0;
-  --bg-dark: #111110;
-  --surface: #FFFFFF;
-  --surface-elevated: #F0EFE9;
-  --surface-dark: #1C1B19;
-  --text: #111110;
-  --text-secondary: #383734;
-  --text-muted: #6B6965;
-  --text-light: #9B9895;
-  --text-inverse: #F5F4F0;
-  --border: #D9D8D2;
-  --border-subtle: #E8E7E1;
-  --border-dark: #2E2D2A;
-  --link: #111110;
-  --link-hover: #383734;
-  --accent: #8B0000;
+  --bg: #F3F1EB;
+  --bg-dark: #0E0D0C;
+  --bg-darkest: #080807;
+  --surface: #FAF9F5;
+  --surface-elevated: #EAE8E0;
+  --surface-mid: #E2DFD6;
+  --surface-dark: #191714;
+  --text: #0E0D0C;
+  --text-secondary: #2E2C28;
+  --text-muted: #5E5C57;
+  --text-light: #8A8782;
+  --text-inverse: #F3F1EB;
+  --text-inverse-dim: rgba(243, 241, 235, 0.55);
+  --border: #C8C6BF;
+  --border-subtle: #DCD9D0;
+  --border-dark: #252320;
+  --border-darkest: #1A1916;
+  --link: #0E0D0C;
+  --link-hover: #2E2C28;
+  --accent: #7A0000;
+  --accent-warm: #9C3A00;
 
   --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -28,16 +33,18 @@
   --space-2xs: 4px;
   --space-xs: 8px;
   --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 40px;
-  --space-xl: 64px;
-  --space-2xl: 96px;
-  --space-3xl: 128px;
-  --space-4xl: 180px;
+  --space-md: 28px;
+  --space-lg: 48px;
+  --space-xl: 72px;
+  --space-2xl: 108px;
+  --space-pause: 148px;
+  --space-3xl: 176px;
+  --space-4xl: 240px;
 
   --radius: 0;
-  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.10);
+  --shadow-image: 0 8px 40px rgba(0, 0, 0, 0.18);
 }
 
 * {
@@ -66,35 +73,35 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   color: var(--text);
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   font-optical-sizing: auto;
 }
 
 h1 {
-  font-size: clamp(56px, 8vw, 108px);
-  line-height: 0.96;
-  letter-spacing: -0.045em;
+  font-size: clamp(56px, 8.5vw, 116px);
+  line-height: 0.93;
+  letter-spacing: -0.05em;
 }
 
 h2 {
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1.04;
-  letter-spacing: -0.03em;
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
 }
 
 h3 {
-  font-size: clamp(24px, 3vw, 38px);
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
 h4 {
-  font-size: clamp(18px, 2vw, 22px);
-  line-height: 1.3;
-  letter-spacing: -0.015em;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.28;
+  letter-spacing: -0.018em;
 }
 
 a {
@@ -123,15 +130,35 @@ img {
   outline-offset: 3px;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-enter {
+  animation: fadeUp 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
 @media (max-width: 980px) {
-  h1 { font-size: clamp(44px, 10vw, 72px); }
-  h2 { font-size: 34px; }
-  h3 { font-size: 24px; }
+  h1 { font-size: clamp(44px, 10vw, 76px); }
+  h2 { font-size: 36px; }
+  h3 { font-size: 26px; }
   body { font-size: 15px; }
 }
 
 @media (max-width: 640px) {
-  h1 { font-size: clamp(38px, 11vw, 56px); }
-  h2 { font-size: 28px; }
-  h3 { font-size: 22px; }
+  h1 { font-size: clamp(38px, 12vw, 60px); }
+  h2 { font-size: 30px; }
+  h3 { font-size: 23px; }
 }

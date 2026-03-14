@@ -28,14 +28,14 @@
   z-index: 200;
   background-color: var(--bg);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: border-color 0.35s ease, background-color 0.35s ease;
 }
 
 .header--scrolled {
   border-bottom-color: var(--border);
-  background-color: rgba(245, 244, 240, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(243, 241, 235, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .header-inner {
@@ -197,10 +197,11 @@
 /* ===================== FOOTER ===================== */
 
 .footer {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-darkest);
   color: var(--text-inverse);
   padding: var(--space-3xl) 0 var(--space-lg);
   margin-top: auto;
+  border-top: 1px solid var(--border-darkest);
 }
 
 .footer-inner {
@@ -358,7 +359,7 @@
 }
 
 .page-header {
-  padding: var(--space-3xl) 0 var(--space-2xl);
+  padding: var(--space-pause) 0 var(--space-2xl);
   border-bottom: 1px solid var(--border);
 }
 

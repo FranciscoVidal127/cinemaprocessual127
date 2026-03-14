@@ -112,11 +112,22 @@ function Footer() {
   );
 }
 
+function PageTransition({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  return (
+    <div key={location.pathname} className="page-enter">
+      {children}
+    </div>
+  );
+}
+
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="app">
       <Header />
-      <main className="main">{children}</main>
+      <main className="main">
+        <PageTransition>{children}</PageTransition>
+      </main>
       <Footer />
     </div>
   );
