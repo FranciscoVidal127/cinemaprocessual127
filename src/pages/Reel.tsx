@@ -15,17 +15,15 @@ export function Reel() {
       </header>
 
       <section className="reel-content">
-        <div className="container">
-          <div className="reel-grid">
-            {siteData.reel.videos.map((videoUrl, index) => (
-              <div key={index} className="reel-item">
-                <YouTubeEmbed
-                  url={videoUrl}
-                  title={`Francisco Vidal — Reel ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="reel-grid">
+          {siteData.reel.videos.map((videoUrl, index) => (
+            <div key={index} className="reel-item">
+              <YouTubeEmbed
+                url={videoUrl}
+                title={`Francisco Vidal — Reel ${index + 1}`}
+              />
+            </div>
+          ))}
         </div>
       </section>
 

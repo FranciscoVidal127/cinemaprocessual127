@@ -127,7 +127,7 @@ export const siteData = {
     { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-3.jpg", alt: "Francisco Vidal - Photoshoot" },
     { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-4.jpg", alt: "Francisco Vidal - Photoshoot" },
     { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-5.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-5.jpg", alt: "Francisco Vidal - Photoshoot" }
+    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/image copy copy.png", alt: "Francisco Vidal" }
   ],
 
   escritos: [] as Escrito[],

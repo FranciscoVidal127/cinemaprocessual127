@@ -9,7 +9,7 @@
 .reel-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3px;
+  gap: 2px;
   background-color: var(--bg-dark);
 }
 

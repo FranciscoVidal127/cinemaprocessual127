@@ -554,13 +554,21 @@
     border-bottom: 1px solid var(--border);
   }
 
+  .hero-nav-link:nth-last-child(-n+2):nth-child(odd),
+  .hero-nav-link:last-child {
+    border-bottom: none;
+  }
+
   .home-film-card {
     grid-template-columns: 1fr;
   }
 
+  .home-film-image {
+    max-width: 280px;
+  }
+
   .home-film-image img {
-    aspect-ratio: 3/4;
-    max-height: 420px;
+    aspect-ratio: 2/3;
   }
 
   .home-film-inner,

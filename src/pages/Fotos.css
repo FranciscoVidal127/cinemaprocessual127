@@ -79,9 +79,12 @@
   }
 
   .foto-cell--1,
+  .foto-cell--4 {
+    aspect-ratio: 3/4;
+  }
+
   .foto-cell--2,
   .foto-cell--3,
-  .foto-cell--4,
   .foto-cell--5 {
     aspect-ratio: 4/3;
   }

@@ -48,7 +48,9 @@ export function FilmeDetail() {
   if (loading) {
     return (
       <div className="filme-detail-loading">
-        <div className="container">Carregando...</div>
+        <div className="container">
+          <p className="filme-detail-loading-text">Carregando...</p>
+        </div>
       </div>
     );
   }

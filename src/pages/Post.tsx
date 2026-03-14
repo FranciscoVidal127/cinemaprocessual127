@@ -3,6 +3,16 @@ import { Link, useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import './Post.css';
 
+function formatDate(raw: string): string {
+  if (!raw) return '';
+  if (raw.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    const [year, month, day] = raw.split('-');
+    const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+    return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
+  }
+  return raw;
+}
+
 interface PostMetadata {
   title: string;
   subtitle: string;
@@ -184,7 +194,7 @@ export function Post() {
           <div className="essay-header-inner">
             <div className="essay-eyebrow">
               <span className="essay-category">{metadata.category}</span>
-              {metadata.date && <span className="essay-date">{metadata.date}</span>}
+              {metadata.date && <span className="essay-date">{formatDate(metadata.date)}</span>}
             </div>
 
             <h1 className="essay-title">{metadata.title}</h1>

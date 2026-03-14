@@ -3,6 +3,17 @@ import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import './Escrita.css';
 
+function formatDate(raw: string): string {
+  if (!raw) return '';
+  const iso = raw.match(/^\d{4}-\d{2}-\d{2}$/);
+  if (iso) {
+    const [year, month, day] = raw.split('-');
+    const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+    return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
+  }
+  return raw;
+}
+
 type Escrito = {
   id: number;
   title: string;
@@ -112,7 +123,7 @@ export function Escrita() {
                   <div className="escrita-entry-body">
                     <div className="escrita-entry-top">
                       <span className="escrita-entry-category">{item.category}</span>
-                      <span className="escrita-entry-date">{item.date}</span>
+                      <span className="escrita-entry-date">{formatDate(item.date)}</span>
                       {item.readTime && <span className="escrita-entry-time">{item.readTime}</span>}
                       {item.origem && <span className="escrita-entry-origem">{item.origem}</span>}
                     </div>

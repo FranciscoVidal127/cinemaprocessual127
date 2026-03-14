@@ -4,6 +4,16 @@ import { siteData } from '../data/content';
 import { supabase } from '../lib/supabase';
 import './Home.css';
 
+function formatDate(raw: string): string {
+  if (!raw) return '';
+  if (raw.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    const [year, month, day] = raw.split('-');
+    const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+    return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
+  }
+  return raw;
+}
+
 type Escrito = {
   id: number;
   title: string;
@@ -140,7 +150,7 @@ export function Home() {
                 <h2 className="home-writing-title">{featuredEscrito.title}</h2>
                 <p className="home-writing-excerpt">{featuredEscrito.excerpt}</p>
                 <div className="home-writing-meta">
-                  <span>{featuredEscrito.date}</span>
+                  <span>{formatDate(featuredEscrito.date)}</span>
                   {featuredEscrito.readTime && <span>{featuredEscrito.readTime} de leitura</span>}
                 </div>
                 <span className="home-writing-read">Ler texto →</span>
@@ -152,7 +162,7 @@ export function Home() {
                     <Link key={item.id} to={`/post/${item.slug}`} className="home-writing-item">
                       <div className="home-writing-item-top">
                         <span className="home-writing-item-category">{item.category}</span>
-                        <span className="home-writing-item-date">{item.date}</span>
+                        <span className="home-writing-item-date">{formatDate(item.date)}</span>
                       </div>
                       <h3 className="home-writing-item-title">{item.title}</h3>
                     </Link>

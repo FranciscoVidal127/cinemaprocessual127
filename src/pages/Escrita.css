@@ -103,6 +103,10 @@
   transition: opacity 0.15s ease;
 }
 
+.escrita-entry:last-child {
+  border-bottom: none;
+}
+
 .escrita-entry:hover {
   opacity: 0.85;
 }
