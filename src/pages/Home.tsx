@@ -108,8 +108,8 @@ export function Home() {
               </h1>
 
               <p className="hero-statement">
-                Presença diante da câmera, processo de realização, escrita crítica —
-                uma prática única e contínua.
+                O cinema como matéria: tempo, escuta, relação.
+                Uma prática que atravessa o corpo, a câmera e a página.
               </p>
 
               <div className="hero-roles" aria-label="Áreas de atuação">
@@ -117,7 +117,7 @@ export function Home() {
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
                 <span>Realização</span>
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Crítica</span>
+                <span>Escrita</span>
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
                 <span>Tradução</span>
               </div>
@@ -171,7 +171,7 @@ export function Home() {
       {/* TICKER */}
       <div className="ticker" aria-hidden="true">
         <div className="ticker-track">
-          {['Cinema', 'Atuação', 'Pensamento', 'Corpo', 'Processo', 'Escrita', 'Encontro', 'Presença', 'Cinema', 'Atuação', 'Pensamento', 'Corpo', 'Processo', 'Escrita', 'Encontro', 'Presença'].map((word, i) => (
+          {['Cinema', 'Membrana', 'Rio de Janeiro', 'Escuta', 'Matéria', 'Processo', 'Tradução', 'Presença', 'Tempo', 'Corpo', 'Gesto', 'Cinema', 'Membrana', 'Rio de Janeiro', 'Escuta', 'Matéria', 'Processo', 'Tradução', 'Presença', 'Tempo', 'Corpo', 'Gesto'].map((word, i) => (
             <span key={i} className="ticker-word">{word}<span className="ticker-dot">·</span></span>
           ))}
         </div>
@@ -186,10 +186,10 @@ export function Home() {
             </div>
             <div className="home-statement-body">
               <blockquote className="home-statement-quote">
-                "O que procuro na atuação é alta presença e escuta: o corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador."
+                "O cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação."
               </blockquote>
               <p className="home-statement-text">
-                Ator e cineasta baseado no Rio de Janeiro. Minha prática atravessa a frente da câmera, a direção e a escrita — não como disciplinas separadas, mas como um único movimento de atenção ao cinema. Estou em processo contínuo, aberto a projetos que me interesse profundamente.
+                Ator e cineasta formado por dentro do cinema — pela pós-produção, pela tradução, pelo contato com realizadores que pensam a câmera como linguagem. O que busco na atuação é o corpo como membrana: sensível ao outro, ao espaço, ao ritmo de cada diretor. Não uma identidade fixa, mas um ator em processo permanente.
               </p>
               <Link to="/sobre" className="home-statement-link">
                 Trajetória completa →
@@ -299,9 +299,9 @@ export function Home() {
         <div className="container">
           <div className="home-contact-inner">
             <div className="home-contact-text">
-              <p className="home-contact-heading">Encontro</p>
+              <p className="home-contact-heading">Escreva</p>
               <p className="home-contact-body">
-                Se o que você vê aqui ressoa com um projeto, uma ideia, ou uma pergunta — escreva. Estou disponível para colaborações em cinema, diálogos sobre escrita e encontros artísticos que façam sentido.
+                Se o que você viu aqui ressoa com algo que você faz ou quer fazer — um projeto, uma ideia, uma pergunta sem resposta ainda — escreva. Estou em processo e aberto ao encontro.
               </p>
             </div>
             <div className="home-contact-links">

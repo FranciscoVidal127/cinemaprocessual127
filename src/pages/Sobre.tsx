@@ -5,11 +5,17 @@ export function Sobre() {
   return (
     <div className="sobre-page">
 
-      <header className="page-header">
-        <div className="page-header-inner">
-          <span className="page-eyebrow">Francisco Vidal</span>
-          <h1 className="page-title">Sobre</h1>
-          <p className="page-intro">Rio de Janeiro. Atuação, realização, escrita.</p>
+      <header className="sobre-header">
+        <div className="sobre-header-inner">
+          <div className="sobre-header-meta">
+            <span className="page-eyebrow">Rio de Janeiro · Brasil</span>
+          </div>
+          <h1 className="sobre-header-name">Francisco<br />Vidal</h1>
+          <div className="sobre-header-statement">
+            <p className="sobre-opening-line">
+              O cinema deixou de ser ideia<br />e virou matéria.
+            </p>
+          </div>
         </div>
       </header>
 
@@ -23,6 +29,39 @@ export function Sobre() {
             </div>
             <div className="sobre-bio-image">
               <img src={siteData.sobre.image} alt="Francisco Vidal" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="sobre-pratica">
+        <div className="container">
+          <div className="sobre-pratica-inner">
+            <div className="sobre-pratica-label">
+              <span className="label">Prática</span>
+            </div>
+            <div className="sobre-pratica-body">
+              <div className="sobre-pratica-item">
+                <span className="sobre-pratica-num" aria-hidden="true">I</span>
+                <div>
+                  <h3 className="sobre-pratica-title">Atuação</h3>
+                  <p className="sobre-pratica-text">Alta presença e escuta. O corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador. Não uma identidade fixa, mas um ator em processo: aprender a chegar, a adaptar, a sustentar o momento.</p>
+                </div>
+              </div>
+              <div className="sobre-pratica-item">
+                <span className="sobre-pratica-num" aria-hidden="true">II</span>
+                <div>
+                  <h3 className="sobre-pratica-title">Realização</h3>
+                  <p className="sobre-pratica-text">Entrou no cinema pela engrenagem: tradução, pós-produção, convívio com o processo. Formado por dentro — não pela escola, mas pelo contato direto com realizadores que tratam o cinema como linguagem.</p>
+                </div>
+              </div>
+              <div className="sobre-pratica-item">
+                <span className="sobre-pratica-num" aria-hidden="true">III</span>
+                <div>
+                  <h3 className="sobre-pratica-title">Escrita</h3>
+                  <p className="sobre-pratica-text">Crítica, tradução, pensamento sobre cinema. A escrita como outra forma de atenção — ao tempo da imagem, ao gesto do ator, à inteligência do realizador. Não separada da prática, mas como sua extensão reflexiva.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

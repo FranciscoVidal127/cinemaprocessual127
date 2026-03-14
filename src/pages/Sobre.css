@@ -2,6 +2,123 @@
   min-height: 70vh;
 }
 
+/* ===================== HEADER ===================== */
+
+.sobre-header {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-pause) 0 var(--space-3xl);
+  overflow: hidden;
+  position: relative;
+}
+
+.sobre-header-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-3xl);
+  align-items: end;
+}
+
+.sobre-header-meta {
+  grid-column: 1 / -1;
+  margin-bottom: var(--space-xl);
+}
+
+.sobre-header-name {
+  font-family: var(--font-serif);
+  font-size: clamp(72px, 11vw, 160px);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.055em;
+  color: var(--text);
+  grid-column: 1;
+}
+
+.sobre-header-statement {
+  grid-column: 2;
+  padding-bottom: 8px;
+  max-width: 26ch;
+  align-self: end;
+}
+
+.sobre-opening-line {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2vw, 26px);
+  font-style: italic;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--accent);
+  padding-left: var(--space-md);
+}
+
+/* ===================== PRÁTICA ===================== */
+
+.sobre-pratica {
+  padding: var(--space-3xl) 0;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--surface-elevated);
+}
+
+.sobre-pratica-inner {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.sobre-pratica-label {
+  padding-top: 6px;
+}
+
+.sobre-pratica-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sobre-pratica-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--space-md);
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.sobre-pratica-item:last-child {
+  border-bottom: none;
+}
+
+.sobre-pratica-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  padding-top: 6px;
+}
+
+.sobre-pratica-title {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}
+
+.sobre-pratica-text {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.72;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  max-width: 60ch;
+}
+
 /* ===================== BIO ===================== */
 
 .sobre-bio {
@@ -186,9 +303,9 @@
 /* ===================== ENCONTRO ===================== */
 
 .sobre-encontro {
-  padding: var(--space-3xl) 0;
-  background-color: var(--bg-dark);
-  border-top: 1px solid var(--border-dark);
+  padding: var(--space-pause) 0;
+  background-color: var(--bg-darkest);
+  border-top: 1px solid var(--border-darkest);
 }
 
 .sobre-encontro-inner {
@@ -203,7 +320,7 @@
 }
 
 .sobre-encontro-left .label {
-  color: rgba(245, 244, 240, 0.35);
+  color: rgba(243, 241, 235, 0.35);
 }
 
 .sobre-encontro-title {
@@ -229,13 +346,13 @@
   font-family: var(--font-serif);
   font-size: 18px;
   line-height: 1.75;
-  color: rgba(245, 244, 240, 0.55);
+  color: rgba(243, 241, 235, 0.55);
   letter-spacing: -0.01em;
   max-width: 56ch;
 }
 
 .sobre-encontro-body p:last-child {
-  color: rgba(245, 244, 240, 0.75);
+  color: rgba(243, 241, 235, 0.75);
   font-style: italic;
 }
 
@@ -265,18 +382,37 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 244, 240, 0.35);
+  color: rgba(243, 241, 235, 0.35);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .sobre-encontro-instagram:hover {
-  color: rgba(245, 244, 240, 0.75);
+  color: rgba(243, 241, 235, 0.75);
 }
 
 /* ===================== RESPONSIVE ===================== */
 
 @media (max-width: 980px) {
+  .sobre-header-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-header-name {
+    grid-column: 1;
+  }
+
+  .sobre-header-statement {
+    grid-column: 1;
+    max-width: none;
+    padding-bottom: 0;
+  }
+
+  .sobre-pratica-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
   .sobre-bio-grid {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);

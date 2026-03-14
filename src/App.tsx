@@ -40,7 +40,7 @@ function Header() {
       <div className="header-inner">
         <a href="/" className="nav-brand">
           <span className="nav-brand-name">Francisco Vidal</span>
-          <span className="nav-brand-sub">ator · cineasta · tradutor</span>
+          <span className="nav-brand-sub">ator · cineasta · escritor · rio de janeiro</span>
         </a>
 
         <nav className="nav-links" aria-label="Navegação principal">
@@ -93,11 +93,11 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-left">
           <p className="footer-name">Francisco Vidal</p>
-          <p className="footer-desc">Ator · Cineasta · Tradutor</p>
+          <p className="footer-desc">Ator · Cineasta · Escritor</p>
           <p className="footer-desc">Rio de Janeiro, Brasil</p>
         </div>
         <div className="footer-center">
-          <p className="footer-statement">Atuação, realização, escrita — uma prática contínua e aberta ao encontro.</p>
+          <p className="footer-statement">O cinema como matéria: tempo, montagem, escuta, relação.</p>
         </div>
         <div className="footer-right">
           <p className="footer-location">Escreva</p>
