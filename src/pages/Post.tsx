@@ -51,7 +51,7 @@ function calculateReadTime(text: string): string {
 function renderInline(text: string): React.ReactNode {
   if (!text) return null;
   const segments: React.ReactNode[] = [];
-  const regex = /(\*\*[^*]+\*\*|\*[^*]+\*|\[([^\]]+)\]\(([^)]+)\))/g;
+  const regex = /(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|\*[^*]+\*|\[([^\]]+)\]\(([^)]+)\))/g;
   let last = 0;
   let match;
   let key = 0;
@@ -61,7 +61,9 @@ function renderInline(text: string): React.ReactNode {
       segments.push(text.slice(last, match.index));
     }
     const token = match[0];
-    if (token.startsWith('**') && token.endsWith('**')) {
+    if (token.startsWith('***') && token.endsWith('***')) {
+      segments.push(<strong key={key++}><em>{token.slice(3, -3)}</em></strong>);
+    } else if (token.startsWith('**') && token.endsWith('**')) {
       segments.push(<strong key={key++}>{token.slice(2, -2)}</strong>);
     } else if (token.startsWith('*') && token.endsWith('*')) {
       segments.push(<em key={key++}>{token.slice(1, -1)}</em>);
