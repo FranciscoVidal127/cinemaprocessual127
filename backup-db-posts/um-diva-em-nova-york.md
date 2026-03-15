@@ -1,0 +1,24 @@
+---
+slug: um-diva-em-nova-york
+title: "Um Divã em Nova York (1996) — Mostra Chantal Akerman no MAM, Março 2023"
+category: Escrita
+date: "2023-03-15"
+excerpt: "Reflexões sobre a comédia romântica de Chantal Akerman e sua relação com a questão da alteridade, exibida na Mostra Chantal Akerman no MAM."
+created_at: 2026-03-14T20:18:52.050005+00:00
+---
+
+![Um Divã em Nova York (1996)](https://blogger.googleusercontent.com/img/a/AVvXsEhfHPQAJs-HIM8MjUCww5MbfD4rCjOkR-NJ7X8nlYkL8ymOrqLg0y08rc0Io4B50-AdwG26-4nfyn3HHRjH23lJMzUWNfRUyfMP4YnKUMdye8tCieu0ZwlpDCycz1tV_aXDVyLazV3fENZVmZGslPhYklPuzect2rRdYZjRDA3yEIWdIkCQwExscf4zgA)
+
+Uma comédia romântica em um estilo Nora Ephron não é a primeira coisa que associamos quando pensamos no cinema de Akerman, mas um aspecto que me marcou foi como ela se utiliza de elementos de slapstick comedy e de screwball comedy que poderiam ser encontrados em obras de Lubitsch e Hawks, com uma narrativa no qual o estranhamento dos personagens pela alteridade do cenário acaba me lembrando a um belo título de um documentário feito em 2015 sobre a cineasta: "I Don't Belong Anywhere"
+
+Porque o principal aspecto cômico desse filme é justamente a forma como os personagens da Juliette Binoche e de William Hurt lidam com uma alteridade continental, profissional, e de certa forma, de classe. Enquanto Binoche consegue subverter com uma ingenuidade infantil o caráter frio, impessoal, e frígido do ambiente do escritório psicanalista em Nova York, o personagem de Hurt se encontra em uma comédia de erros de má adaptação no ambiente doméstico e caseiro do lar da personagem em Paris, culminando em uma sequência digna de Charles Chalpin no qual um jorro de água é atirado no personagem após ele tentar consertar um cano.
+
+A beleza do filme é justamente como o olhar infantil e doce da Binoche é completamente alienígena a ambiência profissional que uma sala de divã deveria ter, ela com isso se torna ao meu ver uma Anti-Jeanne Dielman: Ela vive a vida em um estado de constante perplexidade de descoberta e de uma inventividade diária de se apropriar de elementos mais prosaicos e impessoais no dia-a-dia( de novo, lembrando Chaplin). E há um lado Jacques Tati também na forma como a tecnologia moderna de Nova York se choca com a domesticidade artesanal de Paris.
+
+O romance do filme, apesar de a primeira vista parecer algo estranho de ocorrer, é na verdade um produto dessa maneira de viver o mundo experimentada pela Binoche: Ao trazer uma inventividade de formas e uma subversão do banal ao mundo de Hurt, ela consegue resgatar ele de uma esterilização do inesperado e do desconhecido em seu universo.
+
+O filme todo é ancorado nessa questão de alteridade, alteridade de classes, profissões, papéis (O personagem de Hurt utiliza um nome falso para poder atuar como paciente para Binoche) como uma forma de experiência a vida de um outro como um processo de encenação, de performance, no qual essa "mentira" acaba levando os personagens a um entendimento tátil de novas formas de se relacionarem entre si e com o mundo.
+
+Há 2 cenas rimas que me impressionaram ao assistir o filme ontem como parte da retrospectiva do MAM, as cenas em que o personagem do William Hurt chega a Paris pela primeira vez, e o momento em que ele vaga por um bairro de Nova York para usar um telefone público para ligar para a Binoche. Nestas cenas, nós vemos pessoas do dia-a-dia, comuns, que representam uma esfera social e racial de Paris e de Nova York no qual servem ao mesmo tempo como um desvio documental e sociológico das cidades do filme, e também como uma forma de retratar a questão da alteridade que é tão importante ao filme: O William Hurt sai de seu ambiente privilegiado e de classe média alta e sua presença se tornar quase um intruso nos planos abertos em contraste com a forma espontânea e viva das pessoas "comuns" ao seu redor, essa intrusão de um aspecto documental no filme provavelmente mais comercial e tradicional da carreira de Akerman é algo impressionante.
+
+O filme pode, ao meu ver, parecer um elemento estranho na carreira de Akerman, ao incorporar modelos de referência mais convencionais e longe da experimentação estrutural e plástica de *Jeanne Dielman*, *News From Home*, e *Hotel Montery*, mas a forma como ela lida com a questão do pertencimento (ou falta de,) como sendo algo em constante movimento e no qual o contato do outro através da perfomance, da alteridade de subjetividades e estilos de vida, é algo que me marca e me comove por lidar com algo essencial do gênero da comédia-romântica: Através da performance de vivenciar a alteridade de alguém, e que finalmente conseguimos podemos nos enxergar como um outro.

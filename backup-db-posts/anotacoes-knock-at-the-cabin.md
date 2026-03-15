@@ -1,0 +1,18 @@
+---
+slug: anotacoes-knock-at-the-cabin
+title: "Anotações breves de Knock At The Cabin (2023), de M Night Shyamalan"
+category: Escrita
+date: "2023-02-04"
+excerpt: "Reflexões sobre o cinema de fé de Shyamalan e como Knock at the Cabin continua sua exploração da tensão entre razão e transcendência."
+created_at: 2026-03-14T20:18:52.050005+00:00
+---
+
+![Knock At The Cabin (2023)](https://blogger.googleusercontent.com/img/a/AVvXsEjohZ7fVJseTUTpiWWcsc6y25f7s8lOfG1LwTImSh9HT_Zd3fbTNXIQ_Fbk4BKWGEhejLQMZNIGMSsk0sg5k1fZW_3mQY01ro547ysB_m3BHNOC-NBk91fFeEQNnyRPWltvpCg7QIy9glvpHKR1wiecA1QXv6aA5ogDsSyhTWMUGTB2UBPjhKhDyh7j0g)
+
+O cinema de Shyamalan sempre teve como uma temática central a questão da fé, entre a luta de uma visão racional e ateística de eventos aparentemente extraordinários e uma resignação ao fracasso de tentar compreender racionalmente o mistério da vida, os seus personagens ao se depararem com algo absurdo, inacreditável, e fora do padrão sempre transitam entre esses dois registros de pensamento: A tentativa de racionalizar os círculos nas plantações como sendo uma pegadinha de jovens em *Sinais* (2002), a taxação inicial de esquizofrenia feita pelo médico infantil Malcolm Crowe a criança mediúnica vivida por Haley Joel Osment em *O Sexto Sentido,* e a declaração de uma personagem psicóloga ( vivida por Nikki Amuka Bird, também presente em *Batem á Porta*), após presenciar pessoas em uma praia envelhecendo um ano em uma hora em *Tempo* (2021) : "Nós devemos estar passando por uma espécie de psicose coletiva!"
+
+A luta entre uma aceitação a algo que é impossível de ser explicado e a tentativa de encaixar o inédito em "caixas" conceituais reconhecíveis anima a tensão geral de *Knock At The Cabin*, que é um dos filmes mais frontais de Shyamalan nesse sentido ao colocar os personagens principais( o casal vivido por Jonathan Groff e Ben Aldridge) como quase representantes dos dois lados dessa moeda: Enquanto o último mantêm uma postura crítica e cética a tudo que os invasores dizem( argumentando que os vídeos apocalípticos são filmagens pré-gravadas, que eles são parte de um culto suicida estilo *Heaven´s Gate)*, o outro começa a entrar em um processo de corrosão do que ele deveria identificar como a explicação mais lógica do evento, e gradualmente passa a acreditar na explicação mais fantástica.
+
+Com isso, Shyamalan continua a se afirmar como um dos poucos cineastas comerciais que lida com a questão da fé em algo transcendente a si mesmo, e o vilão dos seus filmes sempre é a tentativa de mediocrizar algo que por si só é extraordinário, o crítico de cinema em *A Dama da Água* (2006) vivido por Bob Balaban, e a psiquiatra interpretada pela Sarah Paulson em *Vidro* (2019) são as figuras mais malditas em seu cinema exatamente por sua descrença absoluta que a vida pode trazer algo novo, imprevisto, nunca visto ou pensado antes de sua aparição, e o seu cinema é luta constante em como poder representar esse milagre, seja de um menino que vê fantasmas ou de uma família que consegue averter o apocalipse.
+
+Vou rever o filme, há diversos elementos que quero refletir mais sobre( em especial como M Night é um dos poucos diretores de mise-en-scene em uma hollywood devastada pela amnesia generalizada de como compor uma imagem, uma encenação, um clima, uma atmosfera...) mas algo que me ressalta é como esse filme continua um fio que Shyamalan discute desde 1999: Em seu cinema, ter fé é ao mesmo tempo um ato de sobrevivência e resistência a padrões dominantes racionalizantes e mortificantes.

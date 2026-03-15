@@ -1,0 +1,86 @@
+---
+slug: entrevista-negro-leo-filme-livre
+title: "Entrevista com Negro Leo na 20ª Mostra Filme Livre"
+category: Entrevista
+date: "sábado, 7 de outubro de 2023"
+excerpt: "Sobre rumor, tecnologia e cinema independente"
+created_at: 2026-02-06T20:35:24.736249+00:00
+---
+
+
+*Entrevista realizada perto da Cinemateca do MAM, no dia 23 de Setembro de 2023.*
+
+**Há quanto tempo você trabalha com cinema como modo de expressão artística sua?**
+
+**NEGRO LEO**: Então, eu comecei a usar a música desde que eu era criança, bem criança mesmo. Mas, na verdade, os meus primeiros trabalhos, ou primeiras aspirações artísticas minhas, eram mais ligadas ao cinema, sabe? Tanto que eu tinha realizado um curta-metragem meu que passou na Mostra Filme Livre, acho que em uma das primeiras edições, não sei se na segunda ou terceira. E era um curta-metragem chamado [Tropa de Elite 4](https://www.youtube.com/watch?v=12pG4pW8V6Y), que eu fiz junto com uma atriz colega minha chamada Barbara Vida, eu não me lembro exatamente se a gente fez durante o lançamento do primeiro Tropa de Elite(2007), não me lembro o ano exato.
+
+E a gente fez esse filme porque naquela época havia camelôs de rua que vendiam filmes piratas, eu estudava lá no Instituto de Filosofia e Ciência Sociais da UFRJ do Rio de Janeiro, e eu me lembro de que esses camelôs já estavam vendendo várias versões diferentes de Tropa de Elite. E essas versões eram ou incursões policiais de verdade, ou gravações tiradas de outros filmes. Então havia um DVD de Tropa de Elite 2 que na verdade era uma filmagem de uma incursão policial em uma favela de Niterói, e também havia uma cópia de Tropa de Elite 3 que era nessa mesma linha. Então naquele período eu pensei: ''pô, vamos fazer o quatro então!" E aí a gente fez esse filme que foi exibido em uma das primeiras edições da Mostra do Filme Livre. Então o que eu quero dizer é que o cinema na verdade entrou primeiro como uma inspiração profissional na minha vida do que a música, sabe? Mesmo que eu tocasse violão desde os meus 15, 16 anos.
+
+**Como foi trabalhar em conjunto com os cineastas Gregório Gananian (*Nenhuma Fantasia, A Guerra de Michael*) e Paula Gáitan (*É Rocha e Rio, Negro Léo*), nesses três filmes que estão sendo exibidos na Mostra Filme Livre de 2023?**
+
+**NEGRO LEO**: Ah! a Paula é a minha sogra, eu tenho uma admiração muito grande por ela e a gente tem uma intimidade familiar que faz com que as coisas fluem de uma maneira muito natural, né? E o Greg é o meu amigo, a gente se conhece há muitos anos, há mais de uma década, e eu também tenho uma admiração e respeito muito grandes com ele e as ideias dele. Então, é natural trabalhar para mim eu trabalhar com a Paula e o Gregório, e são processos diferentes: nos filmes com o Greg a gente trabalha dividindo a criação, né? E no caso do *É Rocha e Rio, Negro Léo (2020)* eu sou, vamos dizer assim, o ''documentado.'' Então é uma relação diferente de trabalho nesses filmes.
+
+**Eu queria perguntar a você sobre a questão de um cinema de gênero, quando o Gregório apresentou o Nenhuma Fantasia na abertura da Mostra Filme Livre ele falou ser um filme de ''entretenimento,'' e eu queria te perguntar porque tem uma menção breve sua no É Rocha e Rio, Negro Léo do escritor Phillip K. Dick, e eu sei que atualmente você está trabalhando com o cineasta João Dumans em um longa de ficção científica que se passa na China. Como você vê a questão de gênero, ou de ficção científica, na sua concepção de cinema?**
+
+No *Nenhuma Fantasia* a gente planejava fazer um filme de ficção científica, mas a gente descobriu que tudo que a gente iria abordar no filme está acontecendo agora. Transferência de cérebro para servidores, para máquinas, para computadores. Memórias armazenadas em servidores de empresas, como é o caso da *Nectome* (empresa norte-americana que propõe armazenar digitalmente memórias após a morte de um indivíduo.) Então o filme perdeu essa característica de ser uma ficção sobre uma ideia de futuro tecnológico, porque essas coisas já estão acontecendo. Então ele ficou super atual, na verdade.
+
+E sabe, se você olhar para a literatura de ficção científica que era produzida nos anos 50, por exemplo, as coisas que os caras estavam pensando são coisas que estão acontecendo agora, né? No nosso caso a gente começou pensando ideias que caminhavam um pouco além desse tipo de fabulação e que agora na verdade são elementos bem reais dentro do nosso mundo. Então eu acho que eu não posso falar sobre ficção científica, dentro desse filme específico, porque ele não é mais sobre ficção cientifica.
+
+Na verdade, eu nem sei se tenho um grande interesse por ficção científica em si, o que aconteceu é que o Greg me emprestou uma vez um livro de contos do Phillip K. Dick e eu amei esse livro, eu achei incrível as estórias, essa capacidade imaginativa que o autor trazia. Como ele conseguiu imaginar umas coisas inacreditáveis. E esses textos que ele escreveu na década de 60 e 70 acabaram virando filmes, tipo *O Vingador do Futuro (1990)* e o *Minority Report (2001)*, e acho que deve ter outros títulos que estão me escapando, mas a obra dele foi adaptada ao cinema.
+
+**Eu achei interessante trazer essa questão de gênero porque uma característica de Nenhuma Fantasia é dele ser, para mim, um filme bem engraçado. Então eu queria perguntar sobre a questão do humor, e o que o Gregório havia trazido na entrevista dele de um conceito de ''rumor.''**
+
+**NEGRO LEO**: É, o ''rumor,'' né? A gente batizou esses filmes de rumor porque, de certa forma, a gente vive numa sociedade... e quando eu digo ''sociedade'' eu estou querendo colocar as coisas em uma mesma dimensão, em uma mesma camada, por maior que sejam as diferenças culturais, entendeu? Existem aspectos de infraestrutura no mundo que sobrepõe-se as realidades diversas. Tipo, os chineses tomam água quente, mas a água quente deles é produzida pela mesma máquina que produz essa água para nós. Então esse conceito de ''rumor'' pintou com essa ideia de relação, dessa coisa de sociedade e das informações e tal.
+
+E o que é  o ''rumor''? O humor é evidente, ele aparece no filme, mas o rumor são as estórias que o filme conta, que são estórias que não são bem encontradas. No rumor você não sabe exatamente se uma coisa é aquilo ou não é. As coisas são indeterminadas. É quase como a visão de um míope, a minha visão, você não consegue determinar exatamente o que você está vendo. Se eu tiro os meus óculos, eu não consigo entender a distância, não consigo entender se aquela figura é uma pessoa ou um quadro, sabe? Aí você tem que dizer que a pessoa está, sei lá, há quase 10 metros de distância da gente, ou mais, talvez. Então é sobre esse momento de total imprecisão, da gente não saber se essas coisas são o que elas são.
+
+Por exemplo, outro dia eu estava conversando com um amigo meu, e ele me contou um enigma muito interessante, lógico: imagina que uma pessoa morre e chega no céu, essa pessoa deixou sua família, seus filhos, atrás na terra. E de repente Deus aparece e essa pessoa fala para ele que quer voltar, e Deus responde para ela que ela tem as opções de ir para o inferno, ir para o céu, ou voltar para sua família. E a questão do enigma é essa: se essa pessoa falar uma afirmação verdadeira, ela vai para o céu, se ela falar uma afirmação falsa, vai para o inferno. E se ela disser algo que Deus não consegue entender se é verdadeira ou falsa, ela volta para sua família na Terra.
+
+E nessa estória, essa pessoa afirma que vai para o inferno, e Deus vê essa afirmação como uma afirmação positiva, sabe? Ele pensa: *'Pô, se essa afirmação é verdadeira, então eu preciso enviar ele ao paraíso.'* E aí ela vai para o céu, e depois Deus fica *"Porra!"* porque aquela afirmação seria em si falsa, já que ela tinha falado que iria para o inferno. Então Deus acaba chegando na conclusão que não sabe se aquela informação era verdadeira ou falsa, e precisa mandar ela de volta para Terra.
+
+Então esse enigma se liga ao conceito de rumor porque o grande lance do rumor é justamente essa imprecisão. E eu acho que a gente quer fazer filmes que sejam sobre isso. No caso do filme da China ele também é sobre imprecisão, mais no nível das tecnologias e usos das tecnologias do que as implicações que elas trazem em si. A gente não sabe nada sobre o que vai acontecer direito quando a gente começa algo, e é mais ou menos esse o nosso lance. 
+
+**Como você vê a questão da tecnologia no filme e em sua trabalho artístico?** 
+
+**NEGRO LEO**: A tecnologia não tem jeito, ela é a roupa e os óculos que você usa. A gente tá gravando nossas vidas, e essa entrevista, usando um celular. Então a tecnologia é uma extensão de tudo hoje em dia, de todas as nossas faculdades sensoriais, e isso é inevitável sabe? Tudo ao nosso redor é tecnologia. 
+
+Aliás, se a voltar bem atrás para o tempo dos primeiros hominídeos, quando eles realizavam pintura rupestre eles estavam realmente criando uma tecnologia de representação, né? Porque quando eles pintavam uma pintura rupestre numa caverna eles estavam criando uma conexão ''além do fato.'' Por exemplo: se uma pintura mostra um boi que de repente é atingindo por um raio no meio do progresso da pintura, aquilo é uma história que está sendo contada, mas também aquilo se torna algo além do ''fato'' material que aconteceu concretamente. Então se torna uma tecnologia de representação do mundo. 
+
+Mas o que eu queria te dizer sobre tecnologia que é isso, a tecnologia tá aí, porra, eu faço música ainda de maneira muito... , claro que eu uso e tal a tecnologia para fazer as coisas. O violão é um é um objeto tecnológico, né? As coisas têm pensamento, tem ciência investida nas coisas.
+
+E a tecnologia está aqui, sempre. O violão é um objeto tecnológico, as coisas, esses elementos materiais, elas têm um pensamento e ciência investida no interior delas. Mas isso não é uma coisa que eu fico me prendendo muito, eu não fico pensando: *"como é que a tecnologia implica com meu trabalho?"* porque eu acho que ela implica com tudo, em geral. O ônibus é uma tecnologia que a pessoa saí do trabalho para pegar, entendeu? O asfalto também é tecnologia, qualquer coisa pode ser, esse agrupamento de pedras ao nosso redor... eu não saberia o que dizer sobre tecnologia sem falar que ela está em tudo mesmo.
+
+Agora, as ferramentas que eu utilizo para fazer a minha música ainda são ferramentas lá dos anos 90. Eu não fico *up-to-date* com as coisas da tecnologia em si, quero dizer, com as coisas novas que estão sendo empregadas talvez eu não esteja muito *up-to-date.* Não só essas coisas novas que estão sendo usadas para fazer música, mas também para gravações e tal. Essas coisas novas eu confesso que ainda estou com uma relação um pouco anacrônica.
+
+**A minha última pergunta que quero fazer é sobre a Mostra do Filme Livre em si, você mencionou a exibição de Tropa de Elite 4 em uma das primeiras edições do festival, então eu queria saber como você vê a importância dessa mostra não apenas para você individualmente, mas para uma espécie de cinema brasileiro independente? E seguindo essa linha: você pensa em continuar desenvolvendo novos projetos especificamente para o cinema?**
+
+**NEGRO LEO**: Cara, o cinema é uma loucura, né? O cinema entrou na minha vida assim por acaso, muito lá atrás. Porque eu devo ter assistido alguma coisa que deve ter me emocionado, as coisas na vida são assim, né? Eu tinha um grupo de amigos na faculdade, e posso citar nominalmente dois nomes importantes: o Ricardo Pita e o Luiz Augusto. E eles, evidentemente, foram importantes porque você sempre precisa ter alguém para reforçar ou criar alguma ressonância desse contato afetivo, quando uma coisa te emociona tem que ter alguém para compartilhar esse afeto, né? E então eu ia com esses amigos para sessões na Cinemateca do MAM no período de 2002 a 2009, enquanto o Gilberto Santeiro ainda ele ainda era curador da Cinemateca e organizava as mostras e exibições. 
+
+E, conforme eu te disse antes, eu comecei primeiro com cinema até mesmo antes que a música. Mas eu não tenho grandes... eu não tenho grandes pretensões com o cinema nesse sentido. Eu realizei e participei desses filmes, mas não é uma coisa que eu... eu acho que as pessoas, o público em si, nem me reconhece socialmente como cineasta, né? Porque de certa forma você precisa desse tipo de reconhecimento social para levar alguma coisa adiante, entendeu? Senão você não é, você só é aquilo pelo que você é reconhecido. As pessoas olham para mim e veem um músico, um artista musical e não um artista de cinema.
+
+Então eu não sei se tenho essa relevância no campo do cinema, e eu faço essas coisas que eu faço porque eu gosto de fazer, eu gosto de pensar o cinema e pensar imagens, embora eu não me considere um cara com uma sensibilidade visual apurada o suficientemente para poder montar uma coisa com a outra, para poder criar signos com as imagens entendeu? É um paradoxo: como é que o cara que não tem sensibilidade visual consegue, ou ao menos aspira, a fazer cinema? Porque esse é meu caso. Então eu não tenho grandes ambições no campo de cinema, eu tô fazendo minhas coisas simplesmente porque eu estou fazendo. Acho que não tenho grandes ambições com nada, nem com música ou com cinema, só acho que sou na verdade um cara de muita sorte, é isso.
+
+Sobre a Mostra do Filme Livre, ela tá aqui por muitos anos, né? O Tropa de Elite 4 a gente deve ter feito em 2007 ou 2008, então ele foi exibido na quarta ou quinta edição da Mostra do Filme Livre. Eu acho muito importante a existência dela, e a quantidade de filmes que ela tá exibindo. Eu só acho uma pena que as sessões estejam vazias, mas acho que é uma coisa geracional mesmo, cada geração muda. Na minha geração tinha gente que ia muito mais ao cinema porque porra, não havia celular! Não tinha celular e a internet ainda era um negócio precário de se utilizar, sabe? Ela ainda era simples, e fazia um barulho horrível. 
+
+E hoje em dia as pessoas assistem filmes de menos de um minuto, no TikTok, por exemplo. Então a sensibilidade do público foi reformatada para um outro tipo de experiência de tempo no cinema. O tempo para as pessoas é mais rápido, não dá para um filme com planos longos, de uma hora e meia ou duas horas, competir com algo de 20, 30 segundos. Então vira uma questão de acessibilidade dessa nova geração, tanto que se você vê o público que estava aqui, era com certeza na faixa etária de 30 anos pra mais mesmo. Então é isso aí.
+
+
+<figure>
+<img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-1.jpg" alt="Fotografia de Negro Leo" />
+</figure>
+
+<figure>
+<img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-2.jpg" alt="Fotografia de Negro Leo" />
+</figure>
+
+<figure>
+<img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-3.jpg" alt="Fotografia de Negro Leo" />
+</figure>
+
+<figure>
+<img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-4.jpg" alt="Fotografia de Negro Leo" />
+</figure>
+
+<figure>
+<img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-5.jpg" alt="Fotografia de Negro Leo" />
+</figure>
