@@ -202,33 +202,25 @@ export function Home() {
           <div className="home-stills-grid">
             <div className="home-stills-item home-stills-item--primary">
               <img
-                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg"
-                alt="Francisco Vidal como Fábio em O Mundo dos Mortos"
+                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png"
+                alt="Francisco Vidal"
                 loading="lazy"
               />
-              <div className="home-stills-caption">
-                <span className="home-stills-role">Fábio</span>
-                <span className="home-stills-film">O Mundo dos Mortos · dir. Pedro Tavares</span>
-              </div>
             </div>
             <div className="home-stills-stack">
               <div className="home-stills-item">
                 <img
-                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg"
-                  alt="Francisco Vidal em O Mundo dos Mortos"
+                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
+                  alt="Francisco Vidal"
                   loading="lazy"
                 />
               </div>
               <div className="home-stills-item">
                 <img
-                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Captura_de_tela_de_2026-02-10_07-41-26.png"
-                  alt="Francisco Vidal como Espectro F. em O Inspetor Geral"
+                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
+                  alt="Francisco Vidal"
                   loading="lazy"
                 />
-                <div className="home-stills-caption">
-                  <span className="home-stills-role">Espectro F.</span>
-                  <span className="home-stills-film">O Inspetor Geral · dir. Gregório Gananian</span>
-                </div>
               </div>
             </div>
           </div>
