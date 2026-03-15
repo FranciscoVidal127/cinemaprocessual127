@@ -3,18 +3,19 @@
 }
 
 .reel-content {
-  padding: var(--space-3xl) 0;
+  padding: 0;
+  background-color: var(--bg-darkest);
 }
 
 .reel-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  background-color: var(--bg-dark);
+  gap: 1px;
+  background-color: var(--border-darkest);
 }
 
 .reel-item {
-  background-color: #0a0a09;
+  background-color: #0a0908;
 }
 
 .video-wrapper {

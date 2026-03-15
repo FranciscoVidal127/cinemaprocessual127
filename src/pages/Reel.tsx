@@ -10,7 +10,7 @@ export function Reel() {
         <div className="page-header-inner">
           <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Reel</h1>
-          <p className="page-intro">Seleção de trabalhos recentes em cinema.</p>
+          <p className="page-intro">Cenas e presença. O corpo diante da câmera como prática — não como demonstração, mas como relação.</p>
         </div>
       </header>
 

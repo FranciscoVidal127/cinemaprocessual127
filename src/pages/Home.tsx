@@ -108,8 +108,7 @@ export function Home() {
               </h1>
 
               <p className="hero-statement">
-                O cinema como matéria: tempo, escuta, relação.
-                Uma prática que atravessa o corpo, a câmera e a página.
+                Entrou no cinema pela engrenagem — tradução, montagem, pós-produção. Agora está diante da câmera. O corpo como membrana. O gesto como linguagem.
               </p>
 
               <div className="hero-roles" aria-label="Áreas de atuação">
@@ -303,9 +302,12 @@ export function Home() {
         <div className="container">
           <div className="home-contact-inner">
             <div className="home-contact-text">
-              <p className="home-contact-heading">Escreva</p>
+              <p className="home-contact-heading">Escreva.</p>
               <p className="home-contact-body">
-                Se o que você viu aqui ressoa com algo que você faz ou quer fazer — um projeto, uma ideia, uma pergunta sem resposta ainda — escreva. Estou em processo e aberto ao encontro.
+                Um projeto, uma ideia, uma pergunta ainda sem resposta — se o que você viu aqui ressoa com algo que você faz ou quer fazer, escreva. Estou em processo e aberto ao encontro.
+              </p>
+              <p className="home-contact-sub">
+                Rio de Janeiro · disponível para projetos de cinema
               </p>
             </div>
             <div className="home-contact-links">

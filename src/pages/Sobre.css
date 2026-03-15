@@ -7,7 +7,7 @@
 .sobre-header {
   background-color: var(--bg);
   border-bottom: 1px solid var(--border);
-  padding: var(--space-pause) 0 var(--space-3xl);
+  padding: var(--space-2xl) 0 0;
   overflow: hidden;
   position: relative;
 }
@@ -18,37 +18,40 @@
   padding: 0 var(--space-lg);
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: var(--space-3xl);
+  gap: var(--space-2xl);
   align-items: end;
 }
 
 .sobre-header-meta {
   grid-column: 1 / -1;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .sobre-header-name {
   font-family: var(--font-serif);
-  font-size: clamp(72px, 11vw, 160px);
+  font-size: clamp(80px, 13vw, 180px);
   font-weight: 400;
-  line-height: 0.85;
-  letter-spacing: -0.055em;
+  line-height: 0.84;
+  letter-spacing: -0.06em;
   color: var(--text);
   grid-column: 1;
+  padding-bottom: var(--space-xl);
 }
 
 .sobre-header-statement {
   grid-column: 2;
-  padding-bottom: 8px;
-  max-width: 26ch;
+  padding-bottom: var(--space-xl);
+  max-width: 28ch;
   align-self: end;
+  border-left: 1px solid var(--border);
+  padding-left: var(--space-xl);
 }
 
 .sobre-opening-line {
   font-family: var(--font-serif);
-  font-size: clamp(18px, 2vw, 26px);
+  font-size: clamp(18px, 1.9vw, 24px);
   font-style: italic;
-  line-height: 1.45;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   color: var(--text-secondary);
   border-left: 2px solid var(--accent);
@@ -103,9 +106,9 @@
 
 .sobre-pratica-title {
   font-family: var(--font-serif);
-  font-size: clamp(22px, 2.5vw, 32px);
+  font-size: clamp(24px, 2.8vw, 36px);
   font-weight: 400;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   color: var(--text);
   margin-bottom: var(--space-sm);
 }
@@ -143,9 +146,15 @@
 .sobre-bio-text p {
   font-family: var(--font-serif);
   font-size: 20px;
-  line-height: 1.75;
+  line-height: 1.78;
   color: var(--text-secondary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
+}
+
+.sobre-bio-text p:first-child {
+  font-size: 22px;
+  color: var(--text);
+  font-style: italic;
 }
 
 .sobre-bio-image {
@@ -325,10 +334,10 @@
 
 .sobre-encontro-title {
   font-family: var(--font-serif);
-  font-size: clamp(32px, 4.5vw, 60px);
+  font-size: clamp(40px, 5.5vw, 76px);
   font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1.0;
+  letter-spacing: -0.045em;
+  line-height: 0.97;
   color: var(--text-inverse);
   margin-bottom: var(--space-xl);
 }
@@ -345,15 +354,16 @@
 .sobre-encontro-body p {
   font-family: var(--font-serif);
   font-size: 18px;
-  line-height: 1.75;
-  color: rgba(243, 241, 235, 0.55);
+  line-height: 1.8;
+  color: rgba(242, 240, 233, 0.5);
   letter-spacing: -0.01em;
   max-width: 56ch;
 }
 
 .sobre-encontro-body p:last-child {
-  color: rgba(243, 241, 235, 0.75);
+  color: rgba(242, 240, 233, 0.78);
   font-style: italic;
+  font-size: 19px;
 }
 
 .sobre-encontro-links {
@@ -400,12 +410,16 @@
 
   .sobre-header-name {
     grid-column: 1;
+    font-size: clamp(64px, 14vw, 120px);
+    padding-bottom: var(--space-lg);
   }
 
   .sobre-header-statement {
     grid-column: 1;
     max-width: none;
-    padding-bottom: 0;
+    padding-bottom: var(--space-xl);
+    border-left: none;
+    padding-left: 0;
   }
 
   .sobre-pratica-inner {

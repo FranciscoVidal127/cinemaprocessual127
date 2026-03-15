@@ -1,25 +1,25 @@
 :root {
-  --bg: #F3F1EB;
-  --bg-dark: #0E0D0C;
-  --bg-darkest: #080807;
+  --bg: #F2F0E9;
+  --bg-dark: #0C0B0A;
+  --bg-darkest: #070706;
   --surface: #FAF9F5;
-  --surface-elevated: #EAE8E0;
-  --surface-mid: #E2DFD6;
-  --surface-dark: #191714;
-  --text: #0E0D0C;
-  --text-secondary: #2E2C28;
-  --text-muted: #5E5C57;
-  --text-light: #8A8782;
-  --text-inverse: #F3F1EB;
-  --text-inverse-dim: rgba(243, 241, 235, 0.55);
-  --border: #C8C6BF;
-  --border-subtle: #DCD9D0;
-  --border-dark: #252320;
-  --border-darkest: #1A1916;
-  --link: #0E0D0C;
-  --link-hover: #2E2C28;
-  --accent: #7A0000;
-  --accent-warm: #9C3A00;
+  --surface-elevated: #E8E5DC;
+  --surface-mid: #DFDbd0;
+  --surface-dark: #161412;
+  --text: #0C0B0A;
+  --text-secondary: #2A2824;
+  --text-muted: #5A5853;
+  --text-light: #86837E;
+  --text-inverse: #F2F0E9;
+  --text-inverse-dim: rgba(242, 240, 233, 0.55);
+  --border: #C4C2BB;
+  --border-subtle: #D8D5CC;
+  --border-dark: #232220;
+  --border-darkest: #181614;
+  --link: #0C0B0A;
+  --link-hover: #2A2824;
+  --accent: #6B0000;
+  --accent-warm: #8E3200;
 
   --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -42,9 +42,9 @@
   --space-4xl: 240px;
 
   --radius: 0;
-  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.10);
-  --shadow-image: 0 8px 40px rgba(0, 0, 0, 0.18);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.07);
+  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-image: 0 8px 40px rgba(0, 0, 0, 0.22);
 }
 
 * {
@@ -133,7 +133,7 @@ img {
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -147,7 +147,7 @@ img {
 }
 
 .page-enter {
-  animation: fadeUp 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 @media (max-width: 980px) {

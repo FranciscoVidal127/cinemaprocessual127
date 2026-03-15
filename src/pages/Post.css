@@ -20,10 +20,11 @@
   top: 0;
   left: 0;
   height: 1px;
-  background-color: var(--text-muted);
+  background-color: var(--accent);
   z-index: 300;
-  transition: width 0.15s linear;
+  transition: width 0.1s linear;
   pointer-events: none;
+  opacity: 0.85;
 }
 
 /* ===================== POST NAV ===================== */
@@ -56,7 +57,7 @@
 /* ===================== HEADER ===================== */
 
 .essay-header-wrap {
-  padding: var(--space-3xl) 0 var(--space-2xl);
+  padding: var(--space-2xl) 0 var(--space-xl);
   border-bottom: 1px solid var(--border);
 }
 
@@ -93,10 +94,10 @@
 
 .essay-title {
   font-family: var(--font-serif);
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(36px, 5vw, 68px);
   font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
   color: var(--text);
 }
 
@@ -239,11 +240,11 @@
 .essay-p {
   font-family: var(--font-serif);
   font-size: 19px;
-  line-height: 1.78;
+  line-height: 1.82;
   color: var(--text-secondary);
-  letter-spacing: -0.01em;
-  margin-bottom: 1.6em;
-  max-width: 66ch;
+  letter-spacing: -0.012em;
+  margin-bottom: 1.65em;
+  max-width: 65ch;
 }
 
 .essay-p:last-child {
@@ -306,12 +307,12 @@
   font-family: var(--font-serif);
   font-size: 20px;
   font-style: italic;
-  line-height: 1.75;
+  line-height: 1.78;
   color: var(--text-secondary);
-  padding: 16px 0 16px 32px;
-  border-left: 1px solid var(--text-muted);
-  margin-bottom: 1.6em;
-  max-width: 60ch;
+  padding: 18px 0 18px 32px;
+  border-left: 2px solid var(--accent);
+  margin-bottom: 1.8em;
+  max-width: 58ch;
   letter-spacing: -0.01em;
 }
 

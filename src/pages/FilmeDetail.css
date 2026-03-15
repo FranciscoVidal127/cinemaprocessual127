@@ -83,10 +83,10 @@
 
 .filme-detail-title {
   font-family: var(--font-serif);
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: clamp(44px, 6vw, 88px);
   font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1.0;
+  letter-spacing: -0.05em;
+  line-height: 0.96;
   color: var(--text);
 }
 
@@ -128,10 +128,12 @@
   font-family: var(--font-serif);
   font-size: 19px;
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.78;
   color: var(--text-secondary);
-  letter-spacing: -0.01em;
-  max-width: 58ch;
+  letter-spacing: -0.012em;
+  max-width: 56ch;
+  border-left: 2px solid var(--accent);
+  padding-left: var(--space-md);
 }
 
 .filme-detail-festival,
