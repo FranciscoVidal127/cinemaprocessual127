@@ -120,6 +120,12 @@ export function FilmeDetail() {
                     <span className="filme-detail-meta-value">{filme.duration}</span>
                   </div>
                 )}
+                {filme.productionCompanies && filme.productionCompanies.length > 0 && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">Produtoras</span>
+                    <span className="filme-detail-meta-value">{filme.productionCompanies.join(', ')}</span>
+                  </div>
+                )}
               </div>
 
               <div className="filme-detail-divider" />
@@ -135,10 +141,31 @@ export function FilmeDetail() {
                 </div>
               )}
 
-              {filme.cast && filme.cast.length > 0 && (
-                <div className="filme-detail-cast">
+              {filme.producers && filme.producers.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">Produção</span>
+                  <p className="filme-detail-crew-names">{filme.producers.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.castPrincipal && filme.castPrincipal.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">Elenco Principal</span>
+                  <p className="filme-detail-crew-names">{filme.castPrincipal.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.castSecundario && filme.castSecundario.length > 0 && (
+                <div className="filme-detail-crew-block">
                   <span className="label">Elenco</span>
-                  <p>{filme.cast.join(', ')}</p>
+                  <p className="filme-detail-crew-names">{filme.castSecundario.join(', ')}</p>
+                </div>
+              )}
+
+              {!filme.castPrincipal && filme.cast && filme.cast.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">Elenco</span>
+                  <p className="filme-detail-crew-names">{filme.cast.join(', ')}</p>
                 </div>
               )}
             </div>

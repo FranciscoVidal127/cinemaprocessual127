@@ -25,6 +25,10 @@ type Filme = {
   description: string;
   image: string;
   cast: string[];
+  castPrincipal?: string[];
+  castSecundario?: string[];
+  producers?: string[];
+  productionCompanies?: string[];
   stills: Still[];
   scenes: Scene[];
 };
@@ -115,7 +119,11 @@ export const siteData = {
       festivals: "",
       description: "Adaptação cinematográfica da clássica peça de Nikolai Gogol sobre corrupção e engano na Rússia czarista.",
       image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/INSPETORIMAGEM.png",
-      cast: ["Clara Choveaux", "Ivon Patrócínio", "Cláudia Ohana", "Francisco Vidal"],
+      cast: [],
+      castPrincipal: ["Clara Choveaux", "Ivon Patrocínio"],
+      castSecundario: ["Cláudia Ohana", "Elder Gama (Catraca)", "Ewerton Belico", "Francisco Vidal", "José Roberto Aguilar", "Marcelo Ariel", "Negro Léo", "Paulo Jordão", "Renan Rovida", "Rosângela Baptista Ignacio", "Sérgio Villafranca", "Silvana Stein", "Thiago Matéria", "Toni Nogueira", "Viviane Ferreira", "Walter Figueiredo"],
+      producers: ["Marisa Merlo", "Gregório Gananian", "Clara Choveaux"],
+      productionCompanies: ["Anacoluto", "Zaum", "Satyros"],
       stills: [],
       scenes: []
     }
