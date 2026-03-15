@@ -5,9 +5,8 @@
 /* ===================== CONTROLS ===================== */
 
 .escrita-controls {
-  padding: var(--space-lg) 0;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--bg);
+  padding: var(--space-lg) 0 var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .escrita-controls-inner {
@@ -26,14 +25,14 @@
 }
 
 .escrita-cat-btn {
-  font-family: var(--font-serif);
-  font-size: 17px;
+  font-family: var(--reading-font, 'Cormorant Garamond', serif);
+  font-size: 18px;
   font-style: italic;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
   color: var(--text-light);
   background: none;
   border: none;
-  padding: 4px 20px 4px 0;
+  padding: 4px 22px 4px 0;
   cursor: pointer;
   transition: color 0.2s ease;
   line-height: 1.4;
@@ -46,14 +45,12 @@
 .escrita-cat-btn.active {
   color: var(--text);
   font-style: normal;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  font-weight: 500;
 }
 
 .escrita-search {
-  font-family: var(--font-serif);
-  font-size: 16px;
+  font-family: var(--reading-font, 'Cormorant Garamond', serif);
+  font-size: 17px;
   font-style: italic;
   color: var(--text);
   background: none;
@@ -83,8 +80,8 @@
 
 .escrita-loading,
 .escrita-empty {
-  font-family: var(--font-serif);
-  font-size: 18px;
+  font-family: var(--reading-font, 'Cormorant Garamond', serif);
+  font-size: 19px;
   font-style: italic;
   color: var(--text-muted);
   padding: var(--space-2xl) 0;
@@ -94,20 +91,21 @@
 .escrita-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-subtle);
 }
 
 /* ===================== ENTRY ===================== */
 
 .escrita-entry {
   display: grid;
-  grid-template-columns: 52px 1fr auto;
+  grid-template-columns: 48px 1fr auto;
   gap: var(--space-xl) var(--space-lg);
-  padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--border);
+  padding: clamp(36px, 4vw, 56px) 0;
+  border-bottom: 1px solid var(--border-subtle);
   align-items: start;
   text-decoration: none;
   color: inherit;
+  transition: opacity 0.25s ease;
 }
 
 .escrita-entry:last-child {
@@ -115,25 +113,25 @@
 }
 
 .escrita-entry--soon {
-  opacity: 0.52;
+  opacity: 0.45;
 }
 
-/* Ghost ordinal — compositional anchor, not a label */
+/* Ghost ordinal */
 
 .escrita-entry-number {
   font-family: var(--font-mono);
-  font-size: clamp(24px, 2.6vw, 40px);
+  font-size: clamp(18px, 2vw, 28px);
   letter-spacing: -0.04em;
-  color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.045);
   line-height: 1;
-  padding-top: 10px;
+  padding-top: 12px;
   font-weight: 400;
   user-select: none;
-  transition: color 0.35s ease;
+  transition: color 0.4s ease;
 }
 
 .escrita-entry:hover .escrita-entry-number {
-  color: rgba(0, 0, 0, 0.09);
+  color: rgba(0, 0, 0, 0.08);
 }
 
 /* ===================== ENTRY BODY ===================== */
@@ -147,48 +145,44 @@
 .escrita-entry-top {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
-
-/* Category — names the intellectual register */
 
 .escrita-entry-category {
   font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.14em;
+  font-size: 9px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
 }
 
-/* Origem — publication credential, clearly distinguished */
-
 .escrita-entry-origem {
-  font-family: var(--font-serif);
-  font-size: 13px;
+  font-family: var(--reading-font, 'Cormorant Garamond', serif);
+  font-size: 13.5px;
   font-style: italic;
   color: var(--text-secondary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
 }
 
 .escrita-entry-date,
 .escrita-entry-time {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-light);
 }
 
-/* Title — the primary magnet of each entry */
+/* Title */
 
 .escrita-entry-title {
   font-family: var(--font-serif);
-  font-size: clamp(26px, 2.8vw, 44px);
+  font-size: clamp(28px, 3vw, 48px);
   font-weight: 400;
-  letter-spacing: -0.038em;
-  line-height: 1.06;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
   color: var(--text);
   margin-bottom: var(--space-md);
 }
@@ -203,15 +197,18 @@
   color: var(--text-secondary);
 }
 
+/* Excerpt */
+
 .escrita-entry-excerpt {
-  font-family: var(--font-serif);
-  font-size: 17px;
+  font-family: var(--reading-font, 'Cormorant Garamond', serif);
+  font-size: 18px;
   font-style: italic;
-  line-height: 1.82;
+  font-weight: 300;
+  line-height: 1.76;
   color: var(--text-secondary);
-  max-width: 52ch;
-  letter-spacing: -0.012em;
-  padding-top: 14px;
+  max-width: 54ch;
+  letter-spacing: -0.005em;
+  padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -226,8 +223,8 @@
 
 .escrita-entry-tag {
   font-family: var(--font-mono);
-  font-size: 8.5px;
-  letter-spacing: 0.12em;
+  font-size: 8px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-light);
   border: 1px solid var(--border-subtle);
@@ -237,7 +234,7 @@
 /* CTA column */
 
 .escrita-entry-cta {
-  padding-top: 10px;
+  padding-top: 12px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -245,20 +242,17 @@
 
 .escrita-entry-link {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.16em;
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-light);
   text-decoration: none;
-  border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 2px;
   white-space: nowrap;
-  transition: color 0.22s ease, border-color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .escrita-entry:hover .escrita-entry-link {
   color: var(--text);
-  border-bottom-color: var(--text);
 }
 
 /* Soon state */
@@ -290,7 +284,7 @@
   }
 
   .escrita-entry {
-    grid-template-columns: 40px 1fr auto;
+    grid-template-columns: 36px 1fr auto;
     gap: var(--space-md) var(--space-md);
   }
 }
@@ -316,6 +310,10 @@
   }
 
   .escrita-entry-title {
-    font-size: clamp(24px, 7vw, 38px);
+    font-size: clamp(26px, 7.5vw, 40px);
+  }
+
+  .escrita-entry-excerpt {
+    font-size: 17px;
   }
 }

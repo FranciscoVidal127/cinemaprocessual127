@@ -281,116 +281,164 @@ function isBoldOnlyLine(text: string): boolean {
   return text.startsWith('**') && text.endsWith('**') && !text.match(/^\*\*([^*]+)\*\*:/) && text.length > 4;
 }
 
-function renderElements(elements: ParsedElement[], isInterview?: boolean): React.ReactNode[] {
-  return elements.map((el, idx) => {
-    switch (el.type) {
-      case 'p': {
-        if (isInterview && isBoldOnlyLine(el.text)) {
-          const inner = el.text.slice(2, -2).trim();
-          return (
-            <div key={idx} className="interview-block">
-              <p className="interview-question">{inner}</p>
-            </div>
-          );
-        }
-        const dropCap = el.isFirst && !isInterview;
-        return (
-          <p key={idx} className={`essay-p${dropCap ? ' essay-p--first' : ''}`}>
-            {renderInline(el.text)}
-          </p>
-        );
-      }
+function groupInterviewTurns(elements: ParsedElement[]): React.ReactNode[] {
+  const nodes: React.ReactNode[] = [];
+  let i = 0;
 
-      case 'h2':
-        return (
-          <h2 key={idx} id={el.id} className="essay-h2">
-            {renderInline(el.text)}
-          </h2>
-        );
+  while (i < elements.length) {
+    const el = elements[i];
 
-      case 'h3': {
-        if (isInterview && el.text.startsWith('**') && el.text.endsWith('**')) {
-          const inner = el.text.slice(2, -2).trim();
-          return (
-            <div key={idx} className="interview-block">
-              <p className="interview-question">{inner}</p>
-            </div>
-          );
-        }
-        return (
-          <h3 key={idx} id={el.id} className="essay-h3">
-            {renderInline(el.text)}
-          </h3>
-        );
-      }
-
-      case 'blockquote':
-        return (
-          <blockquote key={idx} className="essay-blockquote">
-            {el.lines.map((line, li) => (
-              <span key={li}>
-                {renderInline(line)}
-                {li < el.lines.length - 1 && <br />}
-              </span>
-            ))}
-          </blockquote>
-        );
-
-      case 'list':
-        return (
-          <ul key={idx} className="essay-list">
-            {el.items.map((item, ii) => (
-              <li key={ii} className="essay-list-item">
-                {renderInline(item)}
-              </li>
-            ))}
-          </ul>
-        );
-
-      case 'rule':
-        return <div key={idx} className="essay-rule" />;
-
-      case 'image':
-        return (
-          <figure key={idx} className="essay-figure">
-            <img src={el.src} alt={el.alt} loading="lazy" />
-            {el.caption && <figcaption className="essay-caption">{el.caption}</figcaption>}
-          </figure>
-        );
-
-      case 'interview-question':
-        return (
-          <div key={idx} className="interview-block">
-            <p className="interview-question">{el.text}</p>
-          </div>
-        );
-
-      case 'interview-answer':
-        return (
-          <div key={idx} className="interview-answer-block">
-            <span className="interview-speaker">{el.speaker}</span>
-            <p className="interview-answer">{renderInline(el.text)}</p>
-          </div>
-        );
-
-      case 'note':
-        return (
-          <p key={idx} className="essay-note">
-            {renderInline(el.text)}
-          </p>
-        );
-
-      case 'credit':
-        return (
-          <p key={idx} className="essay-credit">
-            {el.text}
-          </p>
-        );
-
-      default:
-        return null;
+    if (el.type === 'interview-question') {
+      nodes.push(
+        <div key={`q-${i}`} className="interview-exchange">
+          <p className="interview-question">{renderInline(el.text)}</p>
+        </div>
+      );
+      i++;
+      continue;
     }
-  });
+
+    if (el.type === 'interview-answer') {
+      const paragraphs: ParsedElement[] = [];
+      i++;
+      while (
+        i < elements.length &&
+        (elements[i].type === 'p' ||
+          (elements[i].type === 'interview-answer' &&
+            (elements[i] as { type: 'interview-answer'; speaker: string; text: string }).speaker === el.speaker))
+      ) {
+        paragraphs.push(elements[i]);
+        i++;
+      }
+
+      nodes.push(
+        <div key={`a-${i}`} className="interview-response">
+          <span className="interview-speaker">{el.speaker}</span>
+          <div className="interview-response-body">
+            <p className="interview-answer">{renderInline(el.text)}</p>
+            {paragraphs.map((p, pi) => {
+              if (p.type === 'p') {
+                return (
+                  <p key={pi} className="interview-answer">
+                    {renderInline(p.text)}
+                  </p>
+                );
+              }
+              if (p.type === 'interview-answer') {
+                return (
+                  <p key={pi} className="interview-answer">
+                    {renderInline((p as { type: 'interview-answer'; speaker: string; text: string }).text)}
+                  </p>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </div>
+      );
+      continue;
+    }
+
+    nodes.push(renderSingleElement(el, i));
+    i++;
+  }
+
+  return nodes;
+}
+
+function renderSingleElement(el: ParsedElement, idx: number): React.ReactNode {
+  switch (el.type) {
+    case 'p': {
+      const dropCap = el.isFirst;
+      return (
+        <p key={idx} className={`essay-p${dropCap ? ' essay-p--first' : ''}`}>
+          {renderInline(el.text)}
+        </p>
+      );
+    }
+
+    case 'h2':
+      return (
+        <h2 key={idx} id={el.id} className="essay-h2">
+          {renderInline(el.text)}
+        </h2>
+      );
+
+    case 'h3':
+      return (
+        <h3 key={idx} id={el.id} className="essay-h3">
+          {renderInline(el.text)}
+        </h3>
+      );
+
+    case 'blockquote':
+      return (
+        <blockquote key={idx} className="essay-blockquote">
+          {el.lines.map((line, li) => (
+            <span key={li}>
+              {renderInline(line)}
+              {li < el.lines.length - 1 && <br />}
+            </span>
+          ))}
+        </blockquote>
+      );
+
+    case 'list':
+      return (
+        <ul key={idx} className="essay-list">
+          {el.items.map((item, ii) => (
+            <li key={ii} className="essay-list-item">
+              {renderInline(item)}
+            </li>
+          ))}
+        </ul>
+      );
+
+    case 'rule':
+      return <div key={idx} className="essay-rule" />;
+
+    case 'image':
+      return (
+        <figure key={idx} className="essay-figure">
+          <img src={el.src} alt={el.alt} loading="lazy" />
+          {el.caption && <figcaption className="essay-caption">{el.caption}</figcaption>}
+        </figure>
+      );
+
+    case 'note':
+      return (
+        <p key={idx} className="essay-note">
+          {renderInline(el.text)}
+        </p>
+      );
+
+    case 'credit':
+      return (
+        <p key={idx} className="essay-credit">
+          {el.text}
+        </p>
+      );
+
+    default:
+      return null;
+  }
+}
+
+function renderElements(elements: ParsedElement[], isInterview?: boolean): React.ReactNode[] {
+  if (isInterview) {
+    const interviewElements = elements.map((el) => {
+      if (el.type === 'p' && isBoldOnlyLine(el.text)) {
+        return { type: 'interview-question' as const, text: el.text.slice(2, -2).trim() };
+      }
+      if (el.type === 'h3' && el.text.startsWith('**') && el.text.endsWith('**')) {
+        return { type: 'interview-question' as const, text: el.text.slice(2, -2).trim() };
+      }
+      return el;
+    });
+    return groupInterviewTurns(interviewElements);
+  }
+
+  return elements.map((el, idx) => renderSingleElement(el, idx));
 }
 
 export function Post() {
@@ -549,6 +597,10 @@ export function Post() {
               <span className="essay-time">{metadata.readTime} de leitura</span>
             </div>
           </div>
+        </div>
+
+        <div className="essay-header-divider">
+          <div className="essay-header-divider-line" />
         </div>
 
         {showTOC && (
