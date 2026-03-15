@@ -114,7 +114,7 @@ export const siteData = {
       status: "Em pós-produção",
       festivals: "",
       description: "Adaptação cinematográfica da clássica peça de Nikolai Gogol sobre corrupção e engano na Rússia czarista.",
-      image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Captura_de_tela_de_2026-02-10_07-41-26.png",
+      image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/INSPETORIMAGEM.png",
       cast: ["Clara Choveaux", "Ivon Patrócínio", "Cláudia Ohana", "Francisco Vidal"],
       stills: [],
       scenes: []
