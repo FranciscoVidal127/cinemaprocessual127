@@ -6,17 +6,29 @@ source_url: http://www.logosjournal.com/brakhage_mekas.htm
 credit: Tradução por Francisco Vidal
 ---
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgd-TlxI3aXiSBNI-qQnA4y9nPCoJJqERbMWQ15JsJGCJX6b2vMgK4rfCrtDrqPMtEyvUvgJsw_I6L9M9D1oPWC6P8bvroy3GovmgI83Qo7mMQPiVAYVXBiLEhIeb0BC_2rYpi6JBbdnPipLApr3mOFphjL3sZEuAxwj-EnSCfRHALbpdXKM_inzWo2Mg" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
+
 *A seguinte conversa foi realizada no Anthology Film Archives, em Nova York, no dia 3 de novembro de 2000. Ela foi gravada com a intenção de ser publicada na revista Vogue, mas apenas uma porção pequena dela foi publicada lá. Aqui é apresentado um extrato mais completo do diálogo feito entre duas das figuras mais consagradas do Cinema de Vanguarda norte-americano.*
 
 **Jonas Mekas**: Aqui está Stan Brakhage! Que é considerado não apenas por mim, mas pela maioria das pessoas que escrevem crítica de cinema séria, como possivelmente o maior cineasta americano vivo, tanto na importância artística do conjunto de seu trabalho como também na maneira que você influenciou outros realizadores.
 
 **Stan Brakhage**: E aqui está o que você significa para mim, Jonas: Além de ser um grande cineasta que se estabeleceu em um estilo no qual você é praticamente único, o de cinema diário, você também foi o único artista que conseguiu manter um formato fílmico jornalístico durante quase toda a sua vida adulta, um formato ao mesmo tempo extenso, verossímil e também carregado de significado artístico. E além de seu trabalho como cineasta, você encontrou uma forma de patrocinar e preservar filmes que você ama, e criou cooperativas nas quais eles podem ser distribuídos: o *Anthology Film Archives*, um lugar que continua exibindo filmes até hoje e é definitivamente o único local onde podem ser encontrados filmes que fazem parte do "Cinema Poético." Então, além dessas duas coisas mencionadas, você também tem uma vida rica como poeta. Eu não sei ler lituano, então só consigo ler as traduções em inglês do seu trabalho, que me comovem profundamente. Eu não consigo entender como você consegue fazer tudo isso ao mesmo tempo.
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgjjTV2fA9IMVWIqxXjTrSR8rMeVgoAq1kQ8IeE8iaeAumOxtTi3j66mvJNKbbMPthTSU0as6otw1SSVBxyBR221Gch3IOvETcaEvIBtWnguvu7aPsGgqZUwXaAbdD_LvYmOGHFmt92CTlvnp-Xkp9rNLboKhLwc_ma7XOIhQZljjGLCJEgvGqAHp7ClQ" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
+
 **JM**: Eu e você estamos trabalhando há mais de cinquenta anos. Você está fazendo filmes desde 1953. E eu, na primavera de 1953, tinha me mudado para o Lower East Side de Nova York e abri minha primeira mostra de cinema de vanguarda na Gallery East. Eu mostrava filmes de Kenneth Anger, Gregory Markopoulos, Maya Deren e Sidney Peterson. E como você pode ver, eu não precisava ir muito longe de onde morava para poder mostrá-los.
 
 **SB**: Bem, o homem que realmente consegue fazer algum trabalho é aquele que pode trabalhar em casa. Mas obviamente (e ironicamente também) você é um homem exilado, em exílio de seu lar [Jonas Mekas nasceu na Lituânia e emigrou aos Estados Unidos logo após a Segunda Guerra Mundial].
 
 **JM**: Bem, a gente viveu em um século no qual metade dele o mundo estava em um estado tão caótico que era impossível eu permanecer no meu lar original. Então eu agora costumo dizer que cinema se tornou meu lar. Eu antigamente dizia que cultura era meu lar, mas a ideia do que é ou não é cultura ficou muito confusa. Agora ninguém sabe mais o que é cultura, então eu prefiro continuar com o cinema.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgkDuEwyPtg3hmGShW9g08_SqyNOcc9wqyIc3-ABZpxwu2EB3LJRT_5725R6jMSocg9I0JXrs93Hf3K1AcaEB6V06Gt40PaYB8OqbvieT0UcTGc1N5EbpmK36BUegAJSYglJ9yp6kKF8kZTFY_SgrHD133ymQ0QTwz4Se1Lun3Y0TaR9fJyKgACeGvCzg" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
 
 **SB**: Esse foi o grande problema que eu e você encontramos pela primeira vez, o que era considerado cultura e o que não era, e o que era considerado arte também. Eu fiquei aterrorizado naquele período dos anos 60 com o medo de que as questões sociais iriam se sobrepor sobre o avanço das possibilidades estéticas da arte, que a atenção a uma coisa iria tirar a atenção de outra, na minha visão. Olhando para trás, eu acho que você na maior parte tinha razão, que eu não precisava ter tanto medo pela arte da forma que eu tinha. Quero dizer, muitos filmes que foram lançados naquela época eram estúpidos do ponto de vista artístico, estético, e até mesmo na questão de técnica. Mas mesmo assim, eles eram parte importante daquele período.
 
@@ -40,6 +52,10 @@ credit: Tradução por Francisco Vidal
 
 **SB**: Na minha defesa, e muitos riram de mim quando eu fazia isso, eu tentava nos anos 60 e 70 defender o uso da palavra "arte." E eu acabei desistindo dessa palavra porque no final das contas todo mundo acabou usando ela e aplicando essa denominação para qualquer tipo de coisa. Ela deixou de ser uma palavra importante.
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgAZ13dDZ8upSbvFMpMpCc8koSHub3AUOCoNQ2wXAICxpGeXJAQMD-AZ0k8rho-1JQrKB9-MXRPz0qkT8T8r_a05MhBMyIEe71aKq3y0IaHkYr30Zcyv1FUn5xreJEprjodBb-lm3TLJhLtcq42bolHzuxMcT2n9bdF1YAo7j69j921514hzXtGwBRQmA" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
+
 **JM**: Eu li uma pesquisa conduzida por Peter Moore, ele tinha uma coluna na revista Popular Photography durante a metade dos anos 60, e nessa pesquisa ele perguntou a pessoas se elas se consideravam artistas. E mais de seis milhões de pessoas responderam que sim. Então, é claro que quando você tem mais de seis milhões de artistas em um só país, você pode desistir de continuar usando essa palavra.
 
 **SB**: Eu me lembro de alguém me dizendo que em breve, metade dos Estados Unidos vai ensinar arte para a outra metade.
@@ -48,7 +64,15 @@ credit: Tradução por Francisco Vidal
 
 **SB**: E há outras palavras que sofreram muito com isso, palavras como "amor", "Deus", "mal". Então eu diria que não foi apenas o cinema que sofreu com essas dificuldades, mas todas as artes em geral. Ou o que nós tradicionalmente chamamos de arte, elas sofreram com essa desagregação de terminologia, essa falta de uma análise séria. Aqui nós temos uma disciplina que é a mais antiga da humanidade, a pintura, e quando ela é ensinada em escolas públicas e em faculdades também, ela é ensinada apenas como se fosse um playground para você pintar um quadro com o seu dedo, é ensinada como se fosse apenas uma forma de expressão pessoal e sem toda a carga histórica que os movimentos artísticos tiveram ao longo das décadas.
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEg1Ze7Wg78Z1j0Da7wsaYTg3DJ_0IHQGKnuzBgGuyvZ6rd4eLEZOygpO8revlvrf-58BZjRe8WVLByJSGY29XajNcNOr7g9ax8BNvB9bozbt7t9ePVzQ4R9uE7qryupCXsCohWrQePgGZeh3kZEVnBdD0dbyoo82Fh_mDAC_hhq9VTZWlO9kBdGiY_-QA" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
+
 **JM**: Eu quero também ressaltar uma coisa aqui. Quando você começou a fazer filmes no início dos anos 50, e quando eu entrei no cinema nessa mesma época, houve muitos desenvolvimentos importantes nas artes: o Gestualismo (Action Painting), o teatro improvisado de Strasberg, as performances de Allan Kaprow, a aparição de artes conceituais, o Fluxus, vídeo arte — e tudo isso acabou desembocando em uma coisa chamada "Arte de Instalação", que agora se desenvolveu e cresceu ainda mais no presente. E agora essas instalações de hoje em dia têm devorado dentro delas vídeos, filmes, esculturas, pinturas, todas as artes. Eu agora consigo encontrar mais pessoas jovens que estão mais interessadas em retornar ao que é a base primária da arte. Porque em certo ponto você tem que voltar à essência principal e se perguntar o que realmente é música, pintura, cinema, poesia, etc.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgorR9SuSryO41Gt0Rh8UOODCPZ11y8khQi8CuJSoLSA_iQlEZS3pOFG9tZ1MIJubrsuxy3uhu2urDXDl5e7h4NvUGfiCKexheMmGVhWSre6Zg-ZqC48oih22j11DigLsodBWUTA8N3YKB-vPkRvd4o_URqPcb-A0gqeGt3BMXndEFclHG9gcwg9CjkXw" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
 
 **SB**: Mas se lembra de quando nós estávamos escolhendo o nome do *Anthology Film Archives*, e nós pensávamos que não deveria haver um "O" no início do nome, porque achávamos que haveria outras antologias de filmes que seriam feitas, e seriam diferentes e iriam contradizer a nossa lista de Cinema Essencial, e isso seria a base também de um possível diálogo por divergências.
 
@@ -70,6 +94,10 @@ credit: Tradução por Francisco Vidal
 
 **JM**: O meu próprio estilo de diário veio bastante do fato de que eu não tinha tempo ou dinheiro para me dedicar a um filme "convencional" com um roteiro pronto. Então em vez de fazer "filmes" eu apenas filmava a vida. Eu até brinco às vezes que eu não sou realmente um "cineasta"; eu sou apenas um "filmador". Eu filmo a vida real. Eu nunca sei o que vai acontecer depois. A forma de meus filmes emerge da acumulação do material que eu filmo em si. Eu vou caminhando pela minha vida com a minha câmera Bolex. E aqui eu tenho uma pergunta para você. Eu quero perguntar sobre o filme que você fez no Canadá, o "*The God of Day Looked Down Upon Him*". Você já tinha a forma desse filme em sua mente, ou ela apareceu durante o processo do desenvolvimento dele?
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgDHSa0dS7AsYOiqM9CTDAQsfR_-BHQTo7zyq8NymlfVhbcZsfmr4PNADYt5ZvjccSDwTd-7aEZeOB4pmWGqPvxK9obPnfWy4iZtU5shuW-sRlSw3r9p7zv7h3IRMQ4WOIItgO1xS-7HizRJiSHaTqjV7J-sSXCJMmvEFPJ6hq6Vbk2zDWtkinTfTw6Jw" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
+
 **SB**: Nesse filme, eu sabia desde o início que ele seria uma terceira parte de uma trilogia. O título dele vem do romance de Charles Dickens, "*David Copperfield*". Eu fiz ele no primeiro verão que eu e minha esposa voltamos para o lugar na Ilha de Vancouver onde ela passou a infância. Na época eu ainda estava careca por causa da quimioterapia que eu andava fazendo; eu tinha chegado bem perto da morte. Então eu estava com vontade de ver aquele oceano e formar uma relação com a ideia de um fim, ou com a noite, com a escuridão. A minha mente estava cheia de coisas como as pinturas que Rothko fez nos anos finais de sua vida, como a Capela Rothko em Houston, Texas. Aquela capela salvou a minha sanidade. E também eu pensava no trabalho de Georges Braque, o trabalho tardio de Braque, o período que ele pintava o marrom, com um arado de madeira. Eu me sentia naquela velha idade, eu acreditava que eu iria morrer, e ainda espero isso, que pode acontecer em qualquer momento.
 
 **JM**: Eu queria saber se você tinha alguma ideia, algum sentimento de como seria a forma do filme antes de você começar a gravar ele. Ao fazer um filme, a maior parte dos cineastas sabem o que eles querem visualizar, eles já começam mais ou menos com a forma. Mas eu nunca passei por isso, porque eu sou apenas um "filmador", porque assim é que é a vida real. Eu não sei o que vai acontecer a cada momento, mas o que acontecer eu quero gravar.
@@ -83,6 +111,10 @@ credit: Tradução por Francisco Vidal
 **JM**: Eu nunca penso em dinheiro.
 
 **SB**: Eu sabia que você ia falar isso.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiqlLzLetsTzUJX1Ww6Hn3wYcfXlKd3atJ88vivpjJIh8-wX-i3qHqX868NrLUjR26j4ZW5CZkdKyE78ek8mkTTHmR0Pu9qdUASLX0QlljrAyTVfaxaoJ5g35JiVnwfimjukbL9yEo1t3VvRWLUiyKt--NhHDc2SRsTrrzLWojAycx5n1j4OcBuJOnM0g" alt="Jonas Mekas e Stan Brakhage" />
+</figure>
 
 **JM**: Há um espaço perto do Anthology Film Archives onde nós vamos construir uma biblioteca para a maior coleção que existe de material escrito sobre cinema independente/de vanguarda, vai custar uns 3,5 milhões de dólares. Mas eu sei que essa biblioteca vai conseguir ser feita. Tudo que precisa é a gente acreditar nela e trabalhar, trabalhar, trabalhar…
 

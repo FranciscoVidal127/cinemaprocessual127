@@ -34,14 +34,8 @@ A economia das coisas moleculares, relativa aos fluxos e aos códigos, para não
 
 **2- À esta emergência de núcleos maquínicos cristalizando-se em torno de pontos de singularidade?** (*históricos, cósmicos, etc.*). Não há uma contradição entre esta travessia generalizada dos componentes e a especificação dos agenciamentos? O papel partilhado com os componentes de passagem, tais como a aparência e os ritornelos, consiste, precisamente, em deixar juntos os termos desta contradição. É no centro da textura "*material*" e "*possibilista*" dos componentes que se negociam os quanta de desterritorialização que entrarão, seja nos processos "*normais*" de metabolismo de fluxo e de estrato, seja nos processos de mutação e de cristalização de novos agenciamentos. Encontramo-nos assim diante de dois estados de relação:
 
-<figure className="essay-hero-image essay-inline-figure essay-inline-figure--narrow">
-  <div className="essay-hero-frame">
-    <img
-      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-1.png"
-      alt="Fluxo e códigos atualizados — proposições maquínicas abstratas"
-      loading="lazy"
-    />
-  </div>
+<figure>
+  <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-1.png" alt="Fluxo e códigos atualizados — proposições maquínicas abstratas" />
 </figure>
 
 Em um, a economia do possível está enquistada em estratos e agenciamentos estabilizados; noutros, ao contrário, é seu metabolismo que predomina. A redefinição dos níveis de consistência molar-molecular, em termos de economia de escolha maquínica, nos leva a tentar cercar mais de perto esta instância dos núcleos maquínicos de vocação essencialmente criadora neguentrópica, etc. Quando os estratos e agenciamentos existem sem núcleos maquínicos, quando funcionam em torno de redundâncias ou de buracos negros estabilizados, eu diria que eles dependem de uma política existencial molar. Quando os agenciamentos ou os sistemas interagenciamentos têm negócio com os núcleos maquínicos — que não são necessariamente centrados sobre um agenciamento, eu falaria de **política existencial molecular**. 
@@ -150,14 +144,8 @@ Viu-se que no nível dos estratos passadificados, espacializados, ou substantifi
 
 As máquinas abstratas, sendo incompostas sobre um plano intensional, não se pode inserí-las numa classe extensional. Nenhuma máquina abstrata, fora de prumo da história, não sendo sujeito da história; as multiplicidades maquínicas atravessando ao mesmo tempo sobre um plano diacrônico e sobre um plano sincrônico, os estratos das diferentes realidades "provisoriamente dominantes"; não se pode falar do movimento geral de sua linha de desterritorialização onde ele manifesta uma tendência universal e homogênea, visto que, como em todos os níveis, ela é interrompida por reterritorializações sobre as quais se inserem, de outra maneira, brotinhos microcósmicos de desterritorialização. A cartografia dos maquinismos abstratos faz a história ao desfazer as realidades e as significações dominantes: elas constituem o umbigo, o ponto de emergência e de criacionismo do *phylum* maquínico.
 
-<figure className="essay-hero-image essay-inline-figure essay-inline-figure--wide">
-  <div className="essay-hero-frame">
-    <img
-      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-2.png"
-      alt="Rizoma do cerco fóbico do Pequeno Hans"
-      loading="lazy"
-    />
-  </div>
+<figure>
+  <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-2.png" alt="Rizoma do cerco fóbico do Pequeno Hans" />
 </figure>
 
 **O agenciamento fóbico se constitui no limite de uma série de provas que se jogam sucessivamente:**
@@ -182,14 +170,8 @@ Deparamo-nos aqui com a problemática de alternativa grupo-sujeito/grupo sujeita
 
 Uma esquizo-análise micropolítica não aceitará jamais como um fato consumado sistemas de redundância que parecem, aparentemente, só poder conduzir a impasses; ela se esforçará para fazer emergir processos de diagramatização, analisadores, agenciamentos coletivos de enunciação que destituirão os modos individualizados de subjetivação e a partir dos quais serão registradas e remanejadas as relações micropolíticas anteriores. Mas não se trataria aí, unicamente, de instrumentos organizacionais, programáticos ou teóricos, mas fundamentalmente de mutações na pragmática social.
 
-<figure className="essay-hero-image essay-inline-figure essay-inline-figure--wide">
-  <div className="essay-hero-frame">
-    <img
-      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-3.png"
-      alt="Rizoma do corte leninista e a produção do estalinismo"
-      loading="lazy"
-    />
-  </div>
+<figure>
+  <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-3.png" alt="Rizoma do corte leninista e a produção do estalinismo" />
 </figure>
 
 A tarefa de uma tal pragmática consistirá então em operar conexões entre os sistemas transformacionais capazes de anular os efeitos das gerações significantes e discernir as orientações micropolíticas concernentes ao conjunto dos sistemas semióticos caminhando no sentido de "revoluções moleculares". As transformações diagramáticas são suscetíveis de levar seus efeitos a qualquer registro semiótico: quer se trate das semiologias simbólicas (por exemplo; com os efeitos do mimetismo, do transitivismo, etc.), das semiologias significantes (com sistemas de expressão fundados sobre uma série delimitada de elementos discretos: fonemas, grafemas, traços distintos, etc.), ou mesmo dos modos de codificação “naturais”. Em cada situação o objetivo esquizo-analítico consistirá em livrar a natureza das cristalizações do poder que se operam em redor de um componente transformacional dominante: carta dos buracos negros, das ramificações semióticas, e linhas de fuga (exemplo: nos impérios asiáticos, a instauração de uma escrita significante despótica, ou na paranóia, a emergência de um delírio significante sistematizado). O desarranjo de um componente significante e a aparição de um novo componente diagramático reduzirá os efeitos de significância e de individuação e conduzirá a enunciação a não ser mais que um elemento entre outros dos agenciamentos maquínicos (exemplo: a emancipação de uma máquina de escrita de sua função significante no trabalho poético, musical, matemático, etc.).
@@ -284,14 +266,8 @@ Acrescentemos a isso que, entre esses três pólos, combinam-se três tipos de r
 
 De onde o esquema seguinte:
 
-<figure className="essay-hero-image essay-inline-figure essay-inline-figure--wide">
-  <div className="essay-hero-frame">
-    <img
-      src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-4.png"
-      alt="Esquema: pontos de singularidade, desejo, territorialidades e núcleos maquínicos"
-      loading="lazy"
-    />
-  </div>
+<figure>
+  <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/inconsciente-4.png" alt="Esquema: pontos de singularidade, desejo, territorialidades e núcleos maquínicos" />
 </figure>
 
 **Os oito "princípios"** 

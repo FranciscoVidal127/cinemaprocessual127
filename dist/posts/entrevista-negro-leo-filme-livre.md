@@ -10,6 +10,10 @@ origem: Entrevista realizada por Francisco Vidal
 
 *Entrevista realizada perto da Cinemateca do MAM, no dia 23 de Setembro de 2023.*
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyHbUBimIyP0JfdCOtvE43Tui6iVTWT042r-VWN3RGixi8seKftJ_0hyphenhyphenQwQFDA5xY4KHZWrAWM35IBT6c8Uex8EfIKxMzjrAUqtqEE0nzpoEv2sxDjJTt2c1HI2_AarnDABDNKX0LA5Fa07Cu-t4Lx3IsGZ2OILiPT3RYPP2w09jQd2BYojpSqfUTy8Jy7/s800/img-1043006-negro-leo_widelg.jpeg" alt="Negro Leo" />
+</figure>
+
 **Há quanto tempo você trabalha com cinema como modo de expressão artística sua?**
 
 **NEGRO LEO**: Então, eu comecei a usar a música desde que eu era criança, bem criança mesmo. Mas, na verdade, os meus primeiros trabalhos, ou primeiras aspirações artísticas minhas, eram mais ligadas ao cinema, sabe? Tanto que eu tinha realizado um curta-metragem meu que passou na Mostra Filme Livre, acho que em uma das primeiras edições, não sei se na segunda ou terceira. E era um curta-metragem chamado [Tropa de Elite 4](https://www.youtube.com/watch?v=12pG4pW8V6Y), que eu fiz junto com uma atriz colega minha chamada Barbara Vida, eu não me lembro exatamente se a gente fez durante o lançamento do primeiro Tropa de Elite(2007), não me lembro o ano exato.

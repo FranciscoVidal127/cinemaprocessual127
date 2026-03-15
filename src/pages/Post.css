@@ -69,7 +69,7 @@
    ============================================================ */
 
 .essay-header-wrap {
-  padding: var(--space-relaxed) 0 var(--space-xl);
+  padding: var(--space-relaxed) 0 var(--space-2xl);
   border-bottom: 1px solid var(--border);
 }
 
@@ -317,15 +317,15 @@
 
 .essay-blockquote {
   font-family: var(--font-serif);
-  font-size: 19px;
+  font-size: 20px;
   font-style: italic;
-  line-height: 1.8;
+  line-height: 1.78;
   color: var(--text-secondary);
-  padding: 0 0 0 28px;
-  border-left: 2px solid var(--accent);
-  margin: var(--space-md) 0 1.8em;
-  max-width: 60ch;
-  letter-spacing: -0.012em;
+  padding: var(--space-sm) 0 var(--space-sm) 28px;
+  border-left: 2px solid var(--text-muted);
+  margin: var(--space-lg) 0 var(--space-lg);
+  max-width: 56ch;
+  letter-spacing: -0.014em;
 }
 
 /* ============================================================
@@ -355,8 +355,8 @@
    ============================================================ */
 
 .essay-figure {
-  margin: var(--space-2xl) 0;
-  max-width: 100%;
+  margin: var(--space-2xl) calc(-1 * var(--space-lg));
+  max-width: calc(100% + 2 * var(--space-lg));
 }
 
 .essay-figure img {
@@ -371,8 +371,20 @@
   letter-spacing: 0.06em;
   color: var(--text-light);
   margin-top: 14px;
+  margin-left: var(--space-lg);
   line-height: 1.55;
   max-width: 52ch;
+}
+
+@media (max-width: 640px) {
+  .essay-figure {
+    margin-left: calc(-1 * var(--space-sm));
+    margin-right: calc(-1 * var(--space-sm));
+    max-width: calc(100% + 2 * var(--space-sm));
+  }
+  .essay-caption {
+    margin-left: 0;
+  }
 }
 
 /* ============================================================
@@ -402,20 +414,23 @@
 .interview-answer-block {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 20px;
-  margin-bottom: var(--space-md);
+  gap: 10px;
+  margin-top: 18px;
+  margin-bottom: var(--space-lg);
   max-width: 66ch;
+  padding-left: 0;
 }
 
 .interview-speaker {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text);
   display: block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .interview-answer {
@@ -435,7 +450,6 @@
   text-underline-offset: 3px;
 }
 
-/* Interview variant — slightly more air between question and answer pairs */
 .essay--interview .essay-body {
   gap: 0;
 }

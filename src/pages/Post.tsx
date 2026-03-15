@@ -248,15 +248,29 @@ function parseContent(raw: string): ParsedElement[] {
   return elements;
 }
 
-function renderElements(elements: ParsedElement[]): React.ReactNode[] {
+function isBoldOnlyLine(text: string): boolean {
+  return text.startsWith('**') && text.endsWith('**') && !text.match(/^\*\*([^*]+)\*\*:/) && text.length > 4;
+}
+
+function renderElements(elements: ParsedElement[], isInterview?: boolean): React.ReactNode[] {
   return elements.map((el, idx) => {
     switch (el.type) {
-      case 'p':
+      case 'p': {
+        if (isInterview && isBoldOnlyLine(el.text)) {
+          const inner = el.text.slice(2, -2).trim();
+          return (
+            <div key={idx} className="interview-block">
+              <p className="interview-question">{inner}</p>
+            </div>
+          );
+        }
+        const dropCap = el.isFirst && !isInterview;
         return (
-          <p key={idx} className={`essay-p${el.isFirst ? ' essay-p--first' : ''}`}>
+          <p key={idx} className={`essay-p${dropCap ? ' essay-p--first' : ''}`}>
             {renderInline(el.text)}
           </p>
         );
+      }
 
       case 'h2':
         return (
@@ -515,7 +529,7 @@ export function Post() {
         )}
 
         <section className="essay-body">
-          {renderElements(parsed)}
+          {renderElements(parsed, isInterview)}
 
           {sourceUrl && (
             <p className="essay-source-link">

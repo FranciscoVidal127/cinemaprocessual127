@@ -8,6 +8,10 @@ tags: ["Kurt Walker", "Hit 2 Pass", "S01E03", "Festival ECRÃ", "cinema independ
 origem: Entrevista realizada por Francisco Vidal
 ---
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh0Zb-N3mv8DmrsCZGioahwmUvy7brhemheWVIcjfHJv5WxNNmBV8ak-DokcIvcgiF0wV4fA0p-bBIIriycjqtm5xI47KsJW8l_qffSXxWMBjsbhq3nwtBZgsgE5fOg3wg8uuSrjWrS0CfIKeVQ8mnRRzXdhpaaPkSNZFCrycSwNX_N_zsE1odB9WTbrxyY=w401-h234" alt="Hit 2 Pass — Kurt Walker" />
+</figure>
+
 **Kurt, quero agradecer muito por você ter vindo ao Brasil, e queria perguntar sobre algo que me tocou enquanto assistia S01E03, que foi esse sentimento de comunidade. Nos seus filmes, eu reconheço a contribuição de muitos nomes da cena de cinema independente no Canadá, por exemplo, cineastas como Sophy Romvari e Neil Bahadur, então eu queria perguntar: o quão importante é para você esse senso de criação coletiva na experiência de fazer seus filmes? Você faria filmes sozinho?**
 
 **Kurt Walker**: Eu não sou monolítico sobre o assunto, acho que depende do tipo de filme que estou fazendo. Eu faria um filme sozinho, dependendo do que quero expressar, mas, no caso de S01E03, é um filme francamente sobre amor, amizade e essa integração dentro de uma experiência virtual. Então foi natural que tivesse um estilo mais participativo e comunitário, porque estou tentando retratar um grupo de amigos online cujo relacionamento entre eles atravessa o planeta. Então, naturalmente, abracei não apenas esse tema, mas também esse modelo de produção, um modelo de produção comunitário de baixíssimo orçamento.
@@ -19,6 +23,10 @@ origem: Entrevista realizada por Francisco Vidal
 **O filme tem apresenta mudanças de formato e de estilo durante sua duração, é um filme que pode pertencer ao subgênero desktop film (de filmes gravados através do computador), mas também apresenta cenas filmadas em 16mm e com um estilo mais geométrico de lidar com os atores e com o espaço. Como você relacionou esses diferentes modelos de capturar o interior e o exterior durante a montagem do filme?**
 
 **Kurt Walker**: Bem, quando você está trabalhando com um orçamento baixo ou com nenhum orçamento, porque este foi um filme feito por menos de 10.000 dólares, o que você realmente tem à sua disposição para elevar seus meios de expressão está na forma. Está na edição, na cor, na montagem e nos meios que você escolher. Então, com isso, eu simplesmente abracei o uso de uma variedade de câmeras e estilos diferentes. Mas também tentando explorar o máximo de cor possível. Porque eu não tenho os meios para fazer um tipo de fotografia bonita e perfeita. Então, em vez disso, com a ajuda dos meus diretores de fotografia, eu simplesmente abracei uma paleta ampla, mas específica, de cores para este filme.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhK2PhRzsk1T8Nu__26sptimFx7JDag7ichiySxMxy_-H1b5TGWXUHd6nFAw9mZvD4d5I-QEKPppNtVnRjjkTWT1aISiolwcioGJUGTGb7uDLf1L38zd3jruiTOm4CWMdCTf5J9Es633VOJb3UsqIKm7BEhLseVB54ZOsmsvn87Z_QyX4O7OVgp9JYTQeuq=w344-h408" alt="Kurt Walker" />
+</figure>
 
 **Eu também queria falar sobre o outro filme exibido hoje, Hit 2 Pass, que eu gostei muito. E, assim como S01E03, é um filme que você fez com amigos. E é um filme muito físico, porque não é apenas sobre corridas e carros, mas também sobre a ideia de destruição e reconstrução. Como esse projeto surgiu para você?**
 
