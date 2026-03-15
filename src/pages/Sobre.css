@@ -161,12 +161,42 @@
   margin-bottom: var(--space-sm);
 }
 
-.sobre-bio-image {
+.sobre-bio-sidebar {
   position: sticky;
   top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
-.sobre-bio-image img {
+.sobre-bio-still {
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-bio-still img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(0.08) contrast(1.1) saturate(0.88);
+  transition: filter 0.6s ease;
+}
+
+.sobre-bio-still:hover img {
+  filter: grayscale(0) contrast(1.03) saturate(1.0);
+}
+
+.sobre-bio-still-caption {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.sobre-bio-portrait img {
   width: 100%;
   height: auto;
   filter: grayscale(0.15) contrast(1.05);
@@ -258,11 +288,32 @@
   color: var(--text);
 }
 
+.trajetoria-credits-role {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+
 .trajetoria-credits-meta {
   font-family: var(--font-sans);
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+.trajetoria-credits-note {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  max-width: 54ch;
+  padding-top: 6px;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 4px;
 }
 
 /* Formation list */
@@ -436,7 +487,7 @@
     gap: var(--space-2xl);
   }
 
-  .sobre-bio-image {
+  .sobre-bio-sidebar {
     position: relative;
     top: 0;
     max-width: 340px;

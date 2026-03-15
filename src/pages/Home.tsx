@@ -112,13 +112,13 @@ export function Home() {
               </p>
 
               <div className="hero-roles" aria-label="Áreas de atuação">
-                <span>Atuação</span>
+                <span className="hero-roles-primary">Ator</span>
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Realização</span>
+                <span>Cineasta</span>
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Escrita</span>
+                <span>Escritor de cinema</span>
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Tradução</span>
+                <span>Tradutor</span>
               </div>
 
               <nav className="hero-nav" aria-label="Navegação rápida">
@@ -194,6 +194,48 @@ export function Home() {
         </div>
       </section>
 
+      {/* STILLS */}
+      <section className="home-stills">
+        <div className="home-stills-inner">
+          <div className="home-stills-grid">
+            <div className="home-stills-item home-stills-item--primary">
+              <img
+                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg"
+                alt="Francisco Vidal como Fábio em O Mundo dos Mortos"
+                loading="lazy"
+              />
+              <div className="home-stills-caption">
+                <span className="home-stills-role">Fábio</span>
+                <span className="home-stills-film">O Mundo dos Mortos · dir. Pedro Tavares</span>
+              </div>
+            </div>
+            <div className="home-stills-stack">
+              <div className="home-stills-item">
+                <img
+                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg"
+                  alt="Francisco Vidal em O Mundo dos Mortos"
+                  loading="lazy"
+                />
+              </div>
+              <div className="home-stills-item">
+                <img
+                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Captura_de_tela_de_2026-02-10_07-41-26.png"
+                  alt="Francisco Vidal como Espectro F. em O Inspetor Geral"
+                  loading="lazy"
+                />
+                <div className="home-stills-caption">
+                  <span className="home-stills-role">Espectro F.</span>
+                  <span className="home-stills-film">O Inspetor Geral · dir. Gregório Gananian</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="home-stills-footer">
+            <span className="home-stills-note">Em tela</span>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED FILM */}
       {featuredFilme && (
         <section className="home-film">
@@ -215,7 +257,8 @@ export function Home() {
                   {featuredFilme.year} · Dir. {featuredFilme.director}
                 </p>
                 <h2 className="home-film-title">{featuredFilme.title}</h2>
-                <p className="home-film-role">{featuredFilme.role}</p>
+                <p className="home-film-role-label">Papel</p>
+                <p className="home-film-role-name">{featuredFilme.role}</p>
                 <p className="home-film-synopsis">{featuredFilme.description}</p>
                 {featuredFilme.festivals && (
                   <p className="home-film-festivals">{featuredFilme.festivals}</p>

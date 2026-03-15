@@ -27,8 +27,19 @@ export function Sobre() {
                 <p key={idx} className={idx === 0 ? 'sobre-bio-lead' : undefined}>{paragraph}</p>
               ))}
             </div>
-            <div className="sobre-bio-image">
-              <img src={siteData.sobre.image} alt="Francisco Vidal" />
+            <div className="sobre-bio-sidebar">
+              <div className="sobre-bio-still">
+                <img
+                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg"
+                  alt="Francisco Vidal como Fábio em O Mundo dos Mortos"
+                />
+                <p className="sobre-bio-still-caption">
+                  <em>O Mundo dos Mortos</em> · dir. Pedro Tavares · 2025
+                </p>
+              </div>
+              <div className="sobre-bio-portrait">
+                <img src={siteData.sobre.image} alt="Francisco Vidal" />
+              </div>
             </div>
           </div>
         </div>
@@ -90,12 +101,16 @@ export function Sobre() {
               <div className="trajetoria-entry-content">
                 <ul className="trajetoria-credits">
                   <li>
-                    <strong>O Inspetor Geral</strong>
-                    <span className="trajetoria-credits-meta">Dir. Gregório Gananian · Zaum · filmado maio–junho/2024 · em pós-produção</span>
+                    <strong>O Mundo dos Mortos</strong>
+                    <span className="trajetoria-credits-role">Fábio</span>
+                    <span className="trajetoria-credits-meta">Dir. Pedro Tavares · 7 a 1 Filmes e Cavideo · 28ª Mostra de Cinema de Tiradentes (2025)</span>
+                    <span className="trajetoria-credits-note">Estreia em longa-metragem — um humano vagando pela Terra abandonada no segundo dia após a morte de Cristo. Papel físico, de escuta e presença sustentada.</span>
                   </li>
                   <li>
-                    <strong>O Mundo dos Mortos</strong>
-                    <span className="trajetoria-credits-meta">Dir. Pedro Tavares · 7 a 1 Filmes e Cavideo · 28ª Mostra de Cinema de Tiradentes (2025)</span>
+                    <strong>O Inspetor Geral</strong>
+                    <span className="trajetoria-credits-role">Espectro F.</span>
+                    <span className="trajetoria-credits-meta">Dir. Gregório Gananian · Zaum · filmado maio–junho/2024 · em pós-produção</span>
+                    <span className="trajetoria-credits-note">Adaptação de Gogol, com Cláudia Ohana e Clara Choveaux. Uma figura espectral na corrupção czarista.</span>
                   </li>
                   <li>
                     <strong>Acronon</strong>
