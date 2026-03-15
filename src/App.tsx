@@ -75,11 +75,11 @@ function Header() {
 
       {menuOpen && (
         <nav className="nav-mobile">
-          <NavLink to="/reel" className="nav-mobile-link">Reel</NavLink>
-          <NavLink to="/sobre" className="nav-mobile-link">Sobre</NavLink>
-          <NavLink to="/filmografia" className="nav-mobile-link">Filmografia</NavLink>
-          <NavLink to="/fotos" className="nav-mobile-link">Fotos</NavLink>
-          <NavLink to="/escrita" className="nav-mobile-link">Escrita</NavLink>
+          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
+          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Sobre</NavLink>
+          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
+          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Fotos</NavLink>
+          <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Escrita</NavLink>
           <a href="mailto:franciscovidalcs@gmail.com" className="nav-mobile-link">Contato</a>
         </nav>
       )}

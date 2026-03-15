@@ -277,7 +277,7 @@
 .footer-bottom {
   max-width: var(--container);
   margin: 0 auto;
-  padding: var(--space-lg) var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-lg) var(--space-lg);
   border-top: 1px solid var(--border-dark);
   display: flex;
   justify-content: center;

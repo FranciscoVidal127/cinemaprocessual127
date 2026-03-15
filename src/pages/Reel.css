@@ -4,13 +4,13 @@
 
 .reel-featured {
   background-color: var(--bg-darkest);
-  border-bottom: 1px solid var(--border-darkest);
+  border-bottom: 1px solid var(--border-dark);
 }
 
 .reel-content {
   padding: 0;
   background-color: var(--bg-darkest);
-  border-top: 1px solid var(--border-darkest);
+  border-top: 1px solid var(--border-dark);
 }
 
 .reel-grid {
