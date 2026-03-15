@@ -7,8 +7,8 @@ function formatDate(raw: string): string {
   if (!raw) return '';
   if (raw.match(/^\d{4}-\d{2}-\d{2}$/)) {
     const [year, month, day] = raw.split('-');
-    const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-    return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
+    const months = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    return `${parseInt(day)} de ${months[parseInt(month) - 1]} de ${year}`;
   }
   return raw;
 }
@@ -21,6 +21,8 @@ interface PostMetadata {
   tags: string[];
   readTime: string;
   origem?: string;
+  credit?: string;
+  source_url?: string;
 }
 
 interface Heading {
@@ -42,8 +44,301 @@ function slugify(text: string): string {
 
 function calculateReadTime(text: string): string {
   const words = text.trim().split(/\s+/).length;
-  const minutes = Math.ceil(words / 220);
+  const minutes = Math.ceil(words / 200);
   return `${minutes} min`;
+}
+
+function renderInline(text: string): React.ReactNode {
+  if (!text) return null;
+  const segments: React.ReactNode[] = [];
+  const regex = /(\*\*[^*]+\*\*|\*[^*]+\*|\[([^\]]+)\]\(([^)]+)\))/g;
+  let last = 0;
+  let match;
+  let key = 0;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > last) {
+      segments.push(text.slice(last, match.index));
+    }
+    const token = match[0];
+    if (token.startsWith('**') && token.endsWith('**')) {
+      segments.push(<strong key={key++}>{token.slice(2, -2)}</strong>);
+    } else if (token.startsWith('*') && token.endsWith('*')) {
+      segments.push(<em key={key++}>{token.slice(1, -1)}</em>);
+    } else {
+      const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (linkMatch) {
+        segments.push(
+          <a key={key++} href={linkMatch[2]} target="_blank" rel="noopener noreferrer">
+            {linkMatch[1]}
+          </a>
+        );
+      } else {
+        segments.push(token);
+      }
+    }
+    last = match.index + token.length;
+  }
+
+  if (last < text.length) {
+    segments.push(text.slice(last));
+  }
+
+  return segments.length === 1 ? segments[0] : segments;
+}
+
+type ParsedElement =
+  | { type: 'p'; text: string; isFirst?: boolean }
+  | { type: 'h2'; text: string; id: string }
+  | { type: 'h3'; text: string; id: string }
+  | { type: 'blockquote'; lines: string[] }
+  | { type: 'list'; items: string[] }
+  | { type: 'rule' }
+  | { type: 'image'; src: string; alt: string; caption?: string }
+  | { type: 'interview-question'; text: string }
+  | { type: 'interview-answer'; speaker: string; text: string }
+  | { type: 'note'; text: string }
+  | { type: 'credit'; text: string };
+
+function parseContent(raw: string): ParsedElement[] {
+  const lines = raw.split('\n');
+  const elements: ParsedElement[] = [];
+  let i = 0;
+  let firstParagraphSeen = false;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (trimmed === '') {
+      i++;
+      continue;
+    }
+
+    if (trimmed === '---') {
+      elements.push({ type: 'rule' });
+      i++;
+      continue;
+    }
+
+    if (trimmed.startsWith('<figure')) {
+      let block = trimmed;
+      if (!block.includes('</figure>')) {
+        i++;
+        while (i < lines.length && !lines[i].includes('</figure>')) {
+          block += ' ' + lines[i].trim();
+          i++;
+        }
+        if (i < lines.length) block += ' ' + lines[i].trim();
+      }
+      const srcMatch = block.match(/src="([^"]+)"/);
+      const altMatch = block.match(/alt="([^"]*)"/);
+      const captionMatch = block.match(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/);
+      if (srcMatch) {
+        elements.push({
+          type: 'image',
+          src: srcMatch[1],
+          alt: altMatch ? altMatch[1] : '',
+          caption: captionMatch ? captionMatch[1].replace(/<[^>]+>/g, '').trim() : undefined,
+        });
+      }
+      i++;
+      continue;
+    }
+
+    const mdImageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (mdImageMatch) {
+      elements.push({ type: 'image', src: mdImageMatch[2], alt: mdImageMatch[1] });
+      i++;
+      continue;
+    }
+
+    if (trimmed.startsWith('## ')) {
+      const text = trimmed.slice(3).trim();
+      elements.push({ type: 'h2', text, id: slugify(text) });
+      i++;
+      continue;
+    }
+
+    if (trimmed.startsWith('### ') || trimmed.startsWith('#### ')) {
+      const text = trimmed.replace(/^#{3,4} /, '').trim();
+      elements.push({ type: 'h3', text, id: slugify(text) });
+      i++;
+      continue;
+    }
+
+    if (trimmed.startsWith('# ')) {
+      const text = trimmed.slice(2).trim();
+      if (text) {
+        elements.push({ type: 'h2', text, id: slugify(text) });
+      }
+      i++;
+      continue;
+    }
+
+    if (trimmed.startsWith('> ')) {
+      const bqLines: string[] = [];
+      while (i < lines.length && lines[i].trim().startsWith('> ')) {
+        bqLines.push(lines[i].trim().slice(2));
+        i++;
+      }
+      elements.push({ type: 'blockquote', lines: bqLines });
+      continue;
+    }
+
+    if (trimmed.match(/^[-*] /) && !trimmed.match(/^\*\*[^*]+\*\*:/)) {
+      const items: string[] = [];
+      while (i < lines.length && lines[i].trim().match(/^[-*] /)) {
+        items.push(lines[i].trim().slice(2));
+        i++;
+      }
+      elements.push({ type: 'list', items });
+      continue;
+    }
+
+    const speakerAnswerMatch = trimmed.match(/^\*\*([^*]+)\*\*:\s*(.*)$/);
+    if (speakerAnswerMatch) {
+      elements.push({
+        type: 'interview-answer',
+        speaker: speakerAnswerMatch[1],
+        text: speakerAnswerMatch[2],
+      });
+      i++;
+      continue;
+    }
+
+    if (
+      trimmed.startsWith('*') &&
+      trimmed.endsWith('*') &&
+      !trimmed.startsWith('**') &&
+      trimmed.length > 2
+    ) {
+      const inner = trimmed.slice(1, -1);
+      const isNote = inner.startsWith('Tradução') || inner.startsWith('Entrevista realizada') || inner.startsWith('A seguinte') || inner.startsWith('Texto original') || inner.length < 180;
+      if (isNote) {
+        elements.push({ type: 'note', text: inner });
+      } else {
+        elements.push({ type: 'interview-question', text: inner });
+      }
+      i++;
+      continue;
+    }
+
+    if (trimmed.startsWith('_') && trimmed.endsWith('_') && trimmed.length > 2) {
+      elements.push({ type: 'note', text: trimmed.slice(1, -1) });
+      i++;
+      continue;
+    }
+
+    const creditMatch = trimmed.match(/^\[([^\]]+)\]\(([^)]+)\)\s*$/);
+    if (creditMatch && (creditMatch[1].startsWith('Texto original') || creditMatch[1].startsWith('Tradução'))) {
+      elements.push({ type: 'credit', text: `${creditMatch[1]} — ${creditMatch[2]}` });
+      i++;
+      continue;
+    }
+
+    if (trimmed) {
+      const isFirst = !firstParagraphSeen;
+      firstParagraphSeen = true;
+      elements.push({ type: 'p', text: trimmed, isFirst });
+    }
+    i++;
+  }
+
+  return elements;
+}
+
+function renderElements(elements: ParsedElement[]): React.ReactNode[] {
+  return elements.map((el, idx) => {
+    switch (el.type) {
+      case 'p':
+        return (
+          <p key={idx} className={`essay-p${el.isFirst ? ' essay-p--first' : ''}`}>
+            {renderInline(el.text)}
+          </p>
+        );
+
+      case 'h2':
+        return (
+          <h2 key={idx} id={el.id} className="essay-h2">
+            {renderInline(el.text)}
+          </h2>
+        );
+
+      case 'h3':
+        return (
+          <h3 key={idx} id={el.id} className="essay-h3">
+            {renderInline(el.text)}
+          </h3>
+        );
+
+      case 'blockquote':
+        return (
+          <blockquote key={idx} className="essay-blockquote">
+            {el.lines.map((line, li) => (
+              <span key={li}>
+                {renderInline(line)}
+                {li < el.lines.length - 1 && <br />}
+              </span>
+            ))}
+          </blockquote>
+        );
+
+      case 'list':
+        return (
+          <ul key={idx} className="essay-list">
+            {el.items.map((item, ii) => (
+              <li key={ii} className="essay-list-item">
+                {renderInline(item)}
+              </li>
+            ))}
+          </ul>
+        );
+
+      case 'rule':
+        return <div key={idx} className="essay-rule" />;
+
+      case 'image':
+        return (
+          <figure key={idx} className="essay-figure">
+            <img src={el.src} alt={el.alt} loading="lazy" />
+            {el.caption && <figcaption className="essay-caption">{el.caption}</figcaption>}
+          </figure>
+        );
+
+      case 'interview-question':
+        return (
+          <div key={idx} className="interview-block">
+            <p className="interview-question">{el.text}</p>
+          </div>
+        );
+
+      case 'interview-answer':
+        return (
+          <div key={idx} className="interview-answer-block">
+            <span className="interview-speaker">{el.speaker}</span>
+            <p className="interview-answer">{renderInline(el.text)}</p>
+          </div>
+        );
+
+      case 'note':
+        return (
+          <p key={idx} className="essay-note">
+            {renderInline(el.text)}
+          </p>
+        );
+
+      case 'credit':
+        return (
+          <p key={idx} className="essay-credit">
+            {el.text}
+          </p>
+        );
+
+      default:
+        return null;
+    }
+  });
 }
 
 export function Post() {
@@ -67,77 +362,57 @@ export function Post() {
         if (!error && dbPost) {
           const meta: PostMetadata = {
             title: dbPost.title,
-            subtitle: '',
+            subtitle: dbPost.subtitle || '',
             date: dbPost.date || '',
             category: dbPost.category || 'Escrita',
-            tags: dbPost.tags || [],
+            tags: Array.isArray(dbPost.tags) ? dbPost.tags : [],
             readTime: dbPost.read_time || calculateReadTime(dbPost.content),
-            origem: dbPost.origem || 'por Francisco Vidal'
+            origem: dbPost.origem || '',
+            credit: dbPost.credit || '',
           };
-
           setMetadata(meta);
           setContent(dbPost.content);
-
-          const extractedHeadings: Heading[] = [];
-          dbPost.content.split('\n').forEach((line: string) => {
-            if (line.startsWith('## ')) {
-              const text = line.replace('## ', '');
-              extractedHeadings.push({ id: slugify(text), text, level: 2 });
-            } else if (line.startsWith('### ')) {
-              const text = line.replace('### ', '');
-              extractedHeadings.push({ id: slugify(text), text, level: 3 });
-            }
-          });
-          setHeadings(extractedHeadings);
+          setHeadings(extractHeadings(dbPost.content));
           setLoading(false);
           return;
         }
 
         const response = await fetch(`/posts/${slug}.md`);
+        if (!response.ok) throw new Error('Not found');
         const text = await response.text();
 
-        const metadataMatch = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-
-        if (metadataMatch) {
-          const metadataText = metadataMatch[1];
-          const contentText = metadataMatch[2];
-
+        const fmMatch = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+        if (fmMatch) {
+          const fmText = fmMatch[1];
+          const bodyText = fmMatch[2];
           const meta: any = {};
-          metadataText.split('\n').forEach(line => {
-            const match = line.match(/^(\w+):\s*(.*)$/);
-            if (match) {
-              const key = match[1];
-              let value = match[2].replace(/^["']|["']$/g, '');
+
+          fmText.split('\n').forEach(line => {
+            const m = line.match(/^(\w+):\s*(.+)$/);
+            if (m) {
+              const key = m[1];
+              let val = m[2].trim().replace(/^["']|["']$/g, '');
               if (key === 'tags') {
-                const tagsArray = value.replace(/^\[|\]$/g, '').split(',').map((t: string) => t.trim().replace(/^["']|["']$/g, ''));
-                meta[key] = tagsArray;
+                meta[key] = val
+                  .replace(/^\[|\]$/g, '')
+                  .split(',')
+                  .map((t: string) => t.trim().replace(/^["']|["']$/g, ''))
+                  .filter(Boolean);
               } else {
-                meta[key] = value;
+                meta[key] = val;
               }
             }
           });
 
-          if (!meta.readTime) {
-            meta.readTime = calculateReadTime(contentText);
-          }
+          if (!meta.readTime) meta.readTime = calculateReadTime(bodyText);
+          if (!Array.isArray(meta.tags)) meta.tags = [];
 
           setMetadata(meta as PostMetadata);
-          setContent(contentText);
-
-          const extractedHeadings: Heading[] = [];
-          contentText.split('\n').forEach(line => {
-            if (line.startsWith('## ')) {
-              const text = line.replace('## ', '');
-              extractedHeadings.push({ id: slugify(text), text, level: 2 });
-            } else if (line.startsWith('### ')) {
-              const text = line.replace('### ', '');
-              extractedHeadings.push({ id: slugify(text), text, level: 3 });
-            }
-          });
-          setHeadings(extractedHeadings);
+          setContent(bodyText);
+          setHeadings(extractHeadings(bodyText));
         }
-      } catch (error) {
-        console.error('Error loading post:', error);
+      } catch {
+        // silently handled; loading false triggers not-found UI
       } finally {
         setLoading(false);
       }
@@ -149,14 +424,12 @@ export function Post() {
   useEffect(() => {
     function handleScroll() {
       if (!articleRef.current) return;
-      const article = articleRef.current;
-      const scrollTop = window.scrollY;
-      const docHeight = article.offsetHeight;
-      const winHeight = window.innerHeight;
-      const scrollPercent = scrollTop / (docHeight - winHeight);
-      setReadProgress(Math.min(100, Math.max(0, scrollPercent * 100)));
+      const el = articleRef.current;
+      const scrollTop = window.scrollY - el.offsetTop;
+      const scrollable = el.offsetHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      setReadProgress(Math.min(100, Math.max(0, (scrollTop / scrollable) * 100)));
     }
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -164,7 +437,9 @@ export function Post() {
   if (loading) {
     return (
       <div className="post-page">
-        <div className="post-loading">Carregando...</div>
+        <div className="post-loading">
+          <span>Carregando</span>
+        </div>
       </div>
     );
   }
@@ -177,11 +452,17 @@ export function Post() {
     );
   }
 
+  const parsed = parseContent(content);
   const showTOC = headings.length >= 3;
+  const isInterview = metadata.category?.toLowerCase() === 'entrevista' ||
+    parsed.some(el => el.type === 'interview-question' || el.type === 'interview-answer');
+
+  const creditLine = metadata.credit || metadata.origem || '';
+  const sourceUrl = metadata.source_url || '';
 
   return (
     <div className="post-page">
-      <div className="read-progress" style={{ width: `${readProgress}%` }} />
+      <div className="read-progress" style={{ width: `${readProgress}%` }} aria-hidden="true" />
 
       <header className="post-nav">
         <div className="container">
@@ -189,12 +470,15 @@ export function Post() {
         </div>
       </header>
 
-      <article className="essay" ref={articleRef}>
+      <article className={`essay${isInterview ? ' essay--interview' : ''}`} ref={articleRef}>
+
         <div className="essay-header-wrap">
           <div className="essay-header-inner">
             <div className="essay-eyebrow">
               <span className="essay-category">{metadata.category}</span>
-              {metadata.date && <span className="essay-date">{formatDate(metadata.date)}</span>}
+              {metadata.date && (
+                <span className="essay-date">{formatDate(metadata.date)}</span>
+              )}
             </div>
 
             <h1 className="essay-title">{metadata.title}</h1>
@@ -204,22 +488,25 @@ export function Post() {
             )}
 
             <div className="essay-meta">
-              <span className="essay-author">{metadata.origem || 'por Francisco Vidal'}</span>
-              <span className="essay-meta-sep">·</span>
+              {creditLine && (
+                <span className="essay-author">{creditLine}</span>
+              )}
+              {creditLine && (
+                <span className="essay-meta-sep" aria-hidden="true">·</span>
+              )}
               <span className="essay-time">{metadata.readTime} de leitura</span>
             </div>
           </div>
         </div>
 
-
         {showTOC && (
-          <nav className="essay-toc">
+          <nav className="essay-toc" aria-label="Sumário">
             <div className="essay-toc-inner">
               <p className="essay-toc-label">Sumário</p>
               <ol className="essay-toc-list">
-                {headings.map((heading) => (
-                  <li key={heading.id} className={`essay-toc-item level-${heading.level}`}>
-                    <a href={`#${heading.id}`}>{heading.text}</a>
+                {headings.map((h) => (
+                  <li key={h.id} className={`essay-toc-item level-${h.level}`}>
+                    <a href={`#${h.id}`}>{h.text}</a>
                   </li>
                 ))}
               </ol>
@@ -228,187 +515,43 @@ export function Post() {
         )}
 
         <section className="essay-body">
-          {(() => {
-            const lines = content.split('\n');
-            const elements: JSX.Element[] = [];
-            let listBuffer: string[] = [];
+          {renderElements(parsed)}
 
-            function flushList(key: number) {
-              if (listBuffer.length > 0) {
-                elements.push(
-                  <ul key={`list-${key}`} className="essay-list">
-                    {listBuffer.map((item, i) => (
-                      <li key={i} className="essay-list-item">{renderInline(item)}</li>
-                    ))}
-                  </ul>
-                );
-                listBuffer = [];
-              }
-            }
-
-            for (let idx = 0; idx < lines.length; idx++) {
-              const line = lines[idx];
-
-
-              if (line.trim().startsWith('<figure')) {
-                flushList(idx);
-                let htmlBlock = line + '\n';
-                if (!line.includes('</figure>')) {
-                  idx++;
-                  while (idx < lines.length && !lines[idx].includes('</figure>')) {
-                    htmlBlock += lines[idx] + '\n';
-                    idx++;
-                  }
-                  if (idx < lines.length) {
-                    htmlBlock += lines[idx];
-                  }
-                }
-                const srcMatch = htmlBlock.match(/src="([^"]+)"/);
-                const altMatch = htmlBlock.match(/alt="([^"]*)"/);
-                if (srcMatch) {
-                  elements.push(
-                    <figure key={idx} className="essay-inline-image">
-                      <img src={srcMatch[1]} alt={altMatch ? altMatch[1] : ''} loading="lazy" />
-                    </figure>
-                  );
-                }
-                continue;
-              }
-
-              if (line.trim() === '---') {
-                flushList(idx);
-                elements.push(<hr key={idx} className="essay-rule" />);
-                continue;
-              }
-
-              if (line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/)) {
-                flushList(idx);
-                const match = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
-                if (match) {
-                  elements.push(
-                    <figure key={idx} className="essay-inline-image">
-                      <img src={match[2]} alt={match[1]} loading="lazy" />
-                    </figure>
-                  );
-                  continue;
-                }
-              }
-
-              if (line.startsWith('#### ') || line.startsWith('### ')) {
-                flushList(idx);
-                const text = line.replace(/^#{3,4} /, '');
-                elements.push(<h3 key={idx} id={slugify(text)} className="essay-h3">{renderInline(text)}</h3>);
-                continue;
-              }
-
-              if (line.startsWith('## ')) {
-                flushList(idx);
-                const text = line.replace('## ', '');
-                elements.push(<h2 key={idx} id={slugify(text)} className="essay-h2">{renderInline(text)}</h2>);
-                continue;
-              }
-
-              if (line.startsWith('# ')) {
-                flushList(idx);
-                const text = line.replace(/^#+ /, '').trim();
-                if (text) {
-                  elements.push(<p key={idx} className="essay-p">{renderInline(text)}</p>);
-                }
-                continue;
-              }
-
-              if (line.startsWith('> ')) {
-                flushList(idx);
-                const text = line.replace(/^> /, '');
-                elements.push(
-                  <blockquote key={idx} className="essay-blockquote">
-                    {renderInline(text)}
-                  </blockquote>
-                );
-                continue;
-              }
-
-              if (line.match(/^[-*] /)) {
-                const text = line.replace(/^[-*] /, '');
-                listBuffer.push(text);
-                continue;
-              }
-
-              if (line.match(/^\*\*[^*]+\*\*:/)) {
-                flushList(idx);
-                const match = line.match(/^\*\*([^*]+)\*\*:\s*(.*)$/);
-                if (match) {
-                  elements.push(
-                    <p key={idx} className="interview-answer">
-                      <span className="interview-speaker">{match[1]}:</span>{' '}
-                      {renderInline(match[2])}
-                    </p>
-                  );
-                  continue;
-                }
-              }
-
-              if (line.startsWith('*') && line.endsWith('*') && !line.startsWith('**')) {
-                flushList(idx);
-                elements.push(
-                  <p key={idx} className="interview-question">
-                    {line.slice(1, -1)}
-                  </p>
-                );
-                continue;
-              }
-
-              if (line.startsWith('[') && line.includes('](')) {
-                flushList(idx);
-                const match = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
-                if (match) {
-                  elements.push(
-                    <p key={idx} className="essay-p">
-                      <a href={match[2]} target="_blank" rel="noopener noreferrer">{match[1]}</a>
-                    </p>
-                  );
-                  continue;
-                }
-              }
-
-              if (line.trim() === '') {
-                flushList(idx);
-                continue;
-              }
-
-              flushList(idx);
-              elements.push(
-                <p key={idx} className="essay-p">{renderInline(line)}</p>
-              );
-            }
-
-            flushList(lines.length);
-            return elements;
-          })()}
+          {sourceUrl && (
+            <p className="essay-source-link">
+              <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+                Texto original
+              </a>
+            </p>
+          )}
         </section>
 
         <footer className="essay-footer">
+          {metadata.tags && metadata.tags.length > 0 && (
+            <div className="essay-tags">
+              {metadata.tags.map((tag, i) => (
+                <span key={i} className="essay-tag">{tag}</span>
+              ))}
+            </div>
+          )}
           <Link to="/escrita" className="essay-back-link">← Voltar para Escrita</Link>
         </footer>
+
       </article>
     </div>
   );
 }
 
-function renderInline(text: string): React.ReactNode {
-  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|\[([^\]]+)\]\(([^)]+)\))/g);
-  return parts.map((part, i) => {
-    if (!part) return null;
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={i}>{part.slice(2, -2)}</strong>;
+function extractHeadings(text: string): Heading[] {
+  const result: Heading[] = [];
+  text.split('\n').forEach(line => {
+    if (line.startsWith('## ')) {
+      const t = line.slice(3).trim();
+      result.push({ id: slugify(t), text: t, level: 2 });
+    } else if (line.startsWith('### ')) {
+      const t = line.slice(4).trim();
+      result.push({ id: slugify(t), text: t, level: 3 });
     }
-    if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
-      return <em key={i}>{part.slice(1, -1)}</em>;
-    }
-    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-    if (linkMatch) {
-      return <a key={i} href={linkMatch[2]} target="_blank" rel="noopener noreferrer">{linkMatch[1]}</a>;
-    }
-    return part;
   });
+  return result;
 }

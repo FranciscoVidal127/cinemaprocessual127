@@ -87,7 +87,3 @@ credit: Tradução por Francisco Vidal
 **JM**: Há um espaço perto do Anthology Film Archives onde nós vamos construir uma biblioteca para a maior coleção que existe de material escrito sobre cinema independente/de vanguarda, vai custar uns 3,5 milhões de dólares. Mas eu sei que essa biblioteca vai conseguir ser feita. Tudo que precisa é a gente acreditar nela e trabalhar, trabalhar, trabalhar…
 
 ---
-
-[Texto original](http://www.logosjournal.com/brakhage_mekas.htm)
-
-*Tradução por Francisco Vidal.*
