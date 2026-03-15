@@ -21,8 +21,15 @@ export function Fotos() {
               className={`foto-cell foto-cell--${(idx % 5) + 1}`}
             >
               <img src={foto.url} alt={foto.alt} loading="lazy" />
+              <span className="foto-cell-num" aria-hidden="true">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
             </div>
           ))}
+        </div>
+        <div className="fotos-note">
+          <span className="fotos-note-line" aria-hidden="true" />
+          <p className="fotos-note-text">Ensaio fotográfico · Rio de Janeiro</p>
         </div>
       </section>
 

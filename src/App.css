@@ -206,23 +206,23 @@
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 1fr 1.4fr 1fr;
-  gap: var(--space-3xl);
+  grid-template-columns: 200px 1fr 200px;
+  gap: var(--space-2xl);
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--space-lg);
   margin-bottom: var(--space-3xl);
-  align-items: start;
+  align-items: center;
 }
 
 .footer-name {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.022em;
   color: var(--text-inverse);
   margin-bottom: 10px;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .footer-desc {
@@ -230,20 +230,18 @@
   font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 244, 240, 0.4);
+  color: rgba(245, 244, 240, 0.25);
   line-height: 1.6;
 }
 
 .footer-statement {
   font-family: var(--font-serif);
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(22px, 2.8vw, 36px);
   font-style: italic;
-  line-height: 1.55;
-  color: rgba(242, 240, 233, 0.72);
-  letter-spacing: -0.025em;
+  line-height: 1.45;
+  color: rgba(242, 240, 233, 0.78);
+  letter-spacing: -0.03em;
   text-align: center;
-  border-left: 1px solid rgba(242, 240, 233, 0.08);
-  border-right: 1px solid rgba(242, 240, 233, 0.08);
   padding: 0 var(--space-xl);
 }
 
@@ -259,14 +257,14 @@
   font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 244, 240, 0.4);
+  color: rgba(245, 244, 240, 0.25);
 }
 
 .footer-email,
 .footer-instagram {
   font-family: var(--font-sans);
-  font-size: 13px;
-  color: rgba(245, 244, 240, 0.55);
+  font-size: 12px;
+  color: rgba(245, 244, 240, 0.38);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -414,6 +412,20 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  opacity: 0.55;
+  flex-shrink: 0;
 }
 
 /* ===================== RESPONSIVE ===================== */

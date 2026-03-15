@@ -151,15 +151,7 @@ export function Home() {
                     onLoad={() => setHeroLoaded(true)}
                   />
                 </div>
-                <div className="hero-image-caption" aria-hidden="true">
-                  <span>Ator · Cineasta</span>
-                  <span>Rio de Janeiro</span>
-                </div>
                 <div className="hero-image-grain" aria-hidden="true" />
-              </div>
-              <div className="hero-image-note" aria-hidden="true">
-                <span className="hero-image-note-line" />
-                <span className="hero-image-note-text">O corpo como membrana</span>
               </div>
             </div>
 

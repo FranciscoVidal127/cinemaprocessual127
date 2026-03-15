@@ -149,7 +149,7 @@ export function FilmeDetail() {
       {filme.stills && filme.stills.length > 0 && (
         <section className="filme-detail-stills">
           <div className="container">
-            <h2 className="filme-detail-section-title">Stills</h2>
+            <p className="filme-detail-section-title">Imagens do filme</p>
             <div className="filme-stills-grid">
               {filme.stills.map((still: { src: string; alt: string }, idx: number) => (
                 <div key={idx} className="filme-still">
@@ -164,7 +164,7 @@ export function FilmeDetail() {
       {filme.scenes && filme.scenes.length > 0 && (
         <section className="filme-detail-scenes">
           <div className="container">
-            <h2 className="filme-detail-section-title">Cenas</h2>
+            <p className="filme-detail-section-title">Cenas selecionadas</p>
             <p className="filme-scenes-intro">
               Cenas selecionadas — {filme.role} (Francisco Vidal)
             </p>

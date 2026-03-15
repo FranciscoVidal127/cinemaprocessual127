@@ -24,7 +24,7 @@ export function Sobre() {
           <div className="sobre-bio-grid">
             <div className="sobre-bio-text">
               {siteData.sobre.text.map((paragraph, idx) => (
-                <p key={idx}>{paragraph}</p>
+                <p key={idx} className={idx === 0 ? 'sobre-bio-lead' : undefined}>{paragraph}</p>
               ))}
             </div>
             <div className="sobre-bio-image">

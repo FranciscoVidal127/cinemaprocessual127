@@ -146,15 +146,19 @@
 .sobre-bio-text p {
   font-family: var(--font-serif);
   font-size: 20px;
-  line-height: 1.78;
+  line-height: 1.8;
   color: var(--text-secondary);
   letter-spacing: -0.012em;
 }
 
-.sobre-bio-text p:first-child {
-  font-size: 22px;
-  color: var(--text);
-  font-style: italic;
+.sobre-bio-lead {
+  font-size: 22px !important;
+  color: var(--text) !important;
+  letter-spacing: -0.018em !important;
+  line-height: 1.72 !important;
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-sm);
 }
 
 .sobre-bio-image {
