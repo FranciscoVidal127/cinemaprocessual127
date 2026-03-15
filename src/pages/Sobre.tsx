@@ -13,7 +13,7 @@ export function Sobre() {
           <h1 className="sobre-header-name">Francisco<br />Vidal</h1>
           <div className="sobre-header-statement">
             <p className="sobre-opening-line">
-              O cinema deixou de ser ideia<br />e virou matéria.
+              Ator, cineasta, escritor.<br />Um único projeto de atenção.
             </p>
           </div>
         </div>
@@ -45,21 +45,21 @@ export function Sobre() {
                 <span className="sobre-pratica-num" aria-hidden="true">I</span>
                 <div>
                   <h3 className="sobre-pratica-title">Atuação</h3>
-                  <p className="sobre-pratica-text">Alta presença e escuta. O corpo como membrana — sensível ao outro, ao espaço e ao ritmo de cada realizador. Não uma identidade fixa, mas um ator em processo: aprender a chegar, a adaptar, a sustentar o momento.</p>
+                  <p className="sobre-pratica-text">Disponibilidade radical ao encontro. O corpo como membrana sensível ao outro, ao espaço e ao ritmo singular de cada realizador. Não a construção de personagens, mas a abertura ao que o set exige — escuta, adaptação, presença sustentada.</p>
                 </div>
               </div>
               <div className="sobre-pratica-item">
                 <span className="sobre-pratica-num" aria-hidden="true">II</span>
                 <div>
                   <h3 className="sobre-pratica-title">Realização</h3>
-                  <p className="sobre-pratica-text">Entrou no cinema pela engrenagem: tradução, pós-produção, convívio com o processo. Formado por dentro — não pela escola, mas pelo contato direto com realizadores que tratam o cinema como linguagem.</p>
+                  <p className="sobre-pratica-text">Formado por dentro do processo — tradução, montagem, pós-produção, assistência de direção. Não pela escola, mas pelo contato direto com realizadores que pensam a câmera como linguagem e o set como lugar de investigação.</p>
                 </div>
               </div>
               <div className="sobre-pratica-item">
                 <span className="sobre-pratica-num" aria-hidden="true">III</span>
                 <div>
                   <h3 className="sobre-pratica-title">Escrita</h3>
-                  <p className="sobre-pratica-text">Crítica, tradução, pensamento sobre cinema. A escrita como outra forma de atenção — ao tempo da imagem, ao gesto do ator, à inteligência do realizador. Não separada da prática, mas como sua extensão reflexiva.</p>
+                  <p className="sobre-pratica-text">Crítica, tradução, ensaio. Escrever sobre cinema é continuar a ver — com outra velocidade. Traduzir é habitar outra língua cinematográfica de dentro. Não uma atividade paralela: é o mesmo olhar, em outro meio.</p>
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@ export function Sobre() {
                 <span className="label">Entrada no cinema</span>
               </div>
               <div className="trajetoria-entry-content">
-                <p>Em 2023, trabalhou com tradução e pós-produção no longa <em>Canto das Amapolas</em> (dir. Paula Gaitán), experiência que consolidou sua relação com o cinema como linguagem e processo e impulsionou sua transição para a atuação.</p>
+                <p>Em 2023, trabalhou com tradução e pós-produção no longa <em>Canto das Amapolas</em> (dir. Paula Gaitán) — experiência que não foi apenas formação, mas revelação: o cinema como tempo, montagem, relação entre corpos. Dali saiu com uma pergunta nova sobre o que queria fazer diante da câmera.</p>
               </div>
             </div>
 
@@ -107,10 +107,10 @@ export function Sobre() {
 
             <div className="trajetoria-entry">
               <div className="trajetoria-entry-label">
-                <span className="label">Pesquisa</span>
+                <span className="label">Modo de trabalho</span>
               </div>
               <div className="trajetoria-entry-content">
-                <p>Seu trabalho busca uma atuação de alta presença e escuta, com flexibilidade para diferentes estilos de direção autoral — mantendo precisão, adaptação e disponibilidade. O corpo como membrana: sensível ao outro, ao espaço, ao ritmo de cada realizador.</p>
+                <p>Tem interesse particular em realizadores com visão autoral — que usam a câmera como instrumento de pensamento e o ator como parceiro de uma descoberta, não como executor de uma ideia já formada. Trabalha com flexibilidade de registro: ficção, documentário, experimental. O que importa é a seriedade com a linguagem.</p>
               </div>
             </div>
 
@@ -172,14 +172,14 @@ export function Sobre() {
         <div className="container">
           <div className="sobre-encontro-inner">
             <div className="sobre-encontro-left">
-              <span className="label">Disponibilidade</span>
+              <span className="label">Contato</span>
             </div>
             <div className="sobre-encontro-right">
-              <h2 className="sobre-encontro-title">Aberto ao encontro</h2>
+              <h2 className="sobre-encontro-title">Disponível para<br />o próximo projeto</h2>
               <div className="sobre-encontro-body">
-                <p>Estou em atividade contínua como ator e estou disponível para projetos de cinema — de longas e curtas de ficção a documentários e trabalhos experimentais. Tenho interesse particular em diretores com visão autoral, em projetos que levem a linguagem cinematográfica a sério.</p>
-                <p>Também escrevo sobre cinema e estou aberto a colaborações editoriais, diálogos sobre crítica e tradução, e encontros que não se enquadram em categorias óbvias.</p>
-                <p>Se o que você viu aqui ressoa com algo que você faz ou quer fazer — escreva.</p>
+                <p>Estou em atividade contínua como ator — aberto a longas, curtas, documentários e trabalhos que atravessam fronteiras de forma. O que orienta o interesse não é o formato, mas a qualidade da visão: realizadores que pensam o cinema como linguagem e o set como espaço de descoberta.</p>
+                <p>Também estou aberto a encontros que não têm nome ainda — conversas sobre crítica, colaborações editoriais, projetos que precisam de alguém que entende o cinema de dentro.</p>
+                <p>Se algo aqui ressoa com o que você faz — escreva.</p>
               </div>
               <div className="sobre-encontro-links">
                 <a href="mailto:franciscovidalcs@gmail.com" className="sobre-encontro-email">

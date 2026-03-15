@@ -108,7 +108,7 @@ export function Home() {
               </h1>
 
               <p className="hero-statement">
-                Entrou no cinema pela engrenagem — tradução, montagem, pós-produção. Agora está diante da câmera. O corpo como membrana. O gesto como linguagem.
+                Entrou no cinema pela engrenagem — tradução, montagem, pós-produção. Agora está diante da câmera, escreve sobre cinema, e continua, por todos esses meios, a perguntar o que uma imagem pode.
               </p>
 
               <div className="hero-roles" aria-label="Áreas de atuação">
@@ -166,7 +166,7 @@ export function Home() {
       {/* TICKER */}
       <div className="ticker" aria-hidden="true">
         <div className="ticker-track">
-          {['Cinema', 'Membrana', 'Rio de Janeiro', 'Escuta', 'Matéria', 'Processo', 'Tradução', 'Presença', 'Tempo', 'Corpo', 'Gesto', 'Cinema', 'Membrana', 'Rio de Janeiro', 'Escuta', 'Matéria', 'Processo', 'Tradução', 'Presença', 'Tempo', 'Corpo', 'Gesto'].map((word, i) => (
+          {['Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Tradução', 'Encontro', 'Tempo', 'Corpo', 'Gesto', 'Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Tradução', 'Encontro', 'Tempo', 'Corpo', 'Gesto'].map((word, i) => (
             <span key={i} className="ticker-word">{word}<span className="ticker-dot">·</span></span>
           ))}
         </div>
@@ -181,10 +181,10 @@ export function Home() {
             </div>
             <div className="home-statement-body">
               <blockquote className="home-statement-quote">
-                "O cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação."
+                "O cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço."
               </blockquote>
               <p className="home-statement-text">
-                Ator e cineasta formado por dentro do cinema — pela pós-produção, pela tradução, pelo contato com realizadores que pensam a câmera como linguagem. O que busco na atuação é o corpo como membrana: sensível ao outro, ao espaço, ao ritmo de cada diretor. Não uma identidade fixa, mas um ator em processo permanente.
+                Ator e cineasta formado por dentro do cinema — pela pós-produção, pela tradução, pelo convívio próximo com realizadores que pensam a câmera como linguagem. Busca na atuação uma disponibilidade radical: o corpo sensível ao outro, ao espaço, ao ritmo singular de cada diretor. A escrita e a realização não são atividades paralelas — são o mesmo projeto de atenção, em outros meios.
               </p>
               <Link to="/sobre" className="home-statement-link">
                 Trajetória completa →
@@ -294,10 +294,10 @@ export function Home() {
             <div className="home-contact-text">
               <p className="home-contact-heading">Escreva.</p>
               <p className="home-contact-body">
-                Um projeto, uma ideia, uma pergunta ainda sem resposta — se o que você viu aqui ressoa com algo que você faz ou quer fazer, escreva. Estou em processo e aberto ao encontro.
+                Um projeto em desenvolvimento, uma pergunta sobre o trabalho, uma colaboração que ainda não tem forma — se algo aqui ressoa com o que você faz, escreva. Estou em atividade contínua e aberto ao encontro.
               </p>
               <p className="home-contact-sub">
-                Rio de Janeiro · disponível para projetos de cinema
+                Rio de Janeiro · ator · disponível para projetos de cinema
               </p>
             </div>
             <div className="home-contact-links">
