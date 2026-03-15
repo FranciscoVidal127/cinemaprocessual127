@@ -73,10 +73,9 @@ export function Escrita() {
 
       <header className="page-header">
         <div className="page-header-inner">
-          <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Escrita</h1>
           <p className="page-intro">
-            Ensaios, entrevistas, crítica de cinema, tradução e cadernos de processo — a escrita como outra forma de atenção ao cinema.
+            A escrita como outra forma de atenção — ao tempo da imagem, ao gesto do ator, à inteligência do realizador.
           </p>
         </div>
       </header>

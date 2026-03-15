@@ -7,9 +7,8 @@ export function Fotos() {
 
       <header className="page-header">
         <div className="page-header-inner">
-          <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Fotos</h1>
-          <p className="page-intro">Retratos. A imagem fixa como outro modo de presença.</p>
+          <p className="page-intro">A imagem fixa como outro modo de presença.</p>
         </div>
       </header>
 

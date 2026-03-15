@@ -8,9 +8,8 @@ export function Filmografia() {
 
       <header className="page-header">
         <div className="page-header-inner">
-          <span className="page-eyebrow">Francisco Vidal</span>
           <h1 className="page-title">Filmografia</h1>
-          <p className="page-intro">Trabalhos em cinema. Presença diante da câmera como prática contínua.</p>
+          <p className="page-intro">Presença diante da câmera como prática contínua — não como demonstração, mas como relação.</p>
         </div>
       </header>
 

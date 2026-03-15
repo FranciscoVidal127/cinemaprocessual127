@@ -361,7 +361,7 @@
 }
 
 .page-header {
-  padding: var(--space-2xl) 0 var(--space-xl);
+  padding: var(--space-3xl) 0 var(--space-2xl);
   border-bottom: 1px solid var(--border);
   background-color: var(--bg);
 }
@@ -393,15 +393,13 @@
 
 .page-intro {
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: clamp(18px, 2vw, 24px);
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.58;
   color: var(--text-secondary);
-  max-width: 52ch;
-  margin-top: 24px;
-  letter-spacing: -0.015em;
-  border-left: 2px solid var(--accent);
-  padding-left: 20px;
+  max-width: 48ch;
+  margin-top: 28px;
+  letter-spacing: -0.018em;
 }
 
 /* ===================== SHARED LABEL STYLE ===================== */
