@@ -8,6 +8,10 @@ tags: ["Bruno Pires", "João Pedro Faro", "Infinito Ábaco", "mbvideo", "cinema 
 origem: Entrevista realizada por Francisco Vidal
 ---
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXcZ3UXD3KiVij2FZWOGEhqrCxP49BAkvMRRH-YYEaUNRQCyS9m_rRKsuyxLCgWfHI4emqwLenjbJcrEoBI7evL5W5ZZhgev7nXqv6GVkTWjkNkT-kyN4N5fjv7e6fqdAw08K4m1tiegZQZlvNDwrbFsNsBUEyPC4F32oNZCVrU0kfIe97O3DJHCq5nojP/w282-h419/Captura%20de%20tela%202023-09-21%20105255.png" alt="Infinito Ábaco" />
+</figure>
+
 ### **Como surgiu *Infinito Ábaco*? Como foi a concepção da ideia do filme até seu momento de gravação?**
 
 **BRUNO**: Então, o filme ele se comunica bem com um curta-metragem que eu havia realizado há alguns anos, e que era um vídeo de cinco minutos meio em estilo *Found footage*, sobre alienígenas e teorias da conspiração, e era um curta-metragem que eu achei bem divertido de fazer. E aí eu decidi expandir um pouco dessa linha estilística no *Infinito Ábaco*, que não é um filme de *Found footage*, mas era uma primeira ideia inicial, e acabou que o filme se tornou um filme mais engraçado, um filme de personagem né? Ele se tornou um *Mockumentary* desse personagem, interpretado por mim mesmo, se gravando. 
@@ -27,6 +31,10 @@ origem: Entrevista realizada por Francisco Vidal
 **JOÃO**: O gênero são as convenções cinematográficas que fazem sentido de serem trabalhadas a partir de determinada ideia. Então eu acho que pra mim talvez ela venha depois, porque o que vem antes nunca é necessariamente uma pulsão de um longa, ou de um gênero especifico, são um conjunto de ideias e interesses próprios que a gente acaba percebendo elas dentro de uma teia de outras referências. E tudo isso vai levar você a convenções, a trabalhar com as convenções que existem. E isso não é um elemento necessariamente incontornável, mas é algo sempre bem vindo, principalmente nesses projetos em que a ideia principal é essa tentativa constante, que nunca é finalizada, de encontrar um balanço, uma mistura, ou uma ligação entre experimentos estéticos mais intensos e de narrativas mais reconhecíveis, com traços reconhecíveis de outros cinemas, produtos culturais, meios artísticos, e pensamentos mais ou menos eruditos, mais ou menos inteligentes.  
 
 Então é sempre essa tentativa de homogeneizar as coisas, e o gênero é uma convenção, o gênero é quando você percebe algum elemento que une um determinado grupo de coisas. Então de certa forma quando a gente se interessa em fazer filmes que tenham algum tipo de elemento mais reconhecível é difícil fugir de gêneros, porque são eles que determinam as convenções. Então me interessa sempre isso, os gêneros e os arquétipos. No caso do *Infinito Ábaco,* ele não lida necessariamente muito com a questão do arquétipo, ou até da questão de gênero, mas ele lida com essa ideia de quebra de expectativas, especialmente dentro de uma comédia, de uma quebra do que você espera ou não espera que aconteça dentro de uma determinada sequência estrutural e lógica do filme, que vai se explicando enquanto ele acontece, então o que fica são essas percepções alteradas de convenções e arquétipos. 
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzPKiD89fbsF7tu77HYY6-NWYv2c3YHVnMI-QuPwbVIvD59maruS9HjxjW8lOArnNXkImcoA6XIFfuvfR9vHbHSrYlwmvaHWRTnhKJreE8-1aPJYYSR8VlVqsmst2pPNPsZ13lhjQMAqcXqAZvM_g-STR-lhZ8m8mMLm7zGzzjulBYeZVdkzylKvBNcdRA/w354-h197/Captura%20de%20tela%202023-09-21%20105404.png" alt="Infinito Ábaco" />
+</figure>
 
 **Sobre essa questão da comédia, eu queria que vocês falassem sobre o humor do filme, porque outro elemento dos filmes da *mbvideo* é essa ideia de explorar algo extremo, até mesmo nessa questão de uma certa violência que gera uma certa estranheza, uma certa quebra de expectativa com o que você está assistindo. E também queria que vocês comentassem a questão da ironia, porque a ideia de ironia é vista ás vezes com maus olhos, vocês acham que todas as obras da *mbvideo* tem uma questão de humor envolvida?**
 
@@ -65,6 +73,10 @@ Mas ao mesmo tempo em que o filme traz essas referências um pouco mais eruditas
 **BRUNO**: E querendo ou não, nesse processo você acaba ganhando certa moral, você aprende a ficar meio marrento também, né?
 
 **JOÃO**: Não que a gente receba qualquer moral, mas realmente o objetivo é sempre ser mais ambicioso e mais malicioso. E eu acho que a malícia em geral ela é uma questão afetiva também, sabe? A malícia ela não é maldade, ela é diferente. Ela requer uma agressão e uma sutiliza também, você entender a hora que você pode ser malicioso, você saber como você vai ser malicioso, como você vai desviar e atingir os lugares comuns, tudo isso tem a ver com malícia. E eu acho que essas são sempre nossas grandes e principais intenções: malícia e ambição. Pra mim esses dois elementos não são apenas de criatividade e invenção, mas também de uma paixão e amor pela reação, uma amor pelos sentimentos e percepções que são capazes de serem produzidos dentro do cinema, e na verdade dentro de qualquer tipo de expressão artística. 
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVCSsJltK7bl6hMihUQQVc8VPZWKcOHpaqSeeen5oH8KbkZS-IzEgz6ewTQu2k_9cUy-fOK8j6w7kL0Tfqt-quSCVMHgvAJ-HVb5eoxZLtWnWmHH-mTAwsuBbnk-XYlNNCFpQrSavl9P7PreqNaVxrU9u_U1qVoSVF8Iei0kmiqv6uoTBbZ8IzQKgIM/w347-h199/Captura%20de%20tela%202023-09-21%20105426.png" alt="Infinito Ábaco" />
+</figure>
 
 **A minha última pergunta é sobre como vocês se sentem passando o filme em um festival, e como vocês se observam dentro de uma tradição de um certo cinema experimental independente, vocês se sentem parte de alguma tradição moderna de cinema experimental brasileiro?** 
 

@@ -8,6 +8,10 @@ tags: ["Matilde Miranda Mellado", "Salaman Extensor", "Festival ECRÃ", "cinema 
 origem: Entrevista realizada por Francisco Vidal
 ---
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAZjVzcaMxr0z8Jli0HlQJGezL1fhVeVI3KRQ99UQu2o5O3wqUa0S2QXJv6invhyTg4VLzC_jOYCgz6B8t8qI0AsmL2Cel7eJSq8ESepZZjZ_7sEonn2fi1IWqcQmbmFNeVRcb9urb6c6jqSw4buyIwnewGmMDFio8mn9tlGKeup3rsmd4m3xajL0rVFQ4/s320/festival-ecra%20(1).jpg" alt="Festival ECRÃ 2024" />
+</figure>
+
 **Uma coisa que realmente me tocou em seu filme foi esse tema de tentar buscar uma maneira de expressar uma emoção que é muito interna. E eu queria perguntar sobre esse processo de tentar traduzir através de imagens e som a jornada da protagonista principal, HAAYA, nessa paisagem virtual. Como foi o processo de criação dessa paisagem e o que te inspirou a fazer este projeto?**
 
 **Matilde Miranda Mellado:** Acho o que principalmente me inspirou foi que, durante a pandemia, eu meio que me apaixonei. Durante esse período, eu tive aulas online com uma universidade coreana, onde conheci esse cara por quem me apaixonei, então a estória que aparece no final do filme é verdadeira. E isso nunca tinha acontecido comigo antes, então foi muito revelador sentir esse tipo de coisa através de uma plataforma virtual. Foi onde o espectro do amor se abriu para mim, onde eu pude senti-lo. Então, essa foi a principal razão pela qual eu quis explorar essa novidade, esse afeto virtual. Depois, eu não tinha muita certeza de como representar esse lugar ou essa estória, porque "virtual" e "afeto" eram as palavras-chave principais para o projeto, mas elas não tinham muita representação visual anterior com a qual trabalhar. Eu não conseguia pensar em nada... era como um vazio. Então, começamos esse projeto do nada, apenas com essas duas palavras, e elas eram tão elusivas, duas palavras de representação.
@@ -15,6 +19,10 @@ origem: Entrevista realizada por Francisco Vidal
 E eu trabalhei com meu diretor de fotografia para registrar nossos arredores materiais, foi muito... não sei, não é um processo experimental, mas é muito prático. Estávamos trabalhando durante a pandemia, então não estávamos juntos, mas estávamos trocando essas cartas gravadas. Nós enviávamos vídeos um ao outro. E registrávamos nossos arredores, como vidros entre as luzes, e gravávamos a água. Juntos, assistimos aos vídeos que aparecem no filme e conversamos sobre o que eles nos faziam sentir. E então começamos a entrar em algumas emoções que sentíamos que os materiais nos transmitiam, e depois queríamos continuar explorando. Então, foi assim que decidimos trabalhar com alguns materiais, com fogo, por exemplo, e com muita água, e assim começamos a construir esse *corpus material* de gravações.
 
 E então eventualmente começamos a entrar na pós-produção, e começamos a criar essas novas imagens que eram completamente diferentes das primeiras, e então foi quando a história começou a se desenrolar, porque então eu tinha essas novas imagens que trouxeram essas outras ideias, e então foi apenas tentar ver o material pelo que ele era, e o que ele nos fazia sentir no momento, e depois tentar colocá-lo em palavras e sons, e simplesmente trabalhar com isso.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAVdqWq6mIa9NRzjKsr3eTedtIrxDK_Lo7DLCiCuvvRid6YaQypLsdwancHj3HctfphKhXIC0WRFMjZ-ZHPjZ_2_mHUG0fUhZA0Twm8sxdPgfhm6GdIXoYPp9b1N0xeKdxDZoid2W0qroCXrjANSHukvsLx7d5htIGfKZ5-LWzRNYzrJfQOJTQTHLHW1Zs/s320/Captura%20de%20tela%202024-07-06%20165018.png" alt="Salaman Extensor — Matilde Miranda Mellado" />
+</figure>
 
 **As imagens no seu filme são deslumbrantes. Fiquei particularmente comovido com as imagens desse tipo de grupo aquático de criaturas em forma de anel que são capazes de gerar um novo ser, cuja própria diferença em relação a elas faz com que ele se separe. Como você conseguiu chegar a uma imagética tão sensual e também tão viva?**
 
@@ -26,6 +34,10 @@ E então eventualmente começamos a entrar na pós-produção, e começamos a cr
 
 E eu sempre tive os nomes dos principais usuários como HAAYA e SULLL8, eu sempre quis que fosse essa conversa. Gosto disso porque acho que é como uma coisa de mão dupla, que meio que me lembra um pouco do diálogo de Platão e Sócrates. Eles sempre têm esse tipo de conversa, então foi algo semelhante a isso.
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEize_JuX4Pj-0h7syaaJjZYiNfiEZJDrJ2Vnfrl5gO0-DZ_8wxbcUazJ4Fyf8B_7vVNTzScVC6QPfMyxHu1RLKZb2wNROqlTfsU-SsikP9Uwgp5HdKZUVALeECPUR3FQRskK0VRFwCD2DDqhle0UyfWMpCVMmUSCYDxVakAztrV4N4od97McmrkFoZB0z0e/s320/Captura%20de%20tela%202024-07-06%20165039.png" alt="Salaman Extensor — Matilde Miranda Mellado" />
+</figure>
+
 **E como foi o design de som feito durante o processo? Porque há essa mistura de movimentos da água, do mar, e movimentos muito parecidos com algo marinho. Como isso foi criado e como a ideia do espaço de Salamandra, que também é o nome do filme, foi criada no processo?**
 
 **Matilde Miranda Mellado:** O design de som veio com a música, porque eu estava trabalhando com meu amigo e ele faz música eletrônica. Mas eu não sei, para mim é sempre assim, eu assisto a imagem sem o som, e meio que começo a tentar ver o que poderia ir ali, e o que essas coisas me fariam sentir. Por exemplo, no filme há uma imagem vermelha, e é meio sangrenta, mas eu queria intensificar esse sentimento com um som de algo molhado e espremido, e também com isso tornar a imagem mais leve. Como se parecesse que está subindo um pouco, como se estivesse ficando mais clara de certa forma. Eu não sei, eu apenas tento sentir o que as imagens estão dizendo, e então vejo se isso funciona, e se não funciona, então talvez deva ser o completo oposto. Então é como brincar com tudo, até chegar ao que você quer expressar, mas nunca é o que você quer expressar, é apenas, isso se expressa depois. Você só precisa saber como ler, as coisas que estão saindo do próprio filme, eu acho. E o nome, Salaman Extensor, foi a primeira coisa que fizemos, antes de termos tudo. Nós apenas colocamos o nome lá fora, parecia algo que era ao mesmo tempo antigo e também futurista. Então essa é a única razão pela qual se chama assim, e também nos deu a primeira pedra que colocamos, e então tudo veio depois disso.
@@ -33,6 +45,10 @@ E eu sempre tive os nomes dos principais usuários como HAAYA e SULLL8, eu sempr
 **Eu ainda não vi o seu trabalho anterior, então estou curioso para saber se você sente que Salaman Extensor é uma culminação do que você queria expressar como artista. Você sente isso ou o filme representa um novo e diferente capítulo para você?**
 
 **Matilde Miranda Mellado:** Eu acho que é como uma culminação, sim, ou como um ponto de partida para algo. E acho que isso teve a ver com a pandemia, porque nesse período percebi que tinha mais controle sobre o mundo material, porque fui forçado a ficar no computador 24 horas por dia, 7 dias por semana, e fazer todo o meu trabalho lá. E foi como, "Oh, isso é meio divertido!" e era fácil controlar tudo, então teve essa sensação de eu poder fazer o que quisesse. Então, esse foi o começo disso, e também eu estava em um curso de coreano durante a pandemia, e tive que fazer um trabalho final no curso que era mais como um filme de ficção científica, e durante isso percebi que poderia fazer algo mais autobiográfico com esse gênero. E a ficção científica me ajudou a tentar expressar essas coisas, mudando um pouco a perspectiva, como se afastando um pouco do seu ponto de vista e da própria realidade. Então, com esse programa como Salamander, você pode se dar esse quadro de trabalho que é separado da realidade, então você pode fantasiar nesse lugar, e isso pode te ajudar a processar emoções apenas mudando um pouco o enquadramento.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjszO205DjpQOjWNDQ-cIRPJMl-kCjZsqo7KAlcseGHohhsLk50LE6rp_iDoxBv8fppS1kPY3VZLYHwGBvf984_4wLmXA2_nOKCILm4hXPBSd64JFCNTUp5OqQap0U8pdrurYDO5p2PSRCuBa5u1vlFGsTZUY-sIW9KHF8XueUFNveEb0gBNiwZPFGpDAt_/s320/Captura%20de%20tela%202024-07-06%20164933.png" alt="Salaman Extensor — Matilde Miranda Mellado" />
+</figure>
 
 **Você estreou o filme pela primeira vez no Festival ECRÃ no Brasil, como você se sente, como uma jovem cineasta, em estrear este filme nesse tipo de festival e também como você vê a importância dos festivais de cinema experimental para o desenvolvimento de trabalhos mais radicais e únicos?**
 

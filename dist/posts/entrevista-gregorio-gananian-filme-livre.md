@@ -7,22 +7,8 @@ origem: Entrevista realizada por Francisco Vidal
 
 *Entrevista realizada no Estação Net Botafogo, no dia 15 de setembro de 2023.*
 
-<figure className="essay-hero-image essay-hero-image--stacked">
-  <div className="essay-hero-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-1.png" alt="Imagem 1 — post Greg8" loading="lazy" />
-  </div>
-</figure>
-
-<figure className="essay-hero-image essay-hero-image--stacked">
-  <div className="essay-hero-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-2.png" alt="Imagem 2 — post Greg8" loading="lazy" />
-  </div>
-</figure>
-
-<figure className="essay-hero-image essay-hero-image--stacked essay-hero-image--stacked-last">
-  <div className="essay-hero-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-3.png" alt="Imagem 3 — post Greg8" loading="lazy" />
-  </div>
+<figure>
+  <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-1.png" alt="Gregório Gananian" />
 </figure>
 
 **Há quanto tempo você conhece o Negro Leo? Como surgiu a colaboração e a ideia para este filme?**
@@ -34,6 +20,10 @@ origem: Entrevista realizada por Francisco Vidal
 **GREGORIO**: Então, na nossa concepção de humor, a gente o chama de "rumor", de "rumorismo", porque a nossa intenção era trabalhar com um tipo de cinema atrelado a uma questão de ritmo, de velocidade, que conversa um pouco com o cinema realizado nas décadas de 40 e 50, e o próprio cinema brasileiro deste período, como o cinema do Rogério Sganzerla e do Andrea Tonacci. A ideia do "rumorismo" é justamente essa questão desses sons, desses rumores, essas espécies de propagações sonoras que vagueiam em torno da gente e criam uma ressonância. Esses tipos de sons, sua velocidade, assim como a velocidade desse tipo de cinema, serviram como índice que guiava o nosso caminho. Também foi muito importante pensar a questão da velocidade. A gente estava interessado em repensar essa ideia da fala padronizada utilizada no século XX, e também pegamos influência de outros lugares: na música, até mesmo em desenhos animados.
 
 Sobre a questão robótica, aquele vídeo da Boston Dynamics (empresa norte-americana que produz robôs para testagem de uso policial e de defesa) surgiu na hora da filmagem mesmo. A gente estava gravando e de repente me veio a memória de um dos vídeos que assisti no YouTube, e eu achei aquilo incrível. Porque eu me lembro que uma coisa que eu e o Leo pensamos é que vai chegar um momento em que esses robôs vão entrar em uma guerra real, né, com a humanidade. Então a gente colocou ele no curta quase que para dizer que estamos do lado dos robôs! Que quando chegar a hora deles atacarem geral, não nos ataquem! Estamos juntos! Ou seja, a gente entende a dor deles, a gente entende a luta que está por vir.
+
+<figure>
+  <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-2.png" alt="Gregório Gananian" />
+</figure>
 
 **É fascinante ver no filme como vocês exploram a questão da *Mise En Abyme*, com a presença de vários "Negro Leos": primeiro ele conversando consigo mesmo, e depois com a presença dos dois duplicada ao infinito na televisão. Como surgiu essa ideia?**
 
@@ -70,6 +60,10 @@ Então o *G.M - 8 Cantos* é composto sobre esses fragmentos de memória afetiva
 Quando você for assistir, você vai sentir isso. É um filme que eu considero como um filme "menor". Menor no melhor sentido, naquele sentido que o Deleuze e o Guattari falam de uma arte menor. É um filme em uma voltagem diferente do *Nenhuma Fantasia*. Eu sou um cineasta que se interessa em explorar as duas frequências do cinema: a da alta velocidade do *Nenhuma Fantasia*, e a desse cinema mais Tai Chi Chuan que o *G.M - 8 Cantos* representa. E aí hoje a gente está sentindo muita felicidade porque o Sérgio fez a trilha do filme e vai tocar depois do final da sessão. Poder vir aqui ao Rio de Janeiro, após o período pandêmico, carrega muitos símbolos de memórias afetivas, poder voltar a essa rede de encontros e ressonâncias.
 
 O Sérgio é uma espécie de discípulo (talvez não seja a melhor palavra) do Koellreutter, que foi um grande compositor brasileiro, que deu aulas na Bahia para o Tom Zé, para o Caetano Veloso. Foi ele que formou a faculdade de música da Bahia. E o Gilberto Mendes havia feito uma composição chamada *"Meu Amigo Koellreutter"*, e é essa a música que o Sérgio toca no filme, e vai ser essa a música que ele vai tocar na sala de cinema quando a sessão acabar. Então a gente está dentro de um clima de abraços, de um clima mais festivo, de celebrar a vida, né? Sempre com um pouco de amargura no coração por todos que faleceram. Em especial pelas pessoas que faziam parte da Mostra Filme Livre e que foram homenageadas na sessão de abertura.
+
+<figure>
+  <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Greg8-3.png" alt="Gregório Gananian" />
+</figure>
 
 **A última pergunta que quero fazer é sobre a Mostra Filme Livre. Qual é o relacionamento que você tem com essa mostra? Como você vê a questão da importância dela para o cinema independente brasileiro?**
 

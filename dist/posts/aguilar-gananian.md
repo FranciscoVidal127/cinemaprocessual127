@@ -8,6 +8,10 @@ tags: ["José Roberto Aguilar", "Gregório Gananian", "cinema experimental", "pe
 origem: Entrevista realizada por Francisco Vidal
 ---
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzm_5CB5GT2fbaquqT8pehV1HNwPgB2DjJx7E_KP4M5zvr0s69-3E6ki6CIKP-HKq1Rb5E99Tepuqfd6eL-RYfGFRQnZ-tOAAwZQjPoT5oen0CpLfx-qodTD_wSa8Lzw_ozasRObAWwXAPX7qaiz4wsEeUL2h266CjZV6tbNsvi0-TUiAoQNVegJIlUt3_/w483-h322/40078132295_4335d38dc5_b.jpg" alt="José Roberto Aguilar" />
+</figure>
+
 *A entrevista com Gregório Gananian, cineasta e curador/diretor da mostra **José Roberto Aguilar- Sonho e Contrassonho** na Cinemateca do MAM, foi realizada no dia 20 de Novembro de 2023. Ela abrange não apenas a mostra em si mais também o relacionamento artístico de Gregório com Aguilar.*
 
 **Como surgiu sua colaboração artística com Aguilar? Como vocês se conheceram?**
@@ -25,6 +29,10 @@ E nesse período eu mandei mensagem para o Aguilar dizendo "Olha, eu vou fazer u
 E a partir disso começamos a nos encontrar com regularidade, almoçávamos juntos, eu ia demais para a casa dele, ele mora em uma casa no bairro Bixiga em São Paulo, que é um dos bairros mais interessantes da cidade. E aí a partir disso eu o convidei para participar do *Inaudito* (2017), e o filme tem uma curiosidade porque os artistas que eu convidei para participar do filme eram o Aguilar, o Macalé, e o Negro Leo. Eu acho que eu não tive o interesse de chamar artistas como o Caetano ou o Gil porque o filme era muito sobre a versão atual do Lanny, sobre esse processo moderno do Lanny. E o Aguilar realiza uma performance linda no filme, ele pinta o branco sobre o branco, em uma parede branca. E aí quando eu separei as imagens gravadas do filme, ele começou a falar pra mim "*Vamos continuar a fazer coisas juntos!*" Foi um convite que veio dele. E a partir disso nos estabelecemos uma parceria.  Acho que até hoje nós conseguimos fazer mais de 30 performances juntos, ou mais. 
 
 A gente trabalhou tanto junto que eu o considero como uma família, como uma espécie de amigo-pai-filho. Ele é um grande amigo para mim, ele sempre me acompanha. Eu me lembro que fizemos uma vídeo instalação recentemente lá no Sesc Consolação, e ficou uma coisa divina. Eu semanalmente vou para a casa dele, eu sento com ele e a gente bate um papo. Durante a pandemia a gente fazia live toda semana, a gente desenvolveu muitos projetos juntos, ele é uma figura que me ensina muito. Ele me ensinou e me levou para fazer Tai Chi Chuan, me ensinou a ser mais intuitivo e espontâneo. Então considero ele simultaneamente um grande mestre, um grande amigo, e um grande parceiro. 
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDzXlmzV7UhkIh3wCIbYKIwJw8c5hLTrIjr2ME06wzNDTSjipQrN7vc96fPDfHDfUCtd8qsl_bUJnfMgHbfrwmnJah-kdrHBgXtGTpVD5TuKI6ic76BP245vH0abw8ORa29ETdBhOL4XQ75kI9W16wn6zftrBLlCGuerD0TjPThOmcSr53vPSWAqst2GIM/w487-h298/34886_Original.jpeg" alt="José Roberto Aguilar" />
+</figure>
 
 **Eu queria perguntar sobre os dois filmes que estão sendo exibidos nesta mostra e que você codirigiu com Aguilar, o *Tomoaki Tomoshigue* (2021) e o *Agripino* (2023). Como foi o processo de realizá-los? É especialmente fascinante ver Agripino por ser um filme feito sobre a pintura de película de 35mm.**
 
@@ -55,6 +63,10 @@ E eu aprendi com o Aguilar... o Aguilar muitas vezes escreve nomes para os quadr
 E eu acho que ele ainda está em processo, a gente encontrou material de uma entrevista inédita com o Agripino, e o som neste filme ficou incrível! Porque era o som de material de 16 quadros por segundo, então eles parecem vozes de... daquilo que o Deleuze fala, né? Do Caos, de um plano do caos. Então é a criação desse plano que se você entra com a cabeça você pode ser devorado, se você não estiver preparado. Mas se você permite que as forças do caos brotem, elas fluem e se conectam com o caos. Ele fala isso no livro '*'O Que É a Filosofia?"* Como um conceito de criação de uma ética.
 
 E essa ética seria justamente permitir que as forças, os movimentos, as fraquezas do caos possam nascer espontaneamente por elas mesmas. E a gente deixar esse plano acontecer. Por exemplo, o Deleuze fala de plano de composição, plano de imanência, plano de consistência, e esse plano de caos, e de um plano de imagem. E eu considero que esse filme, essa película transparente, essa membrana transparente é um plano de composição para que o Agripino brote. E Foi assim que ele nasceu, desse processo.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihZbkf1oWEBc7hJBzUYKkXI5t1MM0lQ9Zm2IkCiGinlZy6t3Twu6HFoajfWaOpmaGOyhDXZgEvswnOHhYCIkHBcaAWvYEqWsNEotMU7WqsrQAlBzBdGFv9zrgx76CIj9OPUDmIqq1jEhl_hF98koLQ6iRnBTM74ooajcpT_j94m6FXHY6Jk3_Q1oYjqJG_/w483-h311/16046699455fa551f9c0828_1604669945_3x2_md.jpg" alt="José Roberto Aguilar" />
+</figure>
 
 **Então, uma última pergunta, como foi para você a recepção do público dessa mostra no Rio de Janeiro? Como foi ver o público reagindo aos filmes e as performances? E para você, como você se sentiu com as projeções dos filmes?**
 

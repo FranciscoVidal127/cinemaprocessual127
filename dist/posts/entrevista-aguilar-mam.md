@@ -8,6 +8,10 @@ tags: ["José Roberto Aguilar", "cinema experimental", "pintura", "action painti
 origem: Entrevista realizada por Francisco Vidal
 ---
 
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJcNHx6g22tAx-bYWpUPkK7Qj63F7gtPY7t9B8718It8bjnBvQS75kfjY0GWEqzdNGG3BWFAeQCyjOaeFdJwZ4k8-Gi738fgjbt2rmHgfbxrQlrqdeG8NPGP0wPVy-CTAdYxH_W6SbSjUdVgLo4VR-_XKCCVHb2v96oo2ZENZxydrIy4nEaQdYLzu-7YoX/w409-h429/foto-do-aguilar.webp" alt="José Roberto Aguilar" />
+</figure>
+
 *Esta breve entrevista com José Roberto Aguilar foi realizada em um corredor da Cinemateca do MAM, no qual ocorreu entre os dias 16, 17, e 18 de Novembro de 2023 uma retrospectiva de seu trabalho em vídeo, pela direção e curadoria do cineasta e artista Gregório Gananian, que também trabalhou com Aguilar nas obras Tomoaki Tomoshigue (2021) e Agripino (2023).*
 
 **Aguilar, é um prazer tremendo estar com você e poder acompanhar sua mostra aqui na Cinemateca do MAM, como você se sente com a exibição e a recepção de suas obras aqui no Rio?**
@@ -27,3 +31,7 @@ Então tem uma junção muito grande no meu trabalho, não apenas o gesto sem sa
 **Muitos dos materiais que você utilizou artisticamente são de diferentes meios, como por exemplo o vídeo a película de 35mm, e a própria pintura. Eu queria perguntar como você se guia para escolher o tipo de material adequado, se é uma escolha baseada em intuição ou de um desejo de explorar novos processos tecnológicos emergentes. E, unido a essa pergunta, você acredita que as tecnologias modernas que existem no Brasil fornecem liberdade para artistas experimentarem mais? Você acha que nossa geração pode utilizar novas tecnologias de forma inventiva?**
 
 AGUILAR: Olha, isso é uma noção que se encontra presente desde o começo da revolução industrial. Por exemplo, o nascimento do cinema foi que nem o nascimento de uma imensa montanha que anda luz a um Super-Homem em uma caminhada titubeante. Sempre foi assim, já na década de 70 eu adquiri a primeira câmera de vídeo, a câmera Black and White da Sony, e agora, depois de 55 anos, já temos a inteligência artificial. Toda essa questão da evolução tecnológica que encontramos no passado e no presente não é nada mais nada menos do que meios específicos que a gente pode utilizar para fazer a nossa assinatura, para marcar a nossa própria individualidade. Essa é a base total de qualquer inovação.
+
+<figure>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBMsdKVQVNiG-9fyUbg9TJjrNtHhAr_Uk6GLR5VGF0tFOvk7xRdYPLERyfVxPVrx8jf5UTkua98yD_tWVlp0AxPlPjx8-zydwcZM1jnRwb6X1VhzuC6bmErnpeIoNcXl7OuWOWad5NDb-nCmG4OQ7GJFLj1lyJOGnl10PjdEFwCO4pW2oPGjZGRSagDsbx/w455-h293/16046699455fa551f9c0828_1604669945_3x2_md.jpg" alt="José Roberto Aguilar" />
+</figure>
