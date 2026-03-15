@@ -67,26 +67,26 @@
   padding: 0 var(--space-lg);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-md);
 }
 
 .essay-eyebrow {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .essay-category {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--accent);
 }
 
 .essay-date {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-light);
@@ -103,25 +103,26 @@
 
 .essay-subtitle {
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: 21px;
   font-style: italic;
-  line-height: 1.55;
+  line-height: 1.58;
   color: var(--text-secondary);
-  letter-spacing: -0.01em;
-  max-width: 58ch;
+  letter-spacing: -0.012em;
+  max-width: 56ch;
 }
 
 .essay-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding-top: 8px;
+  gap: 14px;
+  padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
 }
 
 .essay-author {
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: 12.5px;
+  letter-spacing: 0.01em;
   color: var(--text-secondary);
 }
 
@@ -184,11 +185,11 @@
 
 .essay-toc-label {
   font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.14em;
+  font-size: 9px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 16px;
+  color: var(--text-light);
+  margin-bottom: 18px;
 }
 
 .essay-toc-list {
@@ -231,7 +232,7 @@
 .essay-body {
   max-width: var(--container-narrow);
   margin: 0 auto;
-  padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
+  padding: var(--space-xl) var(--space-lg) var(--space-3xl);
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -273,13 +274,15 @@
 .essay-p a {
   color: var(--text);
   text-decoration: underline;
+  text-decoration-color: var(--border);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: opacity 0.2s ease;
+  transition: text-decoration-color 0.2s ease, opacity 0.2s ease;
 }
 
 .essay-p a:hover {
-  opacity: 0.65;
+  text-decoration-color: var(--text);
+  opacity: 0.72;
 }
 
 .essay-h2 {
@@ -309,24 +312,25 @@
 
 .essay-rule {
   border: none;
-  border-top: 1px solid var(--border);
-  margin: var(--space-2xl) 0;
-  max-width: 66ch;
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--space-xl) 0;
+  max-width: 65ch;
 }
 
 /* ===================== BLOCKQUOTE & LIST ===================== */
 
 .essay-blockquote {
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: 19px;
   font-style: italic;
-  line-height: 1.78;
+  line-height: 1.82;
   color: var(--text-secondary);
-  padding: 18px 0 18px 32px;
+  padding: 16px 0 16px var(--space-md);
   border-left: 2px solid var(--accent);
+  margin-top: 0.4em;
   margin-bottom: 1.8em;
-  max-width: 58ch;
-  letter-spacing: -0.01em;
+  max-width: 56ch;
+  letter-spacing: -0.012em;
 }
 
 .essay-list {
@@ -360,22 +364,23 @@
   font-family: var(--font-serif);
   font-size: 19px;
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.72;
   color: var(--text);
-  padding: 16px 0 16px 24px;
-  border-left: 3px solid var(--text);
-  margin-bottom: 1.2em;
-  max-width: 66ch;
+  padding: 14px 0 14px var(--space-md);
+  border-left: 2px solid var(--text);
+  margin-bottom: 1.1em;
+  max-width: 65ch;
+  letter-spacing: -0.012em;
 }
 
 .interview-answer {
   font-family: var(--font-serif);
   font-size: 19px;
-  line-height: 1.78;
+  line-height: 1.8;
   color: var(--text-secondary);
-  margin-bottom: 1.6em;
-  max-width: 66ch;
-  letter-spacing: -0.01em;
+  margin-bottom: 1.65em;
+  max-width: 65ch;
+  letter-spacing: -0.012em;
 }
 
 .interview-speaker {
@@ -399,12 +404,12 @@
 
 .essay-back-link {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-light);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
 .essay-back-link:hover {

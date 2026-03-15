@@ -33,7 +33,7 @@
   color: var(--text-light);
   background: none;
   border: none;
-  padding: 4px 24px 4px 0;
+  padding: 4px 20px 4px 0;
   cursor: pointer;
   transition: color 0.2s ease;
   line-height: 1.4;
@@ -101,9 +101,9 @@
 
 .escrita-entry {
   display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: var(--space-2xl);
-  padding: var(--space-2xl) 0;
+  grid-template-columns: 52px 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
   text-decoration: none;
@@ -122,9 +122,9 @@
 
 .escrita-entry-number {
   font-family: var(--font-mono);
-  font-size: clamp(28px, 3.2vw, 48px);
+  font-size: clamp(24px, 2.6vw, 40px);
   letter-spacing: -0.04em;
-  color: rgba(0, 0, 0, 0.055);
+  color: rgba(0, 0, 0, 0.05);
   line-height: 1;
   padding-top: 10px;
   font-weight: 400;
@@ -133,7 +133,7 @@
 }
 
 .escrita-entry:hover .escrita-entry-number {
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.09);
 }
 
 /* ===================== ENTRY BODY ===================== */
@@ -147,9 +147,9 @@
 .escrita-entry-top {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 /* Category — names the intellectual register */
@@ -185,10 +185,10 @@
 
 .escrita-entry-title {
   font-family: var(--font-serif);
-  font-size: clamp(28px, 3.2vw, 48px);
+  font-size: clamp(26px, 2.8vw, 44px);
   font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 1.04;
+  letter-spacing: -0.038em;
+  line-height: 1.06;
   color: var(--text);
   margin-bottom: var(--space-md);
 }
@@ -209,9 +209,9 @@
   font-style: italic;
   line-height: 1.82;
   color: var(--text-secondary);
-  max-width: 54ch;
-  letter-spacing: -0.01em;
-  padding-top: var(--space-sm);
+  max-width: 52ch;
+  letter-spacing: -0.012em;
+  padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -219,12 +219,12 @@
 
 .escrita-entry-soon {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.12em;
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-light);
-  border: 1px solid var(--border);
-  padding: 3px 10px;
+  border: 1px solid var(--border-subtle);
+  padding: 4px 10px;
   width: fit-content;
   margin-top: 8px;
 }

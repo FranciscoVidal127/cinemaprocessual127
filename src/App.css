@@ -62,20 +62,20 @@
 
 .nav-brand-name {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.022em;
   color: var(--text);
   line-height: 1;
 }
 
 .nav-brand-sub {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 8.5px;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-light);
   line-height: 1;
 }
 
@@ -87,9 +87,9 @@
 
 .nav-link {
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
   text-decoration: none;
@@ -123,9 +123,9 @@
   color: var(--text);
   border: 1px solid var(--border);
   padding: 6px 16px;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  transition: all 0.2s ease;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease;
 }
 
 .nav-link--contact::after {
@@ -199,7 +199,7 @@
 .footer {
   background-color: var(--bg-darkest);
   color: var(--text-inverse);
-  padding: var(--space-3xl) 0 var(--space-lg);
+  padding: var(--space-2xl) 0 var(--space-lg);
   margin-top: auto;
   border-top: 1px solid var(--border-darkest);
 }
@@ -211,18 +211,18 @@
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--space-lg);
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
   align-items: center;
 }
 
 .footer-name {
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 400;
   letter-spacing: -0.022em;
   color: var(--text-inverse);
   margin-bottom: 10px;
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 .footer-desc {
@@ -236,13 +236,13 @@
 
 .footer-statement {
   font-family: var(--font-serif);
-  font-size: clamp(22px, 2.8vw, 36px);
+  font-size: clamp(20px, 2.4vw, 32px);
   font-style: italic;
-  line-height: 1.45;
-  color: rgba(242, 240, 233, 0.78);
-  letter-spacing: -0.03em;
+  line-height: 1.5;
+  color: rgba(242, 240, 233, 0.65);
+  letter-spacing: -0.028em;
   text-align: center;
-  padding: 0 var(--space-xl);
+  padding: 0 var(--space-lg);
 }
 
 .footer-right {
@@ -264,14 +264,14 @@
 .footer-instagram {
   font-family: var(--font-sans);
   font-size: 12px;
-  color: rgba(245, 244, 240, 0.38);
+  color: rgba(245, 244, 240, 0.42);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
 .footer-email:hover,
 .footer-instagram:hover {
-  color: var(--text-inverse);
+  color: rgba(245, 244, 240, 0.85);
 }
 
 .footer-bottom {
@@ -374,10 +374,10 @@
 
 .page-eyebrow {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-light);
   margin-bottom: 20px;
   display: block;
 }
@@ -406,23 +406,23 @@
 
 .label {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
 }
 
 .label::before {
   content: '';
   display: inline-block;
-  width: 4px;
-  height: 4px;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
   background-color: var(--accent);
-  opacity: 0.55;
+  opacity: 0.6;
   flex-shrink: 0;
 }
 

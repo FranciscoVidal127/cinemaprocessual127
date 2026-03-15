@@ -116,16 +116,16 @@
 .sobre-pratica-text {
   font-family: var(--font-serif);
   font-size: 17px;
-  line-height: 1.72;
+  line-height: 1.76;
   color: var(--text-secondary);
-  letter-spacing: -0.01em;
-  max-width: 60ch;
+  letter-spacing: -0.012em;
+  max-width: 58ch;
 }
 
 /* ===================== BIO ===================== */
 
 .sobre-bio {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-3xl) 0 var(--space-2xl);
   border-bottom: 1px solid var(--border);
 }
 
@@ -145,28 +145,28 @@
 
 .sobre-bio-text p {
   font-family: var(--font-serif);
-  font-size: 20px;
-  line-height: 1.8;
+  font-size: 19px;
+  line-height: 1.82;
   color: var(--text-secondary);
   letter-spacing: -0.012em;
 }
 
 .sobre-bio-lead {
-  font-size: 22px !important;
+  font-size: 21px !important;
   color: var(--text) !important;
-  letter-spacing: -0.018em !important;
-  line-height: 1.72 !important;
-  padding-bottom: var(--space-lg);
-  border-bottom: 1px solid var(--border);
-  margin-bottom: var(--space-sm);
+  letter-spacing: -0.016em !important;
+  line-height: 1.74 !important;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
 }
 
 .sobre-bio-sidebar {
   position: sticky;
-  top: 100px;
+  top: 96px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .sobre-bio-still {
@@ -188,12 +188,13 @@
 
 .sobre-bio-still-caption {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.12em;
+  font-size: 8.5px;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--text-light);
-  margin-top: 10px;
-  line-height: 1.5;
+  margin-top: 12px;
+  line-height: 1.6;
+  opacity: 0.8;
 }
 
 .sobre-bio-portrait img {
@@ -270,7 +271,7 @@
 .trajetoria-credits li {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   padding-bottom: var(--space-lg);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -282,18 +283,20 @@
 
 .trajetoria-credits strong {
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.022em;
   color: var(--text);
+  line-height: 1.1;
 }
 
 .trajetoria-credits-role {
   font-family: var(--font-serif);
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
   color: var(--accent);
   letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .trajetoria-credits-meta {
@@ -305,15 +308,15 @@
 
 .trajetoria-credits-note {
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
-  line-height: 1.68;
+  line-height: 1.7;
   color: var(--text-secondary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
   max-width: 54ch;
-  padding-top: 6px;
+  padding-top: 10px;
   border-top: 1px solid var(--border-subtle);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 /* Formation list */
@@ -327,10 +330,10 @@
 
 .trajetoria-formation li {
   display: grid;
-  grid-template-columns: 200px 1fr auto;
-  gap: var(--space-lg);
+  grid-template-columns: 175px 1fr auto;
+  gap: var(--space-md);
   align-items: baseline;
-  padding: 14px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -351,7 +354,8 @@
   font-family: var(--font-serif);
   font-size: 17px;
   color: var(--text);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
+  line-height: 1.3;
 }
 
 .trajetoria-formation-info {
@@ -403,7 +407,7 @@
   gap: var(--space-md);
   margin-bottom: var(--space-2xl);
   border-left: 1px solid var(--border-dark);
-  padding-left: var(--space-xl);
+  padding-left: var(--space-lg);
 }
 
 .sobre-encontro-body p {
@@ -416,16 +420,17 @@
 }
 
 .sobre-encontro-body p:last-child {
-  color: rgba(242, 240, 233, 0.78);
+  color: rgba(242, 240, 233, 0.82);
   font-style: italic;
-  font-size: 19px;
+  font-size: 18px;
+  letter-spacing: -0.012em;
 }
 
 .sobre-encontro-links {
   display: flex;
   align-items: center;
   gap: var(--space-xl);
-  padding-left: var(--space-xl);
+  padding-left: var(--space-lg);
 }
 
 .sobre-encontro-email {
