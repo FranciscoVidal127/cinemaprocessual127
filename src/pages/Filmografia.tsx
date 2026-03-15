@@ -29,6 +29,15 @@ export function Filmografia() {
                   <img src={filme.image} alt={filme.title} />
                 </div>
                 <div className="filmografia-entry-body">
+                  <div className="filmografia-entry-slate">
+                    <span className="filmografia-entry-director">Dir. {filme.director}</span>
+                    <span className="filmografia-entry-sep">·</span>
+                    <span className="filmografia-entry-role">{filme.role}</span>
+                    {filme.status && (
+                      <span className="filmografia-entry-status">{filme.status}</span>
+                    )}
+                  </div>
+                  <h2 className="filmografia-entry-title">{filme.title}</h2>
                   <div className="filmografia-entry-meta">
                     <span>{filme.year}</span>
                     <span className="filmografia-entry-sep">·</span>
@@ -39,15 +48,6 @@ export function Filmografia() {
                         <span>{filme.genre}</span>
                       </>
                     )}
-                    {filme.status && (
-                      <span className="filmografia-entry-status">{filme.status}</span>
-                    )}
-                  </div>
-                  <h2 className="filmografia-entry-title">{filme.title}</h2>
-                  <div className="filmografia-entry-credits">
-                    <span>Dir. {filme.director}</span>
-                    <span className="filmografia-entry-sep">·</span>
-                    <span>{filme.role}</span>
                   </div>
                   <p className="filmografia-entry-synopsis">{filme.description}</p>
                   {filme.festivals && (
@@ -56,7 +56,6 @@ export function Filmografia() {
                     </div>
                   )}
                 </div>
-                <div className="filmografia-entry-arrow">→</div>
               </Link>
             ))}
           </div>

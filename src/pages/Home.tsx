@@ -215,9 +215,7 @@ export function Home() {
                   {featuredFilme.year} · Dir. {featuredFilme.director}
                 </p>
                 <h2 className="home-film-title">{featuredFilme.title}</h2>
-                <p className="home-film-role">
-                  <em>{featuredFilme.role}</em>
-                </p>
+                <p className="home-film-role">{featuredFilme.role}</p>
                 <p className="home-film-synopsis">{featuredFilme.description}</p>
                 {featuredFilme.festivals && (
                   <p className="home-film-festivals">{featuredFilme.festivals}</p>
