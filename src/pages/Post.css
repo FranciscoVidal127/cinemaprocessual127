@@ -617,9 +617,14 @@
   gap: 0;
 }
 
-/* Each Q→A unit */
+/*
+  Each speaking turn — question or answer — is a self-contained
+  block. Questions and answers alternate with generous vertical
+  space between them, giving the dialogue room to breathe.
+*/
+
 .interview-exchange {
-  margin-top: clamp(52px, 6vw, 80px);
+  margin-top: clamp(56px, 7vw, 88px);
   max-width: var(--reading-width);
 }
 
@@ -627,52 +632,76 @@
   margin-top: 0;
 }
 
+/*
+  The question — the interviewer's voice.
+  Set in the reading serif, italic, slightly larger than body
+  text, with the full weight of the column.
+  No label needed: the italic register signals it is a question.
+*/
 .interview-question {
   font-family: var(--reading-font);
-  font-size: clamp(17.5px, 1.85vw, 20px);
+  font-size: clamp(18px, 1.9vw, 20.5px);
   font-weight: 400;
   font-style: italic;
-  line-height: 1.70;
+  line-height: 1.72;
   color: var(--text);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
   margin: 0;
   padding: 0;
   max-width: var(--reading-width);
 }
 
-/* Answer block */
+/*
+  Answer block — stacked layout.
+  Speaker name sits above the answer text as a discreet
+  typographic label: tracked uppercase in the mono font,
+  at a small size that marks the voice without competing
+  with the prose below it.
+*/
 .interview-response {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 0 22px;
-  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
   margin-bottom: 0;
   max-width: var(--reading-width);
-  align-items: start;
 }
 
+/*
+  Speaker label — uppercase mono, tracked, small.
+  Clear enough to identify the voice at a glance;
+  quiet enough not to interrupt the reading flow.
+  A short rule precedes it, anchoring the speaker
+  to the exchange above.
+*/
 .interview-speaker {
-  font-family: var(--reading-font);
-  font-size: 11px;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
   font-style: normal;
-  font-weight: 500;
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.09em;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: var(--text-muted);
-  line-height: 1.88;
-  padding-top: 0.3em;
-  text-align: right;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.interview-speaker::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--border);
+  flex-shrink: 0;
 }
 
 .interview-response-body {
   display: flex;
   flex-direction: column;
-  gap: 1.42em;
-  border-left: 1px solid var(--border-subtle);
-  padding-left: 22px;
+  gap: 1.44em;
 }
 
 .interview-answer {
@@ -711,27 +740,22 @@
 }
 
 @media (max-width: 640px) {
+  .interview-exchange {
+    margin-top: clamp(44px, 6vw, 64px);
+  }
+
   .interview-response {
-    grid-template-columns: 1fr;
-    gap: 8px 0;
+    margin-top: 28px;
   }
 
   .interview-speaker {
-    text-align: left;
-    font-size: 10px;
-    padding-top: 0;
-    line-height: 1;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
   }
 
-  .interview-response-body {
-    border-left: none;
-    padding-left: 0;
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 16px;
-  }
-
-  .interview-exchange {
-    margin-top: clamp(40px, 5vw, 56px);
+  .interview-speaker::before {
+    width: 18px;
   }
 }
 
