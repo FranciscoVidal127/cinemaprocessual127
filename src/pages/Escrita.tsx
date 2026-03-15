@@ -37,7 +37,7 @@ export function Escrita() {
       const { data, error } = await supabase
         .from('posts')
         .select('*')
-        .order('date', { ascending: false });
+        .order('published_at', { ascending: false });
 
       if (!error && data) {
         const posts: Escrito[] = data.map((post) => ({

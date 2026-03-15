@@ -63,7 +63,7 @@ export function Home() {
       const { data, error } = await supabase
         .from('posts')
         .select('*')
-        .order('created_at', { ascending: false })
+        .order('published_at', { ascending: false })
         .limit(4);
 
       if (!error && data) {
