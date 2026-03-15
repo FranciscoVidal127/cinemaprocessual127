@@ -57,7 +57,7 @@
 /* ===================== HEADER ===================== */
 
 .essay-header-wrap {
-  padding: var(--space-2xl) 0 var(--space-xl);
+  padding: var(--space-xl) 0 var(--space-lg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -231,7 +231,7 @@
 .essay-body {
   max-width: var(--container-narrow);
   margin: 0 auto;
-  padding: var(--space-3xl) var(--space-lg);
+  padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
   display: flex;
   flex-direction: column;
   gap: 0;

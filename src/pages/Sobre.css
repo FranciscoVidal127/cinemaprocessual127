@@ -24,7 +24,7 @@
 
 .sobre-header-meta {
   grid-column: 1 / -1;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .sobre-header-name {
@@ -61,14 +61,14 @@
 /* ===================== PRÁTICA ===================== */
 
 .sobre-pratica {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0 var(--space-3xl);
   border-bottom: 1px solid var(--border);
   background-color: var(--surface-elevated);
 }
 
 .sobre-pratica-inner {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: var(--space-3xl);
   align-items: start;
 }
@@ -87,7 +87,7 @@
   display: grid;
   grid-template-columns: 40px 1fr;
   gap: var(--space-md);
-  padding: var(--space-xl) 0;
+  padding: var(--space-lg) 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
 }
@@ -181,7 +181,7 @@
 }
 
 .sobre-trajetoria-header {
-  padding-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
   border-bottom: 2px solid var(--border);
   margin-bottom: 0;
 }
@@ -205,7 +205,7 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: var(--space-3xl);
-  padding: var(--space-2xl) 0;
+  padding: var(--space-xl) 0;
   border-bottom: 1px solid var(--border);
   align-items: start;
 }
@@ -316,7 +316,7 @@
 /* ===================== ENCONTRO ===================== */
 
 .sobre-encontro {
-  padding: var(--space-pause) 0;
+  padding: var(--space-2xl) 0 var(--space-pause);
   background-color: var(--bg-darkest);
   border-top: 1px solid var(--border-darkest);
 }
