@@ -89,6 +89,8 @@ function renderInline(text: string): React.ReactNode {
   return segments.length === 1 ? segments[0] : segments;
 }
 
+type ImageVariant = 'opening' | 'inline' | 'closing' | 'sequel';
+
 type ParsedElement =
   | { type: 'p'; text: string; isFirst?: boolean }
   | { type: 'h2'; text: string; id: string }
@@ -96,7 +98,7 @@ type ParsedElement =
   | { type: 'blockquote'; lines: string[] }
   | { type: 'list'; items: string[] }
   | { type: 'rule' }
-  | { type: 'image'; src: string; alt: string; caption?: string }
+  | { type: 'image'; src: string; alt: string; caption?: string; variant?: ImageVariant }
   | { type: 'interview-question'; text: string }
   | { type: 'interview-answer'; speaker: string; text: string }
   | { type: 'note'; text: string }
@@ -277,6 +279,37 @@ function parseContent(raw: string): ParsedElement[] {
   return elements;
 }
 
+function classifyImageVariants(elements: ParsedElement[]): ParsedElement[] {
+  return elements.map((el, i) => {
+    if (el.type !== 'image') return el;
+
+    const prev = elements[i - 1];
+    const next = elements[i + 1];
+
+    const prevIsImage = prev?.type === 'image';
+    const nextIsImage = next?.type === 'image';
+
+    const allBeforeAreImages = elements.slice(0, i).every(e => e.type === 'image');
+    const allAfterAreImages = !next || elements.slice(i + 1).every(e => e.type === 'image');
+
+    let variant: ImageVariant;
+
+    if (prevIsImage) {
+      variant = 'sequel';
+    } else if (allBeforeAreImages) {
+      variant = 'opening';
+    } else if (allAfterAreImages && !nextIsImage) {
+      variant = 'closing';
+    } else if (allAfterAreImages && nextIsImage) {
+      variant = 'closing';
+    } else {
+      variant = 'inline';
+    }
+
+    return { ...el, variant };
+  });
+}
+
 function isBoldOnlyLine(text: string): boolean {
   return text.startsWith('**') && text.endsWith('**') && !text.match(/^\*\*([^*]+)\*\*:/) && text.length > 4;
 }
@@ -397,13 +430,21 @@ function renderSingleElement(el: ParsedElement, idx: number): React.ReactNode {
     case 'rule':
       return <div key={idx} className="essay-rule" />;
 
-    case 'image':
+    case 'image': {
+      const variantClass = el.variant === 'opening'
+        ? 'essay-figure--opening'
+        : el.variant === 'closing'
+          ? 'essay-figure--closing'
+          : el.variant === 'sequel'
+            ? 'essay-figure--sequel'
+            : 'essay-figure';
       return (
-        <figure key={idx} className="essay-figure">
+        <figure key={idx} className={variantClass}>
           <img src={el.src} alt={el.alt} loading="lazy" />
           {el.caption && <figcaption className="essay-caption">{el.caption}</figcaption>}
         </figure>
       );
+    }
 
     case 'note':
       return (
@@ -552,7 +593,7 @@ export function Post() {
     );
   }
 
-  const parsed = parseContent(content);
+  const parsed = classifyImageVariants(parseContent(content));
   const showTOC = headings.length >= 3;
   const isInterview = metadata.category?.toLowerCase() === 'entrevista' ||
     parsed.some(el => el.type === 'interview-question' || el.type === 'interview-answer');
@@ -577,7 +618,10 @@ export function Post() {
             <div className="essay-eyebrow">
               <span className="essay-category">{metadata.category}</span>
               {metadata.date && (
-                <span className="essay-date">{formatDate(metadata.date)}</span>
+                <>
+                  <span className="essay-eyebrow-sep" aria-hidden="true" />
+                  <span className="essay-date">{formatDate(metadata.date)}</span>
+                </>
               )}
             </div>
 
@@ -589,10 +633,10 @@ export function Post() {
 
             <div className="essay-meta">
               {creditLine && (
-                <span className="essay-author">{creditLine}</span>
-              )}
-              {creditLine && (
-                <span className="essay-meta-sep" aria-hidden="true">·</span>
+                <>
+                  <span className="essay-author">{creditLine}</span>
+                  <span className="essay-eyebrow-sep" aria-hidden="true" />
+                </>
               )}
               <span className="essay-time">{metadata.readTime} de leitura</span>
             </div>

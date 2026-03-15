@@ -54,15 +54,15 @@
    ============================================================ */
 
 .post-nav {
-  padding: var(--space-md) 0 var(--space-sm);
+  padding: clamp(28px, 3.5vw, 40px) 0 0;
 }
 
 .post-back {
   font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.2em;
+  font-size: 9px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-light);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -83,8 +83,29 @@
    HEADER — Typographic monument
    ============================================================ */
 
+/*
+  The header descends in three registers:
+
+  1. Eyebrow (category / date) — the small metadata that
+     names what you are about to read. Spaced close to the
+     title so it reads as its label, not a separate element.
+
+  2. Title → Subtitle — the dramatic statement. The title
+     is the loudest voice on the page; the subtitle is its
+     first exhale. Kept close together so they read as one
+     continuous declaration.
+
+  3. Meta bar (author / read time) — quiet, below the
+     title block's gravitational pull. A ruled line above
+     it marks the transition out of the title zone and
+     announces: the text is near.
+
+  Vertical rhythm: the top padding is ~2× the bottom padding.
+  The reader arrives into space; the text comes to meet them.
+*/
+
 .essay-header-wrap {
-  padding: clamp(72px, 10vw, 144px) 0 clamp(52px, 7vw, 96px);
+  padding: clamp(64px, 9vw, 128px) 0 clamp(40px, 5vw, 64px);
 }
 
 .essay-header-inner {
@@ -98,34 +119,48 @@
 .essay-eyebrow {
   display: flex;
   align-items: center;
-  gap: 22px;
-  margin-bottom: 36px;
+  gap: 18px;
+  margin-bottom: 26px;
 }
 
 .essay-category {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.22em;
+  font-size: 8.5px;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text-muted);
 }
 
 .essay-date {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 8.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-light);
+  opacity: 0.72;
+}
+
+/*
+  A fine dot separator between category and date —
+  smaller and quieter than the category itself.
+*/
+.essay-eyebrow-sep {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--border);
+  flex-shrink: 0;
 }
 
 .essay-title {
   font-family: var(--font-serif);
-  font-size: clamp(40px, 5.8vw, 78px);
+  font-size: clamp(38px, 5.6vw, 76px);
   font-weight: 400;
   letter-spacing: -0.046em;
   line-height: 0.97;
   color: var(--text);
-  max-width: 18ch;
+  max-width: 22ch;
   margin-bottom: 0;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   font-optical-sizing: auto;
@@ -133,22 +168,29 @@
 
 .essay-subtitle {
   font-family: var(--reading-font);
-  font-size: clamp(18px, 2vw, 22.5px);
+  font-size: clamp(17px, 1.85vw, 21px);
   font-style: italic;
   font-weight: 300;
-  line-height: 1.56;
+  line-height: 1.58;
   color: var(--text-secondary);
   letter-spacing: -0.004em;
-  max-width: 46ch;
-  margin-top: 28px;
+  max-width: 48ch;
+  margin-top: 22px;
+  opacity: 0.88;
 }
 
+/*
+  Meta bar: author name and read time.
+  Lives below the title zone, separated by a thin ruled line.
+  The rule is not decorative — it marks the end of the title's
+  gravitational field. After the rule, the text begins its approach.
+*/
 .essay-meta {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 40px;
-  padding-top: 20px;
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 18px;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -158,25 +200,37 @@
   font-style: italic;
   letter-spacing: 0;
   color: var(--text-muted);
+  opacity: 0.85;
 }
 
 .essay-meta-sep {
   color: var(--border);
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1;
+  opacity: 0.6;
 }
 
 .essay-time {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.14em;
+  font-size: 8.5px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-light);
+  opacity: 0.7;
 }
 
 /* ============================================================
-   HEADER DIVIDER — Breath between title and text
+   HEADER DIVIDER — The threshold between title and text
    ============================================================ */
+
+/*
+  A single ruled line, full reading-container width.
+  Not a gradient. Not decorative. A clean horizontal
+  statement that says: the title ends here, the text begins.
+
+  The space below the rule (handled by essay-body padding-top)
+  is the last beat of silence before the first word.
+*/
 
 .essay-header-divider {
   max-width: var(--reading-width-container);
@@ -187,7 +241,7 @@
 .essay-header-divider-line {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, var(--border) 0%, var(--border-subtle) 55%, transparent 100%);
+  background-color: var(--border-subtle);
 }
 
 /* ============================================================
@@ -254,7 +308,7 @@
 .essay-body {
   max-width: var(--reading-width-container);
   margin: 0 auto;
-  padding: clamp(52px, 6.5vw, 88px) var(--space-lg) clamp(80px, 10vw, 136px);
+  padding: clamp(44px, 5.5vw, 72px) var(--space-lg) clamp(80px, 10vw, 136px);
   display: flex;
   flex-direction: column;
 }
@@ -428,8 +482,34 @@
    IMAGES — Editorial frames
    ============================================================ */
 
+/*
+  Three figure modes:
+
+  1. .essay-figure (default)
+     Inline mid-article image. Sits within the reading column
+     with a modest bleed — wider than the text, narrower than
+     the full viewport. Feels composed, not mechanical.
+
+  2. .essay-figure--opening
+     First image in the article, before any text. Treated as
+     a cinematic header: full reading-container width, generous
+     vertical space, no caption indentation.
+
+  3. .essay-figure--closing
+     Image(s) after the last paragraph. Full column width,
+     more breathing room above than the standard figure, treated
+     as an epilogue visual.
+
+  Consecutive figures: when two figures appear in sequence,
+  the second carries .essay-figure--sequel to collapse the
+  space between them so they read as a pair.
+*/
+
 .essay-figure {
-  margin: clamp(44px, 5.5vw, 72px) calc(-1 * var(--space-lg));
+  margin-top: clamp(48px, 6vw, 80px);
+  margin-bottom: 0;
+  margin-left: calc(-1 * var(--space-lg));
+  margin-right: calc(-1 * var(--space-lg));
   max-width: calc(100% + 2 * var(--space-lg));
 }
 
@@ -439,16 +519,94 @@
   display: block;
 }
 
+/* Opening image — cinematic, no text above it yet */
+.essay-figure--opening {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: calc(-1 * var(--space-lg));
+  margin-right: calc(-1 * var(--space-lg));
+  max-width: calc(100% + 2 * var(--space-lg));
+}
+
+.essay-figure--opening img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Closing image — after all prose, epilogue cadence */
+.essay-figure--closing {
+  margin-top: clamp(56px, 7vw, 96px);
+  margin-bottom: 0;
+  margin-left: calc(-1 * var(--space-lg));
+  margin-right: calc(-1 * var(--space-lg));
+  max-width: calc(100% + 2 * var(--space-lg));
+}
+
+.essay-figure--closing img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Second (or third) figure in an immediate sequence */
+.essay-figure--sequel {
+  margin-top: 4px;
+  margin-bottom: 0;
+  margin-left: calc(-1 * var(--space-lg));
+  margin-right: calc(-1 * var(--space-lg));
+  max-width: calc(100% + 2 * var(--space-lg));
+}
+
+.essay-figure--sequel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*
+  Caption — the figure's quiet annotation.
+  Sits 14px below the image edge; the optical gap
+  reads as belonging to the image, not the next paragraph.
+  Left-aligned with the text column (not the bleed),
+  so it anchors the image to the reading thread.
+*/
 .essay-caption {
   font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.12em;
+  font-size: 9px;
+  letter-spacing: 0.13em;
   color: var(--text-light);
-  margin-top: 18px;
+  margin-top: 14px;
   margin-left: var(--space-lg);
-  line-height: 1.68;
-  max-width: 52ch;
+  line-height: 1.72;
+  max-width: 48ch;
   text-transform: uppercase;
+}
+
+/* Caption on opening figures: no left indent — aligned to container edge */
+.essay-figure--opening .essay-caption,
+.essay-figure--closing .essay-caption,
+.essay-figure--sequel .essay-caption {
+  margin-left: var(--space-lg);
+}
+
+/*
+  Space between the last line of a figure block (caption or image)
+  and the first paragraph that follows.
+  Because .essay-p uses margin-top, and figures have margin-bottom: 0,
+  we add the following rule to explicitly govern that gap.
+*/
+.essay-figure + .essay-p,
+.essay-figure--opening + .essay-p,
+.essay-figure--closing + .essay-p,
+.essay-figure--sequel + .essay-p {
+  margin-top: clamp(44px, 5.5vw, 72px);
+}
+
+/* Figure that immediately follows a paragraph — top spacing already set */
+.essay-p + .essay-figure,
+.essay-p + .essay-figure--closing {
+  margin-top: clamp(48px, 6vw, 80px);
 }
 
 /* ============================================================
@@ -697,7 +855,10 @@
     max-width: none;
   }
 
-  .essay-figure {
+  .essay-figure,
+  .essay-figure--opening,
+  .essay-figure--closing,
+  .essay-figure--sequel {
     margin-left: 0;
     margin-right: 0;
     max-width: 100%;
@@ -718,23 +879,24 @@
   }
 
   .essay-header-wrap {
-    padding-top: clamp(48px, 12vw, 72px);
-    padding-bottom: clamp(36px, 8vw, 56px);
+    padding-top: clamp(44px, 11vw, 68px);
+    padding-bottom: clamp(28px, 7vw, 44px);
   }
 
   .essay-title {
-    font-size: clamp(33px, 10.5vw, 52px);
+    font-size: clamp(32px, 10vw, 50px);
     max-width: none;
     line-height: 0.96;
   }
 
   .essay-subtitle {
-    font-size: 17.5px;
-    margin-top: 18px;
+    font-size: 17px;
+    margin-top: 16px;
   }
 
   .essay-meta {
-    margin-top: 26px;
+    margin-top: 24px;
+    padding-top: 16px;
   }
 
   .essay-p,
@@ -778,8 +940,15 @@
     font-size: 17px;
   }
 
-  .essay-figure {
+  .essay-figure,
+  .essay-figure--opening,
+  .essay-figure--closing,
+  .essay-figure--sequel {
     margin: clamp(32px, 4vw, 48px) 0;
+  }
+
+  .essay-figure--sequel {
+    margin-top: 3px;
   }
 
   .essay-note {
