@@ -2,7 +2,7 @@
    POST PAGE — EDITORIAL LONG-FORM READING EXPERIENCE
    ============================================================ */
 
-:root {
+.post-page {
   --reading-font: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
   --reading-body-size: 20px;
   --reading-line-height: 1.88;

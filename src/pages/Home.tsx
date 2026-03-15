@@ -30,6 +30,8 @@ function useParallax(speed = 0.18) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
     const el = ref.current;
     if (!el) return;
     let ticking = false;

@@ -33,10 +33,8 @@ function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  const isHome = location.pathname === '/';
-
   return (
-    <header className={`header${scrolled ? ' header--scrolled' : ''}${isHome ? ' header--home' : ''}`}>
+    <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
       <div className="header-inner">
         <a href="/" className="nav-brand">
           <span className="nav-brand-name">Francisco Vidal</span>

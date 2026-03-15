@@ -540,7 +540,7 @@
 
 .home-film-card {
   display: grid;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: clamp(340px, 42%, 520px) 1fr;
   min-height: 580px;
   text-decoration: none;
   color: inherit;
@@ -1037,10 +1037,6 @@
 
   .hero-right {
     padding-left: var(--space-xl);
-  }
-
-  .home-film-card {
-    grid-template-columns: 380px 1fr;
   }
 
   .home-statement-inner {
