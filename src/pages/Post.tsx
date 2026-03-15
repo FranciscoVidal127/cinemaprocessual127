@@ -169,11 +169,38 @@ function parseContent(raw: string): ParsedElement[] {
       continue;
     }
 
-    if (trimmed.startsWith('# ')) {
-      const text = trimmed.slice(2).trim();
-      if (text) {
-        elements.push({ type: 'h2', text, id: slugify(text) });
+    if (trimmed.startsWith('# ') || trimmed === '#') {
+      const inner = trimmed.slice(2).trim();
+      if (!inner) { i++; continue; }
+
+      const speakerInner = inner.match(/^\*\*([^*]+)\*\*:\s*(.*)$/);
+      if (speakerInner) {
+        elements.push({ type: 'interview-answer', speaker: speakerInner[1], text: speakerInner[2] });
+        i++;
+        continue;
       }
+
+      if (inner.startsWith('***') && inner.endsWith('***')) {
+        elements.push({ type: 'h3', text: inner.slice(3, -3).trim(), id: slugify(inner.slice(3, -3).trim()) });
+        i++;
+        continue;
+      }
+
+      if (inner.startsWith('*') && inner.endsWith('*') && !inner.startsWith('**')) {
+        elements.push({ type: 'note', text: inner.slice(1, -1) });
+        i++;
+        continue;
+      }
+
+      if (inner.startsWith('**') && inner.endsWith('**') && !inner.match(/^\*\*([^*]+)\*\*:/)) {
+        elements.push({ type: 'h3', text: inner.slice(2, -2).trim(), id: slugify(inner.slice(2, -2).trim()) });
+        i++;
+        continue;
+      }
+
+      const isFirst = !firstParagraphSeen;
+      firstParagraphSeen = true;
+      elements.push({ type: 'p', text: inner, isFirst });
       i++;
       continue;
     }
@@ -281,12 +308,21 @@ function renderElements(elements: ParsedElement[], isInterview?: boolean): React
           </h2>
         );
 
-      case 'h3':
+      case 'h3': {
+        if (isInterview && el.text.startsWith('**') && el.text.endsWith('**')) {
+          const inner = el.text.slice(2, -2).trim();
+          return (
+            <div key={idx} className="interview-block">
+              <p className="interview-question">{inner}</p>
+            </div>
+          );
+        }
         return (
           <h3 key={idx} id={el.id} className="essay-h3">
             {renderInline(el.text)}
           </h3>
         );
+      }
 
       case 'blockquote':
         return (
