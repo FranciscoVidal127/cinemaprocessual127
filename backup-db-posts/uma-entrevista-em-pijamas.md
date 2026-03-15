@@ -350,7 +350,7 @@ created_at: 2026-03-08T12:27:26.961394+00:00
 
 <figure className="essay-editorial-inline">
   <div className="essay-editorial-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez20.png" alt="Je Tu Il Elle, 1974" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez19.png" alt="Je Tu Il Elle, 1974" loading="lazy" />
   </div>
 </figure>
 # 
@@ -617,7 +617,7 @@ created_at: 2026-03-08T12:27:26.961394+00:00
 
 <figure className="essay-editorial-inline">
   <div className="essay-editorial-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez30.png" alt="Filme" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez33.png" alt="Rue Mallet-Stevens, 1986" loading="lazy" />
   </div>
 </figure>
 
@@ -661,11 +661,11 @@ created_at: 2026-03-08T12:27:26.961394+00:00
 
 # Uma evocação da guerra. Implosão.
 
-# **Por
+# **Portrait d'une jeune fille de la fin des années 60s à Bruxelles, 1993**
 
 <figure className="essay-editorial-inline">
   <div className="essay-editorial-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez36.png" alt="Filme" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez35.png" alt="Portrait d'une jeune fille de la fin des années 60s à Bruxelles, 1993" loading="lazy" />
   </div>
 </figure>
 
@@ -713,7 +713,7 @@ created_at: 2026-03-08T12:27:26.961394+00:00
 
 <figure className="essay-editorial-inline">
   <div className="essay-editorial-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez43.png" alt="Filme" loading="lazy" />
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez39.png" alt="De l'autre côté, 2002" loading="lazy" />
   </div>
 </figure>
 
@@ -742,11 +742,7 @@ created_at: 2026-03-08T12:27:26.961394+00:00
 # Não está indo bem.
 
 
-<figure className="essay-editorial-inline">
-  <div className="essay-editorial-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez10.png" alt="Filme" loading="lazy" />
-  </div>
-</figure>
+
 
 # **À l’Est avec Sonia Wieder-Atherton, 2009**
 
@@ -756,12 +752,7 @@ created_at: 2026-03-08T12:27:26.961394+00:00
 
 <figure className="essay-editorial-inline">
   <div className="essay-editorial-frame">
-    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/Akerbrenez19.png" alt="Je Tu Il Elle, 1974" loading="lazy" />
-  </div>
-</figure>
-
-
-# **A Loucura de Almayer, 2011**
+    <img src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/# **A Loucura de Almayer, 2011**
 
 # 
 
