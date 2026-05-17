@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/content';
 import { supabase } from '../lib/supabase';
@@ -26,37 +26,9 @@ type Escrito = {
   origem: string;
 };
 
-function useParallax(speed = 0.18) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
-    const el = ref.current;
-    if (!el) return;
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          if (ref.current) {
-            ref.current.style.transform = `translateY(${window.scrollY * speed}px)`;
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [speed]);
-
-  return ref;
-}
-
 export function Home() {
   const [recentEscritos, setRecentEscritos] = useState<Escrito[]>([]);
   const [heroLoaded, setHeroLoaded] = useState(false);
-  const parallaxRef = useParallax(0.18);
 
   useEffect(() => {
     async function loadPosts() {
@@ -107,7 +79,7 @@ export function Home() {
               </h1>
 
               <p className="hero-statement">
-                Francisco Vidal é ator, cineasta e assistente de direção. Sua trajetória atravessa o cinema autoral brasileiro, a atuação diante da câmera e processos colaborativos de criação cinematográfica.
+                Presença, escuta e criação cinematográfica.
               </p>
 
               <div className="hero-roles" aria-label="Áreas de atuação">
@@ -140,14 +112,12 @@ export function Home() {
 
             <div className="hero-right">
               <div className="hero-image-container">
-                <div className="hero-image-parallax" ref={parallaxRef}>
-                  <img
-                    src={siteData.hero.image}
-                    alt="Francisco Vidal"
-                    className={`hero-image${heroLoaded ? ' hero-image--loaded' : ''}`}
-                    onLoad={() => setHeroLoaded(true)}
-                  />
-                </div>
+                <img
+                  src={siteData.hero.image}
+                  alt="Francisco Vidal, ator e cineasta, em retrato cinematográfico ao ar livre."
+                  className={`hero-image${heroLoaded ? ' hero-image--loaded' : ''}`}
+                  onLoad={() => setHeroLoaded(true)}
+                />
                 <div className="hero-image-grain" aria-hidden="true" />
               </div>
             </div>

@@ -49,8 +49,8 @@ export const siteData = {
   hero: {
     name: "Francisco Vidal",
     title: "Ator · Cineasta · Assistente de Direção · Rio de Janeiro",
-    bio: "Francisco Vidal é ator, cineasta e assistente de direção. Sua trajetória atravessa o cinema autoral brasileiro, a atuação diante da câmera e processos colaborativos de criação cinematográfica.",
-    image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/image-copy-2.png"
+    bio: "Presença, escuta e criação cinematográfica.",
+    image: "/images/hero-bloco1.jpg"
   },
 
   reel: {
