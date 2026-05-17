@@ -1,194 +1,155 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/content';
+import { YouTubeEmbed } from '../components/YouTubeEmbed';
 import './Home.css';
 
 export function Home() {
   const [heroLoaded, setHeroLoaded] = useState(false);
   const featuredFilme = siteData.filmografia[0];
+  const featuredReel = siteData.reel.videos[0];
 
   return (
     <div className="home">
 
-      {/* HERO — full-bleed image, text overlay */}
-      <section className="hero">
-        <div className="hero-image-wrap">
+      {/* SCENE 01 — OPENING */}
+      <section className="scene-opening">
+        <div className="scene-opening-image-wrap">
           <img
-            src={siteData.hero.image}
+            src="/images/BLOCO 1-HERO.png/image.png"
             alt="Francisco Vidal"
-            className={`hero-image${heroLoaded ? ' hero-image--loaded' : ''}`}
+            className={`scene-opening-image${heroLoaded ? ' loaded' : ''}`}
             onLoad={() => setHeroLoaded(true)}
           />
-          <div className="hero-veil" aria-hidden="true" />
+          <div className="scene-opening-veil" aria-hidden="true" />
         </div>
 
-        <div className="hero-content">
-          <div className="hero-top">
-            <div className="hero-location">
-              <span className="hero-location-dot" aria-hidden="true" />
-              <span>Rio de Janeiro · Brasil</span>
-            </div>
-            <div className="hero-roles-inline" aria-label="Funções">
-              <span>Ator</span>
-              <span className="hero-roles-sep" aria-hidden="true">·</span>
-              <span>Cineasta</span>
-              <span className="hero-roles-sep" aria-hidden="true">·</span>
-              <span>Assistente de Direção</span>
-            </div>
-          </div>
-
-          <div className="hero-bottom">
-            <h1 className="hero-name">
-              Francisco<br />Vidal
-            </h1>
-            <div className="hero-bottom-right">
-              <p className="hero-statement">{siteData.hero.bio}</p>
-              <nav className="hero-cta" aria-label="Ações principais">
-                <Link to="/reel" className="hero-cta-btn hero-cta-btn--primary">Ver reel</Link>
-                <Link to="/fotos" className="hero-cta-btn">Ver fotos</Link>
-                <a href="mailto:franciscovidalcs@gmail.com" className="hero-cta-btn">Contato</a>
-              </nav>
-            </div>
-          </div>
+        <div className="scene-opening-roles" aria-label="Funcoes">
+          <span>ATOR</span>
+          <span>CINEASTA</span>
+          <span>ASSISTENTE DE DIRECAO</span>
         </div>
 
-        <div className="hero-scroll-cue" aria-hidden="true">
-          <span className="hero-scroll-line" />
+        <div className="scene-opening-content">
+          <h1 className="scene-opening-name">
+            Francisco<br />Vidal
+          </h1>
+          <p className="scene-opening-statement">
+            Presenca, escuta e corpo diante da camera.
+          </p>
         </div>
+
+        <nav className="scene-opening-cta">
+          <Link to="/reel" className="cta-link">Ver Reel</Link>
+          <Link to="/fotos" className="cta-link">Ver Fotos</Link>
+          <a href="mailto:franciscovidalcs@gmail.com" className="cta-link">Contato</a>
+        </nav>
       </section>
 
-      {/* ATUACAO — texto manifesto */}
-      <section className="home-atuacao">
-        <div className="home-atuacao-inner">
-          <div className="home-atuacao-number" aria-hidden="true">01</div>
-          <div className="home-atuacao-body">
-            <span className="label">Atuação</span>
-            <p className="home-atuacao-lead">
-              Como ator, Francisco Vidal trabalha a partir da escuta, da presença física e da relação entre corpo, câmera e espaço. Sua pesquisa de atuação atravessa estados de atenção, silêncio, vulnerabilidade e transformação diante da imagem.
-            </p>
-            <Link to="/atuacao" className="home-atuacao-link">Atuação completa →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* GALERIA — imagens em grade editorial assimétrica */}
-      <section className="home-gallery">
-        <div className="home-gallery-grid">
-          <div className="home-gallery-item home-gallery-item--a">
+      {/* SCENE 02 — FACE / BODY / CAMERA */}
+      <section className="scene-presence">
+        <div className="scene-presence-grid">
+          <div className="scene-presence-image">
             <img
               src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png"
-              alt="Francisco Vidal"
+              alt="Francisco Vidal — Rosto"
               loading="lazy"
             />
-            <span className="home-gallery-label">Rosto</span>
           </div>
-          <div className="home-gallery-item home-gallery-item--b">
-            <img
-              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
-              alt="Francisco Vidal"
-              loading="lazy"
-            />
-            <span className="home-gallery-label">Corpo</span>
+          <div className="scene-presence-text">
+            <div className="scene-presence-words">
+              <span className="presence-word">ESCUTA.</span>
+              <span className="presence-word">PRESENCA.</span>
+              <span className="presence-word">CORPO DIANTE DA CAMERA.</span>
+            </div>
+            <div className="scene-presence-detail">
+              <img
+                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
+                alt="Francisco Vidal — Presenca"
+                loading="lazy"
+              />
+            </div>
+            <p className="scene-presence-quote">
+              Como ator, Francisco Vidal trabalha a partir da escuta, da presenca fisica e da relacao entre corpo, camera e espaco. Sua pesquisa atravessa estados de atencao, silencio, vulnerabilidade e transformacao diante da imagem.
+            </p>
+            <Link to="/atuacao" className="scene-presence-link">Atuacao →</Link>
           </div>
-          <div className="home-gallery-item home-gallery-item--c">
-            <img
-              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
-              alt="Francisco Vidal"
-              loading="lazy"
-            />
-            <span className="home-gallery-label">Presença</span>
-          </div>
-          <div className="home-gallery-item home-gallery-item--d">
-            <img
-              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg"
-              alt="Francisco Vidal em O Mundo dos Mortos"
-              loading="lazy"
-            />
-            <span className="home-gallery-label">Processo</span>
-          </div>
-        </div>
-        <div className="home-gallery-footer">
-          <Link to="/fotos" className="home-gallery-link">Galeria completa →</Link>
         </div>
       </section>
 
-      {/* FILMOGRAFIA — carte de visite da carreira */}
-      {featuredFilme && (
-        <section className="home-film">
-          <div className="container">
-            <div className="home-film-header">
-              <span className="label">Filmografia</span>
-              <Link to="/filmografia" className="home-film-all">Ver todos →</Link>
+      {/* SCENE 03 — CONTACT SHEET */}
+      <section className="scene-contact-sheet">
+        <div className="scene-contact-sheet-header">
+          <span className="mono-label">GALERIA / ENSAIO</span>
+          <Link to="/fotos" className="mono-link">Ver completa →</Link>
+        </div>
+        <div className="contact-sheet-grid">
+          {siteData.fotos.map((foto, i) => (
+            <div
+              key={foto.id}
+              className={`contact-sheet-item contact-sheet-item--${i + 1}`}
+            >
+              <img src={foto.url} alt={foto.alt} loading="lazy" />
+              <span className="contact-sheet-caption">{foto.category.toUpperCase()}</span>
             </div>
-          </div>
+          ))}
+        </div>
+      </section>
 
-          <Link to={`/filme/${featuredFilme.slug}`} className="home-film-card">
-            <div className="home-film-image-wrap">
-              <img src={featuredFilme.image} alt={featuredFilme.title} className="home-film-image" />
-              <div className="home-film-vignette" aria-hidden="true" />
+      {/* SCENE 04 — REEL */}
+      <section className="scene-reel">
+        <div className="scene-reel-label">
+          <span className="mono-label">REEL</span>
+        </div>
+        {featuredReel ? (
+          <div className="scene-reel-video">
+            <YouTubeEmbed url={featuredReel} title="Francisco Vidal — Reel" />
+          </div>
+        ) : (
+          <div className="scene-reel-placeholder">
+            <h2>Reel em breve</h2>
+          </div>
+        )}
+        <p className="scene-reel-desc">{siteData.reel.description}</p>
+      </section>
+
+      {/* SCENE 05 — FILMOGRAFIA */}
+      {featuredFilme && (
+        <section className="scene-film">
+          <Link to={`/filme/${featuredFilme.slug}`} className="scene-film-link">
+            <div className="scene-film-image-wrap">
+              <img
+                src={featuredFilme.image}
+                alt={featuredFilme.title}
+                loading="lazy"
+                className="scene-film-image"
+              />
+              <div className="scene-film-overlay" aria-hidden="true" />
             </div>
-            <div className="home-film-panel">
-              <p className="home-film-meta">
-                {featuredFilme.year} · Dir. {featuredFilme.director}
-              </p>
-              <h2 className="home-film-title">{featuredFilme.title}</h2>
-              <div className="home-film-role-block">
-                <span className="home-film-role-label">Papel</span>
-                <span className="home-film-role-name">{featuredFilme.role}</span>
-              </div>
-              <p className="home-film-synopsis">{featuredFilme.description}</p>
+            <div className="scene-film-info">
+              <span className="mono-label">{featuredFilme.year} · DIR. {featuredFilme.director.toUpperCase()}</span>
+              <h2 className="scene-film-title">{featuredFilme.title}</h2>
+              <span className="scene-film-role">{featuredFilme.role}</span>
               {featuredFilme.festivals && (
-                <p className="home-film-festivals">{featuredFilme.festivals}</p>
+                <span className="scene-film-festival">{featuredFilme.festivals}</span>
               )}
-              <span className="home-film-cta">Ficha completa →</span>
             </div>
           </Link>
+          <div className="scene-film-footer">
+            <Link to="/filmografia" className="mono-link">Filmografia completa →</Link>
+          </div>
         </section>
       )}
 
-      {/* SOBRE — texto em coluna */}
-      <section className="home-sobre">
-        <div className="container">
-          <div className="home-sobre-grid">
-            <div className="home-sobre-left">
-              <span className="label">Sobre</span>
-              <p className="home-sobre-num" aria-hidden="true">02</p>
-            </div>
-            <div className="home-sobre-right">
-              <p className="home-sobre-text">{siteData.sobre.text[0]}</p>
-              <p className="home-sobre-statement">{siteData.sobre.statement}</p>
-              <Link to="/sobre" className="home-sobre-link">Trajetória completa →</Link>
-            </div>
-          </div>
+      {/* SCENE 06 — CONTATO */}
+      <section className="scene-contact">
+        <h2 className="scene-contact-heading">Disponivel<br />para projetos</h2>
+        <p className="scene-contact-body">{siteData.contato.cta}</p>
+        <div className="scene-contact-links">
+          <a href={`mailto:${siteData.contato.email}`} className="scene-contact-email">{siteData.contato.email}</a>
+          <a href={siteData.contato.instagram} target="_blank" rel="noopener noreferrer" className="scene-contact-social">{siteData.contato.instagramHandle}</a>
         </div>
-      </section>
-
-      {/* CONTATO */}
-      <section className="home-contact">
-        <div className="home-contact-inner">
-          <div className="home-contact-left">
-            <h2 className="home-contact-heading">
-              Disponível<br />para projetos
-            </h2>
-          </div>
-          <div className="home-contact-right">
-            <p className="home-contact-body">{siteData.contato.cta}</p>
-            <p className="home-contact-location">{siteData.contato.location}</p>
-            <div className="home-contact-links">
-              <a href={`mailto:${siteData.contato.email}`} className="home-contact-email">
-                {siteData.contato.email}
-              </a>
-              <a
-                href={siteData.contato.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="home-contact-social"
-              >
-                {siteData.contato.instagramHandle}
-              </a>
-            </div>
-          </div>
-        </div>
+        <span className="scene-contact-location">{siteData.contato.location}</span>
       </section>
 
     </div>

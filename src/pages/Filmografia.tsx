@@ -6,61 +6,38 @@ export function Filmografia() {
   return (
     <div className="filmografia-page">
 
-      <header className="page-header">
-        <div className="page-header-inner">
-          <h1 className="page-title">Filmografia</h1>
-          <p className="page-intro">Presença diante da câmera como prática contínua — não como demonstração, mas como relação.</p>
-        </div>
-      </header>
+      <div className="filmografia-header">
+        <span className="filmografia-label">FILMOGRAFIA</span>
+      </div>
 
-      <section className="filmografia-list-section">
-        <div className="container">
-          <div className="filmografia-list">
-            {siteData.filmografia.map((filme, idx) => (
-              <Link
-                key={filme.id}
-                to={`/filme/${filme.slug}`}
-                className="filmografia-entry"
-              >
-                <div className="filmografia-entry-count">
-                  {String(idx + 1).padStart(2, '0')}
-                </div>
-                <div className="filmografia-entry-image">
-                  <img src={filme.image} alt={filme.title} />
-                </div>
-                <div className="filmografia-entry-body">
-                  <div className="filmografia-entry-slate">
-                    <span className="filmografia-entry-director">Dir. {filme.director}</span>
-                    <span className="filmografia-entry-sep">·</span>
-                    <span className="filmografia-entry-role">{filme.role}</span>
-                    {filme.status && (
-                      <span className="filmografia-entry-status">{filme.status}</span>
-                    )}
-                  </div>
-                  <h2 className="filmografia-entry-title">{filme.title}</h2>
-                  <div className="filmografia-entry-meta">
-                    <span>{filme.year}</span>
-                    <span className="filmografia-entry-sep">·</span>
-                    <span>{filme.type}</span>
-                    {filme.genre && (
-                      <>
-                        <span className="filmografia-entry-sep">·</span>
-                        <span>{filme.genre}</span>
-                      </>
-                    )}
-                  </div>
-                  <p className="filmografia-entry-synopsis">{filme.description}</p>
-                  {filme.festivals && (
-                    <div className="filmografia-entry-festival">
-                      {filme.festivals}
-                    </div>
-                  )}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="filmografia-list">
+        {siteData.filmografia.map((filme) => (
+          <Link
+            key={filme.id}
+            to={`/filme/${filme.slug}`}
+            className="filmografia-entry"
+          >
+            <div className="filmografia-entry-poster">
+              <img src={filme.image} alt={filme.title} />
+            </div>
+            <div className="filmografia-entry-body">
+              <h2 className="filmografia-entry-title">{filme.title}</h2>
+              <div className="filmografia-entry-meta-row">
+                <span className="filmografia-entry-year">{filme.year}</span>
+                <span className="filmografia-entry-director">Dir. {filme.director}</span>
+              </div>
+              <span className="filmografia-entry-role">{filme.role}</span>
+              {filme.status && (
+                <span className="filmografia-entry-status">{filme.status}</span>
+              )}
+              {filme.festivals && (
+                <span className="filmografia-entry-festival">{filme.festivals}</span>
+              )}
+            </div>
+            <span className="filmografia-entry-arrow">→</span>
+          </Link>
+        ))}
+      </div>
 
     </div>
   );

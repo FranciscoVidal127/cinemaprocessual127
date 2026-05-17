@@ -1,548 +1,276 @@
 .sobre-page {
-  min-height: 70vh;
-}
-
-/* ===================== HEADER ===================== */
-
-.sobre-header {
   background-color: var(--bg);
-  border-bottom: 1px solid var(--border);
-  padding: var(--space-2xl) 0 0;
-  overflow: hidden;
-  position: relative;
+  min-height: 100vh;
+  padding-top: 0;
 }
 
-.sobre-header-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--space-2xl);
-  align-items: end;
-}
-
-.sobre-header-meta {
-  grid-column: 1 / -1;
-  margin-bottom: var(--space-md);
-}
-
-.sobre-header-name {
-  font-family: var(--font-display);
-  font-size: clamp(88px, 14vw, 196px);
-  font-weight: 300;
-  line-height: 0.82;
-  letter-spacing: -0.065em;
-  color: var(--text);
-  grid-column: 1;
-  padding-bottom: var(--space-xl);
-}
-
-.sobre-header-statement {
-  grid-column: 2;
-  padding-bottom: var(--space-xl);
-  max-width: 28ch;
-  align-self: end;
-  border-left: 1px solid var(--border);
-  padding-left: var(--space-xl);
-}
-
-.sobre-opening-line {
-  font-family: var(--font-display);
-  font-size: clamp(18px, 1.9vw, 26px);
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  color: var(--text-secondary);
-  border-left: 2px solid var(--accent);
-  padding-left: var(--space-md);
-}
-
-/* ===================== PRÁTICA ===================== */
-
-.sobre-pratica {
-  padding: var(--space-2xl) 0 var(--space-3xl);
-  border-bottom: 1px solid var(--border);
-  background-color: var(--surface-elevated);
-}
-
-.sobre-pratica-inner {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: var(--space-3xl);
-  align-items: start;
-}
-
-.sobre-pratica-label {
-  padding-top: 6px;
-}
-
-.sobre-pratica-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.sobre-pratica-item {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: var(--space-md);
-  padding: var(--space-lg) 0;
-  border-bottom: 1px solid var(--border);
-  align-items: start;
-}
-
-.sobre-pratica-item:last-child {
-  border-bottom: none;
-}
-
-.sobre-pratica-num {
+.sobre-mono {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: var(--text-light);
-  padding-top: 6px;
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
 }
 
-.sobre-pratica-title {
-  font-family: var(--font-serif);
-  font-size: clamp(24px, 2.8vw, 36px);
-  font-weight: 400;
-  letter-spacing: -0.035em;
-  color: var(--text);
-  margin-bottom: var(--space-sm);
+/* ===================== PORTRAIT ===================== */
+
+.sobre-portrait {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 360px;
+  overflow: hidden;
 }
 
-.sobre-pratica-text {
-  font-family: var(--font-serif);
-  font-size: 17px;
-  line-height: 1.76;
-  color: var(--text-secondary);
-  letter-spacing: -0.012em;
-  max-width: 58ch;
+.sobre-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: contrast(1.08) saturate(0.6) brightness(0.7);
+}
+
+.sobre-portrait-label {
+  position: absolute;
+  bottom: 20px;
+  left: 32px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
 }
 
 /* ===================== BIO ===================== */
 
 .sobre-bio {
-  padding: var(--space-3xl) 0 var(--space-2xl);
+  padding: 80px 48px;
   border-bottom: 1px solid var(--border);
 }
 
-.sobre-bio-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: var(--space-3xl);
-  align-items: start;
+.sobre-bio-inner {
+  max-width: 52ch;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .sobre-bio-text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-  max-width: 70ch;
-}
-
-.sobre-bio-text p {
-  font-family: var(--font-serif);
-  font-size: 19px;
-  line-height: 1.82;
-  color: var(--text-secondary);
-  letter-spacing: -0.012em;
-}
-
-.sobre-bio-lead {
-  font-size: 21px !important;
-  color: var(--text) !important;
-  letter-spacing: -0.016em !important;
-  line-height: 1.74 !important;
-  padding-bottom: 36px;
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: 20px;
-}
-
-.sobre-bio-quote {
-  font-family: var(--font-serif);
-  font-size: 17px;
-  font-style: italic;
-  line-height: 1.7;
-  color: var(--text-light);
-  padding-left: 18px;
-  border-left: 2px solid var(--border-subtle);
-  margin-top: var(--space-lg);
-  max-width: 46ch;
-}
-
-.sobre-bio-sidebar {
-  position: sticky;
-  top: 96px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.sobre-bio-still {
-  position: relative;
-  overflow: hidden;
-}
-
-.sobre-bio-still img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(0.08) contrast(1.1) saturate(0.88);
-  transition: filter 0.6s ease;
-}
-
-.sobre-bio-still:hover img {
-  filter: grayscale(0) contrast(1.03) saturate(1.0);
-}
-
-.sobre-bio-still-caption {
-  font-family: var(--font-mono);
-  font-size: 8.5px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  margin-top: 12px;
-  line-height: 1.6;
-  opacity: 0.8;
-}
-
-.sobre-bio-portrait img {
-  width: 100%;
-  height: auto;
-  filter: grayscale(0.15) contrast(1.05);
-  display: block;
-}
-
-/* ===================== TRAJETÓRIA ===================== */
-
-.sobre-trajetoria {
-  padding: var(--space-3xl) 0;
-  background-color: var(--surface-elevated);
-}
-
-.sobre-trajetoria-header {
-  padding-bottom: var(--space-lg);
-  border-bottom: 2px solid var(--border);
-  margin-bottom: 0;
-}
-
-.sobre-trajetoria-title {
-  font-family: var(--font-serif);
-  font-size: clamp(42px, 5vw, 80px);
-  font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.97;
-  color: var(--text);
-}
-
-.sobre-trajetoria-body {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: var(--space-2xl);
-}
-
-.trajetoria-entry {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: var(--space-3xl);
-  padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--border);
-  align-items: start;
-}
-
-.trajetoria-entry:last-child {
-  border-bottom: none;
-}
-
-.trajetoria-entry-label {
-  padding-top: 4px;
-}
-
-.trajetoria-entry-content p {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  line-height: 1.72;
-  color: var(--text-secondary);
-  letter-spacing: -0.01em;
-  max-width: 68ch;
-}
-
-/* Credits list */
-
-.trajetoria-credits {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-  padding: 0;
-}
-
-.trajetoria-credits li {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-bottom: var(--space-lg);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.trajetoria-credits li:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.trajetoria-credits strong {
-  font-family: var(--font-serif);
-  font-size: 21px;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  color: var(--text);
-  line-height: 1.1;
-}
-
-.trajetoria-credits-role {
-  font-family: var(--font-serif);
-  font-size: 15px;
-  font-style: italic;
-  color: var(--accent);
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-}
-
-.trajetoria-credits-meta {
   font-family: var(--font-sans);
-  font-size: 13px;
-  color: var(--text-muted);
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.78;
+  color: var(--text-dim);
 }
 
-.trajetoria-credits-note {
-  font-family: var(--font-serif);
+.sobre-bio-secondary {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.6vw, 20px);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--text-muted);
+  padding-left: 20px;
+  border-left: 1px solid var(--border-strong);
+}
+
+/* ===================== PRATICA ===================== */
+
+.sobre-pratica {
+  padding: 64px 48px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-surface);
+}
+
+.sobre-pratica-header {
+  margin-bottom: 40px;
+}
+
+.sobre-pratica-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1100px;
+}
+
+.sobre-pratica-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sobre-pratica-title {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+}
+
+.sobre-pratica-text {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ===================== TRAJECTORY ===================== */
+
+.sobre-trajectory {
+  padding: 64px 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sobre-trajectory-header {
+  margin-bottom: 32px;
+}
+
+.sobre-trajectory-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+  max-width: 700px;
+}
+
+.sobre-trajectory-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sobre-trajectory-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.sobre-trajectory-role {
+  font-family: var(--font-display);
   font-size: 16px;
   font-style: italic;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  letter-spacing: -0.012em;
-  max-width: 54ch;
-  padding-top: 10px;
-  border-top: 1px solid var(--border-subtle);
-  margin-top: 2px;
+  color: var(--accent);
+  opacity: 0.85;
 }
 
-/* Formation list */
-
-.trajetoria-formation {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.trajetoria-formation li {
-  display: grid;
-  grid-template-columns: 175px 1fr auto;
-  gap: var(--space-md);
-  align-items: baseline;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.trajetoria-formation li:last-child {
-  border-bottom: none;
-}
-
-.trajetoria-formation-date {
+.sobre-trajectory-meta {
   font-family: var(--font-mono);
-  font-size: 9.5px;
+  font-size: 8.5px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  white-space: nowrap;
+  color: var(--text-ghost);
+  margin-top: 4px;
 }
 
-.trajetoria-formation-name {
-  font-family: var(--font-serif);
-  font-size: 17px;
-  color: var(--text);
-  letter-spacing: -0.012em;
-  line-height: 1.3;
+/* ===================== FORMATION ===================== */
+
+.sobre-formation {
+  padding: 64px 48px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-surface);
 }
 
-.trajetoria-formation-info {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  color: var(--text-muted);
-  text-align: right;
-  white-space: nowrap;
+.sobre-formation-header {
+  margin-bottom: 32px;
 }
 
-/* ===================== RESPONSIVE ===================== */
-
-/* ===================== ENCONTRO ===================== */
-
-.sobre-encontro {
-  padding: var(--space-2xl) 0 var(--space-pause);
-  background-color: var(--bg-darkest);
-  border-top: 1px solid var(--border-darkest);
-}
-
-.sobre-encontro-inner {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: var(--space-3xl);
-  align-items: start;
-}
-
-.sobre-encontro-left {
-  padding-top: 6px;
-}
-
-.sobre-encontro-left .label {
-  color: rgba(243, 241, 235, 0.35);
-}
-
-.sobre-encontro-title {
-  font-family: var(--font-serif);
-  font-size: clamp(40px, 5.5vw, 76px);
-  font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.97;
-  color: var(--text-inverse);
-  margin-bottom: var(--space-xl);
-}
-
-.sobre-encontro-body {
+.sobre-formation-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-  margin-bottom: var(--space-2xl);
-  border-left: 1px solid var(--border-dark);
-  padding-left: var(--space-lg);
+  border-top: 1px solid var(--border);
+  max-width: 800px;
 }
 
-.sobre-encontro-body p {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  line-height: 1.8;
-  color: rgba(242, 240, 233, 0.5);
-  letter-spacing: -0.01em;
-  max-width: 56ch;
+.sobre-formation-item {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
 }
 
-.sobre-encontro-body p:last-child {
-  color: rgba(242, 240, 233, 0.82);
-  font-style: italic;
-  font-size: 18px;
-  letter-spacing: -0.012em;
-}
-
-.sobre-encontro-links {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xl);
-  padding-left: var(--space-lg);
-}
-
-.sobre-encontro-email {
-  font-family: var(--font-serif);
-  font-size: clamp(16px, 1.8vw, 22px);
-  letter-spacing: -0.02em;
-  color: var(--text-inverse);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.sobre-encontro-email:hover {
-  opacity: 0.6;
-  color: var(--text-inverse);
-}
-
-.sobre-encontro-instagram {
+.sobre-formation-date {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(243, 241, 235, 0.35);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--text-ghost);
+}
+
+.sobre-formation-name {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.sobre-formation-info {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  color: var(--text-ghost);
+  text-align: right;
+}
+
+/* ===================== CONTACT ===================== */
+
+.sobre-contact {
+  padding: 80px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sobre-contact-body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 40ch;
+}
+
+.sobre-contact-email {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--text-dim);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.sobre-encontro-instagram:hover {
-  color: rgba(243, 241, 235, 0.75);
+.sobre-contact-email:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+.sobre-contact-social {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-ghost);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sobre-contact-social:hover {
+  color: var(--text-dim);
+  opacity: 1;
 }
 
 /* ===================== RESPONSIVE ===================== */
 
-@media (max-width: 980px) {
-  .sobre-header-inner {
+@media (max-width: 860px) {
+  .sobre-bio { padding: 56px 24px; }
+  .sobre-pratica { padding: 48px 24px; }
+  .sobre-trajectory { padding: 48px 24px; }
+  .sobre-formation { padding: 48px 24px; }
+  .sobre-contact { padding: 56px 24px; }
+
+  .sobre-pratica-grid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .sobre-header-name {
-    grid-column: 1;
-    font-size: clamp(64px, 14vw, 120px);
-    padding-bottom: var(--space-lg);
-  }
-
-  .sobre-header-statement {
-    grid-column: 1;
-    max-width: none;
-    padding-bottom: var(--space-xl);
-    border-left: none;
-    padding-left: 0;
-  }
-
-  .sobre-pratica-inner {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  .sobre-bio-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-2xl);
-  }
-
-  .sobre-bio-sidebar {
-    position: relative;
-    top: 0;
-    max-width: 340px;
-  }
-
-  .trajetoria-entry {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  .sobre-encontro-inner {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  .sobre-encontro-body,
-  .sobre-encontro-links {
-    padding-left: 0;
-    border-left: none;
-  }
-
-  .trajetoria-formation li {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-sm);
-  }
-
-  .trajetoria-formation-info {
-    text-align: left;
-  }
-}
-
-@media (max-width: 640px) {
-  .trajetoria-formation li {
+  .sobre-formation-item {
     grid-template-columns: 1fr;
     gap: 4px;
   }
 
-  .trajetoria-formation-info {
-    display: none;
+  .sobre-formation-info {
+    text-align: left;
   }
 }

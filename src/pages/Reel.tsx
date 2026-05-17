@@ -8,31 +8,22 @@ export function Reel() {
   return (
     <div className="reel-page">
 
-      <header className="page-header">
-        <div className="page-header-inner">
-          <h1 className="page-title">Reel</h1>
-          <p className="page-intro">O corpo diante da câmera como prática — não como demonstração, mas como relação.</p>
-        </div>
-      </header>
+      <div className="reel-header">
+        <span className="reel-label">REEL</span>
+      </div>
 
       {featured && (
         <section className="reel-featured">
-          <YouTubeEmbed
-            url={featured}
-            title="Francisco Vidal — Reel"
-          />
+          <YouTubeEmbed url={featured} title="Francisco Vidal — Reel" />
         </section>
       )}
 
       {rest.length > 0 && (
-        <section className="reel-content">
+        <section className="reel-grid-section">
           <div className="reel-grid">
             {rest.map((videoUrl, index) => (
               <div key={index} className="reel-item">
-                <YouTubeEmbed
-                  url={videoUrl}
-                  title={`Francisco Vidal — Cena ${index + 2}`}
-                />
+                <YouTubeEmbed url={videoUrl} title={`Francisco Vidal — Cena ${index + 2}`} />
               </div>
             ))}
           </div>

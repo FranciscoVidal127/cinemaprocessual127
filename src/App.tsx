@@ -20,7 +20,7 @@ function Header() {
 
   useEffect(() => {
     function onScroll() {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 60);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -38,36 +38,16 @@ function Header() {
   return (
     <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
       <div className="header-inner">
-        <a href="/" className="nav-brand">
-          <span className="nav-brand-name">Francisco Vidal</span>
-          <span className="nav-brand-sub">ator · cineasta · assistente de direção · rio de janeiro</span>
-        </a>
+        <a href="/" className="nav-brand">Francisco Vidal</a>
 
-        <nav className="nav-links" aria-label="Navegação principal">
-          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Atuação
-          </NavLink>
-          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Reel
-          </NavLink>
-          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Fotos
-          </NavLink>
-          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Filmografia
-          </NavLink>
-          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Assist. Direção
-          </NavLink>
-          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Sobre
-          </NavLink>
-          <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Escrita
-          </NavLink>
-          <a href="mailto:franciscovidalcs@gmail.com" className="nav-link nav-link--contact">
-            Contato
-          </a>
+        <nav className="nav-links" aria-label="Navegacao principal">
+          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Atuacao</NavLink>
+          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Reel</NavLink>
+          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Fotos</NavLink>
+          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Filmografia</NavLink>
+          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Sobre</NavLink>
+          <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Escrita</NavLink>
+          <a href="mailto:franciscovidalcs@gmail.com" className="nav-link">Contato</a>
         </nav>
 
         <button
@@ -81,13 +61,13 @@ function Header() {
 
       {menuOpen && (
         <nav className="nav-mobile">
-          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Atuação</NavLink>
+          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Atuacao</NavLink>
           <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
           <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Fotos</NavLink>
           <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
-          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Assistência de Direção</NavLink>
           <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Sobre</NavLink>
           <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Escrita</NavLink>
+          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Assistencia de Direcao</NavLink>
           <a href="mailto:franciscovidalcs@gmail.com" className="nav-mobile-link">Contato</a>
         </nav>
       )}
@@ -99,21 +79,13 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <div className="footer-left">
-          <p className="footer-name">Francisco Vidal</p>
-          <p className="footer-desc">Ator · Cineasta · Assistente de Direção</p>
-          <p className="footer-desc">Rio de Janeiro / São Paulo</p>
-        </div>
-        <div className="footer-center">
-          <p className="footer-statement">Para trabalhos como ator, assistência de direção, colaborações criativas e projetos audiovisuais.</p>
-        </div>
-        <div className="footer-right">
-          <a href="mailto:franciscovidalcs@gmail.com" className="footer-email">franciscovidalcs@gmail.com</a>
-          <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="footer-instagram">@franciscovidalcs</a>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <span>&copy; {new Date().getFullYear()} Francisco Vidal &middot; Rio de Janeiro</span>
+        <span className="footer-name">Francisco Vidal</span>
+        <span className="footer-sep" aria-hidden="true" />
+        <a href="mailto:franciscovidalcs@gmail.com" className="footer-link">franciscovidalcs@gmail.com</a>
+        <span className="footer-sep" aria-hidden="true" />
+        <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="footer-link">@franciscovidalcs</a>
+        <span className="footer-sep" aria-hidden="true" />
+        <span className="footer-location">Rio de Janeiro / Sao Paulo</span>
       </div>
     </footer>
   );

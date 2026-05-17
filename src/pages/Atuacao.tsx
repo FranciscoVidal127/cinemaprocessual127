@@ -4,77 +4,58 @@ import { YouTubeEmbed } from '../components/YouTubeEmbed';
 import './Atuacao.css';
 
 export function Atuacao() {
+  const featuredReel = siteData.reel.videos[0];
+
   return (
     <div className="atuacao-page">
 
-      {/* HEADER */}
-      <header className="page-header">
-        <div className="page-header-inner">
-          <h1 className="page-title">Atuação</h1>
-          <p className="page-intro">
-            Presença, escuta, corpo e transformação diante da câmera. A atuação como investigação contínua.
-          </p>
-        </div>
-      </header>
-
-      {/* INTRO */}
-      <section className="atuacao-intro">
-        <div className="container">
-          <div className="atuacao-intro-grid">
-            <div className="atuacao-intro-text">
-              <p className="atuacao-lead">
-                Como ator, Francisco Vidal trabalha a partir da escuta, da presença física e da relação entre corpo, câmera e espaço. Sua pesquisa de atuação atravessa estados de atenção, silêncio, vulnerabilidade e transformação diante da imagem.
-              </p>
-              <p>
-                Não uma identidade fixa — um ator em processo contínuo, que entende o set como lugar de escuta antes de tudo. Trabalha com flexibilidade de registro: ficção, documentário, experimental. O que importa é a seriedade com a linguagem.
-              </p>
-            </div>
-            <div className="atuacao-intro-image">
-              <img
-                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png"
-                alt="Francisco Vidal"
-              />
-            </div>
-          </div>
-        </div>
+      {/* Full-width cinematic still */}
+      <section className="atuacao-hero">
+        <img
+          src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png"
+          alt="Francisco Vidal"
+        />
+        <div className="atuacao-hero-veil" />
+        <span className="atuacao-hero-label">ATUACAO</span>
       </section>
 
-      {/* REEL */}
-      <section className="atuacao-reel">
-        <div className="container">
-          <div className="atuacao-section-header">
-            <span className="label">Reel</span>
+      {/* Statement */}
+      <section className="atuacao-statement">
+        <p className="atuacao-statement-text">
+          Como ator, Francisco Vidal trabalha a partir da escuta, da presenca fisica e da relacao entre corpo, camera e espaco. Sua pesquisa atravessa estados de atencao, silencio, vulnerabilidade e transformacao diante da imagem.
+        </p>
+      </section>
+
+      {/* Reel */}
+      {featuredReel && (
+        <section className="atuacao-reel">
+          <div className="atuacao-reel-header">
+            <span className="atuacao-mono">REEL</span>
           </div>
           <div className="atuacao-reel-video">
-            <YouTubeEmbed url={siteData.reel.videos[0]} title="Reel - Francisco Vidal" />
+            <YouTubeEmbed url={featuredReel} title="Francisco Vidal — Reel" />
           </div>
-          <div className="atuacao-reel-footer">
-            <Link to="/reel" className="atuacao-link">Ver reel completo →</Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* FOTOS */}
-      <section className="atuacao-fotos">
-        <div className="atuacao-section-header-dark">
-          <span className="label" style={{ color: 'rgba(240,237,228,0.35)' }}>Em cena</span>
-        </div>
-        <div className="atuacao-fotos-grid">
-          <div className="atuacao-foto-item">
+      {/* Contact sheet strip */}
+      <section className="atuacao-strip">
+        <div className="atuacao-strip-grid">
+          <div className="atuacao-strip-item">
             <img
               src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
-              alt="Francisco Vidal"
+              alt="Francisco Vidal — Corpo"
               loading="lazy"
             />
           </div>
-          <div className="atuacao-foto-item">
+          <div className="atuacao-strip-item atuacao-strip-item--wide">
             <img
               src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
-              alt="Francisco Vidal"
+              alt="Francisco Vidal — Presenca"
               loading="lazy"
             />
           </div>
-          <div className="atuacao-foto-item">
+          <div className="atuacao-strip-item">
             <img
               src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg"
               alt="Francisco Vidal em O Mundo dos Mortos"
@@ -84,73 +65,50 @@ export function Atuacao() {
         </div>
       </section>
 
-      {/* FORMACAO */}
-      <section className="atuacao-formacao">
-        <div className="container">
-          <div className="atuacao-section-header">
-            <span className="label">Formação recente</span>
+      {/* Formation */}
+      <section className="atuacao-formation">
+        <div className="atuacao-formation-header">
+          <span className="atuacao-mono">FORMACAO 2025–2026</span>
+        </div>
+        <div className="atuacao-formation-list">
+          <div className="atuacao-formation-item">
+            <span className="atuacao-formation-date">06 mai → 03 jul 2025</span>
+            <span className="atuacao-formation-name">O Poder da Camera: Atuacao para TV e Cinema</span>
+            <span className="atuacao-formation-info">Ricardo Conti + Heitor Martinez · 48h</span>
           </div>
-          <p className="atuacao-formacao-intro">
-            Em 2025–2026, aprofunda sua pesquisa de atuação em oficinas, encontros e processos de preparação voltados à presença, escuta, corpo e criação de personagem.
-          </p>
-          <div className="atuacao-formacao-list">
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">06 mai → 03 jul 2025</span>
-              <span className="atuacao-formacao-name">O Poder da Câmera: Atuação para TV e Cinema</span>
-              <span className="atuacao-formacao-info">Ricardo Conti + Heitor Martinez · 48h</span>
-            </div>
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">20 mai → 11 jul 2025</span>
-              <span className="atuacao-formacao-name">Laboratório de Atuação para Câmera</span>
-              <span className="atuacao-formacao-info">Gustavo Pace · 40h</span>
-            </div>
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">31 mai e 19 jul 2025</span>
-              <span className="atuacao-formacao-name">Interpretação para TV e Cinema</span>
-              <span className="atuacao-formacao-info">Andrea Avancini · 21h</span>
-            </div>
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">04 jun → 23 jul 2025</span>
-              <span className="atuacao-formacao-name">O Teatro do Não Eu</span>
-              <span className="atuacao-formacao-info">Rafael Infante · 36h</span>
-            </div>
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">17 set → 17 dez 2025</span>
-              <span className="atuacao-formacao-name">O Teatro do Não Eu — Módulo II</span>
-              <span className="atuacao-formacao-info">Rafael Infante · 46h</span>
-            </div>
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">18 dez 2025</span>
-              <span className="atuacao-formacao-name">Atuando para o Audiovisual</span>
-              <span className="atuacao-formacao-info">Mentoria Walter Lima · 12h</span>
-            </div>
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">12 → 16 jan 2026</span>
-              <span className="atuacao-formacao-name">Desenvolvimento de Cenas, Personagens e Repertório</span>
-              <span className="atuacao-formacao-info">Rafael Infante · 14h</span>
-            </div>
-            <div className="atuacao-formacao-item">
-              <span className="atuacao-formacao-date">Em curso</span>
-              <span className="atuacao-formacao-name">LABO com Patrick Sampaio</span>
-              <span className="atuacao-formacao-info">Prática contínua: gravar / assistir / regravar</span>
-            </div>
+          <div className="atuacao-formation-item">
+            <span className="atuacao-formation-date">20 mai → 11 jul 2025</span>
+            <span className="atuacao-formation-name">Laboratorio de Atuacao para Camera</span>
+            <span className="atuacao-formation-info">Gustavo Pace · 40h</span>
+          </div>
+          <div className="atuacao-formation-item">
+            <span className="atuacao-formation-date">31 mai e 19 jul 2025</span>
+            <span className="atuacao-formation-name">Interpretacao para TV e Cinema</span>
+            <span className="atuacao-formation-info">Andrea Avancini · 21h</span>
+          </div>
+          <div className="atuacao-formation-item">
+            <span className="atuacao-formation-date">04 jun → 23 jul 2025</span>
+            <span className="atuacao-formation-name">O Teatro do Nao Eu</span>
+            <span className="atuacao-formation-info">Rafael Infante · 36h</span>
+          </div>
+          <div className="atuacao-formation-item">
+            <span className="atuacao-formation-date">17 set → 17 dez 2025</span>
+            <span className="atuacao-formation-name">O Teatro do Nao Eu — Modulo II</span>
+            <span className="atuacao-formation-info">Rafael Infante · 46h</span>
+          </div>
+          <div className="atuacao-formation-item">
+            <span className="atuacao-formation-date">Em curso</span>
+            <span className="atuacao-formation-name">LABO com Patrick Sampaio</span>
+            <span className="atuacao-formation-info">Pratica continua: gravar / assistir / regravar</span>
           </div>
         </div>
       </section>
 
-      {/* CONTATO */}
-      <section className="atuacao-contato">
-        <div className="container">
-          <div className="atuacao-contato-inner">
-            <h2 className="atuacao-contato-title">Disponível para projetos</h2>
-            <p className="atuacao-contato-text">
-              Aberto a longas, curtas, séries, documentários e trabalhos que atravessam fronteiras de forma. O que orienta o interesse não é o formato, mas a qualidade da visão.
-            </p>
-            <a href="mailto:franciscovidalcs@gmail.com" className="atuacao-contato-email">
-              franciscovidalcs@gmail.com
-            </a>
-          </div>
-        </div>
+      {/* Contact */}
+      <section className="atuacao-contact">
+        <p className="atuacao-contact-text">Para trabalhos como ator — longas, curtas, documentarios e projetos experimentais.</p>
+        <a href="mailto:franciscovidalcs@gmail.com" className="atuacao-contact-email">franciscovidalcs@gmail.com</a>
+        <Link to="/filmografia" className="atuacao-contact-link">Filmografia →</Link>
       </section>
 
     </div>

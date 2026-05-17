@@ -1,205 +1,259 @@
 .ad-page {
   min-height: 100vh;
+  background-color: var(--bg);
+  padding-top: 72px;
 }
 
-/* DESCRICAO */
+/* ===================== PAGE HEADER ===================== */
+
+.ad-page .page-header {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ad-page .page-header-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.ad-page .page-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--text);
+}
+
+.ad-page .page-intro {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 16px;
+  max-width: 40ch;
+}
+
+/* ===================== DESCRIPTION ===================== */
+
 .ad-descricao {
-  padding: 4rem 0;
+  padding: 64px 32px;
+  border-bottom: 1px solid var(--border);
 }
 
 .ad-descricao-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  max-width: var(--container);
   align-items: start;
 }
 
 .ad-descricao-text {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--color-text);
-}
-
-.ad-descricao-text p {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .ad-lead {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.6;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-dim);
 }
 
-.ad-competencias {
-  padding: 2rem;
-  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+.ad-descricao-text p:not(.ad-lead) {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.ad-descricao-aside {
+  padding-top: 4px;
 }
 
 .ad-competencias-title {
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-text);
-  opacity: 0.5;
-  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
 }
 
 .ad-competencias-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .ad-competencias-list li {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.05));
-  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-dim);
+  padding-left: 14px;
+  position: relative;
 }
 
-.ad-competencias-list li:last-child {
-  border-bottom: none;
+.ad-competencias-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 4px;
+  height: 1px;
+  background-color: var(--text-ghost);
 }
 
-/* CREDITOS */
+/* ===================== CREDITOS ===================== */
+
 .ad-creditos {
-  padding: 4rem 0;
-  border-top: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  padding: 48px 32px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-surface);
 }
 
 .ad-section-header {
-  margin-bottom: 2rem;
+  margin-bottom: 24px;
+}
+
+.ad-section-header .label {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.ad-section-header .label::before {
+  background-color: var(--accent);
+  opacity: 0.6;
 }
 
 .ad-creditos-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  border-top: 1px solid var(--border);
 }
 
 .ad-credito-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.06));
+  align-items: start;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.ad-credito-item:first-child {
-  border-top: 1px solid var(--color-border, rgba(0,0,0,0.06));
+.ad-credito-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .ad-credito-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
 .ad-credito-meta {
-  font-size: 0.9rem;
-  color: var(--color-text);
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--text-ghost);
 }
 
 .ad-credito-desc {
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: var(--color-text);
-  opacity: 0.8;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
 }
 
 .ad-credito-year {
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--color-text);
-  opacity: 0.5;
-  white-space: nowrap;
-  padding-top: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-ghost);
+  flex-shrink: 0;
 }
 
-/* CONTATO */
+/* ===================== CONTATO ===================== */
+
 .ad-contato {
-  padding: 5rem 0;
-  border-top: 1px solid var(--color-border, rgba(0,0,0,0.08));
+  padding: 64px 32px;
 }
 
 .ad-contato-inner {
-  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 500px;
 }
 
 .ad-contato-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--text);
 }
 
 .ad-contato-text {
-  font-size: 1.05rem;
+  font-family: var(--font-sans);
+  font-size: 14px;
   line-height: 1.7;
-  color: var(--color-text);
-  opacity: 0.8;
-  margin-bottom: 1.5rem;
+  color: var(--text-muted);
 }
 
 .ad-contato-links {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 8px;
+  margin-top: 8px;
 }
 
 .ad-contato-email {
-  font-size: 0.95rem;
-  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--text-dim);
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  width: fit-content;
+  transition: color 0.2s ease;
 }
 
 .ad-contato-email:hover {
+  color: var(--text);
   opacity: 1;
 }
 
 .ad-contato-filmografia {
-  font-size: 0.9rem;
-  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-ghost);
   text-decoration: none;
-  opacity: 0.6;
-  transition: opacity 0.2s;
+  transition: color 0.2s ease;
 }
 
 .ad-contato-filmografia:hover {
+  color: var(--text-dim);
   opacity: 1;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 860px) {
+  .ad-page { padding-top: 56px; }
+
   .ad-descricao-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 40px;
   }
 
-  .ad-credito-item {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .ad-credito-year {
-    order: -1;
-  }
-
-  .ad-descricao {
-    padding: 2.5rem 0;
-  }
-
-  .ad-creditos,
-  .ad-contato {
-    padding: 2.5rem 0;
-  }
+  .ad-descricao { padding: 48px 20px; }
+  .ad-creditos { padding: 40px 20px; }
+  .ad-contato { padding: 48px 20px; }
 }
