@@ -92,22 +92,20 @@ export function Home() {
       {/* ============ REEL ============ */}
       <section className="reel" id="reel">
         <div className="reel-inner">
-          <div className="reel-header">
-            <span className="section-label">REEL</span>
-            <p className="reel-desc">Material de atuação diante da câmera.</p>
-          </div>
           {featuredReel ? (
             <div className="reel-video">
               <YouTubeEmbed url={featuredReel} title="Francisco Vidal — Reel" />
             </div>
           ) : (
             <div className="reel-placeholder">
-              <span className="reel-placeholder-text">REEL EM BREVE</span>
-              <span className="reel-placeholder-sub">Inserir reel</span>
+              <span className="reel-placeholder-heading">REEL</span>
+              <span className="reel-placeholder-sub">INSERIR REEL</span>
+              <p className="reel-placeholder-desc">Material de atuação diante da câmera.</p>
             </div>
           )}
           <div className="reel-footer">
-            <a href="#contato" className="section-cta">Solicitar material →</a>
+            <a href="#reel" className="reel-cta reel-cta--primary">Ver reel</a>
+            <a href="#contato" className="reel-cta">Solicitar material →</a>
           </div>
         </div>
       </section>
@@ -119,7 +117,7 @@ export function Home() {
             <span className="section-label">FILMOGRAFIA SELECIONADA</span>
           </div>
           <div className="filmography-grid">
-            {siteData.filmografia.map((filme) => (
+            {siteData.filmografia.slice(0, 4).map((filme) => (
               <Link to={`/filme/${filme.slug}`} key={filme.id} className="film-card">
                 <div className="film-card-meta">
                   <span className="film-card-year">{filme.year}</span>
@@ -128,6 +126,7 @@ export function Home() {
                 <h3 className="film-card-title">{filme.title}</h3>
                 <p className="film-card-director">dir. {filme.director}</p>
                 <p className="film-card-role">{filme.role}</p>
+                <p className="film-card-context">{filme.description}</p>
                 {filme.festivals && (
                   <p className="film-card-festivals">{filme.festivals}</p>
                 )}

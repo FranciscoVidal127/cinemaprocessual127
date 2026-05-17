@@ -239,17 +239,6 @@
   margin: 0 auto;
 }
 
-.reel-header {
-  margin-bottom: 32px;
-}
-
-.reel-desc {
-  font-family: var(--font-body);
-  font-size: 16px;
-  color: var(--text-dim);
-  margin-top: 6px;
-}
-
 .reel-video {
   width: 100%;
   aspect-ratio: 16/9;
@@ -269,31 +258,66 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
   border: 1px solid var(--line-strong);
-  background-color: var(--bg-soft);
+  background: linear-gradient(160deg, var(--bg-soft) 0%, var(--bg) 100%);
 }
 
-.reel-placeholder-text {
+.reel-placeholder-heading {
   font-family: var(--font-display);
   font-size: var(--step-2);
   font-weight: 300;
-  color: var(--text-dim);
-  letter-spacing: -0.03em;
+  color: var(--text);
+  letter-spacing: -0.04em;
 }
 
 .reel-placeholder-sub {
+  font-family: var(--font-meta);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.reel-placeholder-desc {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text-dim);
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+
+.reel-footer {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.reel-cta {
   font-family: var(--font-meta);
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-dim);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid var(--line-strong);
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
-.reel-footer {
-  margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
+.reel-cta:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+  background-color: rgba(245, 241, 232, 0.05);
+  opacity: 1;
+}
+
+.reel-cta--primary {
+  border-color: var(--text-dim);
+  color: var(--text);
 }
 
 /* ===================== SELECTED_FILMOGRAPHY ===================== */
@@ -322,8 +346,8 @@
 .film-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 28px 24px;
+  gap: 8px;
+  padding: 32px 28px;
   border: 1px solid var(--line-strong);
   background-color: var(--bg);
   text-decoration: none;
@@ -379,6 +403,17 @@
   font-style: italic;
   color: var(--accent);
   letter-spacing: -0.01em;
+}
+
+.film-card-context {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dim);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .film-card-festivals {
