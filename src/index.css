@@ -1,30 +1,52 @@
 :root {
-  --bg: #0B0D0C;
-  --bg-deep: #080A09;
-  --bg-surface: #171D18;
-  --bg-elevated: #1E2520;
-  --bg-warm: #111713;
-  --bg-paper: #F2EDE3;
+  --bg-0: #0B0D0C;
+  --bg-1: #111713;
+  --surface: #171D18;
+  --surface-elevated: #1E2520;
+  --paper: #F2EDE3;
 
-  --text: #F3F2F0;
-  --text-body: #D1CBC1;
-  --text-dim: #D1CBC1;
-  --text-muted: #8E8A83;
-  --text-ghost: #5C5854;
+  --text-0: #F3F2F0;
+  --text-1: #D1CBC1;
+  --text-2: #8E8A83;
+  --text-3: #5C5854;
 
   --accent: #8B3C34;
-  --accent-dim: rgba(139, 60, 52, 0.6);
-  --accent-green: #35432B;
+  --accent-forest: #35432B;
 
-  --border: #2A302C;
-  --border-strong: #3A413C;
+  --line: #2A302C;
+  --line-strong: #3A413C;
 
-  --font-display: 'Cormorant Garamond', 'Georgia', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, monospace;
+  --font-display: 'Cormorant Garamond', 'Bodoni Moda', serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-meta: 'IBM Plex Mono', 'SFMono-Regular', monospace;
+
+  --step--1: clamp(0.875rem, 0.84rem + 0.12vw, 0.95rem);
+  --step-0: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
+  --step-2: clamp(1.75rem, 1.45rem + 1vw, 2.5rem);
+  --step-3: clamp(2.8rem, 1.8rem + 4vw, 6rem);
 
   --container: 1400px;
   --container-narrow: 800px;
+
+  /* Legacy aliases for page stylesheets */
+  --bg: var(--bg-0);
+  --bg-deep: var(--bg-0);
+  --bg-surface: var(--surface);
+  --bg-elevated: var(--surface-elevated);
+  --bg-warm: var(--bg-1);
+  --bg-paper: var(--paper);
+  --text: var(--text-0);
+  --text-body: var(--text-1);
+  --text-dim: var(--text-1);
+  --text-muted: var(--text-2);
+  --text-ghost: var(--text-3);
+  --accent-dim: rgba(139, 60, 52, 0.6);
+  --accent-green: var(--accent-forest);
+  --border: var(--line);
+  --border-strong: var(--line-strong);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-meta);
 }
 
 * {
@@ -38,11 +60,11 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.55;
-  color: var(--text);
-  background-color: var(--bg);
+  background: var(--bg-0);
+  color: var(--text-0);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,37 +72,46 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 300;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  color: var(--text);
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+  color: var(--text-0);
 }
 
 h1 {
-  font-size: clamp(80px, 14vw, 200px);
+  font-size: var(--step-3);
+  letter-spacing: -0.04em;
   line-height: 0.85;
-  letter-spacing: -0.06em;
 }
 
 h2 {
-  font-size: clamp(40px, 6vw, 96px);
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-}
-
-h3 {
-  font-size: clamp(24px, 3vw, 44px);
-  line-height: 1.1;
+  font-size: var(--step-2);
   letter-spacing: -0.03em;
 }
 
+h3 {
+  font-size: var(--step-1);
+  line-height: 1.1;
+}
+
+p, li {
+  max-width: 68ch;
+}
+
 a {
-  color: var(--text);
+  color: var(--text-0);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
 a:hover {
   opacity: 0.7;
+}
+
+button,
+a[class*="cta"],
+a[class*="nav"],
+a[class*="btn"] {
+  min-height: 44px;
 }
 
 button {
@@ -95,7 +126,7 @@ img {
 }
 
 :focus-visible {
-  outline: 1px solid var(--text-muted);
+  outline: 1px solid var(--text-2);
   outline-offset: 3px;
 }
 
@@ -111,14 +142,4 @@ img {
 
 .page-enter {
   animation: fadeIn 0.8s ease both;
-}
-
-@media (max-width: 980px) {
-  h1 { font-size: clamp(56px, 14vw, 100px); }
-  h2 { font-size: clamp(36px, 8vw, 60px); }
-}
-
-@media (max-width: 640px) {
-  h1 { font-size: clamp(48px, 15vw, 72px); }
-  h2 { font-size: clamp(32px, 10vw, 48px); }
 }

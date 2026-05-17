@@ -1,28 +1,28 @@
 /* ===================== SHARED UTILITIES ===================== */
 
 .section-label {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
+  font-family: var(--font-meta);
+  font-size: var(--step--1);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-2);
   display: block;
   margin-bottom: 20px;
 }
 
 .section-cta {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
+  font-family: var(--font-meta);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-body);
+  color: var(--text-1);
   text-decoration: none;
   transition: color 0.2s ease;
   padding: 8px 0;
 }
 
 .section-cta:hover {
-  color: var(--text);
+  color: var(--text-0);
   opacity: 1;
 }
 
@@ -73,11 +73,11 @@
 }
 
 .hero-subtitle {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 11px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-body);
+  color: var(--text-1);
   margin-bottom: 16px;
 }
 
@@ -87,7 +87,7 @@
   font-weight: 300;
   line-height: 0.84;
   letter-spacing: -0.06em;
-  color: var(--text);
+  color: var(--text-0);
   margin-bottom: 20px;
 }
 
@@ -95,16 +95,16 @@
   font-family: var(--font-display);
   font-size: clamp(17px, 1.8vw, 23px);
   font-style: italic;
-  color: var(--text-body);
+  color: var(--text-1);
   letter-spacing: -0.01em;
   max-width: 32ch;
 }
 
 .hero-microprova {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  color: var(--text-2);
   margin-top: 14px;
 }
 
@@ -116,33 +116,33 @@
 }
 
 .cta-link {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 10px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-body);
+  color: var(--text-1);
   text-decoration: none;
   padding: 12px 22px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--line-strong);
   transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .cta-link:hover {
-  color: var(--text);
-  border-color: var(--text-muted);
+  color: var(--text-0);
+  border-color: var(--text-2);
   background-color: rgba(243, 242, 240, 0.06);
   opacity: 1;
 }
 
 .cta-link--primary {
-  border-color: var(--text-muted);
-  color: var(--text);
+  border-color: var(--text-2);
+  color: var(--text-0);
 }
 
 /* ===================== ABOUT_DOSSIER ===================== */
 
 .dossier {
-  background-color: var(--bg-paper);
+  background-color: var(--paper);
   border-top: none;
   padding: 100px 48px;
 }
@@ -158,7 +158,7 @@
 
 .dossier-heading {
   font-family: var(--font-display);
-  font-size: clamp(36px, 4vw, 56px);
+  font-size: var(--step-2);
   font-weight: 300;
   letter-spacing: -0.04em;
   line-height: 1.0;
@@ -177,8 +177,8 @@
 }
 
 .dossier-text p {
-  font-family: var(--font-sans);
-  font-size: 17px;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
   line-height: 1.7;
   color: #2E3230;
   max-width: 60ch;
@@ -214,15 +214,15 @@
 }
 
 .highlight-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 9px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #6B6860;
 }
 
 .highlight-value {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.5;
   color: #2E3230;
@@ -231,9 +231,9 @@
 /* ===================== REEL ===================== */
 
 .reel {
-  background-color: var(--bg-deep);
+  background-color: var(--bg-0);
   padding: 100px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .reel-inner {
@@ -246,9 +246,9 @@
 }
 
 .reel-desc {
-  font-family: var(--font-sans);
-  font-size: 15px;
-  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  color: var(--text-1);
   margin-top: 8px;
 }
 
@@ -256,7 +256,7 @@
   width: 100%;
   aspect-ratio: 16/9;
   background-color: #080A09;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--line-strong);
 }
 
 .reel-video > * {
@@ -272,24 +272,24 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  border: 1px solid var(--border-strong);
-  background-color: var(--bg);
+  border: 1px solid var(--line-strong);
+  background-color: var(--bg-1);
 }
 
 .reel-placeholder-text {
   font-family: var(--font-display);
-  font-size: clamp(32px, 5vw, 64px);
+  font-size: var(--step-2);
   font-weight: 300;
-  color: var(--text-muted);
+  color: var(--text-2);
   letter-spacing: -0.03em;
 }
 
 .reel-placeholder-sub {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 10px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-2);
 }
 
 .reel-footer {
@@ -301,9 +301,9 @@
 /* ===================== SELECTED_FILMOGRAPHY ===================== */
 
 .filmography {
-  background-color: var(--bg-surface);
+  background-color: var(--surface);
   padding: 100px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .filmography-inner {
@@ -326,16 +326,16 @@
   flex-direction: column;
   gap: 12px;
   padding: 36px 32px;
-  border: 1px solid var(--border-strong);
-  background-color: var(--bg-warm);
+  border: 1px solid var(--line-strong);
+  background-color: var(--bg-1);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .film-card:hover {
-  border-color: var(--text-muted);
-  background-color: var(--bg-elevated);
+  border-color: var(--text-2);
+  background-color: var(--surface-elevated);
   opacity: 1;
 }
 
@@ -346,64 +346,64 @@
 }
 
 .film-card-year {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 12px;
-  letter-spacing: 0.08em;
-  color: var(--text-body);
+  letter-spacing: 0.06em;
+  color: var(--text-1);
 }
 
 .film-card-type {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 9px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-2);
 }
 
 .film-card-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: var(--step-1);
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1.05;
-  color: var(--text);
+  color: var(--text-0);
 }
 
 .film-card-director {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 15px;
-  color: var(--text-body);
+  color: var(--text-1);
 }
 
 .film-card-role {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: var(--step-0);
   font-style: italic;
-  color: #c45a5a;
+  color: var(--accent);
   letter-spacing: -0.01em;
 }
 
 .film-card-festivals {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  color: var(--text-2);
   line-height: 1.5;
   margin-top: 4px;
 }
 
 .film-card-status {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  color: var(--text-2);
   font-style: italic;
 }
 
 .filmography-footer {
   margin-top: 48px;
   padding-top: 24px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
   display: flex;
   justify-content: flex-end;
 }
@@ -411,9 +411,9 @@
 /* ===================== PHOTOS ===================== */
 
 .photos {
-  background-color: var(--bg-deep);
+  background-color: var(--bg-0);
   padding: 80px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .photos-inner {
@@ -442,7 +442,7 @@
 .photo-item {
   position: relative;
   overflow: hidden;
-  background-color: var(--bg);
+  background-color: var(--bg-1);
 }
 
 .photo-item img {
@@ -462,9 +462,9 @@
   position: absolute;
   bottom: 10px;
   left: 12px;
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 9px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(243, 242, 240, 0.7);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
@@ -479,9 +479,9 @@
 /* ===================== FORMACAO ===================== */
 
 .formacao {
-  background-color: var(--bg-warm);
+  background-color: var(--bg-1);
   padding: 100px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .formacao-inner {
@@ -491,11 +491,11 @@
 
 .formacao-heading {
   font-family: var(--font-display);
-  font-size: clamp(28px, 3.5vw, 44px);
+  font-size: var(--step-1);
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--text);
+  color: var(--text-0);
   margin-bottom: 48px;
 }
 
@@ -507,36 +507,36 @@
 
 .formacao-item {
   padding: 24px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--line);
 }
 
 .formacao-item:first-child {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .formacao-title {
-  font-family: var(--font-sans);
-  font-size: 16px;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.4;
-  color: var(--text);
+  color: var(--text-0);
   margin-bottom: 6px;
 }
 
 .formacao-meta {
-  font-family: var(--font-sans);
-  font-size: 14px;
-  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  color: var(--text-1);
   line-height: 1.5;
 }
 
 /* ===================== ASSISTENCIA_DIRECAO ===================== */
 
 .ad-section {
-  background-color: var(--bg);
+  background-color: var(--bg-0);
   padding: 80px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .ad-inner {
@@ -545,10 +545,10 @@
 }
 
 .ad-text {
-  font-family: var(--font-sans);
-  font-size: 17px;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
   line-height: 1.7;
-  color: var(--text-body);
+  color: var(--text-1);
   max-width: 56ch;
   margin-bottom: 32px;
 }
@@ -565,32 +565,32 @@
   flex-direction: column;
   gap: 4px;
   padding: 16px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--line);
 }
 
 .ad-work-item:first-child {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .ad-work-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 500;
-  color: var(--text);
+  color: var(--text-0);
 }
 
 .ad-work-meta {
-  font-family: var(--font-sans);
-  font-size: 13px;
-  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  color: var(--text-1);
 }
 
 /* ===================== ESCRITA ===================== */
 
 .escrita-home {
-  background-color: var(--bg-deep);
+  background-color: var(--bg-0);
   padding: 72px 48px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .escrita-home-inner {
@@ -599,19 +599,19 @@
 }
 
 .escrita-home-desc {
-  font-family: var(--font-sans);
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
   line-height: 1.6;
-  color: var(--text-body);
+  color: var(--text-1);
   margin-bottom: 20px;
 }
 
 /* ===================== CONTATO ===================== */
 
 .contato {
-  background-color: var(--bg-surface);
+  background-color: var(--surface);
   padding: 120px 48px;
-  border-top: 1px solid var(--border-strong);
+  border-top: 1px solid var(--line-strong);
 }
 
 .contato-inner {
@@ -626,18 +626,18 @@
 
 .contato-heading {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: var(--step-2);
   font-weight: 300;
   letter-spacing: -0.04em;
   line-height: 1.0;
-  color: var(--text);
+  color: var(--text-0);
 }
 
 .contato-body {
-  font-family: var(--font-sans);
-  font-size: 16px;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
   line-height: 1.6;
-  color: var(--text-body);
+  color: var(--text-1);
   max-width: 44ch;
 }
 
@@ -648,50 +648,50 @@
   gap: 12px;
   margin-top: 8px;
   padding: 28px 36px;
-  border: 1px solid var(--border-strong);
-  background-color: var(--bg);
+  border: 1px solid var(--line-strong);
+  background-color: var(--bg-0);
 }
 
 .contato-email {
   font-family: var(--font-display);
-  font-size: clamp(20px, 2.5vw, 30px);
+  font-size: var(--step-1);
   letter-spacing: -0.02em;
-  color: var(--text);
+  color: var(--text-0);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .contato-email:hover {
-  color: var(--text-body);
+  color: var(--text-1);
   opacity: 1;
 }
 
 .contato-social {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--text-body);
+  letter-spacing: 0.08em;
+  color: var(--text-1);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .contato-social:hover {
-  color: var(--text);
+  color: var(--text-0);
   opacity: 1;
 }
 
 .contato-location {
-  font-family: var(--font-mono);
+  font-family: var(--font-meta);
   font-size: 10px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-2);
 }
 
 .contato-availability {
-  font-family: var(--font-sans);
-  font-size: 14px;
-  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  color: var(--text-1);
   font-style: italic;
 }
 
@@ -818,10 +818,6 @@
 
   .ad-section {
     padding: 48px 20px;
-  }
-
-  .ad-text {
-    font-size: 16px;
   }
 
   .escrita-home {
