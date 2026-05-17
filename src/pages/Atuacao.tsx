@@ -56,32 +56,30 @@ export function Atuacao() {
 
       {/* FOTOS */}
       <section className="atuacao-fotos">
-        <div className="container">
-          <div className="atuacao-section-header">
-            <span className="label">Em cena</span>
+        <div className="atuacao-section-header-dark">
+          <span className="label" style={{ color: 'rgba(240,237,228,0.35)' }}>Em cena</span>
+        </div>
+        <div className="atuacao-fotos-grid">
+          <div className="atuacao-foto-item">
+            <img
+              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
+              alt="Francisco Vidal"
+              loading="lazy"
+            />
           </div>
-          <div className="atuacao-fotos-grid">
-            <div className="atuacao-foto-item">
-              <img
-                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
-                alt="Francisco Vidal"
-                loading="lazy"
-              />
-            </div>
-            <div className="atuacao-foto-item">
-              <img
-                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
-                alt="Francisco Vidal"
-                loading="lazy"
-              />
-            </div>
-            <div className="atuacao-foto-item">
-              <img
-                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg"
-                alt="Francisco Vidal em O Mundo dos Mortos"
-                loading="lazy"
-              />
-            </div>
+          <div className="atuacao-foto-item">
+            <img
+              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
+              alt="Francisco Vidal"
+              loading="lazy"
+            />
+          </div>
+          <div className="atuacao-foto-item">
+            <img
+              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg"
+              alt="Francisco Vidal em O Mundo dos Mortos"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

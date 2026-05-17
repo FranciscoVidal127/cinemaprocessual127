@@ -1,51 +1,62 @@
 :root {
-  --bg: #F2F0E9;
-  --bg-dark: #0C0B0A;
-  --bg-darkest: #070706;
-  --surface: #FAF9F5;
-  --surface-elevated: #E8E5DC;
-  --surface-mid: #DFDbd0;
-  --surface-dark: #161412;
-  --text: #0C0B0A;
-  --text-secondary: #2A2824;
-  --text-muted: #5A5853;
-  --text-light: #86837E;
-  --text-inverse: #F2F0E9;
-  --text-inverse-dim: rgba(242, 240, 233, 0.55);
-  --border: #C4C2BB;
-  --border-subtle: #D8D5CC;
-  --border-dark: #232220;
-  --border-darkest: #181614;
-  --link: #0C0B0A;
-  --link-hover: #2A2824;
-  --accent: #6B0000;
-  --accent-warm: #8E3200;
+  /* Paper / dark surfaces */
+  --bg: #F0EDE4;
+  --bg-dark: #0D0C0B;
+  --bg-darkest: #080706;
+  --surface: #F7F5EF;
+  --surface-elevated: #E6E2D8;
+  --surface-mid: #DAD6CB;
+  --surface-dark: #151210;
 
-  --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  /* Text */
+  --text: #0D0C0B;
+  --text-secondary: #2B2824;
+  --text-muted: #5C5955;
+  --text-light: #8A8780;
+  --text-inverse: #F0EDE4;
+  --text-inverse-dim: rgba(240, 237, 228, 0.5);
+
+  /* Borders */
+  --border: #C2BFB7;
+  --border-subtle: #D5D1C8;
+  --border-dark: #252220;
+  --border-darkest: #1A1714;
+
+  /* Links */
+  --link: #0D0C0B;
+  --link-hover: #2B2824;
+
+  /* Accent — deep blood red */
+  --accent: #5C0000;
+  --accent-warm: #7A2800;
+
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, 'Courier New', monospace;
 
-  --container: 1280px;
+  /* Layout */
+  --container: 1320px;
   --container-narrow: 860px;
-  --container-wide: 1440px;
-  --reading-width: 66ch;
+  --container-wide: 1560px;
+  --reading-width: 62ch;
 
+  /* Spacing — generous, deliberate */
   --space-2xs: 4px;
   --space-xs: 8px;
   --space-sm: 16px;
   --space-md: 28px;
   --space-lg: 48px;
-  --space-xl: 72px;
-  --space-relaxed: 92px;
-  --space-2xl: 108px;
-  --space-pause: 148px;
-  --space-3xl: 176px;
-  --space-4xl: 240px;
+  --space-xl: 80px;
+  --space-relaxed: 100px;
+  --space-2xl: 120px;
+  --space-pause: 160px;
+  --space-3xl: 200px;
+  --space-4xl: 260px;
 
   --radius: 0;
-  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.07);
-  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-  --shadow-image: 0 8px 40px rgba(0, 0, 0, 0.22);
+  --shadow-image: 0 12px 60px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -68,41 +79,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1, "liga" 1;
-  font-variant-ligatures: common-ligatures;
 }
 
+/* All headings use the display serif — Cormorant Garamond */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
   color: var(--text);
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  font-optical-sizing: auto;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "dlig" 1;
 }
 
+/* Extreme scale contrast — the name must feel monumental */
 h1 {
-  font-size: clamp(56px, 8.5vw, 116px);
-  line-height: 0.93;
-  letter-spacing: -0.05em;
+  font-size: clamp(64px, 10vw, 152px);
+  line-height: 0.88;
+  letter-spacing: -0.055em;
 }
 
 h2 {
-  font-size: clamp(32px, 4.5vw, 68px);
-  line-height: 1.04;
-  letter-spacing: -0.035em;
+  font-size: clamp(36px, 5vw, 80px);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
 }
 
 h3 {
-  font-size: clamp(22px, 2.6vw, 38px);
-  line-height: 1.18;
-  letter-spacing: -0.024em;
+  font-size: clamp(24px, 2.8vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.028em;
 }
 
 h4 {
-  font-size: clamp(17px, 1.8vw, 22px);
-  line-height: 1.3;
-  letter-spacing: -0.016em;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.25;
+  letter-spacing: -0.018em;
 }
 
 a {
@@ -127,39 +138,32 @@ img {
 }
 
 :focus-visible {
-  outline: 2px solid var(--text);
-  outline-offset: 3px;
+  outline: 1px solid var(--text);
+  outline-offset: 4px;
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 .page-enter {
-  animation: fadeUp 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation: fadeUp 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 @media (max-width: 980px) {
-  h1 { font-size: clamp(44px, 10vw, 76px); }
-  h2 { font-size: clamp(28px, 5.5vw, 44px); }
-  h3 { font-size: clamp(20px, 3.5vw, 28px); }
-  body { font-size: 15px; }
+  h1 { font-size: clamp(52px, 13vw, 88px); }
+  h2 { font-size: clamp(32px, 6.5vw, 52px); }
+  h3 { font-size: clamp(22px, 4vw, 32px); }
 }
 
 @media (max-width: 640px) {
-  h1 { font-size: clamp(38px, 12vw, 60px); }
-  h2 { font-size: clamp(26px, 7.5vw, 34px); }
-  h3 { font-size: clamp(20px, 5.5vw, 26px); }
+  h1 { font-size: clamp(44px, 14vw, 64px); }
+  h2 { font-size: clamp(28px, 8vw, 40px); }
+  h3 { font-size: clamp(22px, 6vw, 30px); }
 }
