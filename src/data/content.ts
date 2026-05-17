@@ -131,12 +131,12 @@ export const siteData = {
   ] as Filme[],
 
   fotos: [
-    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png", alt: "Francisco Vidal - Retrato PB com luz lateral", category: "Rosto", slot: "rosto" },
-    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png", alt: "Francisco Vidal - Corpo inteiro, eixo vertical", category: "Corpo", slot: "corpo" },
-    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png", alt: "Francisco Vidal - Close, estado interno", category: "Gesto", slot: "gesto" },
-    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "Francisco Vidal em O Mundo dos Mortos", category: "Processo", slot: "processo" },
-    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "Francisco Vidal em cena - escuta", category: "Processo", slot: "processo" },
-    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "Francisco Vidal - Atuação, presença física", category: "Corpo", slot: "corpo" }
+    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png", alt: "Francisco Vidal em retrato em preto e branco, meio-corpo, contra fundo escuro", category: "Rosto", slot: "rosto" },
+    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png", alt: "Francisco Vidal em pé, em ambiente externo, com postura integral visível", category: "Corpo", slot: "corpo" },
+    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png", alt: "Close de Francisco Vidal em luz âmbar desfocada, com expressão recolhida", category: "Gesto", slot: "gesto" },
+    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "Francisco Vidal em cena de O Mundo dos Mortos, em escuta diante da câmera", category: "Processo", slot: "processo" },
+    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "Francisco Vidal em set, momento de preparação entre takes", category: "Processo", slot: "processo" },
+    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "Francisco Vidal em cena, corpo inteiro com presença física definida", category: "Corpo", slot: "corpo" }
   ],
 
   escritos: [] as Escrito[],

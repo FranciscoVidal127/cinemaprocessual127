@@ -108,8 +108,9 @@ function PageTransition({ children }: { children: React.ReactNode }) {
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="app">
+      <a href="#main-content" className="skip-link">Pular para o conteúdo</a>
       <Header />
-      <main className="main">
+      <main className="main" id="main-content">
         <PageTransition>{children}</PageTransition>
       </main>
       <Footer />

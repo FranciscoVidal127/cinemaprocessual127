@@ -11,8 +11,8 @@
 
 .fotos-header-label {
   font-family: var(--font-meta);
-  font-size: 8px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.14em;
   color: var(--text-3);
 }
 
@@ -47,9 +47,10 @@
   bottom: 10px;
   left: 12px;
   font-family: var(--font-meta);
-  font-size: 7px;
-  letter-spacing: 0.18em;
-  color: var(--text-2);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(243, 242, 240, 0.7);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Slot-based aspect ratios */
@@ -80,8 +81,8 @@
 
 .fotos-footer-text {
   font-family: var(--font-meta);
-  font-size: 7.5px;
-  letter-spacing: 0.16em;
+  font-size: 10px;
+  letter-spacing: 0.12em;
   color: var(--text-3);
 }
 

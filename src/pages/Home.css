@@ -216,10 +216,10 @@
 
 .highlight-label {
   font-family: var(--font-meta);
-  font-size: 9px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #6B6860;
+  color: #5C5854;
 }
 
 .highlight-value {

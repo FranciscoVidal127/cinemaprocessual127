@@ -16,7 +16,7 @@ export function Home() {
         <div className="hero-image-wrap">
           <img
             src="/images/BLOCO 1-HERO.png/image.png"
-            alt="Francisco Vidal"
+            alt="Retrato de Francisco Vidal em floresta, olhando para cima, com luz filtrada entre folhas"
             className={`hero-image${heroLoaded ? ' loaded' : ''}`}
             onLoad={() => setHeroLoaded(true)}
           />

@@ -7,8 +7,8 @@
 
   --text-0: #F3F2F0;
   --text-1: #D1CBC1;
-  --text-2: #8E8A83;
-  --text-3: #5C5854;
+  --text-2: #9A958E;
+  --text-3: #7A756E;
 
   --accent: #8B3C34;
   --accent-forest: #35432B;
@@ -41,6 +41,7 @@
   --text-dim: var(--text-1);
   --text-muted: var(--text-2);
   --text-ghost: var(--text-3);
+  --text-caption: #5C5854;
   --accent-dim: rgba(139, 60, 52, 0.6);
   --accent-green: var(--accent-forest);
   --border: var(--line);
@@ -126,8 +127,12 @@ img {
 }
 
 :focus-visible {
-  outline: 1px solid var(--text-2);
+  outline: 2px solid var(--text-2);
   outline-offset: 3px;
+}
+
+.dossier :focus-visible {
+  outline-color: #2E3230;
 }
 
 @keyframes fadeIn {
