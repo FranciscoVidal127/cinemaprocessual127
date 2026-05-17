@@ -3,18 +3,20 @@
   --bg-deep: #060605;
   --bg-surface: #111110;
   --bg-elevated: #181716;
+  --bg-warm: #141312;
   --bg-film: #0D110E;
 
   --text: #E8E4DA;
-  --text-dim: rgba(232, 228, 218, 0.62);
-  --text-muted: rgba(232, 228, 218, 0.35);
-  --text-ghost: rgba(232, 228, 218, 0.18);
+  --text-body: rgba(232, 228, 218, 0.85);
+  --text-dim: rgba(232, 228, 218, 0.72);
+  --text-muted: rgba(232, 228, 218, 0.42);
+  --text-ghost: rgba(232, 228, 218, 0.22);
 
   --accent: #6B1515;
   --accent-dim: rgba(107, 21, 21, 0.6);
 
   --border: rgba(232, 228, 218, 0.08);
-  --border-strong: rgba(232, 228, 218, 0.15);
+  --border-strong: rgba(232, 228, 218, 0.18);
 
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -36,8 +38,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.55;
   color: var(--text);
   background-color: var(--bg);
   -webkit-font-smoothing: antialiased;

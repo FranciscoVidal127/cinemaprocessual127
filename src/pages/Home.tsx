@@ -6,151 +6,228 @@ import './Home.css';
 
 export function Home() {
   const [heroLoaded, setHeroLoaded] = useState(false);
-  const featuredFilme = siteData.filmografia[0];
   const featuredReel = siteData.reel.videos[0];
 
   return (
     <div className="home">
 
-      {/* SCENE 01 — OPENING */}
-      <section className="scene-opening">
-        <div className="scene-opening-image-wrap">
+      {/* ============ HERO ============ */}
+      <section className="hero">
+        <div className="hero-image-wrap">
           <img
             src="/images/BLOCO 1-HERO.png/image.png"
             alt="Francisco Vidal"
-            className={`scene-opening-image${heroLoaded ? ' loaded' : ''}`}
+            className={`hero-image${heroLoaded ? ' loaded' : ''}`}
             onLoad={() => setHeroLoaded(true)}
           />
-          <div className="scene-opening-veil" aria-hidden="true" />
+          <div className="hero-veil" aria-hidden="true" />
         </div>
 
-        <div className="scene-opening-roles" aria-label="Funcoes">
-          <span>ATOR</span>
-          <span>CINEASTA</span>
-          <span>ASSISTENTE DE DIRECAO</span>
-        </div>
-
-        <div className="scene-opening-content">
-          <h1 className="scene-opening-name">
+        <div className="hero-content">
+          <p className="hero-subtitle">Ator · Cineasta · Assistente de Direção</p>
+          <h1 className="hero-name">
             Francisco<br />Vidal
           </h1>
-          <p className="scene-opening-statement">
-            Presenca, escuta e corpo diante da camera.
+          <p className="hero-statement">
+            Presença, escuta e corpo diante da câmera.
           </p>
         </div>
 
-        <nav className="scene-opening-cta">
-          <Link to="/reel" className="cta-link">Ver Reel</Link>
+        <nav className="hero-cta">
+          <a href="#reel" className="cta-link cta-link--primary">Ver Reel</a>
           <Link to="/fotos" className="cta-link">Ver Fotos</Link>
-          <a href="mailto:franciscovidalcs@gmail.com" className="cta-link">Contato</a>
+          <a href="#contato" className="cta-link">Contato</a>
         </nav>
       </section>
 
-      {/* SCENE 02 — FACE / BODY / CAMERA */}
-      <section className="scene-presence">
-        <div className="scene-presence-grid">
-          <div className="scene-presence-image">
-            <img
-              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png"
-              alt="Francisco Vidal — Rosto"
-              loading="lazy"
-            />
+      {/* ============ ABOUT_DOSSIER ============ */}
+      <section className="dossier">
+        <div className="dossier-inner">
+          <div className="dossier-bio">
+            <span className="section-label">SOBRE</span>
+            <h2 className="dossier-heading">Francisco Vidal</h2>
+            <div className="dossier-text">
+              <p>
+                Francisco Vidal é ator, cineasta e assistente de direção, com trajetória ligada ao cinema autoral brasileiro. Sua formação passa pela prática de set, pela assistência de direção, pela escrita sobre cinema e por processos recentes de pesquisa em atuação para câmera.
+              </p>
+              <p>
+                Como ator, desenvolve um trabalho ancorado em presença, escuta, relação entre corpo, espaço e imagem. Sua pesquisa atravessa estados de atenção, silêncio, vulnerabilidade e transformação diante da câmera.
+              </p>
+              <p>
+                Entre seus trabalhos recentes estão <em>Acronon</em> (dir. Gregorio Gananian, 2026) e <em>O Mundo dos Mortos</em> (dir. Pedro Tavares, 2025), em que interpreta Fábio. Em 2025, aprofundou sua formação em processos de atuação com Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante e Patrick Sampaio.
+              </p>
+              <p>
+                Baseado no Rio de Janeiro, com circulação também em São Paulo, trabalha em longas, curtas, documentários, projetos híbridos e colaborações cinematográficas.
+              </p>
+            </div>
           </div>
-          <div className="scene-presence-text">
-            <div className="scene-presence-words">
-              <span className="presence-word">ESCUTA.</span>
-              <span className="presence-word">PRESENCA.</span>
-              <span className="presence-word">CORPO DIANTE DA CAMERA.</span>
+          <aside className="dossier-highlights">
+            <span className="section-label">PERFIL</span>
+            <ul className="highlights-list">
+              <li className="highlight-item">
+                <span className="highlight-label">Base</span>
+                <span className="highlight-value">Rio de Janeiro / São Paulo</span>
+              </li>
+              <li className="highlight-item">
+                <span className="highlight-label">Funções</span>
+                <span className="highlight-value">Ator · Cineasta · Assistente de Direção</span>
+              </li>
+              <li className="highlight-item">
+                <span className="highlight-label">Pesquisa</span>
+                <span className="highlight-value">Presença, escuta, corpo e câmera</span>
+              </li>
+              <li className="highlight-item">
+                <span className="highlight-label">Trabalhos recentes</span>
+                <span className="highlight-value">Acronon (2026) · O Mundo dos Mortos (2025)</span>
+              </li>
+              <li className="highlight-item">
+                <span className="highlight-label">Formação recente</span>
+                <span className="highlight-value">Atuação para câmera — Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante, Patrick Sampaio</span>
+              </li>
+              <li className="highlight-item">
+                <span className="highlight-label">Disponível para</span>
+                <span className="highlight-value">Longas, curtas, documentários e colaborações</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      {/* ============ REEL ============ */}
+      <section className="reel" id="reel">
+        <div className="reel-inner">
+          <div className="reel-header">
+            <span className="section-label">REEL</span>
+            <p className="reel-desc">Material de atuação diante da câmera.</p>
+          </div>
+          {featuredReel ? (
+            <div className="reel-video">
+              <YouTubeEmbed url={featuredReel} title="Francisco Vidal — Reel" />
             </div>
-            <div className="scene-presence-detail">
-              <img
-                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
-                alt="Francisco Vidal — Presenca"
-                loading="lazy"
-              />
+          ) : (
+            <div className="reel-placeholder">
+              <span className="reel-placeholder-text">REEL EM BREVE</span>
             </div>
-            <p className="scene-presence-quote">
-              Como ator, Francisco Vidal trabalha a partir da escuta, da presenca fisica e da relacao entre corpo, camera e espaco. Sua pesquisa atravessa estados de atencao, silencio, vulnerabilidade e transformacao diante da imagem.
-            </p>
-            <Link to="/atuacao" className="scene-presence-link">Atuacao →</Link>
+          )}
+        </div>
+      </section>
+
+      {/* ============ SELECTED_FILMOGRAPHY ============ */}
+      <section className="filmography">
+        <div className="filmography-inner">
+          <div className="filmography-header">
+            <span className="section-label">FILMOGRAFIA SELECIONADA</span>
+          </div>
+          <div className="filmography-grid">
+            {siteData.filmografia.map((filme) => (
+              <Link to={`/filme/${filme.slug}`} key={filme.id} className="film-card">
+                <div className="film-card-meta">
+                  <span className="film-card-year">{filme.year}</span>
+                  <span className="film-card-type">{filme.type}</span>
+                </div>
+                <h3 className="film-card-title">{filme.title}</h3>
+                <p className="film-card-director">dir. {filme.director}</p>
+                <p className="film-card-role">{filme.role}</p>
+                {filme.festivals && (
+                  <p className="film-card-festivals">{filme.festivals}</p>
+                )}
+                {filme.status && (
+                  <p className="film-card-status">{filme.status}</p>
+                )}
+              </Link>
+            ))}
+          </div>
+          <div className="filmography-footer">
+            <Link to="/filmografia" className="section-cta">Ver filmografia completa →</Link>
           </div>
         </div>
       </section>
 
-      {/* SCENE 03 — CONTACT SHEET */}
-      <section className="scene-contact-sheet">
-        <div className="scene-contact-sheet-header">
-          <span className="mono-label">GALERIA / ENSAIO</span>
-          <Link to="/fotos" className="mono-link">Ver completa →</Link>
-        </div>
-        <div className="contact-sheet-grid">
-          {siteData.fotos.map((foto, i) => (
-            <div
-              key={foto.id}
-              className={`contact-sheet-item contact-sheet-item--${i + 1}`}
-            >
-              <img src={foto.url} alt={foto.alt} loading="lazy" />
-              <span className="contact-sheet-caption">{foto.category.toUpperCase()}</span>
-            </div>
-          ))}
+      {/* ============ PHOTOS ============ */}
+      <section className="photos">
+        <div className="photos-inner">
+          <div className="photos-header">
+            <span className="section-label">GALERIA</span>
+            <Link to="/fotos" className="section-cta">Ver galeria completa →</Link>
+          </div>
+          <div className="photos-grid">
+            {siteData.fotos.slice(0, 5).map((foto, i) => (
+              <div key={foto.id} className={`photo-item photo-item--${i + 1}`}>
+                <img src={foto.url} alt={foto.alt} loading="lazy" />
+                <span className="photo-caption">{foto.category}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* SCENE 04 — REEL */}
-      <section className="scene-reel">
-        <div className="scene-reel-label">
-          <span className="mono-label">REEL</span>
+      {/* ============ FORMACAO ============ */}
+      <section className="formacao">
+        <div className="formacao-inner">
+          <span className="section-label">FORMAÇÃO 2025–2026</span>
+          <h2 className="formacao-heading">Processos de atuação</h2>
+          <div className="formacao-list">
+            <div className="formacao-item">
+              <h4 className="formacao-title">O Poder da Câmera: Atuação para TV e Cinema</h4>
+              <p className="formacao-meta">Ricardo Conti + Heitor Martinez — 48h</p>
+            </div>
+            <div className="formacao-item">
+              <h4 className="formacao-title">Laboratório de Atuação para Câmera</h4>
+              <p className="formacao-meta">Gustavo Pace — 40h</p>
+            </div>
+            <div className="formacao-item">
+              <h4 className="formacao-title">O Teatro do Não Eu</h4>
+              <p className="formacao-meta">Rafael Infante — 36h</p>
+            </div>
+            <div className="formacao-item">
+              <h4 className="formacao-title">O Teatro do Não Eu — Módulo II</h4>
+              <p className="formacao-meta">Rafael Infante — 46h</p>
+            </div>
+            <div className="formacao-item">
+              <h4 className="formacao-title">LABO com Patrick Sampaio</h4>
+              <p className="formacao-meta">Prática contínua: gravar / assistir / regravar</p>
+            </div>
+          </div>
         </div>
-        {featuredReel ? (
-          <div className="scene-reel-video">
-            <YouTubeEmbed url={featuredReel} title="Francisco Vidal — Reel" />
-          </div>
-        ) : (
-          <div className="scene-reel-placeholder">
-            <h2>Reel em breve</h2>
-          </div>
-        )}
-        <p className="scene-reel-desc">{siteData.reel.description}</p>
       </section>
 
-      {/* SCENE 05 — FILMOGRAFIA */}
-      {featuredFilme && (
-        <section className="scene-film">
-          <Link to={`/filme/${featuredFilme.slug}`} className="scene-film-link">
-            <div className="scene-film-image-wrap">
-              <img
-                src={featuredFilme.image}
-                alt={featuredFilme.title}
-                loading="lazy"
-                className="scene-film-image"
-              />
-              <div className="scene-film-overlay" aria-hidden="true" />
-            </div>
-            <div className="scene-film-info">
-              <span className="mono-label">{featuredFilme.year} · DIR. {featuredFilme.director.toUpperCase()}</span>
-              <h2 className="scene-film-title">{featuredFilme.title}</h2>
-              <span className="scene-film-role">{featuredFilme.role}</span>
-              {featuredFilme.festivals && (
-                <span className="scene-film-festival">{featuredFilme.festivals}</span>
-              )}
-            </div>
-          </Link>
-          <div className="scene-film-footer">
-            <Link to="/filmografia" className="mono-link">Filmografia completa →</Link>
-          </div>
-        </section>
-      )}
-
-      {/* SCENE 06 — CONTATO */}
-      <section className="scene-contact">
-        <span className="scene-contact-eyebrow">CONTATO</span>
-        <h2 className="scene-contact-heading">Disponivel<br />para projetos</h2>
-        <p className="scene-contact-body">{siteData.contato.cta}</p>
-        <div className="scene-contact-links">
-          <a href={`mailto:${siteData.contato.email}`} className="scene-contact-email">{siteData.contato.email}</a>
-          <a href={siteData.contato.instagram} target="_blank" rel="noopener noreferrer" className="scene-contact-social">{siteData.contato.instagramHandle}</a>
+      {/* ============ ASSISTENCIA_DIRECAO ============ */}
+      <section className="ad-section">
+        <div className="ad-inner">
+          <span className="section-label">ASSISTÊNCIA DE DIREÇÃO</span>
+          <p className="ad-text">
+            Como assistente de direção, Francisco Vidal atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.
+          </p>
+          <Link to="/assistencia-de-direcao" className="section-cta">Ver trabalhos de AD →</Link>
         </div>
-        <span className="scene-contact-location">{siteData.contato.location}</span>
+      </section>
+
+      {/* ============ ESCRITA ============ */}
+      <section className="escrita-home">
+        <div className="escrita-home-inner">
+          <span className="section-label">ESCRITA / PENSAMENTO CINEMATOGRÁFICO</span>
+          <p className="escrita-home-desc">
+            Textos, ensaios e entrevistas sobre cinema, imagem e processo criativo.
+          </p>
+          <Link to="/escrita" className="section-cta">Ver arquivo de textos →</Link>
+        </div>
+      </section>
+
+      {/* ============ CONTATO ============ */}
+      <section className="contato" id="contato">
+        <div className="contato-inner">
+          <span className="section-label">CONTATO</span>
+          <h2 className="contato-heading">Disponível para projetos</h2>
+          <p className="contato-body">
+            Para trabalhos como ator, assistência de direção, colaborações criativas e projetos audiovisuais.
+          </p>
+          <div className="contato-links">
+            <a href="mailto:franciscovidalcs@gmail.com" className="contato-email">franciscovidalcs@gmail.com</a>
+            <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="contato-social">@franciscovidalcs</a>
+          </div>
+          <p className="contato-location">Rio de Janeiro / São Paulo</p>
+          <p className="contato-availability">Disponível para longas, curtas, documentários e trabalhos híbridos.</p>
+        </div>
       </section>
 
     </div>
