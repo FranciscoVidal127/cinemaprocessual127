@@ -2,28 +2,27 @@
 
 .section-label {
   font-family: var(--font-meta);
-  font-size: var(--step--1);
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-2);
+  color: var(--text-dim);
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .section-cta {
   font-family: var(--font-meta);
-  font-size: var(--step--1);
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-1);
+  color: var(--text);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
   padding: 8px 0;
 }
 
 .section-cta:hover {
-  color: var(--text-0);
-  opacity: 1;
+  opacity: 0.7;
 }
 
 /* ===================== HERO ===================== */
@@ -73,40 +72,40 @@
   max-width: 700px;
 }
 
-.hero-subtitle {
-  font-family: var(--font-meta);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-1);
-  margin-bottom: 16px;
-}
-
 .hero-name {
   font-family: var(--font-display);
   font-size: clamp(72px, 13vw, 180px);
   font-weight: 300;
   line-height: 0.84;
   letter-spacing: -0.06em;
-  color: var(--text-0);
-  margin-bottom: 20px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.hero-role {
+  font-family: var(--font-meta);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 16px;
 }
 
 .hero-statement {
   font-family: var(--font-display);
   font-size: clamp(17px, 1.8vw, 23px);
   font-style: italic;
-  color: var(--text-1);
+  color: var(--text-dim);
   letter-spacing: -0.01em;
   max-width: 32ch;
 }
 
 .hero-microprova {
   font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  color: var(--text-2);
-  margin-top: 14px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  margin-top: 12px;
 }
 
 .hero-cta {
@@ -118,10 +117,10 @@
 
 .cta-link {
   font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-1);
+  color: var(--text-dim);
   text-decoration: none;
   padding: 12px 22px;
   border: 1px solid var(--line-strong);
@@ -129,23 +128,22 @@
 }
 
 .cta-link:hover {
-  color: var(--text-0);
-  border-color: var(--text-2);
-  background-color: rgba(243, 242, 240, 0.06);
+  color: var(--text);
+  border-color: var(--text-dim);
+  background-color: rgba(245, 241, 232, 0.06);
   opacity: 1;
 }
 
 .cta-link--primary {
-  border-color: var(--text-2);
-  color: var(--text-0);
+  border-color: var(--text-dim);
+  color: var(--text);
 }
 
 /* ===================== ABOUT_DOSSIER ===================== */
 
 .dossier {
   background-color: var(--paper);
-  border-top: none;
-  padding: 100px 48px;
+  padding: 72px 48px;
 }
 
 .dossier-inner {
@@ -153,7 +151,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.4fr 1fr;
-  gap: 80px;
+  gap: 64px;
   align-items: start;
 }
 
@@ -164,22 +162,22 @@
   letter-spacing: -0.04em;
   line-height: 1.0;
   color: #1A1D1B;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .dossier .section-label {
-  color: #5C5854;
+  color: #6B6860;
 }
 
 .dossier-text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .dossier-text p {
   font-family: var(--font-body);
-  font-size: var(--step-0);
+  font-size: 18px;
   line-height: 1.7;
   color: #2E3230;
   max-width: 60ch;
@@ -191,21 +189,21 @@
 }
 
 .dossier-highlights {
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
 .highlights-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .highlight-item {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   border-bottom: 1px solid rgba(42, 48, 44, 0.15);
 }
 
@@ -216,10 +214,10 @@
 
 .highlight-label {
   font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #5C5854;
+  color: #6B6860;
 }
 
 .highlight-value {
@@ -232,8 +230,8 @@
 /* ===================== REEL ===================== */
 
 .reel {
-  background-color: var(--bg-0);
-  padding: 100px 48px;
+  background-color: var(--bg);
+  padding: 64px 48px;
   border-top: 1px solid var(--line);
 }
 
@@ -243,14 +241,14 @@
 }
 
 .reel-header {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .reel-desc {
   font-family: var(--font-body);
-  font-size: var(--step--1);
-  color: var(--text-1);
-  margin-top: 8px;
+  font-size: 16px;
+  color: var(--text-dim);
+  margin-top: 6px;
 }
 
 .reel-video {
@@ -274,27 +272,27 @@
   justify-content: center;
   gap: 12px;
   border: 1px solid var(--line-strong);
-  background-color: var(--bg-1);
+  background-color: var(--bg-soft);
 }
 
 .reel-placeholder-text {
   font-family: var(--font-display);
   font-size: var(--step-2);
   font-weight: 300;
-  color: var(--text-2);
+  color: var(--text-dim);
   letter-spacing: -0.03em;
 }
 
 .reel-placeholder-sub {
   font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-2);
+  color: var(--text-dim);
 }
 
 .reel-footer {
-  margin-top: 24px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
@@ -302,8 +300,8 @@
 /* ===================== SELECTED_FILMOGRAPHY ===================== */
 
 .filmography {
-  background-color: var(--surface);
-  padding: 100px 48px;
+  background-color: var(--bg-soft);
+  padding: 72px 48px;
   border-top: 1px solid var(--line);
 }
 
@@ -313,30 +311,30 @@
 }
 
 .filmography-header {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
 
 .filmography-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 24px;
 }
 
 .film-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 36px 32px;
+  gap: 10px;
+  padding: 28px 24px;
   border: 1px solid var(--line-strong);
-  background-color: var(--bg-1);
+  background-color: var(--bg);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .film-card:hover {
-  border-color: var(--text-2);
-  background-color: var(--surface-elevated);
+  border-color: var(--text-dim);
+  background-color: var(--surface);
   opacity: 1;
 }
 
@@ -348,17 +346,17 @@
 
 .film-card-year {
   font-family: var(--font-meta);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  color: var(--text-1);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--text);
 }
 
 .film-card-type {
   font-family: var(--font-meta);
-  font-size: 9px;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-2);
+  color: var(--text-dim);
 }
 
 .film-card-title {
@@ -367,18 +365,18 @@
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1.05;
-  color: var(--text-0);
+  color: var(--text);
 }
 
 .film-card-director {
   font-family: var(--font-body);
   font-size: 15px;
-  color: var(--text-1);
+  color: var(--text-dim);
 }
 
 .film-card-role {
   font-family: var(--font-display);
-  font-size: var(--step-0);
+  font-size: 18px;
   font-style: italic;
   color: var(--accent);
   letter-spacing: -0.01em;
@@ -386,24 +384,24 @@
 
 .film-card-festivals {
   font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  color: var(--text-2);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
   line-height: 1.5;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .film-card-status {
   font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  color: var(--text-2);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
   font-style: italic;
 }
 
 .filmography-footer {
-  margin-top: 48px;
-  padding-top: 24px;
+  margin-top: 36px;
+  padding-top: 20px;
   border-top: 1px solid var(--line);
   display: flex;
   justify-content: flex-end;
@@ -412,8 +410,8 @@
 /* ===================== PHOTOS ===================== */
 
 .photos {
-  background-color: var(--bg-0);
-  padding: 80px 48px;
+  background-color: var(--bg);
+  padding: 56px 48px;
   border-top: 1px solid var(--line);
 }
 
@@ -426,7 +424,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .photos-header .section-label {
@@ -442,7 +440,7 @@
 .photo-item {
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-1);
+  background-color: var(--bg-soft);
 }
 
 .photo-item img {
@@ -463,10 +461,10 @@
   bottom: 10px;
   left: 12px;
   font-family: var(--font-meta);
-  font-size: 9px;
-  letter-spacing: 0.08em;
+  font-size: 10px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(243, 242, 240, 0.7);
+  color: rgba(245, 241, 232, 0.7);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
@@ -494,8 +492,8 @@
 /* ===================== FORMACAO ===================== */
 
 .formacao {
-  background-color: var(--bg-1);
-  padding: 100px 48px;
+  background-color: var(--bg-soft);
+  padding: 64px 48px;
   border-top: 1px solid var(--line);
 }
 
@@ -510,18 +508,17 @@
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--text-0);
-  margin-bottom: 48px;
+  color: var(--text);
+  margin-bottom: 36px;
 }
 
 .formacao-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .formacao-item {
-  padding: 24px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -531,26 +528,26 @@
 
 .formacao-title {
   font-family: var(--font-body);
-  font-size: var(--step-0);
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.4;
-  color: var(--text-0);
-  margin-bottom: 6px;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
 .formacao-meta {
   font-family: var(--font-body);
-  font-size: var(--step--1);
-  color: var(--text-1);
+  font-size: 14px;
+  color: var(--text-dim);
   line-height: 1.5;
 }
 
 /* ===================== ASSISTENCIA_DIRECAO ===================== */
 
 .ad-section {
-  background-color: var(--bg-0);
-  padding: 80px 48px;
+  background-color: var(--bg);
+  padding: 56px 48px;
   border-top: 1px solid var(--line);
 }
 
@@ -561,18 +558,17 @@
 
 .ad-text {
   font-family: var(--font-body);
-  font-size: var(--step-0);
+  font-size: 18px;
   line-height: 1.7;
-  color: var(--text-1);
+  color: var(--text-dim);
   max-width: 56ch;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .ad-works {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .ad-work-item {
@@ -589,22 +585,22 @@
 
 .ad-work-title {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  color: var(--text-0);
+  color: var(--text);
 }
 
 .ad-work-meta {
   font-family: var(--font-body);
-  font-size: var(--step--1);
-  color: var(--text-1);
+  font-size: 14px;
+  color: var(--text-dim);
 }
 
 /* ===================== ESCRITA ===================== */
 
 .escrita-home {
-  background-color: var(--bg-0);
-  padding: 72px 48px;
+  background-color: var(--bg-soft);
+  padding: 48px 48px;
   border-top: 1px solid var(--line);
 }
 
@@ -615,17 +611,17 @@
 
 .escrita-home-desc {
   font-family: var(--font-body);
-  font-size: var(--step--1);
+  font-size: 16px;
   line-height: 1.6;
-  color: var(--text-1);
-  margin-bottom: 20px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
 }
 
 /* ===================== CONTATO ===================== */
 
 .contato {
   background-color: var(--surface);
-  padding: 120px 48px;
+  padding: 80px 48px;
   border-top: 1px solid var(--line-strong);
 }
 
@@ -636,7 +632,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .contato-heading {
@@ -645,14 +641,14 @@
   font-weight: 300;
   letter-spacing: -0.04em;
   line-height: 1.0;
-  color: var(--text-0);
+  color: var(--text);
 }
 
 .contato-body {
   font-family: var(--font-body);
-  font-size: var(--step-0);
+  font-size: 18px;
   line-height: 1.6;
-  color: var(--text-1);
+  color: var(--text-dim);
   max-width: 44ch;
 }
 
@@ -662,51 +658,49 @@
   align-items: center;
   gap: 12px;
   margin-top: 8px;
-  padding: 28px 36px;
+  padding: 24px 32px;
   border: 1px solid var(--line-strong);
-  background-color: var(--bg-0);
+  background-color: var(--bg);
 }
 
 .contato-email {
   font-family: var(--font-display);
   font-size: var(--step-1);
   letter-spacing: -0.02em;
-  color: var(--text-0);
+  color: var(--text);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .contato-email:hover {
-  color: var(--text-1);
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .contato-social {
   font-family: var(--font-meta);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--text-1);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .contato-social:hover {
-  color: var(--text-0);
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .contato-location {
   font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-2);
+  color: var(--text-dim);
 }
 
 .contato-availability {
   font-family: var(--font-body);
-  font-size: var(--step--1);
-  color: var(--text-1);
+  font-size: 15px;
+  color: var(--text-dim);
   font-style: italic;
 }
 
@@ -719,20 +713,20 @@
   }
 
   .dossier {
-    padding: 80px 32px;
+    padding: 56px 32px;
   }
 
   .dossier-inner {
     grid-template-columns: 1fr;
-    gap: 56px;
+    gap: 48px;
   }
 
   .reel {
-    padding: 80px 32px;
+    padding: 56px 32px;
   }
 
   .filmography {
-    padding: 80px 32px;
+    padding: 56px 32px;
   }
 
   .filmography-grid {
@@ -740,7 +734,7 @@
   }
 
   .photos {
-    padding: 64px 32px;
+    padding: 48px 32px;
   }
 
   .photos-grid {
@@ -748,19 +742,19 @@
   }
 
   .formacao {
-    padding: 80px 32px;
-  }
-
-  .ad-section {
-    padding: 64px 32px;
-  }
-
-  .escrita-home {
     padding: 56px 32px;
   }
 
+  .ad-section {
+    padding: 48px 32px;
+  }
+
+  .escrita-home {
+    padding: 40px 32px;
+  }
+
   .contato {
-    padding: 80px 32px;
+    padding: 56px 32px;
   }
 }
 
@@ -796,7 +790,7 @@
   }
 
   .dossier {
-    padding: 60px 20px;
+    padding: 48px 20px;
   }
 
   .dossier-text p {
@@ -804,11 +798,11 @@
   }
 
   .reel {
-    padding: 60px 20px;
+    padding: 48px 20px;
   }
 
   .filmography {
-    padding: 60px 20px;
+    padding: 48px 20px;
   }
 
   .filmography-grid {
@@ -816,11 +810,11 @@
   }
 
   .film-card {
-    padding: 28px 20px;
+    padding: 24px 20px;
   }
 
   .photos {
-    padding: 48px 16px;
+    padding: 40px 16px;
   }
 
   .photos-grid {
@@ -828,19 +822,19 @@
   }
 
   .formacao {
-    padding: 60px 20px;
+    padding: 48px 20px;
   }
 
   .ad-section {
-    padding: 48px 20px;
+    padding: 40px 20px;
   }
 
   .escrita-home {
-    padding: 48px 20px;
+    padding: 36px 20px;
   }
 
   .contato {
-    padding: 60px 20px;
+    padding: 48px 20px;
   }
 
   .contato-links {

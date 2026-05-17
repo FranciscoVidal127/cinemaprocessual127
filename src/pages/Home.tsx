@@ -24,10 +24,10 @@ export function Home() {
         </div>
 
         <div className="hero-content">
-          <p className="hero-subtitle">Ator · Cineasta · Assistente de Direção</p>
           <h1 className="hero-name">
             Francisco<br />Vidal
           </h1>
+          <p className="hero-role">Ator · Cineasta · Assistente de Direção</p>
           <p className="hero-statement">
             Presença, escuta e corpo diante da câmera.
           </p>
@@ -113,7 +113,7 @@ export function Home() {
             </div>
           )}
           <div className="reel-footer">
-            <a href="mailto:franciscovidalcs@gmail.com?subject=Solicitar%20material" className="section-cta">Solicitar material →</a>
+            <a href="#contato" className="section-cta">Solicitar material →</a>
           </div>
         </div>
       </section>
