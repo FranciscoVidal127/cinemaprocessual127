@@ -149,13 +149,27 @@ export function Home() {
             <span className="section-label">GALERIA</span>
             <Link to="/fotos" className="section-cta">Ver galeria completa →</Link>
           </div>
-          <div className="photos-grid">
-            {siteData.fotos.slice(0, 4).map((foto) => (
-              <div key={foto.id} className={`photo-item photo-slot--${foto.slot}`}>
-                <img src={foto.url} alt={foto.alt} loading="lazy" />
-                <span className="photo-caption">{foto.category}</span>
-              </div>
-            ))}
+          <div className="photos-editorial">
+            <div className="photo-item photo-area--large">
+              <img src={siteData.fotos[0].url} alt={siteData.fotos[0].alt} loading="lazy" />
+              <span className="photo-label">ROSTO</span>
+            </div>
+            <div className="photo-item photo-area--vert">
+              <img src={siteData.fotos[1].url} alt={siteData.fotos[1].alt} loading="lazy" />
+              <span className="photo-label">CORPO</span>
+            </div>
+            <div className="photo-item photo-area--horiz">
+              <img src={siteData.fotos[3].url} alt={siteData.fotos[3].alt} loading="lazy" />
+              <span className="photo-label">ESCUTA</span>
+            </div>
+            <div className="photo-item photo-area--med">
+              <img src={siteData.fotos[2].url} alt={siteData.fotos[2].alt} loading="lazy" />
+              <span className="photo-label">GESTO</span>
+            </div>
+            <div className="photo-item photo-area--detail">
+              <img src={siteData.fotos[5].url} alt={siteData.fotos[5].alt} loading="lazy" />
+              <span className="photo-label">PRESENÇA</span>
+            </div>
           </div>
         </div>
       </section>
@@ -164,27 +178,31 @@ export function Home() {
       <section className="formacao" id="formacao">
         <div className="formacao-inner">
           <span className="section-label">FORMAÇÃO 2025–2026</span>
-          <h2 className="formacao-heading">Processos de atuação</h2>
-          <div className="formacao-list">
-            <div className="formacao-item">
-              <h4 className="formacao-title">O Poder da Câmera: Atuação para TV e Cinema</h4>
-              <p className="formacao-meta">Ricardo Conti + Heitor Martinez — 48h</p>
+          <div className="formacao-table">
+            <div className="formacao-row">
+              <span className="formacao-period">2025</span>
+              <span className="formacao-course">O Poder da Câmera: Atuação para TV e Cinema</span>
+              <span className="formacao-note">Ricardo Conti + Heitor Martinez — 48h</span>
             </div>
-            <div className="formacao-item">
-              <h4 className="formacao-title">Laboratório de Atuação para Câmera</h4>
-              <p className="formacao-meta">Gustavo Pace — 40h</p>
+            <div className="formacao-row">
+              <span className="formacao-period">2025</span>
+              <span className="formacao-course">Laboratório de Atuação para Câmera</span>
+              <span className="formacao-note">Gustavo Pace — 40h</span>
             </div>
-            <div className="formacao-item">
-              <h4 className="formacao-title">O Teatro do Não Eu</h4>
-              <p className="formacao-meta">Rafael Infante — 36h</p>
+            <div className="formacao-row">
+              <span className="formacao-period">2025</span>
+              <span className="formacao-course">O Teatro do Não Eu</span>
+              <span className="formacao-note">Rafael Infante — 36h</span>
             </div>
-            <div className="formacao-item">
-              <h4 className="formacao-title">O Teatro do Não Eu — Módulo II</h4>
-              <p className="formacao-meta">Rafael Infante — 46h</p>
+            <div className="formacao-row">
+              <span className="formacao-period">2025–26</span>
+              <span className="formacao-course">O Teatro do Não Eu — Módulo II</span>
+              <span className="formacao-note">Rafael Infante — 46h</span>
             </div>
-            <div className="formacao-item">
-              <h4 className="formacao-title">LABO com Patrick Sampaio</h4>
-              <p className="formacao-meta">Prática contínua: gravar / assistir / regravar</p>
+            <div className="formacao-row">
+              <span className="formacao-period">2025–26</span>
+              <span className="formacao-course">LABO com Patrick Sampaio</span>
+              <span className="formacao-note">Prática contínua: gravar / assistir / regravar</span>
             </div>
           </div>
         </div>
@@ -226,16 +244,13 @@ export function Home() {
       <section className="contato" id="contato">
         <div className="contato-inner">
           <span className="section-label">CONTATO</span>
-          <h2 className="contato-heading">Disponível para projetos</h2>
-          <p className="contato-body">
-            Para trabalhos como ator, assistência de direção, colaborações criativas e projetos audiovisuais.
+          <h2 className="contato-heading">Vamos conversar</h2>
+          <p className="contato-availability">
+            Disponível para longas, curtas, documentários e trabalhos híbridos.
           </p>
-          <div className="contato-links">
-            <a href="mailto:franciscovidalcs@gmail.com" className="contato-email">franciscovidalcs@gmail.com</a>
-            <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="contato-social">@franciscovidalcs</a>
-          </div>
-          <p className="contato-location">Rio de Janeiro / São Paulo</p>
-          <p className="contato-availability">Disponível para longas, curtas, documentários e trabalhos híbridos.</p>
+          <a href="mailto:franciscovidalcs@gmail.com" className="contato-email">franciscovidalcs@gmail.com</a>
+          <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="contato-social">@franciscovidalcs</a>
+          <span className="contato-location">Rio de Janeiro / São Paulo</span>
         </div>
       </section>
 
