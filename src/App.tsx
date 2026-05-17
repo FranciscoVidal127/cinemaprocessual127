@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, NavLink, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Home } from './pages/Home';
 import { Sobre } from './pages/Sobre';
@@ -38,7 +38,7 @@ function Header() {
   return (
     <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
       <div className="header-inner">
-        <a href="/" className="nav-brand">Francisco Vidal</a>
+        <Link to="/" className="nav-brand">Francisco Vidal</Link>
 
         <nav className="nav-links" aria-label="Navegacao principal">
           <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Atuacao</NavLink>
@@ -93,6 +93,11 @@ function Footer() {
 
 function PageTransition({ children }: { children: React.ReactNode }) {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div key={location.pathname} className="page-enter">
       {children}

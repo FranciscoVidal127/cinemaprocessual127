@@ -221,13 +221,20 @@
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
 
-/* Mobile nav */
+/* Mobile nav — always solid background */
 .nav-mobile {
   display: flex;
   flex-direction: column;
-  background-color: var(--bg);
+  background-color: rgba(10, 10, 9, 0.98);
   border-top: 1px solid var(--border);
   padding: 16px 0;
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 199;
+  overflow-y: auto;
 }
 
 .nav-mobile-link {

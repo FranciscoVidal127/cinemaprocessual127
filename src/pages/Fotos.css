@@ -19,7 +19,7 @@
 .fotos-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 56vh 48vh 52vh;
+  grid-template-rows: 56vh 48vh;
   gap: 3px;
   padding: 3px;
 }
