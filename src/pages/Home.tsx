@@ -107,7 +107,7 @@ export function Home() {
               </h1>
 
               <p className="hero-statement">
-                Entrou no cinema pela engrenagem — tradução, montagem, pós-produção. Agora está diante da câmera, escreve sobre cinema, e continua, por todos esses meios, a perguntar o que uma imagem pode.
+                Francisco Vidal é ator, cineasta e assistente de direção. Sua trajetória atravessa o cinema autoral brasileiro, a atuação diante da câmera e processos colaborativos de criação cinematográfica.
               </p>
 
               <div className="hero-roles" aria-label="Áreas de atuação">
@@ -115,9 +115,7 @@ export function Home() {
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
                 <span>Cineasta</span>
                 <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Escritor de cinema</span>
-                <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Tradutor</span>
+                <span>Assistente de Direção</span>
               </div>
 
               <nav className="hero-nav" aria-label="Navegação rápida">
@@ -125,12 +123,12 @@ export function Home() {
                   <span className="hero-nav-label">Reel</span>
                   <span className="hero-nav-arrow" aria-hidden="true">↗</span>
                 </Link>
-                <Link to="/filmografia" className="hero-nav-link">
-                  <span className="hero-nav-label">Filmografia</span>
+                <Link to="/atuacao" className="hero-nav-link">
+                  <span className="hero-nav-label">Atuação</span>
                   <span className="hero-nav-arrow" aria-hidden="true">↗</span>
                 </Link>
-                <Link to="/escrita" className="hero-nav-link">
-                  <span className="hero-nav-label">Escrita</span>
+                <Link to="/filmografia" className="hero-nav-link">
+                  <span className="hero-nav-label">Filmografia</span>
                   <span className="hero-nav-arrow" aria-hidden="true">↗</span>
                 </Link>
                 <Link to="/sobre" className="hero-nav-link">
@@ -165,7 +163,7 @@ export function Home() {
       {/* TICKER */}
       <div className="ticker" aria-hidden="true">
         <div className="ticker-track">
-          {['Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Tradução', 'Encontro', 'Tempo', 'Corpo', 'Gesto', 'Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Tradução', 'Encontro', 'Tempo', 'Corpo', 'Gesto'].map((word, i) => (
+          {['Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Direção', 'Encontro', 'Tempo', 'Corpo', 'Gesto', 'Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Direção', 'Encontro', 'Tempo', 'Corpo', 'Gesto'].map((word, i) => (
             <span key={i} className="ticker-word">{word}<span className="ticker-dot">·</span></span>
           ))}
         </div>
@@ -183,7 +181,7 @@ export function Home() {
                 "O cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço."
               </blockquote>
               <p className="home-statement-text">
-                Ator e cineasta formado por dentro do cinema — pela pós-produção, pela tradução, pelo convívio próximo com realizadores que pensam a câmera como linguagem. Busca na atuação uma disponibilidade radical: o corpo sensível ao outro, ao espaço, ao ritmo singular de cada diretor. A escrita e a realização não são atividades paralelas — são o mesmo projeto de atenção, em outros meios.
+                Ator, cineasta e assistente de direção formado por dentro do cinema — pela pós-produção, pela assistência de direção, pelo convívio próximo com realizadores que pensam a câmera como linguagem. Busca na atuação uma disponibilidade radical: o corpo sensível ao outro, ao espaço, ao ritmo singular de cada diretor.
               </p>
               <Link to="/sobre" className="home-statement-link">
                 Trajetória completa →

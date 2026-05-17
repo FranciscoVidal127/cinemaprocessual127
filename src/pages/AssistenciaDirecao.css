@@ -1,0 +1,205 @@
+.ad-page {
+  min-height: 100vh;
+}
+
+/* DESCRICAO */
+.ad-descricao {
+  padding: 4rem 0;
+}
+
+.ad-descricao-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.ad-descricao-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.ad-descricao-text p {
+  margin-bottom: 1.5rem;
+}
+
+.ad-lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.ad-competencias {
+  padding: 2rem;
+  border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+}
+
+.ad-competencias-title {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  opacity: 0.5;
+  margin-bottom: 1.25rem;
+}
+
+.ad-competencias-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ad-competencias-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.05));
+  color: var(--color-text);
+}
+
+.ad-competencias-list li:last-child {
+  border-bottom: none;
+}
+
+/* CREDITOS */
+.ad-creditos {
+  padding: 4rem 0;
+  border-top: 1px solid var(--color-border, rgba(0,0,0,0.08));
+}
+
+.ad-section-header {
+  margin-bottom: 2rem;
+}
+
+.ad-creditos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ad-credito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border, rgba(0,0,0,0.06));
+}
+
+.ad-credito-item:first-child {
+  border-top: 1px solid var(--color-border, rgba(0,0,0,0.06));
+}
+
+.ad-credito-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+.ad-credito-meta {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.ad-credito-desc {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.ad-credito-year {
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  opacity: 0.5;
+  white-space: nowrap;
+  padding-top: 0.15rem;
+}
+
+/* CONTATO */
+.ad-contato {
+  padding: 5rem 0;
+  border-top: 1px solid var(--color-border, rgba(0,0,0,0.08));
+}
+
+.ad-contato-inner {
+  max-width: 560px;
+}
+
+.ad-contato-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.ad-contato-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.ad-contato-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ad-contato-email {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  width: fit-content;
+}
+
+.ad-contato-email:hover {
+  opacity: 1;
+}
+
+.ad-contato-filmografia {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.ad-contato-filmografia:hover {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ad-descricao-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ad-credito-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ad-credito-year {
+    order: -1;
+  }
+
+  .ad-descricao {
+    padding: 2.5rem 0;
+  }
+
+  .ad-creditos,
+  .ad-contato {
+    padding: 2.5rem 0;
+  }
+}

@@ -13,7 +13,7 @@ export function Sobre() {
           <h1 className="sobre-header-name">Francisco<br />Vidal</h1>
           <div className="sobre-header-statement">
             <p className="sobre-opening-line">
-              Ator, cineasta, escritor.<br />Um único projeto de atenção.
+              Ator, cineasta, assistente de direção.<br />Um único projeto de atenção.
             </p>
           </div>
         </div>
@@ -69,8 +69,8 @@ export function Sobre() {
               <div className="sobre-pratica-item">
                 <span className="sobre-pratica-num" aria-hidden="true">III</span>
                 <div>
-                  <h3 className="sobre-pratica-title">Escrita</h3>
-                  <p className="sobre-pratica-text">Crítica, tradução, ensaio. Escrever sobre cinema é continuar a ver — com outra velocidade. Traduzir é habitar outra língua cinematográfica de dentro. Não uma atividade paralela: é o mesmo olhar, em outro meio.</p>
+                  <h3 className="sobre-pratica-title">Assistência de Direção</h3>
+                  <p className="sobre-pratica-text">Organização do processo de filmagem, comunicação entre equipe e direção, acompanhamento de set. A experiência como ator permite uma mediação singular entre a visão artística e a execução prática — entendendo o ritmo do set e garantindo que o espaço de criação se mantenha protegido.</p>
                 </div>
               </div>
             </div>

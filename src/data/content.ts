@@ -48,8 +48,8 @@ type Escrito = {
 export const siteData = {
   hero: {
     name: "Francisco Vidal",
-    title: "Ator · Cineasta · Tradutor · Escritor de Cinema",
-    bio: "Cinema, atuação e pensamento como prática contínua. Entre a presença diante da câmera, o processo de realização e a escrita crítica.",
+    title: "Ator · Cineasta · Assistente de Direção · Rio de Janeiro",
+    bio: "Francisco Vidal é ator, cineasta e assistente de direção. Sua trajetória atravessa o cinema autoral brasileiro, a atuação diante da câmera e processos colaborativos de criação cinematográfica.",
     image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/image-copy-2.png"
   },
 
@@ -65,10 +65,10 @@ export const siteData = {
 
   sobre: {
     text: [
-      "Francisco Vidal é ator e cineasta baseado no Rio de Janeiro. A entrada no cinema não começou diante da câmera, mas por dentro da engrenagem: em 2023, trabalhando com tradução e pós-produção em Canto das Amapolas, dirigido por Paula Gaitán, algo se abriu — não apenas para um filme, mas para um modo de ver. Ali o cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço.",
-      "Em 2024, essa passagem se tornou presença. Francisco estreou como ator em dois longas: O Inspetor Geral, dirigido por Gregório Gananian (Zaum), e O Mundo dos Mortos, dirigido por Pedro Tavares (7 a 1 Filmes e Cavideo), selecionado para a Mostra Olhos Livres do Festival de Tiradentes (2025). Acompanhou a pós-produção de O Inspetor Geral como assistente de direção. Em 2026, filmou Acronon, dirigido por Gananian ao lado de Clara Choveaux.",
-      "O que busca na atuação não é a construção de personagens mas a disponibilidade radical ao encontro: o corpo como membrana sensível ao outro, ao espaço, ao ritmo singular de cada realizador. Não uma identidade fixa — um ator em processo contínuo, que entende o set como lugar de escuta antes de tudo.",
-      "A escrita e a tradução não são atividades paralelas: são o mesmo olhar em outros meios. Escrever sobre cinema é uma forma de continuar a ver. Traduzir é uma forma de habitar outra linguagem. As três práticas — atuação, realização, escrita — formam um único projeto de atenção."
+      "Francisco Vidal é ator, cineasta e assistente de direção, com atuação entre cinema autoral, criação cênica e processos colaborativos de direção. Seu trabalho investiga presença, escuta, corpo e transformação diante da câmera, articulando experiência prática de set, pesquisa de atuação e pensamento cinematográfico.",
+      "A entrada no cinema não começou diante da câmera, mas por dentro da engrenagem: em 2023, trabalhando com tradução e pós-produção em Canto das Amapolas, dirigido por Paula Gaitán. Ali o cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço.",
+      "Em 2024, estreou como ator em dois longas: O Inspetor Geral, dirigido por Gregório Gananian (Zaum), e O Mundo dos Mortos, dirigido por Pedro Tavares (7 a 1 Filmes e Cavideo), selecionado para a Mostra Olhos Livres do Festival de Tiradentes (2025). Acompanhou a pós-produção de O Inspetor Geral como assistente de direção. Em 2026, filmou Acronon, dirigido por Gananian ao lado de Clara Choveaux.",
+      "O que busca na atuação não é a construção de personagens mas a disponibilidade radical ao encontro: o corpo como membrana sensível ao outro, ao espaço, ao ritmo singular de cada realizador. Não uma identidade fixa — um ator em processo contínuo, que entende o set como lugar de escuta antes de tudo."
     ],
     image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/captura_de_tela_de_2026-02-06_18-14-50.png"
   },

@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { Home } from './pages/Home';
 import { Sobre } from './pages/Sobre';
 import { Reel } from './pages/Reel';
+import { Atuacao } from './pages/Atuacao';
+import { AssistenciaDirecao } from './pages/AssistenciaDirecao';
 import { Filmografia } from './pages/Filmografia';
 import { FilmeDetail } from './pages/FilmeDetail';
 import { Fotos } from './pages/Fotos';
@@ -38,7 +40,7 @@ function Header() {
       <div className="header-inner">
         <a href="/" className="nav-brand">
           <span className="nav-brand-name">Francisco Vidal</span>
-          <span className="nav-brand-sub">ator · cineasta · escritor · rio de janeiro</span>
+          <span className="nav-brand-sub">ator · cineasta · assistente de direção · rio de janeiro</span>
         </a>
 
         <nav className="nav-links" aria-label="Navegação principal">
@@ -47,6 +49,12 @@ function Header() {
           </NavLink>
           <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Sobre
+          </NavLink>
+          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Atuação
+          </NavLink>
+          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Assist. Direção
           </NavLink>
           <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Filmografia
@@ -75,6 +83,8 @@ function Header() {
         <nav className="nav-mobile">
           <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
           <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Sobre</NavLink>
+          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Atuação</NavLink>
+          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Assistência de Direção</NavLink>
           <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
           <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Fotos</NavLink>
           <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Escrita</NavLink>
@@ -91,7 +101,7 @@ function Footer() {
       <div className="footer-inner">
         <div className="footer-left">
           <p className="footer-name">Francisco Vidal</p>
-          <p className="footer-desc">Ator · Cineasta · Escritor</p>
+          <p className="footer-desc">Ator · Cineasta · Assistente de Direção</p>
           <p className="footer-desc">Rio de Janeiro, Brasil</p>
         </div>
         <div className="footer-center">
@@ -104,7 +114,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Francisco Vidal · Rio de Janeiro</span>
+        <span>&copy; {new Date().getFullYear()} Francisco Vidal &middot; Rio de Janeiro</span>
       </div>
     </footer>
   );
@@ -138,6 +148,8 @@ function App() {
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/sobre" element={<Layout><Sobre /></Layout>} />
         <Route path="/reel" element={<Layout><Reel /></Layout>} />
+        <Route path="/atuacao" element={<Layout><Atuacao /></Layout>} />
+        <Route path="/assistencia-de-direcao" element={<Layout><AssistenciaDirecao /></Layout>} />
         <Route path="/filmografia" element={<Layout><Filmografia /></Layout>} />
         <Route path="/fotos" element={<Layout><Fotos /></Layout>} />
         <Route path="/escrita" element={<Layout><Escrita /></Layout>} />
