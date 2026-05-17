@@ -23,7 +23,7 @@ export function Atuacao() {
           <div className="atuacao-intro-grid">
             <div className="atuacao-intro-text">
               <p className="atuacao-lead">
-                O que busca na atuação não é a construção de personagens, mas a disponibilidade radical ao encontro: o corpo como membrana sensível ao outro, ao espaço, ao ritmo singular de cada realizador.
+                Como ator, Francisco Vidal trabalha a partir da escuta, da presença física e da relação entre corpo, câmera e espaço. Sua pesquisa de atuação atravessa estados de atenção, silêncio, vulnerabilidade e transformação diante da imagem.
               </p>
               <p>
                 Não uma identidade fixa — um ator em processo contínuo, que entende o set como lugar de escuta antes de tudo. Trabalha com flexibilidade de registro: ficção, documentário, experimental. O que importa é a seriedade com a linguagem.
@@ -93,7 +93,7 @@ export function Atuacao() {
             <span className="label">Formação recente</span>
           </div>
           <p className="atuacao-formacao-intro">
-            Pesquisa contínua de atuação para câmera, presença cênica e corpo no espaço cinematográfico.
+            Em 2025–2026, aprofunda sua pesquisa de atuação em oficinas, encontros e processos de preparação voltados à presença, escuta, corpo e criação de personagem.
           </p>
           <div className="atuacao-formacao-list">
             <div className="atuacao-formacao-item">

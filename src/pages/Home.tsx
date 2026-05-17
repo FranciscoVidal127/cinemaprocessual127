@@ -1,69 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/content';
-import { supabase } from '../lib/supabase';
 import './Home.css';
 
-function formatDate(raw: string): string {
-  if (!raw) return '';
-  if (raw.match(/^\d{4}-\d{2}-\d{2}$/)) {
-    const [year, month, day] = raw.split('-');
-    const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-    return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
-  }
-  return raw;
-}
-
-type Escrito = {
-  id: number;
-  title: string;
-  category: string;
-  date: string;
-  readTime: string;
-  excerpt: string;
-  slug: string;
-  tags: string[];
-  origem: string;
-};
-
 export function Home() {
-  const [recentEscritos, setRecentEscritos] = useState<Escrito[]>([]);
   const [heroLoaded, setHeroLoaded] = useState(false);
-
-  useEffect(() => {
-    async function loadPosts() {
-      const { data: allData, error } = await supabase.rpc('get_posts');
-      const data = allData?.slice(0, 4) ?? null;
-
-      if (!error && data) {
-        const dbPosts: Escrito[] = data.map((post: any) => ({
-          id: post.id,
-          title: post.title,
-          category: post.category || 'Escrita',
-          date: post.date || '',
-          readTime: post.read_time || '',
-          excerpt: post.excerpt || '',
-          slug: post.slug,
-          tags: Array.isArray(post.tags) ? post.tags : (post.tags ? [post.tags] : []),
-          origem: post.origem || ''
-        }));
-        setRecentEscritos(dbPosts);
-      }
-    }
-    loadPosts();
-  }, []);
-
   const featuredFilme = siteData.filmografia[0];
-  const featuredEscrito = recentEscritos[0];
-  const otherEscritos = recentEscritos.slice(1, 4);
 
   return (
     <div className="home">
 
       {/* HERO */}
       <section className="hero">
-        <span className="hero-bg-text" aria-hidden="true">cinema</span>
-
         <div className="hero-inner">
           <div className="hero-grid">
 
@@ -78,35 +26,14 @@ export function Home() {
                 <span className="hero-name-last">Vidal</span>
               </h1>
 
-              <p className="hero-statement">
-                Presença, escuta e criação cinematográfica.
-              </p>
+              <p className="hero-title">{siteData.hero.title}</p>
 
-              <div className="hero-roles" aria-label="Áreas de atuação">
-                <span className="hero-roles-primary">Ator</span>
-                <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Cineasta</span>
-                <span className="hero-roles-sep" aria-hidden="true">—</span>
-                <span>Assistente de Direção</span>
-              </div>
+              <p className="hero-statement">{siteData.hero.bio}</p>
 
-              <nav className="hero-nav" aria-label="Navegação rápida">
-                <Link to="/reel" className="hero-nav-link">
-                  <span className="hero-nav-label">Reel</span>
-                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
-                </Link>
-                <Link to="/atuacao" className="hero-nav-link">
-                  <span className="hero-nav-label">Atuação</span>
-                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
-                </Link>
-                <Link to="/filmografia" className="hero-nav-link">
-                  <span className="hero-nav-label">Filmografia</span>
-                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
-                </Link>
-                <Link to="/sobre" className="hero-nav-link">
-                  <span className="hero-nav-label">Sobre</span>
-                  <span className="hero-nav-arrow" aria-hidden="true">↗</span>
-                </Link>
+              <nav className="hero-cta" aria-label="Ações principais">
+                <Link to="/reel" className="hero-cta-btn hero-cta-btn--primary">Ver reel</Link>
+                <Link to="/fotos" className="hero-cta-btn">Ver fotos</Link>
+                <a href="mailto:franciscovidalcs@gmail.com" className="hero-cta-btn">Contato</a>
               </nav>
             </div>
 
@@ -114,11 +41,10 @@ export function Home() {
               <div className="hero-image-container">
                 <img
                   src={siteData.hero.image}
-                  alt="Francisco Vidal, ator e cineasta, em retrato cinematográfico ao ar livre."
+                  alt="Francisco Vidal, ator e cineasta."
                   className={`hero-image${heroLoaded ? ' hero-image--loaded' : ''}`}
                   onLoad={() => setHeroLoaded(true)}
                 />
-                <div className="hero-image-grain" aria-hidden="true" />
               </div>
             </div>
 
@@ -130,77 +56,66 @@ export function Home() {
         </div>
       </section>
 
-      {/* TICKER */}
-      <div className="ticker" aria-hidden="true">
-        <div className="ticker-track">
-          {['Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Direção', 'Encontro', 'Tempo', 'Corpo', 'Gesto', 'Cinema', 'Escuta', 'Rio de Janeiro', 'Presença', 'Matéria', 'Processo', 'Direção', 'Encontro', 'Tempo', 'Corpo', 'Gesto'].map((word, i) => (
-            <span key={i} className="ticker-word">{word}<span className="ticker-dot">·</span></span>
-          ))}
-        </div>
-      </div>
-
-      {/* STATEMENT */}
-      <section className="home-statement">
+      {/* ATUACAO */}
+      <section className="home-atuacao">
         <div className="container">
-          <div className="home-statement-inner">
-            <div className="home-statement-marker">
-              <span className="label">Sobre</span>
+          <div className="home-atuacao-inner">
+            <div className="home-atuacao-label">
+              <span className="label">Atuação</span>
             </div>
-            <div className="home-statement-body">
-              <blockquote className="home-statement-quote">
-                "O cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço."
-              </blockquote>
-              <p className="home-statement-text">
-                Ator, cineasta e assistente de direção formado por dentro do cinema — pela pós-produção, pela assistência de direção, pelo convívio próximo com realizadores que pensam a câmera como linguagem. Busca na atuação uma disponibilidade radical: o corpo sensível ao outro, ao espaço, ao ritmo singular de cada diretor.
+            <div className="home-atuacao-body">
+              <p className="home-atuacao-lead">
+                Como ator, Francisco Vidal trabalha a partir da escuta, da presença física e da relação entre corpo, câmera e espaço. Sua pesquisa de atuação atravessa estados de atenção, silêncio, vulnerabilidade e transformação diante da imagem.
               </p>
-              <Link to="/sobre" className="home-statement-link">
-                Trajetória completa →
+              <Link to="/atuacao" className="home-atuacao-link">
+                Ver atuação completa →
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* STILLS */}
-      <section className="home-stills">
-        <div className="home-stills-inner">
-          <div className="home-stills-grid">
-            <div className="home-stills-item home-stills-item--primary">
+      {/* GALERIA */}
+      <section className="home-gallery">
+        <div className="home-gallery-inner">
+          <div className="home-gallery-grid">
+            <div className="home-gallery-item home-gallery-item--large">
               <img
                 src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png"
                 alt="Francisco Vidal"
                 loading="lazy"
               />
+              <span className="home-gallery-category">Rosto</span>
             </div>
-            <div className="home-stills-stack">
-              <div className="home-stills-item">
-                <img
-                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
-                  alt="Francisco Vidal"
-                  loading="lazy"
-                />
-              </div>
-              <div className="home-stills-item">
-                <img
-                  src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
-                  alt="Francisco Vidal"
-                  loading="lazy"
-                />
-              </div>
+            <div className="home-gallery-item home-gallery-item--medium">
+              <img
+                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
+                alt="Francisco Vidal"
+                loading="lazy"
+              />
+              <span className="home-gallery-category">Corpo</span>
+            </div>
+            <div className="home-gallery-item home-gallery-item--medium">
+              <img
+                src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
+                alt="Francisco Vidal"
+                loading="lazy"
+              />
+              <span className="home-gallery-category">Presença</span>
             </div>
           </div>
-          <div className="home-stills-footer">
-            <span className="home-stills-note">Em tela</span>
+          <div className="home-gallery-footer">
+            <Link to="/fotos" className="home-gallery-link">Galeria completa →</Link>
           </div>
         </div>
       </section>
 
-      {/* FEATURED FILM */}
+      {/* FILMOGRAFIA */}
       {featuredFilme && (
         <section className="home-film">
           <div className="container">
             <div className="home-film-header">
-              <span className="label">Filmografia recente</span>
+              <span className="label">Filmografia</span>
               <Link to="/filmografia" className="home-film-all">Ver todos →</Link>
             </div>
           </div>
@@ -229,90 +144,52 @@ export function Home() {
         </section>
       )}
 
-      {/* WRITING */}
-      {featuredEscrito && (
-        <section className="home-writing">
-          <div className="container">
-            <div className="home-writing-header">
-              <span className="label">Escrita recente</span>
-              <Link to="/escrita" className="home-writing-all">Arquivo completo →</Link>
-            </div>
-
-            <div className="home-writing-grid">
-              <Link to={`/post/${featuredEscrito.slug}`} className="home-writing-featured">
-                <span className="home-writing-num" aria-hidden="true">01</span>
-                <span className="home-writing-category">{featuredEscrito.category}</span>
-                <h2 className="home-writing-title">{featuredEscrito.title}</h2>
-                <p className="home-writing-excerpt">{featuredEscrito.excerpt}</p>
-                <div className="home-writing-foot">
-                  <span className="home-writing-date">{formatDate(featuredEscrito.date)}</span>
-                  <span className="home-writing-read">Ler →</span>
-                </div>
-              </Link>
-
-              {otherEscritos.length > 0 && (
-                <div className="home-writing-list">
-                  {otherEscritos.map((item, i) => (
-                    <Link key={item.id} to={`/post/${item.slug}`} className="home-writing-item">
-                      <span className="home-writing-item-num" aria-hidden="true">0{i + 2}</span>
-                      <div className="home-writing-item-body">
-                        <div className="home-writing-item-meta">
-                          <span className="home-writing-item-category">{item.category}</span>
-                          <span className="home-writing-item-date">{formatDate(item.date)}</span>
-                        </div>
-                        <h3 className="home-writing-item-title">{item.title}</h3>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* PHOTOS */}
-      <section className="home-fotos">
-        <div className="home-fotos-inner">
-          <div className="home-fotos-track">
-            {[...siteData.fotos, ...siteData.fotos].map((foto, i) => (
-              <div key={i} className="home-fotos-item">
-                <img src={foto.url} alt={foto.alt} loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* SOBRE */}
+      <section className="home-sobre">
         <div className="container">
-          <Link to="/fotos" className="home-fotos-link">
-            Ver fotos →
-          </Link>
+          <div className="home-sobre-inner">
+            <div className="home-sobre-label">
+              <span className="label">Sobre</span>
+            </div>
+            <div className="home-sobre-body">
+              <p className="home-sobre-text">
+                {siteData.sobre.text[0]}
+              </p>
+              <p className="home-sobre-statement">
+                {siteData.sobre.statement}
+              </p>
+              <Link to="/sobre" className="home-sobre-link">
+                Trajetória completa →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CONTACT */}
+      {/* CONTATO */}
       <section className="home-contact">
         <div className="container">
           <div className="home-contact-inner">
             <div className="home-contact-text">
-              <p className="home-contact-heading">Escreva.</p>
+              <h2 className="home-contact-heading">Disponível para projetos</h2>
               <p className="home-contact-body">
-                Um projeto em desenvolvimento, uma pergunta sobre o trabalho, uma colaboração que ainda não tem forma — se algo aqui ressoa com o que você faz, escreva. Estou em atividade contínua e aberto ao encontro.
+                {siteData.contato.cta}
               </p>
-              <p className="home-contact-sub">
-                Rio de Janeiro · ator · disponível para projetos de cinema
+              <p className="home-contact-location">
+                {siteData.contato.location}
               </p>
             </div>
             <div className="home-contact-links">
-              <a href="mailto:franciscovidalcs@gmail.com" className="home-contact-email">
-                franciscovidalcs@gmail.com
+              <a href={`mailto:${siteData.contato.email}`} className="home-contact-email">
+                {siteData.contato.email}
               </a>
               <a
-                href="https://www.instagram.com/franciscovidalcs/"
+                href={siteData.contato.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="home-contact-social"
               >
-                @franciscovidalcs
+                {siteData.contato.instagramHandle}
               </a>
             </div>
           </div>

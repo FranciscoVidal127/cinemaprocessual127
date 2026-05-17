@@ -21,10 +21,10 @@ export function AssistenciaDirecao() {
           <div className="ad-descricao-grid">
             <div className="ad-descricao-text">
               <p className="ad-lead">
-                Como assistente de direção, Francisco atua na organização do processo de filmagem, comunicação entre equipe e direção, acompanhamento de set e sustentação prática da mise-en-scène.
+                Como assistente de direção, Francisco atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.
               </p>
               <p>
-                A experiência como ator e a familiaridade com o processo criativo do diretor permitem uma mediação singular entre a visão artística e a execução técnica — entendendo o ritmo do set, antecipando necessidades e garantindo que o espaço de criação se mantenha protegido.
+                A experiência como ator e a familiaridade com o processo criativo do diretor permitem uma mediação singular entre a visão artística e a execução prática — entendendo o ritmo do set e garantindo que o espaço de criação se mantenha protegido.
               </p>
             </div>
             <div className="ad-descricao-aside">

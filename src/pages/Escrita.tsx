@@ -70,7 +70,7 @@ export function Escrita() {
 
       <header className="page-header">
         <div className="page-header-inner">
-          <h1 className="page-title">Escrita</h1>
+          <h1 className="page-title">Escrita / Pensamento cinematográfico</h1>
           <p className="page-intro">
             A escrita como outra forma de atenção — ao tempo da imagem, ao gesto do ator, à inteligência do realizador.
           </p>

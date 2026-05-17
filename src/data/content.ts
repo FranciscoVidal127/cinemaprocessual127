@@ -48,9 +48,9 @@ type Escrito = {
 export const siteData = {
   hero: {
     name: "Francisco Vidal",
-    title: "Ator · Cineasta · Assistente de Direção · Rio de Janeiro",
-    bio: "Presença, escuta e criação cinematográfica.",
-    image: "/images/hero-bloco1.jpg"
+    title: "Ator · Cineasta · Assistente de Direção",
+    bio: "Presença, escuta e corpo diante da câmera.",
+    image: "/images/BLOCO 1-HERO.png/image.png"
   },
 
   reel: {
@@ -65,11 +65,12 @@ export const siteData = {
 
   sobre: {
     text: [
-      "Francisco Vidal é ator, cineasta e assistente de direção, com atuação entre cinema autoral, criação cênica e processos colaborativos de direção. Seu trabalho investiga presença, escuta, corpo e transformação diante da câmera, articulando experiência prática de set, pesquisa de atuação e pensamento cinematográfico.",
-      "A entrada no cinema não começou diante da câmera, mas por dentro da engrenagem: em 2023, trabalhando com tradução e pós-produção em Canto das Amapolas, dirigido por Paula Gaitán. Ali o cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço.",
+      "Francisco Vidal é ator, cineasta e assistente de direção, com trajetória ligada ao cinema autoral brasileiro. Sua formação passa pela prática de set, pela assistência de direção, pela escrita sobre cinema e por processos recentes de pesquisa em atuação. Seu trabalho investiga a presença do corpo diante da câmera, a escuta do espaço e a colaboração com realizadores.",
+      "A entrada no cinema não começou diante da câmera, mas por dentro da engrenagem: em 2023, trabalhando com tradução e pós-produção em Canto das Amapolas, dirigido por Paula Gaitán.",
       "Em 2024, estreou como ator em dois longas: O Inspetor Geral, dirigido por Gregório Gananian (Zaum), e O Mundo dos Mortos, dirigido por Pedro Tavares (7 a 1 Filmes e Cavideo), selecionado para a Mostra Olhos Livres do Festival de Tiradentes (2025). Acompanhou a pós-produção de O Inspetor Geral como assistente de direção. Em 2026, filmou Acronon, dirigido por Gananian ao lado de Clara Choveaux.",
-      "O que busca na atuação não é a construção de personagens mas a disponibilidade radical ao encontro: o corpo como membrana sensível ao outro, ao espaço, ao ritmo singular de cada realizador. Não uma identidade fixa — um ator em processo contínuo, que entende o set como lugar de escuta antes de tudo."
+      "Em 2025–2026, aprofunda sua pesquisa de atuação em oficinas, encontros e processos de preparação voltados à presença, escuta, corpo e criação de personagem."
     ],
+    statement: "O cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço.",
     image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/captura_de_tela_de_2026-02-06_18-14-50.png"
   },
 
@@ -130,19 +131,22 @@ export const siteData = {
   ] as Filme[],
 
   fotos: [
-    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-1.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-2.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-3.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-4.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-5.jpg", alt: "Francisco Vidal - Photoshoot" },
-    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/image%20copy%20copy.png", alt: "Francisco Vidal" }
+    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png", alt: "Francisco Vidal - Rosto", category: "Rosto" },
+    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png", alt: "Francisco Vidal - Corpo", category: "Corpo" },
+    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png", alt: "Francisco Vidal - Presença", category: "Presença" },
+    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "Francisco Vidal em O Mundo dos Mortos", category: "Presença" },
+    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "Francisco Vidal em cena", category: "Processo" },
+    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "Francisco Vidal - Atuação", category: "Corpo" }
   ],
 
   escritos: [] as Escrito[],
 
   contato: {
     email: "franciscovidalcs@gmail.com",
-    instagram: "https://www.instagram.com/franciscovidalcs/"
+    instagram: "https://www.instagram.com/franciscovidalcs/",
+    instagramHandle: "@franciscovidalcs",
+    location: "Rio de Janeiro / São Paulo",
+    cta: "Para trabalhos como ator, assistência de direção, colaborações criativas e projetos audiovisuais."
   }
 };
 

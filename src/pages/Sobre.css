@@ -161,6 +161,18 @@
   margin-bottom: 20px;
 }
 
+.sobre-bio-quote {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-light);
+  padding-left: 18px;
+  border-left: 2px solid var(--border-subtle);
+  margin-top: var(--space-lg);
+  max-width: 46ch;
+}
+
 .sobre-bio-sidebar {
   position: sticky;
   top: 96px;

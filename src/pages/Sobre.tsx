@@ -13,7 +13,7 @@ export function Sobre() {
           <h1 className="sobre-header-name">Francisco<br />Vidal</h1>
           <div className="sobre-header-statement">
             <p className="sobre-opening-line">
-              Ator, cineasta, assistente de direção.<br />Um único projeto de atenção.
+              Ator, cineasta e assistente de direção.
             </p>
           </div>
         </div>
@@ -26,6 +26,9 @@ export function Sobre() {
               {siteData.sobre.text.map((paragraph, idx) => (
                 <p key={idx} className={idx === 0 ? 'sobre-bio-lead' : undefined}>{paragraph}</p>
               ))}
+              <blockquote className="sobre-bio-quote">
+                {siteData.sobre.statement}
+              </blockquote>
             </div>
             <div className="sobre-bio-sidebar">
               <div className="sobre-bio-still">

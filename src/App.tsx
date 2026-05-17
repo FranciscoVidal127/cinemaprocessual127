@@ -44,23 +44,23 @@ function Header() {
         </a>
 
         <nav className="nav-links" aria-label="Navegação principal">
-          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Reel
-          </NavLink>
-          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Sobre
-          </NavLink>
           <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Atuação
           </NavLink>
-          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Assist. Direção
+          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Reel
+          </NavLink>
+          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Fotos
           </NavLink>
           <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Filmografia
           </NavLink>
-          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-            Fotos
+          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Assist. Direção
+          </NavLink>
+          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            Sobre
           </NavLink>
           <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Escrita
@@ -81,12 +81,12 @@ function Header() {
 
       {menuOpen && (
         <nav className="nav-mobile">
-          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
-          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Sobre</NavLink>
           <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Atuação</NavLink>
-          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Assistência de Direção</NavLink>
-          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
+          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
           <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Fotos</NavLink>
+          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
+          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Assistência de Direção</NavLink>
+          <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Sobre</NavLink>
           <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Escrita</NavLink>
           <a href="mailto:franciscovidalcs@gmail.com" className="nav-mobile-link">Contato</a>
         </nav>
@@ -102,13 +102,12 @@ function Footer() {
         <div className="footer-left">
           <p className="footer-name">Francisco Vidal</p>
           <p className="footer-desc">Ator · Cineasta · Assistente de Direção</p>
-          <p className="footer-desc">Rio de Janeiro, Brasil</p>
+          <p className="footer-desc">Rio de Janeiro / São Paulo</p>
         </div>
         <div className="footer-center">
-          <p className="footer-statement">O cinema como matéria: tempo, montagem, escuta, relação.</p>
+          <p className="footer-statement">Para trabalhos como ator, assistência de direção, colaborações criativas e projetos audiovisuais.</p>
         </div>
         <div className="footer-right">
-          <p className="footer-location">Escreva</p>
           <a href="mailto:franciscovidalcs@gmail.com" className="footer-email">franciscovidalcs@gmail.com</a>
           <a href="https://www.instagram.com/franciscovidalcs/" target="_blank" rel="noopener noreferrer" className="footer-instagram">@franciscovidalcs</a>
         </div>
