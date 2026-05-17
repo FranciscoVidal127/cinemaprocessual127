@@ -41,13 +41,12 @@ function Header() {
         <Link to="/" className="nav-brand">Francisco Vidal</Link>
 
         <nav className="nav-links" aria-label="Navegacao principal">
-          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Atuacao</NavLink>
-          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Reel</NavLink>
-          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Fotos</NavLink>
-          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Filmografia</NavLink>
           <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Sobre</NavLink>
-          <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Escrita</NavLink>
-          <a href="mailto:franciscovidalcs@gmail.com" className="nav-link">Contato</a>
+          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Reel</NavLink>
+          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Filmografia</NavLink>
+          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Fotos</NavLink>
+          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Processo</NavLink>
+          <a href="#contato" className="nav-link">Contato</a>
         </nav>
 
         <button
@@ -61,14 +60,15 @@ function Header() {
 
       {menuOpen && (
         <nav className="nav-mobile">
-          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Atuacao</NavLink>
-          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
-          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Fotos</NavLink>
-          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
           <NavLink to="/sobre" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Sobre</NavLink>
-          <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Escrita</NavLink>
-          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Assistencia de Direcao</NavLink>
-          <a href="mailto:franciscovidalcs@gmail.com" className="nav-mobile-link">Contato</a>
+          <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
+          <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
+          <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Fotos</NavLink>
+          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Processo</NavLink>
+          <a href="#contato" className="nav-mobile-link">Contato</a>
+          <div className="nav-mobile-divider" />
+          <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link nav-mobile-link--secondary active' : 'nav-mobile-link nav-mobile-link--secondary'}>Assist. de Direção</NavLink>
+          <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-mobile-link nav-mobile-link--secondary active' : 'nav-mobile-link nav-mobile-link--secondary'}>Escrita</NavLink>
         </nav>
       )}
     </header>

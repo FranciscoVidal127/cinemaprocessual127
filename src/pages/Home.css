@@ -15,7 +15,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-body);
   text-decoration: none;
   transition: color 0.2s ease;
   padding: 8px 0;
@@ -66,17 +66,18 @@
 
 .hero-content {
   position: absolute;
-  bottom: 100px;
+  bottom: 64px;
   left: 48px;
   z-index: 3;
+  max-width: 700px;
 }
 
 .hero-subtitle {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-body);
   margin-bottom: 16px;
 }
 
@@ -92,20 +93,26 @@
 
 .hero-statement {
   font-family: var(--font-display);
-  font-size: clamp(16px, 1.8vw, 22px);
+  font-size: clamp(17px, 1.8vw, 23px);
   font-style: italic;
-  color: var(--text-dim);
+  color: var(--text-body);
   letter-spacing: -0.01em;
   max-width: 32ch;
 }
 
+.hero-microprova {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+
 .hero-cta {
-  position: absolute;
-  bottom: 40px;
-  right: 48px;
-  z-index: 3;
   display: flex;
-  gap: 16px;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
 }
 
 .cta-link {
@@ -113,22 +120,22 @@
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-body);
   text-decoration: none;
   padding: 12px 22px;
-  border: 1px solid rgba(232, 228, 218, 0.2);
+  border: 1px solid var(--border-strong);
   transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .cta-link:hover {
   color: var(--text);
-  border-color: rgba(232, 228, 218, 0.55);
-  background-color: rgba(232, 228, 218, 0.06);
+  border-color: var(--text-muted);
+  background-color: rgba(243, 242, 240, 0.06);
   opacity: 1;
 }
 
 .cta-link--primary {
-  border-color: rgba(232, 228, 218, 0.4);
+  border-color: var(--text-muted);
   color: var(--text);
 }
 
@@ -168,7 +175,7 @@
 .dossier-text p {
   font-family: var(--font-sans);
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--text-body);
   max-width: 60ch;
 }
@@ -220,7 +227,7 @@
 /* ===================== REEL ===================== */
 
 .reel {
-  background-color: #000;
+  background-color: var(--bg-deep);
   padding: 100px 48px;
   border-top: 1px solid var(--border);
 }
@@ -237,14 +244,14 @@
 .reel-desc {
   font-family: var(--font-sans);
   font-size: 15px;
-  color: var(--text-dim);
+  color: var(--text-body);
   margin-top: 8px;
 }
 
 .reel-video {
   width: 100%;
   aspect-ratio: 16/9;
-  background-color: #0a0a09;
+  background-color: #080A09;
   border: 1px solid var(--border-strong);
 }
 
@@ -257,10 +264,12 @@
   width: 100%;
   aspect-ratio: 16/9;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   border: 1px solid var(--border-strong);
-  background-color: var(--bg-deep);
+  background-color: var(--bg);
 }
 
 .reel-placeholder-text {
@@ -271,10 +280,24 @@
   letter-spacing: -0.03em;
 }
 
+.reel-placeholder-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.reel-footer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* ===================== SELECTED_FILMOGRAPHY ===================== */
 
 .filmography {
-  background-color: var(--bg);
+  background-color: var(--bg-surface);
   padding: 100px 48px;
   border-top: 1px solid var(--border);
 }
@@ -300,14 +323,14 @@
   gap: 12px;
   padding: 36px 32px;
   border: 1px solid var(--border-strong);
-  background-color: var(--bg-surface);
+  background-color: var(--bg-warm);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .film-card:hover {
-  border-color: rgba(232, 228, 218, 0.3);
+  border-color: var(--text-muted);
   background-color: var(--bg-elevated);
   opacity: 1;
 }
@@ -320,9 +343,9 @@
 
 .film-card-year {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-body);
 }
 
 .film-card-type {
@@ -345,7 +368,7 @@
 .film-card-director {
   font-family: var(--font-sans);
   font-size: 15px;
-  color: var(--text-dim);
+  color: var(--text-body);
 }
 
 .film-card-role {
@@ -384,7 +407,7 @@
 /* ===================== PHOTOS ===================== */
 
 .photos {
-  background-color: #000;
+  background-color: var(--bg-deep);
   padding: 80px 48px;
   border-top: 1px solid var(--border);
 }
@@ -415,7 +438,7 @@
 .photo-item {
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-deep);
+  background-color: var(--bg);
 }
 
 .photo-item img {
@@ -439,7 +462,7 @@
   font-size: 9px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(232, 228, 218, 0.7);
+  color: rgba(243, 242, 240, 0.7);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
@@ -500,7 +523,7 @@
 .formacao-meta {
   font-family: var(--font-sans);
   font-size: 14px;
-  color: var(--text-dim);
+  color: var(--text-body);
   line-height: 1.5;
 }
 
@@ -520,7 +543,7 @@
 .ad-text {
   font-family: var(--font-sans);
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--text-body);
   max-width: 56ch;
   margin-bottom: 32px;
@@ -555,7 +578,7 @@
 .ad-work-meta {
   font-family: var(--font-sans);
   font-size: 13px;
-  color: var(--text-dim);
+  color: var(--text-body);
 }
 
 /* ===================== ESCRITA ===================== */
@@ -575,7 +598,7 @@
   font-family: var(--font-sans);
   font-size: 15px;
   line-height: 1.6;
-  color: var(--text-dim);
+  color: var(--text-body);
   margin-bottom: 20px;
 }
 
@@ -635,7 +658,7 @@
 }
 
 .contato-email:hover {
-  color: var(--text-dim);
+  color: var(--text-body);
   opacity: 1;
 }
 
@@ -643,7 +666,7 @@
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--text-dim);
+  color: var(--text-body);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -664,7 +687,7 @@
 .contato-availability {
   font-family: var(--font-sans);
   font-size: 14px;
-  color: var(--text-dim);
+  color: var(--text-body);
   font-style: italic;
 }
 
@@ -672,16 +695,8 @@
 
 @media (max-width: 980px) {
   .hero-content {
-    bottom: 80px;
+    bottom: 48px;
     left: 32px;
-  }
-
-  .hero-cta {
-    bottom: 28px;
-    right: 32px;
-    left: 32px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
   }
 
   .dossier {
@@ -741,14 +756,16 @@
 
 @media (max-width: 640px) {
   .hero-content {
-    bottom: 100px;
+    bottom: 32px;
     left: 20px;
+    right: 20px;
+  }
+
+  .hero-name {
+    font-size: clamp(56px, 16vw, 90px);
   }
 
   .hero-cta {
-    bottom: 24px;
-    right: 20px;
-    left: 20px;
     flex-direction: column;
     gap: 8px;
   }

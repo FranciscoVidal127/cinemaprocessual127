@@ -31,13 +31,15 @@ export function Home() {
           <p className="hero-statement">
             Presença, escuta e corpo diante da câmera.
           </p>
+          <p className="hero-microprova">
+            Trabalhos recentes: Acronon (2026) · O Mundo dos Mortos (2025)
+          </p>
+          <nav className="hero-cta">
+            <a href="#reel" className="cta-link cta-link--primary">Ver Reel</a>
+            <Link to="/fotos" className="cta-link">Ver Fotos</Link>
+            <a href="#contato" className="cta-link">Contato</a>
+          </nav>
         </div>
-
-        <nav className="hero-cta">
-          <a href="#reel" className="cta-link cta-link--primary">Ver Reel</a>
-          <Link to="/fotos" className="cta-link">Ver Fotos</Link>
-          <a href="#contato" className="cta-link">Contato</a>
-        </nav>
       </section>
 
       {/* ============ ABOUT_DOSSIER ============ */}
@@ -48,16 +50,16 @@ export function Home() {
             <h2 className="dossier-heading">Francisco Vidal</h2>
             <div className="dossier-text">
               <p>
-                Francisco Vidal é ator, cineasta e assistente de direção, com trajetória ligada ao cinema autoral brasileiro. Sua formação passa pela prática de set, pela assistência de direção, pela escrita sobre cinema e por processos recentes de pesquisa em atuação para câmera.
+                Francisco Vidal é ator, cineasta e assistente de direção, baseado no Rio de Janeiro, com atuação também em São Paulo. Sua trajetória se desenvolve de dentro do cinema: pela prática de set, pela assistência de direção, pela escrita sobre cinema e pela pesquisa recente em atuação para câmera.
               </p>
               <p>
-                Como ator, desenvolve um trabalho ancorado em presença, escuta, relação entre corpo, espaço e imagem. Sua pesquisa atravessa estados de atenção, silêncio, vulnerabilidade e transformação diante da câmera.
+                Como ator, trabalha a partir de presença, escuta, precisão física e relação entre corpo, espaço e imagem. Sua atuação se interessa por estados de atenção, silêncio, vulnerabilidade e transformação diante da câmera.
               </p>
               <p>
-                Entre seus trabalhos recentes estão <em>Acronon</em> (dir. Gregorio Gananian, 2026) e <em>O Mundo dos Mortos</em> (dir. Pedro Tavares, 2025), em que interpreta Fábio. Em 2025, aprofundou sua formação em processos de atuação com Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante e Patrick Sampaio.
+                Seus trabalhos recentes incluem <em>Acronon</em> (dir. Gregorio Gananian, 2026) e <em>O Mundo dos Mortos</em> (dir. Pedro Tavares, 2025), em que interpreta Fábio. Em 2025, aprofundou sua formação com Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante e Patrick Sampaio.
               </p>
               <p>
-                Baseado no Rio de Janeiro, com circulação também em São Paulo, trabalha em longas, curtas, documentários, projetos híbridos e colaborações cinematográficas.
+                Interessa-se por longas, curtas, documentários, obras híbridas e processos de criação autorais.
               </p>
             </div>
           </div>
@@ -73,8 +75,8 @@ export function Home() {
                 <span className="highlight-value">Ator · Cineasta · Assistente de Direção</span>
               </li>
               <li className="highlight-item">
-                <span className="highlight-label">Pesquisa</span>
-                <span className="highlight-value">Presença, escuta, corpo e câmera</span>
+                <span className="highlight-label">Foco</span>
+                <span className="highlight-value">Atuação para câmera</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Trabalhos recentes</span>
@@ -82,11 +84,11 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Formação recente</span>
-                <span className="highlight-value">Atuação para câmera — Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante, Patrick Sampaio</span>
+                <span className="highlight-value">Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante, Patrick Sampaio</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Disponível para</span>
-                <span className="highlight-value">Longas, curtas, documentários e colaborações</span>
+                <span className="highlight-value">Curtas, longas, documentários e projetos híbridos</span>
               </li>
             </ul>
           </aside>
@@ -107,8 +109,12 @@ export function Home() {
           ) : (
             <div className="reel-placeholder">
               <span className="reel-placeholder-text">REEL EM BREVE</span>
+              <span className="reel-placeholder-sub">Inserir reel</span>
             </div>
           )}
+          <div className="reel-footer">
+            <a href="mailto:franciscovidalcs@gmail.com?subject=Solicitar%20material" className="section-cta">Solicitar material →</a>
+          </div>
         </div>
       </section>
 

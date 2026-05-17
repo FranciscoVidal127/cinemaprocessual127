@@ -147,7 +147,7 @@
 }
 
 .header--scrolled {
-  background-color: rgba(10, 10, 9, 0.92);
+  background-color: rgba(11, 13, 12, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -163,10 +163,10 @@
 
 .nav-brand {
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-body);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -184,10 +184,10 @@
 
 .nav-link {
   font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-body);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -225,7 +225,7 @@
 .nav-mobile {
   display: flex;
   flex-direction: column;
-  background-color: rgba(10, 10, 9, 0.98);
+  background-color: rgba(11, 13, 12, 0.98);
   border-top: 1px solid var(--border);
   padding: 16px 0;
   position: fixed;
@@ -252,6 +252,17 @@
 .nav-mobile-link:hover,
 .nav-mobile-link.active {
   color: var(--text);
+}
+
+.nav-mobile-divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 8px 32px;
+}
+
+.nav-mobile-link--secondary {
+  color: var(--text-muted);
+  font-size: 10px;
 }
 
 /* ===================== FOOTER ===================== */
