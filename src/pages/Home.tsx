@@ -168,7 +168,7 @@ export function Home() {
       </section>
 
       {/* ============ FORMACAO ============ */}
-      <section className="formacao">
+      <section className="formacao" id="formacao">
         <div className="formacao-inner">
           <span className="section-label">FORMAÇÃO 2025–2026</span>
           <h2 className="formacao-heading">Processos de atuação</h2>

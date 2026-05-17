@@ -45,7 +45,7 @@ function Header() {
           <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Reel</NavLink>
           <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Filmografia</NavLink>
           <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Fotos</NavLink>
-          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Processo</NavLink>
+          <a href="/#formacao" className="nav-link">Processo</a>
           <a href="#contato" className="nav-link">Contato</a>
         </nav>
 
@@ -64,7 +64,7 @@ function Header() {
           <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Reel</NavLink>
           <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Filmografia</NavLink>
           <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Fotos</NavLink>
-          <NavLink to="/atuacao" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>Processo</NavLink>
+          <a href="/#formacao" className="nav-mobile-link">Processo</a>
           <a href="#contato" className="nav-mobile-link">Contato</a>
           <div className="nav-mobile-divider" />
           <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link nav-mobile-link--secondary active' : 'nav-mobile-link nav-mobile-link--secondary'}>Assist. de Direção</NavLink>
