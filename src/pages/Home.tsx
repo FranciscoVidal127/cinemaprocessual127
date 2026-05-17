@@ -143,6 +143,7 @@ export function Home() {
 
       {/* SCENE 06 — CONTATO */}
       <section className="scene-contact">
+        <span className="scene-contact-eyebrow">CONTATO</span>
         <h2 className="scene-contact-heading">Disponivel<br />para projetos</h2>
         <p className="scene-contact-body">{siteData.contato.cta}</p>
         <div className="scene-contact-links">

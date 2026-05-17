@@ -1,7 +1,11 @@
 .escrita-page {
   min-height: 100vh;
   background-color: var(--bg);
-  padding-top: 72px;
+  padding-top: 0;
+}
+
+.escrita-page .page-header {
+  padding-top: 136px;
 }
 
 /* ===================== CONTROLS ===================== */
@@ -258,7 +262,7 @@
 }
 
 @media (max-width: 640px) {
-  .escrita-page { padding-top: 56px; }
+  .escrita-page .page-header { padding-top: 108px; }
   .escrita-controls { padding: 16px 20px; }
   .escrita-archive { padding: 32px 20px 80px; }
 

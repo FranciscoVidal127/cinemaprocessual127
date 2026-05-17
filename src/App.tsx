@@ -36,7 +36,7 @@ function Header() {
   }, [menuOpen]);
 
   return (
-    <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
+    <header className={`header${(scrolled || menuOpen) ? ' header--scrolled' : ''}`}>
       <div className="header-inner">
         <Link to="/" className="nav-brand">Francisco Vidal</Link>
 
