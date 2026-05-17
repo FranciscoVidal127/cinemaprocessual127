@@ -30,15 +30,9 @@ export function Home() {
           <h1 className="hero-name">
             Francisco<br />Vidal
           </h1>
-          <p className="hero-role">Ator · Cineasta · Assistente de Direção</p>
-          <p className="hero-statement">
-            Presença, escuta e corpo diante da câmera.
-          </p>
-          <p className="hero-microprova">
-            Trabalhos recentes: Acronon (2026) · O Mundo dos Mortos (2025)
-          </p>
           <nav className="hero-cta">
-            <a href="#reel" className="cta-link cta-link--primary">Ver Reel</a>
+            <Link to="/sobre" className="cta-link">Sobre</Link>
+            <a href="#reel" className="cta-link">Ver Reel</a>
             <Link to="/fotos" className="cta-link">Ver Fotos</Link>
             <a href="#contato" className="cta-link">Contato</a>
           </nav>
