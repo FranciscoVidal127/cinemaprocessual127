@@ -494,11 +494,8 @@ export function Post() {
   useEffect(() => {
     async function loadPost() {
       try {
-        const { data: dbPost, error } = await supabase
-          .from('posts')
-          .select('*')
-          .eq('slug', slug)
-          .maybeSingle();
+        const { data: dbPosts, error } = await supabase.rpc('get_post_by_slug', { p_slug: slug });
+        const dbPost = dbPosts?.[0] ?? null;
 
         if (!error && dbPost) {
           const meta: PostMetadata = {

@@ -60,14 +60,11 @@ export function Home() {
 
   useEffect(() => {
     async function loadPosts() {
-      const { data, error } = await supabase
-        .from('posts')
-        .select('*')
-        .order('published_at', { ascending: false })
-        .limit(4);
+      const { data: allData, error } = await supabase.rpc('get_posts');
+      const data = allData?.slice(0, 4) ?? null;
 
       if (!error && data) {
-        const dbPosts: Escrito[] = data.map((post) => ({
+        const dbPosts: Escrito[] = data.map((post: any) => ({
           id: post.id,
           title: post.title,
           category: post.category || 'Escrita',

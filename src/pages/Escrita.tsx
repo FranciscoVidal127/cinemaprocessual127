@@ -34,13 +34,10 @@ export function Escrita() {
 
   useEffect(() => {
     async function loadPosts() {
-      const { data, error } = await supabase
-        .from('posts')
-        .select('*')
-        .order('published_at', { ascending: false });
+      const { data, error } = await supabase.rpc('get_posts');
 
       if (!error && data) {
-        const posts: Escrito[] = data.map((post) => ({
+        const posts: Escrito[] = data.map((post: any) => ({
           id: post.id,
           title: post.title,
           category: post.category || 'Escrita',

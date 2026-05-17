@@ -43,10 +43,7 @@ export interface Post {
 }
 
 export async function getFilmes(): Promise<Filme[]> {
-  const { data, error } = await supabase
-    .from('filmes')
-    .select('*')
-    .order('year', { ascending: false });
+  const { data, error } = await supabase.rpc('get_filmes');
 
   if (error) {
     console.error('Erro ao buscar filmes:', error);
@@ -57,10 +54,7 @@ export async function getFilmes(): Promise<Filme[]> {
 }
 
 export async function getFotos(): Promise<Foto[]> {
-  const { data, error } = await supabase
-    .from('fotos')
-    .select('*')
-    .order('ordem', { ascending: true });
+  const { data, error } = await supabase.rpc('get_fotos');
 
   if (error) {
     console.error('Erro ao buscar fotos:', error);
@@ -71,28 +65,17 @@ export async function getFotos(): Promise<Foto[]> {
 }
 
 export async function getFilmeBySlug(slug: string): Promise<any | null> {
-  const { data: filme, error } = await supabase
-    .from('filmes')
-    .select('*')
-    .eq('slug', slug)
-    .maybeSingle();
+  const { data: filmes, error } = await supabase.rpc('get_filme_by_slug', { p_slug: slug });
 
-  if (error || !filme) {
+  if (error || !filmes || filmes.length === 0) {
     console.error('Erro ao buscar filme:', error);
     return null;
   }
 
-  const { data: stills } = await supabase
-    .from('stills')
-    .select('*')
-    .eq('filme_id', filme.id)
-    .order('ordem', { ascending: true });
+  const filme = filmes[0];
 
-  const { data: scenes } = await supabase
-    .from('scenes')
-    .select('*')
-    .eq('filme_id', filme.id)
-    .order('ordem', { ascending: true });
+  const { data: stills } = await supabase.rpc('get_stills_by_filme', { p_filme_id: filme.id });
+  const { data: scenes } = await supabase.rpc('get_scenes_by_filme', { p_filme_id: filme.id });
 
   return {
     ...filme,
@@ -103,10 +86,7 @@ export async function getFilmeBySlug(slug: string): Promise<any | null> {
 }
 
 export async function getPosts(): Promise<Post[]> {
-  const { data, error } = await supabase
-    .from('posts')
-    .select('*')
-    .order('date', { ascending: false });
+  const { data, error } = await supabase.rpc('get_posts');
 
   if (error) {
     console.error('Erro ao buscar posts:', error);
@@ -117,16 +97,12 @@ export async function getPosts(): Promise<Post[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const { data, error } = await supabase
-    .from('posts')
-    .select('*')
-    .eq('slug', slug)
-    .maybeSingle();
+  const { data, error } = await supabase.rpc('get_post_by_slug', { p_slug: slug });
 
   if (error) {
     console.error('Erro ao buscar post:', error);
     return null;
   }
 
-  return data;
+  return data?.[0] ?? null;
 }
