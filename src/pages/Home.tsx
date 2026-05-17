@@ -198,6 +198,16 @@ export function Home() {
           <p className="ad-text">
             Como assistente de direção, Francisco Vidal atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.
           </p>
+          <div className="ad-works">
+            <div className="ad-work-item">
+              <span className="ad-work-title">O Inspetor Geral</span>
+              <span className="ad-work-meta">dir. Gregório Gananian — Assistente de Direção — Pós-produção</span>
+            </div>
+            <div className="ad-work-item">
+              <span className="ad-work-title">Canto das Amapolas</span>
+              <span className="ad-work-meta">dir. Paula Gaitán — Tradução e Pós-produção — 2023</span>
+            </div>
+          </div>
           <Link to="/assistencia-de-direcao" className="section-cta">Ver trabalhos de AD →</Link>
         </div>
       </section>
