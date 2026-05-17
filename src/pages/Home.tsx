@@ -18,6 +18,9 @@ export function Home() {
             src="/images/BLOCO 1-HERO.png/image.png"
             alt="Retrato de Francisco Vidal em floresta, olhando para cima, com luz filtrada entre folhas"
             className={`hero-image${heroLoaded ? ' loaded' : ''}`}
+            width={1920}
+            height={1080}
+            fetchPriority="high"
             onLoad={() => setHeroLoaded(true)}
           />
           <div className="hero-veil" aria-hidden="true" />

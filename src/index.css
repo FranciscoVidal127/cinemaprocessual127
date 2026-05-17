@@ -3,9 +3,9 @@
   --bg-soft: #0D1511;
   --paper: #F2EDE3;
   --text: #F5F1E8;
-  --text-dim: rgba(245,241,232,.68);
+  --text-dim: rgba(245,241,232,.78);
   --accent: #8A3B2D;
-  --line: rgba(245,241,232,.12);
+  --line: rgba(245,241,232,.14);
 
   --font-display: 'Cormorant Garamond', 'Bodoni Moda', serif;
   --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
@@ -26,8 +26,8 @@
   --bg-paper: var(--paper);
   --text-0: var(--text);
   --text-1: var(--text-dim);
-  --text-2: rgba(245,241,232,.52);
-  --text-3: rgba(245,241,232,.38);
+  --text-2: rgba(245,241,232,.62);
+  --text-3: rgba(245,241,232,.50);
   --text-body: var(--text-dim);
   --text-muted: var(--text-2);
   --text-ghost: var(--text-3);
@@ -63,7 +63,7 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   font-size: clamp(1.125rem, 1rem + 0.3vw, 1.25rem);
-  line-height: 1.6;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -121,8 +121,9 @@ img {
 }
 
 :focus-visible {
-  outline: 2px solid var(--text-dim);
+  outline: 2px solid rgba(245,241,232,.9);
   outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .dossier :focus-visible {
