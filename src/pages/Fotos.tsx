@@ -12,8 +12,8 @@ export function Fotos() {
       </div>
 
       <section className="fotos-grid">
-        {fotos.map((foto, i) => (
-          <div key={foto.id} className={`fotos-cell fotos-cell--${i + 1}`}>
+        {fotos.map((foto) => (
+          <div key={foto.id} className={`fotos-cell fotos-slot--${foto.slot}`}>
             <img src={foto.url} alt={foto.alt} loading="lazy" />
             <span className="fotos-cell-caption">{foto.category.toUpperCase()}</span>
           </div>

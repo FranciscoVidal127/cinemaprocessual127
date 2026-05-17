@@ -131,12 +131,12 @@ export const siteData = {
   ] as Filme[],
 
   fotos: [
-    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png", alt: "Francisco Vidal - Rosto", category: "Rosto" },
-    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png", alt: "Francisco Vidal - Corpo", category: "Corpo" },
-    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png", alt: "Francisco Vidal - Presença", category: "Presença" },
-    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "Francisco Vidal em O Mundo dos Mortos", category: "Presença" },
-    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "Francisco Vidal em cena", category: "Processo" },
-    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "Francisco Vidal - Atuação", category: "Corpo" }
+    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png", alt: "Francisco Vidal - Retrato PB com luz lateral", category: "Rosto", slot: "rosto" },
+    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png", alt: "Francisco Vidal - Corpo inteiro, eixo vertical", category: "Corpo", slot: "corpo" },
+    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png", alt: "Francisco Vidal - Close, estado interno", category: "Gesto", slot: "gesto" },
+    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "Francisco Vidal em O Mundo dos Mortos", category: "Processo", slot: "processo" },
+    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "Francisco Vidal em cena - escuta", category: "Processo", slot: "processo" },
+    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "Francisco Vidal - Atuação, presença física", category: "Corpo", slot: "corpo" }
   ],
 
   escritos: [] as Escrito[],

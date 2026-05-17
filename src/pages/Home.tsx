@@ -157,8 +157,8 @@ export function Home() {
             <Link to="/fotos" className="section-cta">Ver galeria completa →</Link>
           </div>
           <div className="photos-grid">
-            {siteData.fotos.slice(0, 5).map((foto, i) => (
-              <div key={foto.id} className={`photo-item photo-item--${i + 1}`}>
+            {siteData.fotos.slice(0, 4).map((foto) => (
+              <div key={foto.id} className={`photo-item photo-slot--${foto.slot}`}>
                 <img src={foto.url} alt={foto.alt} loading="lazy" />
                 <span className="photo-caption">{foto.category}</span>
               </div>
