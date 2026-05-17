@@ -50,16 +50,10 @@ export function Home() {
             <h2 className="dossier-heading">Francisco Vidal</h2>
             <div className="dossier-text">
               <p>
-                Francisco Vidal é ator, cineasta e assistente de direção, baseado no Rio de Janeiro, com atuação também em São Paulo. Sua trajetória se desenvolve de dentro do cinema: pela prática de set, pela assistência de direção, pela escrita sobre cinema e pela pesquisa recente em atuação para câmera.
+                Ator, cineasta e assistente de direção baseado no Rio de Janeiro, com atuação também em São Paulo. Sua trajetória se constrói de dentro do cinema — pela prática de set, pela assistência de direção e pela pesquisa em atuação para câmera. Seus trabalhos recentes incluem <em>Acronon</em> (dir. Gregorio Gananian, 2026) e <em>O Mundo dos Mortos</em> (dir. Pedro Tavares, 2025), em que interpreta Fábio.
               </p>
               <p>
-                Como ator, trabalha a partir de presença, escuta, precisão física e relação entre corpo, espaço e imagem. Sua atuação se interessa por estados de atenção, silêncio, vulnerabilidade e transformação diante da câmera.
-              </p>
-              <p>
-                Seus trabalhos recentes incluem <em>Acronon</em> (dir. Gregorio Gananian, 2026) e <em>O Mundo dos Mortos</em> (dir. Pedro Tavares, 2025), em que interpreta Fábio. Em 2025, aprofundou sua formação com Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante e Patrick Sampaio.
-              </p>
-              <p>
-                Interessa-se por longas, curtas, documentários, obras híbridas e processos de criação autorais.
+                Como ator, trabalha a partir de presença, escuta e precisão física. Interessa-se pela relação entre corpo, espaço e imagem — por estados de atenção, silêncio e transformação diante da câmera. Em 2025, aprofundou sua formação com Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante e Patrick Sampaio.
               </p>
             </div>
           </div>
@@ -76,7 +70,7 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Foco</span>
-                <span className="highlight-value">Atuação para câmera</span>
+                <span className="highlight-value">Presença, escuta, corpo e câmera</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Trabalhos recentes</span>

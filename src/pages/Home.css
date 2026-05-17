@@ -180,7 +180,6 @@
   font-size: 18px;
   line-height: 1.7;
   color: #2E3230;
-  max-width: 60ch;
 }
 
 .dossier-text em {
@@ -196,7 +195,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .highlight-item {
@@ -222,7 +221,7 @@
 
 .highlight-value {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
   color: #2E3230;
 }
