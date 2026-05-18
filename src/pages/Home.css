@@ -79,10 +79,17 @@
   line-height: 0.88;
   letter-spacing: -0.035em;
   color: var(--text);
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   text-shadow: 0 2px 40px rgba(0,0,0,0.25);
 }
 
+.hero-subtitle {
+  font-family: var(--font-meta);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: rgba(245, 241, 232, 0.7);
+  margin-bottom: 28px;
+}
 
 .hero-cta {
   display: flex;
@@ -799,7 +806,12 @@
 
   .hero-name {
     font-size: clamp(52px, 14vw, 80px);
-    margin-bottom: 28px;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    margin-bottom: 22px;
   }
 
   .hero-cta {

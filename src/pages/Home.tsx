@@ -30,11 +30,12 @@ export function Home() {
           <h1 className="hero-name">
             Francisco<br />Vidal
           </h1>
+          <p className="hero-subtitle">Ator, assistente de direção, cineasta.</p>
           <nav className="hero-cta">
             <Link to="/sobre" className="cta-link">Sobre</Link>
-            <a href="#reel" className="cta-link">Ver Reel</a>
-            <Link to="/fotos" className="cta-link">Ver Fotos</Link>
-            <a href="#contato" className="cta-link">Contato</a>
+            <Link to="/reel" className="cta-link">Reel</Link>
+            <Link to="/filmografia" className="cta-link">Filmografia</Link>
+            <Link to="/fotos" className="cta-link">Fotos</Link>
           </nav>
         </div>
       </section>
