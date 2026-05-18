@@ -96,7 +96,7 @@ export const siteData = {
       year: 2025,
       country: "Brasil",
       duration: "",
-      role: "Protagonista",
+      role: "Filipe",
       director: "Gregório Gananian",
       type: "Cinema",
       genre: "Longa-metragem, Ficção",
