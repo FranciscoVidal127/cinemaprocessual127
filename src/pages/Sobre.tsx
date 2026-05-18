@@ -21,15 +21,9 @@ export function Sobre() {
       <section className="sobre-bio">
         <div className="about-container">
           <div className="about-text">
-            <p className="sobre-bio-text">
-              Francisco Vidal é ator, assistente de direção e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua trajetória começou "por trás" da câmera: trabalhou com tradução, montagem e pós-produção antes de chegar à atuação.
-            </p>
-            <p className="sobre-bio-text">
-              Colaborou com Paula Gaitán na pós-produção de <em>O Canto das Amapolas</em>, conhecendo Clara Choveaux, Negro Leo e Gregório Gananian. Em seguida, trabalhou na pós de <em>Aquele que Viu o Abismo</em> e, em 2024, foi assistente de direção e ator no longa <em>O Inspetor Geral</em>.
-            </p>
-            <p className="sobre-bio-text">
-              Nos ensaios e filmes, sua pesquisa alia duas dimensões complementares: a sensibilidade de quem pensa o cinema por dentro e a entrega de quem se oferece ao acontecimento diante da câmera. Na atuação, busca presença, escuta e precisão — um corpo atento ao outro, ao espaço e ao silêncio.
-            </p>
+            {siteData.sobre.text.map((paragraph, index) => (
+              <p key={index} className="sobre-bio-text">{paragraph}</p>
+            ))}
           </div>
           <aside className="profile-block">
             <span className="profile-block-label">PERFIL</span>
