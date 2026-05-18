@@ -6,7 +6,7 @@
 
 .sobre-mono {
   font-family: var(--font-mono);
-  font-size: 8.5px;
+  font-size: 9px;
   letter-spacing: 0.2em;
   color: var(--text-muted);
 }
@@ -58,165 +58,96 @@
 }
 
 .sobre-bio-inner {
-  max-width: 52ch;
+  max-width: 62ch;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 26px;
 }
 
 .sobre-bio-text {
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.78;
+  line-height: 1.8;
   color: var(--text-dim);
 }
 
-.sobre-bio-secondary {
-  font-family: var(--font-display);
-  font-size: clamp(16px, 1.6vw, 20px);
+.sobre-bio-text em {
   font-style: italic;
-  line-height: 1.55;
-  color: var(--text-muted);
-  padding-left: 20px;
-  border-left: 1px solid var(--border-strong);
-}
-
-/* ===================== PRATICA ===================== */
-
-.sobre-pratica {
-  padding: 64px 48px;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--bg-surface);
-}
-
-.sobre-pratica-header {
-  margin-bottom: 40px;
-}
-
-.sobre-pratica-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-  max-width: 1100px;
-}
-
-.sobre-pratica-item {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.sobre-pratica-title {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.18em;
-  color: var(--text-dim);
-}
-
-.sobre-pratica-text {
-  font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 /* ===================== TRAJECTORY ===================== */
 
 .sobre-trajectory {
-  padding: 64px 48px;
+  padding: 80px 48px;
   border-bottom: 1px solid var(--border);
+  background-color: var(--bg-surface);
 }
 
 .sobre-trajectory-header {
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .sobre-trajectory-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--border);
   max-width: 700px;
 }
 
 .sobre-trajectory-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 20px 0;
+  gap: 10px;
+  padding: 28px 0;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  padding-left: 24px;
 }
 
-.sobre-trajectory-title {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  color: var(--text);
+.sobre-trajectory-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--text-muted);
+  opacity: 0.5;
 }
 
-.sobre-trajectory-role {
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-style: italic;
-  color: var(--accent);
-  opacity: 0.85;
+.sobre-trajectory-item:first-child {
+  padding-top: 0;
 }
 
-.sobre-trajectory-meta {
+.sobre-trajectory-item:first-child::before {
+  top: 0;
+}
+
+.sobre-trajectory-item:last-child {
+  border-bottom: none;
+}
+
+.sobre-trajectory-date {
   font-family: var(--font-mono);
-  font-size: 8.5px;
-  letter-spacing: 0.1em;
-  color: var(--text-ghost);
-  margin-top: 4px;
-}
-
-/* ===================== FORMATION ===================== */
-
-.sobre-formation {
-  padding: 64px 48px;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--bg-surface);
-}
-
-.sobre-formation-header {
-  margin-bottom: 32px;
-}
-
-.sobre-formation-list {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--border);
-  max-width: 800px;
-}
-
-.sobre-formation-item {
-  display: grid;
-  grid-template-columns: 200px 1fr auto;
-  gap: 16px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-  align-items: baseline;
-}
-
-.sobre-formation-date {
-  font-family: var(--font-mono);
-  font-size: 8.5px;
-  letter-spacing: 0.1em;
-  color: var(--text-ghost);
-}
-
-.sobre-formation-name {
-  font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text-dim);
+  font-weight: 500;
 }
 
-.sobre-formation-info {
-  font-family: var(--font-mono);
-  font-size: 8.5px;
-  letter-spacing: 0.08em;
-  color: var(--text-ghost);
-  text-align: right;
+.sobre-trajectory-text {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.72;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.sobre-trajectory-text em {
+  font-style: italic;
+  color: var(--text-dim);
 }
 
 /* ===================== CONTACT ===================== */
@@ -265,23 +196,32 @@
 /* ===================== RESPONSIVE ===================== */
 
 @media (max-width: 860px) {
-  .sobre-bio { padding: 56px 24px; }
-  .sobre-pratica { padding: 48px 24px; }
-  .sobre-trajectory { padding: 48px 24px; }
-  .sobre-formation { padding: 48px 24px; }
-  .sobre-contact { padding: 56px 24px; }
-
-  .sobre-pratica-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .sobre-bio {
+    padding: 56px 24px;
   }
 
-  .sobre-formation-item {
-    grid-template-columns: 1fr;
-    gap: 4px;
+  .sobre-bio-inner {
+    max-width: 100%;
   }
 
-  .sobre-formation-info {
-    text-align: left;
+  .sobre-bio-text {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .sobre-trajectory {
+    padding: 56px 24px;
+  }
+
+  .sobre-trajectory-item {
+    padding-left: 20px;
+  }
+
+  .sobre-trajectory-text {
+    font-size: 14px;
+  }
+
+  .sobre-contact {
+    padding: 56px 24px;
   }
 }

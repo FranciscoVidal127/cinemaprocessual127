@@ -47,10 +47,10 @@ export function Home() {
             <h2 className="dossier-heading">Francisco Vidal</h2>
             <div className="dossier-text">
               <p>
-                Ator, cineasta e assistente de direção baseado no Rio de Janeiro, com atuação também em São Paulo. Sua trajetória se constrói de dentro do cinema — pela prática de set, pela assistência de direção e pela pesquisa em atuação para câmera. Seus trabalhos recentes incluem <em>Acronon</em> (dir. Gregorio Gananian, 2026) e <em>O Mundo dos Mortos</em> (dir. Pedro Tavares, 2025), em que interpreta Fábio.
+                Ator e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua entrada no audiovisual não aconteceu primeiro diante da câmera, mas por dentro da matéria do filme: pela tradução, pela pós-produção, pela montagem e pela escuta do processo. Sua trajetória se constrói por continuidade — do trabalho de bastidor ao set, da assistência à atuação, da experiência prática à formação continuada.
               </p>
               <p>
-                Como ator, trabalha a partir de presença, escuta e precisão física. Interessa-se pela relação entre corpo, espaço e imagem — por estados de atenção, silêncio e transformação diante da câmera. Em 2025, aprofundou sua formação com Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante e Patrick Sampaio.
+                Na atuação, busca presença, escuta e precisão. Interessa-lhe um corpo atento ao outro, ao espaço, ao silêncio e ao ritmo singular de cada direção. Mais do que afirmar uma identidade fixa, Francisco entende o ator como processo: alguém que aprende a chegar, perceber, ajustar-se e sustentar o instante exigido pela cena.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export function Home() {
             <ul className="highlights-list">
               <li className="highlight-item">
                 <span className="highlight-label">Base</span>
-                <span className="highlight-value">Rio de Janeiro / São Paulo</span>
+                <span className="highlight-value">Rio de Janeiro</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Funções</span>
@@ -71,11 +71,11 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Trabalhos recentes</span>
-                <span className="highlight-value">Acronon (2026) · O Mundo dos Mortos (2025)</span>
+                <span className="highlight-value">Música de Invenção (2025) · O Mundo dos Mortos (2025) · O Inspetor Geral (2024)</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Formação recente</span>
-                <span className="highlight-value">Ricardo Conti, Heitor Martinez, Gustavo Pace, Rafael Infante, Patrick Sampaio</span>
+                <span className="highlight-value">Rafael Infante, Patrick Sampaio, Ricardo Cônti, Heitor Martinez, Joana Medeiros, Julia Burnier</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Disponível para</span>
