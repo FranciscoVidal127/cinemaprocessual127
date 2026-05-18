@@ -34,15 +34,15 @@ export function Sobre() {
               </li>
               <li className="profile-block-item">
                 <span className="profile-block-item-label">Funções</span>
-                <span className="profile-block-item-value">Ator · Cineasta · Assistente de Direção</span>
+                <span className="profile-block-item-value">Ator · Assistente de Direção · Cineasta</span>
               </li>
               <li className="profile-block-item">
                 <span className="profile-block-item-label">Foco</span>
-                <span className="profile-block-item-value">Presença · Escuta · Corpo · Câmera</span>
+                <span className="profile-block-item-value">Presença · Escuta · Corpo · Câmera · Processo</span>
               </li>
               <li className="profile-block-item">
                 <span className="profile-block-item-label">Trabalhos recentes</span>
-                <span className="profile-block-item-value">Música de Invenção (2025) · O Mundo dos Mortos (2025) · O Inspetor Geral (2024)</span>
+                <span className="profile-block-item-value">O Mundo dos Mortos · O Inspetor Geral</span>
               </li>
               <li className="profile-block-item">
                 <span className="profile-block-item-label">Formação recente</span>
@@ -50,7 +50,7 @@ export function Sobre() {
               </li>
               <li className="profile-block-item">
                 <span className="profile-block-item-label">Disponível para</span>
-                <span className="profile-block-item-value">Curtas, longas, documentários e projetos híbridos</span>
+                <span className="profile-block-item-value">Longas, curtas, projetos híbridos, cinema autoral e audiovisual experimental</span>
               </li>
             </ul>
           </aside>

@@ -48,13 +48,16 @@ export function Home() {
             <h2 className="dossier-heading">Francisco Vidal</h2>
             <div className="dossier-text">
               <p>
-                Francisco Vidal é ator, assistente de direção e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua trajetória começou "por trás" da câmera: trabalhou com tradução, montagem e pós-produção antes de chegar à atuação.
+                Francisco Vidal é ator, assistente de direção e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua entrada no audiovisual aconteceu primeiro por dentro da matéria do filme: pela tradução, pela pós-produção, pela montagem e pela escuta do processo.
               </p>
               <p>
-                Colaborou com Paula Gaitán na pós-produção de <em>O Canto das Amapolas</em>, conhecendo Clara Choveaux, Negro Leo e Gregório Gananian. Em seguida, trabalhou na pós de <em>Aquele que Viu o Abismo</em> e, em 2024, foi assistente de direção e ator no longa <em>O Inspetor Geral</em>.
+                Em 2023, ao trabalhar com Paula Gaitán na pós-produção de <em>O Canto das Amapolas</em>, vencedor da Mostra Olhos Livres no Festival de Cinema de Tiradentes, aproximou-se de Clara Choveaux, Negro Leo e Gregório Gananian. Esse encontro abriu uma trajetória construída entre bastidor, criação e presença: Francisco trabalhou na pós-produção de <em>Aquele que Viu o Abismo</em> e, no início de 2024, foi convidado por Gregório Gananian a participar de <em>O Inspetor Geral</em> em duas frentes simultâneas — como assistente na pré-produção e como ator no elenco do longa, filmado no estado de São Paulo no primeiro semestre de 2024.
               </p>
               <p>
-                Nos ensaios e filmes, sua pesquisa alia duas dimensões complementares: a sensibilidade de quem pensa o cinema por dentro e a entrega de quem se oferece ao acontecimento diante da câmera. Na atuação, busca presença, escuta e precisão — um corpo atento ao outro, ao espaço e ao silêncio.
+                No segundo semestre de 2024, filmou no Rio de Janeiro <em>O Mundo dos Mortos</em>, de Pedro Tavares, produzido pela 7 a 1 Filmes e pela Cavideo, longa exibido na Mostra Olhos Livres do Festival de Cinema de Tiradentes em 2025. Atualmente, segue colaborando com Gregório Gananian como assistente de direção, dando continuidade a uma parceria que atravessa pós-produção, pré-produção, set e criação cinematográfica.
+              </p>
+              <p>
+                Na atuação, busca presença, escuta e precisão — um corpo atento ao outro, ao espaço, ao silêncio e ao ritmo singular de cada direção. Sua formação continuada, realizada entre a CAL, laboratórios e oficinas especializadas, aprofunda esse percurso: atuação para câmera, construção de personagem, repertório, método, escuta e prontidão para o set.
               </p>
             </div>
           </div>
@@ -67,15 +70,15 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Funções</span>
-                <span className="highlight-value">Ator · Cineasta · Assistente de Direção</span>
+                <span className="highlight-value">Ator · Assistente de Direção · Cineasta</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Foco</span>
-                <span className="highlight-value">Presença · Escuta · Corpo · Câmera</span>
+                <span className="highlight-value">Presença · Escuta · Corpo · Câmera · Processo</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Trabalhos recentes</span>
-                <span className="highlight-value">Música de Invenção (2025) · O Mundo dos Mortos (2025) · O Inspetor Geral (2024)</span>
+                <span className="highlight-value">O Mundo dos Mortos · O Inspetor Geral</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Formação recente</span>
@@ -83,7 +86,7 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Disponível para</span>
-                <span className="highlight-value">Curtas, longas, documentários e projetos híbridos</span>
+                <span className="highlight-value">Longas, curtas, projetos híbridos, cinema autoral e audiovisual experimental</span>
               </li>
             </ul>
           </aside>
