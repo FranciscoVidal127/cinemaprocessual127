@@ -48,16 +48,13 @@ export function Home() {
             <h2 className="dossier-heading">Francisco Vidal</h2>
             <div className="dossier-text">
               <p>
-                Francisco Vidal é ator e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua entrada no audiovisual aconteceu por dentro da matéria do filme: pela tradução, pela pós-produção, pela montagem e pela escuta do processo.
+                Francisco Vidal é ator, assistente de direção e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua trajetória começou "por trás" da câmera: trabalhou com tradução, montagem e pós-produção antes de chegar à atuação.
               </p>
               <p>
-                A partir do trabalho em <em>O Canto das Amapolas</em>, de Paula Gaitán, aproximou-se de Clara Choveaux, Negro Leo e Gregório Gananian, dando início a uma trajetória construída entre bastidor, criação e presença. Trabalhou na pós-produção de <em>Aquele que Viu o Abismo</em> e, em seguida, passou a colaborar com Gregório Gananian como assistente de direção e ator em <em>O Inspetor Geral</em>, filmado no estado de São Paulo no primeiro semestre de 2024.
+                Colaborou com Paula Gaitán na pós-produção de <em>O Canto das Amapolas</em>, conhecendo Clara Choveaux, Negro Leo e Gregório Gananian. Em seguida, trabalhou na pós de <em>Aquele que Viu o Abismo</em> e, em 2024, foi assistente de direção e ator no longa <em>O Inspetor Geral</em>.
               </p>
               <p>
-                No segundo semestre de 2024, filmou no Rio de Janeiro <em>O Mundo dos Mortos</em>, de Pedro Tavares, produzido pela 7 a 1 Filmes e pela Cavideo, longa exibido na Mostra Olhos Livres do Festival de Cinema de Tiradentes em 2025. Entre criação e cena, sua pesquisa atravessa duas dimensões complementares: a sensibilidade de quem pensa o cinema por dentro e a disponibilidade de quem se oferece ao acontecimento da câmera.
-              </p>
-              <p>
-                Na atuação, busca presença, escuta e precisão — um corpo atento ao outro, ao espaço, ao silêncio e ao ritmo singular de cada direção. Sua formação continuada, realizada entre a CAL, laboratórios e oficinas especializadas, aprofunda esse percurso: atuação para câmera, construção de personagem, repertório, método, escuta e prontidão para o set.
+                Nos ensaios e filmes, sua pesquisa alia duas dimensões complementares: a sensibilidade de quem pensa o cinema por dentro e a entrega de quem se oferece ao acontecimento diante da câmera. Na atuação, busca presença, escuta e precisão — um corpo atento ao outro, ao espaço e ao silêncio.
               </p>
             </div>
           </div>
@@ -74,11 +71,11 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Foco</span>
-                <span className="highlight-value">Presença · Escuta · Corpo · Câmera · Processo</span>
+                <span className="highlight-value">Presença · Escuta · Corpo · Câmera</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Trabalhos recentes</span>
-                <span className="highlight-value">O Mundo dos Mortos · O Inspetor Geral</span>
+                <span className="highlight-value">Música de Invenção (2025) · O Mundo dos Mortos (2025) · O Inspetor Geral (2024)</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Formação recente</span>
@@ -86,7 +83,7 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Disponível para</span>
-                <span className="highlight-value">Longas, curtas, projetos híbridos, cinema autoral e audiovisual experimental</span>
+                <span className="highlight-value">Curtas, longas, documentários e projetos híbridos</span>
               </li>
             </ul>
           </aside>
