@@ -7,10 +7,13 @@ export function Sobre() {
 
       {/* Portrait image — full width */}
       <section className="sobre-portrait">
-        <img
-          src={siteData.sobre.image}
-          alt="Francisco Vidal"
-        />
+        <picture>
+          <source srcSet={siteData.sobre.image} type="image/webp" />
+          <img
+            src={siteData.sobre.image}
+            alt="Francisco Vidal"
+          />
+        </picture>
         <span className="sobre-portrait-label">SOBRE</span>
       </section>
 

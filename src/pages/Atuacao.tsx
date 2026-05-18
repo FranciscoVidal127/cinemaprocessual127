@@ -11,10 +11,13 @@ export function Atuacao() {
 
       {/* Full-width cinematic still */}
       <section className="atuacao-hero">
-        <img
-          src="/images/photoshoot/francisco-vidal-photoshoot-16.webp"
-          alt="Francisco Vidal"
-        />
+        <picture>
+          <source srcSet="/images/photoshoot/francisco-vidal-photoshoot-16.webp" type="image/webp" />
+          <img
+            src="/images/photoshoot/francisco-vidal-photoshoot-16.webp"
+            alt="Francisco Vidal"
+          />
+        </picture>
         <div className="atuacao-hero-veil" />
         <span className="atuacao-hero-label">ATUACAO</span>
       </section>
@@ -42,18 +45,24 @@ export function Atuacao() {
       <section className="atuacao-strip">
         <div className="atuacao-strip-grid">
           <div className="atuacao-strip-item">
-            <img
-              src="/images/photoshoot/francisco-vidal-photoshoot-17.webp"
-              alt="Francisco Vidal — Corpo"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet="/images/photoshoot/francisco-vidal-photoshoot-17.webp" type="image/webp" />
+              <img
+                src="/images/photoshoot/francisco-vidal-photoshoot-17.webp"
+                alt="Francisco Vidal — Corpo"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <div className="atuacao-strip-item atuacao-strip-item--wide">
-            <img
-              src="/images/photoshoot/francisco-vidal-photoshoot-18.webp"
-              alt="Francisco Vidal — Presenca"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet="/images/photoshoot/francisco-vidal-photoshoot-18.webp" type="image/webp" />
+              <img
+                src="/images/photoshoot/francisco-vidal-photoshoot-18.webp"
+                alt="Francisco Vidal — Presenca"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <div className="atuacao-strip-item">
             <img
