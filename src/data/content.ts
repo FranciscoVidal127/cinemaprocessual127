@@ -64,6 +64,9 @@ export const siteData = {
   reel: {
     videos: [
       "https://www.youtube.com/watch?v=Ify4U-E4aaE",
+      "https://www.youtube.com/watch?v=qRzh9oAaoWk",
+      "https://www.youtube.com/watch?v=gKwFF0I_xW4",
+      "https://www.youtube.com/watch?v=EBk0wJLshWo",
       "https://www.youtube.com/embed/UbjvM_b4o70",
       "https://www.youtube.com/embed/rzGUuYIckv4",
       "https://www.youtube.com/watch?v=L3EEwFrGslw"
