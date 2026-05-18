@@ -9,6 +9,11 @@ type Scene = {
   youtubeUrl: string;
 };
 
+type CrewMember = {
+  role: string;
+  name: string;
+};
+
 type Filme = {
   id: number;
   slug: string;
@@ -28,7 +33,10 @@ type Filme = {
   castPrincipal?: string[];
   castSecundario?: string[];
   producers?: string[];
+  coproducers?: string[];
+  supporters?: string[];
   productionCompanies?: string[];
+  crew?: CrewMember[];
   stills: Still[];
   scenes: Scene[];
 };
@@ -88,11 +96,36 @@ export const siteData = {
       festivals: "28ª Mostra de Cinema de Tiradentes — Mostra Olhos Livres",
       description: "No segundo dia após a morte de Cristo, humanos, anjos e demônios questionam o futuro da existência enquanto vagam pela Terra agora abandonada.",
       image: "/images/mundo-mortos-poster.png",
-      cast: [
+      productionCompanies: ["7 a 1 Filmes", "Cavideo"],
+      producers: ["Pedro Tavares"],
+      coproducers: ["João Lanari", "Cavi Borges"],
+      supporters: ["Daniel Diaz e Cara Feia Productions", "Damien Cattinari", "Dean Kavanagh", "Evan Snyder", "Joshua R. Troxler", "Steven Adam Renkovish"],
+      cast: [],
+      castPrincipal: [
         "Estêvão Nogueira",
         "Morgana Corrêa",
         "Raquel Monteiro",
-        "Francisco Vidal"
+        "Araci Breckenfeld",
+        "Diana Deyse",
+        "Francisco Vidal",
+        "Renatto Venâncio",
+        "Cecília Bittencourt"
+      ],
+      crew: [
+        { role: "Montagem", name: "Waleska Antunes" },
+        { role: "Assistente de Direção", name: "Gabriel Papaléo" },
+        { role: "Direção de Fotografia", name: "Vinicius Dratovsky" },
+        { role: "Direção de Som", name: "Jotapê de Souza" },
+        { role: "Mixagem de Som", name: "Guilherme Leite, Pedro Tavares e Waleska Antunes" },
+        { role: "Produção Executiva", name: "Pedro Tavares e Gabriel Papaléo" },
+        { role: "Assistentes de Produção", name: "Francisco Vidal e Leila Almeida" },
+        { role: "Direção de Arte", name: "Leila Almeida" },
+        { role: "Cabelo e Maquiagem", name: "Julio Napoli" },
+        { role: "Figurino", name: "Neide Pereira" },
+        { role: "Colorização", name: "Waleska Antunes" },
+        { role: "Efeitos Especiais", name: "Daniel Diaz" },
+        { role: "Trilha Original", name: "Guilherme Leite" },
+        { role: "Making of", name: "Julio Napoli" }
       ],
       stills: [
         { src: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "O Mundo dos Mortos - Still 1" },

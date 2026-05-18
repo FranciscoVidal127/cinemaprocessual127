@@ -179,6 +179,50 @@
   line-height: 1.6;
 }
 
+.filme-detail-crew-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.filme-detail-crew-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.filme-detail-crew-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+
+.filme-detail-crew-role {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-ghost);
+}
+
+.filme-detail-crew-name {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .filme-detail-crew-row {
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+  }
+}
+
 .filme-detail-stills {
   padding: 0;
   border-top: 1px solid var(--border);

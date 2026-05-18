@@ -148,16 +148,30 @@ export function FilmeDetail() {
                 </div>
               )}
 
+              {filme.coproducers && filme.coproducers.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">Coprodução</span>
+                  <p className="filme-detail-crew-names">{filme.coproducers.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.supporters && filme.supporters.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">Apoio</span>
+                  <p className="filme-detail-crew-names">{filme.supporters.join(', ')}</p>
+                </div>
+              )}
+
               {filme.castPrincipal && filme.castPrincipal.length > 0 && (
                 <div className="filme-detail-crew-block">
-                  <span className="label">Elenco Principal</span>
+                  <span className="label">Elenco</span>
                   <p className="filme-detail-crew-names">{filme.castPrincipal.join(', ')}</p>
                 </div>
               )}
 
               {filme.castSecundario && filme.castSecundario.length > 0 && (
                 <div className="filme-detail-crew-block">
-                  <span className="label">Elenco</span>
+                  <span className="label">Elenco Secundário</span>
                   <p className="filme-detail-crew-names">{filme.castSecundario.join(', ')}</p>
                 </div>
               )}
@@ -166,6 +180,20 @@ export function FilmeDetail() {
                 <div className="filme-detail-crew-block">
                   <span className="label">Elenco</span>
                   <p className="filme-detail-crew-names">{filme.cast.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.crew && filme.crew.length > 0 && (
+                <div className="filme-detail-crew-section">
+                  <span className="label">Ficha Técnica</span>
+                  <div className="filme-detail-crew-list">
+                    {filme.crew.map((member: { role: string; name: string }, idx: number) => (
+                      <div key={idx} className="filme-detail-crew-row">
+                        <span className="filme-detail-crew-role">{member.role}</span>
+                        <span className="filme-detail-crew-name">{member.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
