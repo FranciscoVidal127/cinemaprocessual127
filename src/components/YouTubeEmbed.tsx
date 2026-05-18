@@ -55,7 +55,7 @@ export function YouTubeEmbed({ url, title }: YouTubeEmbedProps) {
     );
   }
 
-  const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+  const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
 
   return (
     <div className="video-wrapper">
