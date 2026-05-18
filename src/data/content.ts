@@ -90,6 +90,29 @@ export const siteData = {
 
   filmografia: [
     {
+      id: 3,
+      slug: "musica-de-invencao",
+      title: "Música de Invenção",
+      year: 2025,
+      country: "Brasil",
+      duration: "",
+      role: "Protagonista",
+      director: "Gregório Gananian",
+      type: "Cinema",
+      genre: "Longa-metragem, Ficção",
+      status: "Em produção",
+      festivals: "",
+      description: "",
+      image: "/images/image copy copy copy copy copy copy.png",
+      productionCompanies: ["Zaum", "Anacoluto"],
+      producers: ["Marisa Merlo", "Gregório Gananian", "Clara Choveaux"],
+      castPrincipal: ["Francisco Vidal", "Clara Choveaux"],
+      cast: [],
+      stills: [],
+      scenes: [],
+      crew: []
+    },
+    {
       id: 1,
       slug: "o-mundo-dos-mortos",
       title: "O Mundo dos Mortos",

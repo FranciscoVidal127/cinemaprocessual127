@@ -130,7 +130,9 @@ export function Home() {
                 <h3 className="film-card-title">{filme.title}</h3>
                 <p className="film-card-director">dir. {filme.director}</p>
                 <p className="film-card-role">{filme.role}</p>
-                <p className="film-card-context">{filme.description}</p>
+                {filme.description && (
+                  <p className="film-card-context">{filme.description}</p>
+                )}
                 {filme.festivals && (
                   <p className="film-card-festivals">{filme.festivals}</p>
                 )}

@@ -130,9 +130,11 @@ export function FilmeDetail() {
 
               <div className="filme-detail-divider" />
 
-              <div className="filme-detail-synopsis">
-                <p>{filme.description}</p>
-              </div>
+              {filme.description && (
+                <div className="filme-detail-synopsis">
+                  <p>{filme.description}</p>
+                </div>
+              )}
 
               {filme.festivals && (
                 <div className="filme-detail-festival">
