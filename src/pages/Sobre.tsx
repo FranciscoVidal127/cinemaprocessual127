@@ -16,40 +16,47 @@ export function Sobre() {
 
       {/* Bio */}
       <section className="sobre-bio">
-        <div className="sobre-bio-inner">
-          <p className="sobre-bio-text">
-            Francisco Vidal é ator e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua entrada no audiovisual não aconteceu primeiro diante da câmera, mas por dentro da matéria do filme: pela tradução, pela pós-produção, pela montagem e pela escuta do processo.
-          </p>
-          <p className="sobre-bio-text">
-            Em 2023, trabalhou com Paula Gaitán na pós-produção de <em>O Canto das Amapolas</em>, longa vencedor da Mostra Olhos Livres no Festival de Cinema de Tiradentes. A experiência abriu uma passagem decisiva em sua trajetória: além de aproximá-lo da fabricação concreta de um filme, colocou Francisco em contato com uma constelação de artistas que passaria a marcar seu caminho, como Clara Choveaux, Negro Leo e Gregório Gananian.
-          </p>
-          <p className="sobre-bio-text">
-            A partir desse encontro, Francisco passou a trabalhar também na pós-produção de <em>Aquele que Viu o Abismo</em>, dirigido por Gregório Gananian e Negro Leo, longa vencedor da Mostra Olhos Livres no Festival de Cinema de Tiradentes em 2024. O convívio com esse processo aprofundou sua relação com o cinema como construção coletiva — uma arte feita de tempo, pensamento, montagem, presença, escuta e confiança.
-          </p>
-          <p className="sobre-bio-text">
-            No início de 2024, essa aproximação se desdobrou em uma nova etapa. Francisco foi convidado por Gregório Gananian a participar de <em>O Inspetor Geral</em> em duas frentes simultâneas: como assistente na pré-produção e como ator no elenco do longa. Antes de chegar ao set, acompanhou por dentro a preparação do filme, sua lógica de criação, sua construção de mundo e o ritmo de trabalho de seu realizador. Filmado no primeiro semestre de 2024, no estado de São Paulo, <em>O Inspetor Geral</em> é uma adaptação livre da peça de Nikolai Gogol, transposta para o Brasil contemporâneo.
-          </p>
-          <p className="sobre-bio-text">
-            No segundo semestre de 2024, Francisco filmou no Rio de Janeiro <em>O Mundo dos Mortos</em>, de Pedro Tavares, produzido pela 7 a 1 Filmes e pela Cavideo. Criador do ECRÃ, festival dedicado ao cinema e à arte experimental, Pedro Tavares desenvolve uma pesquisa ligada à imagem expandida, às formas menos convencionais de narrativa e aos territórios de invenção do audiovisual. Em <em>O Mundo dos Mortos</em>, humanos, anjos e demônios atravessam uma Terra abandonada no segundo dia após a morte de Cristo, enquanto a espera pelo retorno do Messias transforma a existência em um campo de assombro, suspensão e exorcismo. O longa foi exibido na Mostra Olhos Livres do Festival de Cinema de Tiradentes em 2025.
-          </p>
-          <p className="sobre-bio-text">
-            A partir de 2025, Francisco intensificou sua formação como ator. Entre março e dezembro de 2025, manteve um percurso contínuo de estudo na CAL — Casa das Artes de Laranjeiras, atravessando cursos, laboratórios e módulos voltados à atuação para câmera, repertório, presença cênica, escuta e construção de personagem. Esse percurso teve como eixo os dois módulos de <em>O Teatro do Não Eu</em>, com Rafael Infante, processo que se estendeu até dezembro e aprofundou sua pesquisa sobre presença, alteridade, deslocamento de si e disponibilidade para aquilo que a cena exige. Paralelamente, ampliou sua formação em atuação para câmera e relação com o set em cursos com Ricardo Cônti, Heitor Martinez, Gustavo Pace e Andrea Avancini.
-          </p>
-          <p className="sobre-bio-text">
-            No segundo semestre de 2025, deu continuidade à colaboração com Gregório Gananian em <em>Música de Invenção</em>, longa-metragem de ficção dirigido por Gregório, produzido pela Zaum e pela Anacoluto, com produção de Marisa Merlo, Gregório Gananian e Clara Choveaux. Coestrelado por Francisco Vidal e Clara Choveaux, o filme reafirma uma trajetória construída na proximidade entre criação, confiança artística e presença em cena.
-          </p>
-          <p className="sobre-bio-text">
-            Atualmente, Francisco segue colaborando com Gregório Gananian como assistente de direção, dando continuidade a uma parceria que atravessa pós-produção, pré-produção, set, atuação e acompanhamento criativo de projetos. Essa colaboração sintetiza uma parte central de seu percurso: estar próximo da criação cinematográfica não apenas como intérprete, mas como alguém que acompanha o filme em sua construção concreta.
-          </p>
-          <p className="sobre-bio-text">
-            Em dezembro de 2025, Francisco participou de <em>Atuando para o Audiovisual</em>, com Walter Lima Jr. Em 2026, deu sequência ao trabalho de formação e prática diante da câmera: em janeiro, realizou o workshop <em>Desenvolvimento de Cenas, Personagens e Repertório</em>, novamente com Rafael Infante; entre janeiro e março, integrou o LABO de Patrick Sampaio, no curso <em>Gravar, Assistir, Regravar</em>, voltado ao exercício contínuo diante da câmera, à revisão do próprio material e à precisão progressiva da atuação audiovisual; em abril, participou da <em>Carpintaria do Ator</em>, com Joana Medeiros, e do workshop de <em>Método Lee Strasberg</em>, com Julia Burnier, em São Paulo.
-          </p>
-          <p className="sobre-bio-text">
-            Sua trajetória se constrói por continuidade: do trabalho de bastidor ao set; da pós-produção à pré-produção; da assistência à atuação; da experiência prática à formação continuada. Entre criação e cena, Francisco reúne duas dimensões complementares: a sensibilidade de quem pensa o filme por dentro e a disponibilidade de quem se oferece ao acontecimento da câmera.
-          </p>
-          <p className="sobre-bio-text">
-            Na atuação, busca presença, escuta e precisão. Interessa-lhe um corpo atento ao outro, ao espaço, ao silêncio e ao ritmo singular de cada direção. Mais do que afirmar uma identidade fixa, Francisco entende o ator como processo: alguém que aprende a chegar, perceber, ajustar-se e sustentar o instante exigido pela cena, com rigor técnico e abertura sensível.
-          </p>
+        <div className="about-container">
+          <div className="about-text">
+            <p className="sobre-bio-text">
+              Francisco Vidal é ator, assistente de direção e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua trajetória começou "por trás" da câmera: trabalhou com tradução, montagem e pós-produção antes de chegar à atuação.
+            </p>
+            <p className="sobre-bio-text">
+              Colaborou com Paula Gaitán na pós-produção de <em>O Canto das Amapolas</em>, conhecendo Clara Choveaux, Negro Leo e Gregório Gananian. Em seguida, trabalhou na pós de <em>Aquele que Viu o Abismo</em> e, em 2024, foi assistente de direção e ator no longa <em>O Inspetor Geral</em>.
+            </p>
+            <p className="sobre-bio-text">
+              Nos ensaios e filmes, sua pesquisa alia duas dimensões complementares: a sensibilidade de quem pensa o cinema por dentro e a entrega de quem se oferece ao acontecimento diante da câmera. Na atuação, busca presença, escuta e precisão — um corpo atento ao outro, ao espaço e ao silêncio.
+            </p>
+          </div>
+          <aside className="profile-block">
+            <span className="profile-block-label">PERFIL</span>
+            <ul className="profile-block-list">
+              <li className="profile-block-item">
+                <span className="profile-block-item-label">Base</span>
+                <span className="profile-block-item-value">Rio de Janeiro</span>
+              </li>
+              <li className="profile-block-item">
+                <span className="profile-block-item-label">Funções</span>
+                <span className="profile-block-item-value">Ator · Cineasta · Assistente de Direção</span>
+              </li>
+              <li className="profile-block-item">
+                <span className="profile-block-item-label">Foco</span>
+                <span className="profile-block-item-value">Presença · Escuta · Corpo · Câmera</span>
+              </li>
+              <li className="profile-block-item">
+                <span className="profile-block-item-label">Trabalhos recentes</span>
+                <span className="profile-block-item-value">Música de Invenção (2025) · O Mundo dos Mortos (2025) · O Inspetor Geral (2024)</span>
+              </li>
+              <li className="profile-block-item">
+                <span className="profile-block-item-label">Formação recente</span>
+                <span className="profile-block-item-value">CAL · Rafael Infante · Patrick Sampaio · Joana Medeiros · Julia Burnier · Walter Lima Jr.</span>
+              </li>
+              <li className="profile-block-item">
+                <span className="profile-block-item-label">Disponível para</span>
+                <span className="profile-block-item-value">Curtas, longas, documentários e projetos híbridos</span>
+              </li>
+            </ul>
+          </aside>
         </div>
       </section>
 

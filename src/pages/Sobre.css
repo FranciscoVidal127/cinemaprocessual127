@@ -57,8 +57,15 @@
   border-bottom: 1px solid var(--border);
 }
 
-.sobre-bio-inner {
-  max-width: 62ch;
+.about-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   gap: 26px;
@@ -74,6 +81,51 @@
 .sobre-bio-text em {
   font-style: italic;
   color: var(--text);
+}
+
+/* ===================== PROFILE BLOCK ===================== */
+
+.profile-block {
+  flex: 0 0 20rem;
+}
+
+.profile-block-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.profile-block-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-block-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-block-item-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.profile-block-item-value {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dim);
 }
 
 /* ===================== TRAJECTORY ===================== */
@@ -200,8 +252,20 @@
     padding: 56px 24px;
   }
 
-  .sobre-bio-inner {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text {
     max-width: 100%;
+  }
+
+  .profile-block {
+    flex: none;
+    width: 100%;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
   }
 
   .sobre-bio-text {
