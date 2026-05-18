@@ -12,7 +12,7 @@ export function Atuacao() {
       {/* Full-width cinematic still */}
       <section className="atuacao-hero">
         <img
-          src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png"
+          src="/images/photoshoot/francisco-vidal-photoshoot-16.webp"
           alt="Francisco Vidal"
         />
         <div className="atuacao-hero-veil" />
@@ -43,14 +43,14 @@ export function Atuacao() {
         <div className="atuacao-strip-grid">
           <div className="atuacao-strip-item">
             <img
-              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png"
+              src="/images/photoshoot/francisco-vidal-photoshoot-17.webp"
               alt="Francisco Vidal — Corpo"
               loading="lazy"
             />
           </div>
           <div className="atuacao-strip-item atuacao-strip-item--wide">
             <img
-              src="https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png"
+              src="/images/photoshoot/francisco-vidal-photoshoot-18.webp"
               alt="Francisco Vidal — Presenca"
               loading="lazy"
             />

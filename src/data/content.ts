@@ -82,7 +82,7 @@ export const siteData = {
       "Em 2025–2026, aprofunda sua pesquisa de atuação em oficinas, encontros e processos de preparação voltados à presença, escuta, corpo e criação de personagem."
     ],
     statement: "O cinema deixou de ser ideia e virou matéria: tempo, montagem, escuta, relação entre corpos no espaço.",
-    image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/captura_de_tela_de_2026-02-06_18-14-50.png"
+    image: "/images/photoshoot/francisco-vidal-photoshoot-14.webp"
   },
 
   filmografia: [
@@ -169,12 +169,21 @@ export const siteData = {
   ] as Filme[],
 
   fotos: [
-    { id: 1, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-1.png", alt: "Francisco Vidal em retrato em preto e branco, meio-corpo, contra fundo escuro", category: "Rosto", slot: "rosto" },
-    { id: 2, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-2.png", alt: "Francisco Vidal em pé, em ambiente externo, com postura integral visível", category: "Corpo", slot: "corpo" },
-    { id: 3, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/photoshoot-new-3.png", alt: "Close de Francisco Vidal em luz âmbar desfocada, com expressão recolhida", category: "Gesto", slot: "gesto" },
-    { id: 4, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "Francisco Vidal em cena de O Mundo dos Mortos, em escuta diante da câmera", category: "Processo", slot: "processo" },
-    { id: 5, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "Francisco Vidal em set, momento de preparação entre takes", category: "Processo", slot: "processo" },
-    { id: 6, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "Francisco Vidal em cena, corpo inteiro com presença física definida", category: "Corpo", slot: "corpo" }
+    { id: 1, url: "/images/photoshoot/francisco-vidal-photoshoot-01.webp", alt: "Francisco Vidal em corpo inteiro, gesto e presença em ambiente natural", category: "Corpo", slot: "corpo" },
+    { id: 2, url: "/images/photoshoot/francisco-vidal-photoshoot-04.webp", alt: "Francisco Vidal em movimento, sombra e luz filtrada entre árvores", category: "Gesto", slot: "gesto" },
+    { id: 3, url: "/images/photoshoot/francisco-vidal-photoshoot-10.webp", alt: "Francisco Vidal em retrato próximo, expressão contida e olhar direto", category: "Rosto", slot: "rosto" },
+    { id: 4, url: "/images/photoshoot/francisco-vidal-photoshoot-05.webp", alt: "Francisco Vidal em postura integral, presença física definida em floresta", category: "Presença", slot: "presenca" },
+    { id: 5, url: "/images/photoshoot/francisco-vidal-photoshoot-07.webp", alt: "Francisco Vidal entre sombras, corpo recortado pela luz lateral", category: "Sombra", slot: "sombra" },
+    { id: 6, url: "/images/photoshoot/francisco-vidal-photoshoot-11.webp", alt: "Francisco Vidal em close, rosto iluminado com fundo escuro", category: "Rosto", slot: "rosto" },
+    { id: 7, url: "/images/photoshoot/francisco-vidal-photoshoot-02.webp", alt: "Francisco Vidal em gesto amplo, corpo em relação com o espaço", category: "Gesto", slot: "gesto" },
+    { id: 8, url: "/images/photoshoot/francisco-vidal-photoshoot-15.webp", alt: "Francisco Vidal em meio-corpo, expressão recolhida e contemplativa", category: "Silêncio", slot: "silencio" },
+    { id: 9, url: "/images/photoshoot/francisco-vidal-photoshoot-16.webp", alt: "Francisco Vidal em retrato editorial, presença e escuta visíveis", category: "Escuta", slot: "escuta" },
+    { id: 10, url: "/images/photoshoot/francisco-vidal-photoshoot-17.webp", alt: "Francisco Vidal em composição vertical, corpo e sombra em equilíbrio", category: "Corpo", slot: "corpo" },
+    { id: 11, url: "/images/photoshoot/francisco-vidal-photoshoot-18.webp", alt: "Francisco Vidal em retrato com profundidade, olhar e silêncio", category: "Presença", slot: "presenca" },
+    { id: 12, url: "/images/photoshoot/francisco-vidal-photoshoot-14.webp", alt: "Francisco Vidal em close limpo, rosto com luz natural e fundo neutro", category: "Rosto", slot: "rosto" },
+    { id: 13, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-1.jpg", alt: "Francisco Vidal em cena de O Mundo dos Mortos, em escuta diante da câmera", category: "Processo", slot: "processo" },
+    { id: 14, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-2.jpg", alt: "Francisco Vidal em set, momento de preparação entre takes", category: "Processo", slot: "processo" },
+    { id: 15, url: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/still-3.jpg", alt: "Francisco Vidal em cena, corpo inteiro com presença física definida", category: "Processo", slot: "processo" }
   ],
 
   escritos: [] as Escrito[],

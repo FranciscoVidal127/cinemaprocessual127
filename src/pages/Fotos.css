@@ -69,6 +69,26 @@
 }
 .fotos-slot--gesto img { object-position: center 30%; }
 
+.fotos-slot--presenca {
+  aspect-ratio: 4/5;
+}
+.fotos-slot--presenca img { object-position: center 20%; }
+
+.fotos-slot--sombra {
+  aspect-ratio: 2/3;
+}
+.fotos-slot--sombra img { object-position: center center; }
+
+.fotos-slot--silencio {
+  aspect-ratio: 1/1;
+}
+.fotos-slot--silencio img { object-position: center 30%; }
+
+.fotos-slot--escuta {
+  aspect-ratio: 3/2;
+}
+.fotos-slot--escuta img { object-position: center center; }
+
 .fotos-slot--processo {
   aspect-ratio: 3/2;
 }

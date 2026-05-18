@@ -155,23 +155,23 @@ export function Home() {
           <div className="photos-editorial">
             <div className="photo-item photo-area--large">
               <img src={siteData.fotos[0].url} alt={siteData.fotos[0].alt} loading="lazy" />
-              <span className="photo-label">ROSTO</span>
-            </div>
-            <div className="photo-item photo-area--vert">
-              <img src={siteData.fotos[1].url} alt={siteData.fotos[1].alt} loading="lazy" />
               <span className="photo-label">CORPO</span>
             </div>
+            <div className="photo-item photo-area--vert">
+              <img src={siteData.fotos[4].url} alt={siteData.fotos[4].alt} loading="lazy" />
+              <span className="photo-label">SOMBRA</span>
+            </div>
             <div className="photo-item photo-area--horiz">
-              <img src={siteData.fotos[3].url} alt={siteData.fotos[3].alt} loading="lazy" />
+              <img src={siteData.fotos[8].url} alt={siteData.fotos[8].alt} loading="lazy" />
               <span className="photo-label">ESCUTA</span>
             </div>
             <div className="photo-item photo-area--med">
-              <img src={siteData.fotos[2].url} alt={siteData.fotos[2].alt} loading="lazy" />
+              <img src={siteData.fotos[1].url} alt={siteData.fotos[1].alt} loading="lazy" />
               <span className="photo-label">GESTO</span>
             </div>
             <div className="photo-item photo-area--detail">
               <img src={siteData.fotos[5].url} alt={siteData.fotos[5].alt} loading="lazy" />
-              <span className="photo-label">PRESENÇA</span>
+              <span className="photo-label">ROSTO</span>
             </div>
           </div>
         </div>
