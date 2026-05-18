@@ -87,7 +87,7 @@ export const siteData = {
       type: "Cinema",
       festivals: "28ª Mostra de Cinema de Tiradentes — Mostra Olhos Livres",
       description: "No segundo dia após a morte de Cristo, humanos, anjos e demônios questionam o futuro da existência enquanto vagam pela Terra agora abandonada.",
-      image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/mundo-mortos.jpg",
+      image: "/images/mundo-mortos-poster.png",
       cast: [
         "Estêvão Nogueira",
         "Morgana Corrêa",
