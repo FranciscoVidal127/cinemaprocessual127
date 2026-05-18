@@ -14,18 +14,15 @@ export function Home() {
       {/* ============ HERO ============ */}
       <section className="hero">
         <div className="hero-image-wrap">
-          <picture>
-            <source srcSet="/images/photoshoot/francisco-vidal-photoshoot-05.webp" type="image/webp" />
-            <img
-              src="/images/photoshoot/francisco-vidal-photoshoot-05.webp"
-              alt="Retrato de Francisco Vidal em corpo inteiro, presença física definida"
-              className={`hero-image${heroLoaded ? ' loaded' : ''}`}
-              width={1920}
-              height={1080}
-              fetchPriority="high"
-              onLoad={() => setHeroLoaded(true)}
-            />
-          </picture>
+          <img
+            src="/images/BLOCO 1-HERO.png/image.png"
+            alt="Retrato de Francisco Vidal em floresta, olhando para cima, com luz filtrada entre folhas"
+            className={`hero-image${heroLoaded ? ' loaded' : ''}`}
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            onLoad={() => setHeroLoaded(true)}
+          />
           <div className="hero-veil" aria-hidden="true" />
         </div>
 

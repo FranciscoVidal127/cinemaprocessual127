@@ -58,7 +58,7 @@ export const siteData = {
     name: "Francisco Vidal",
     title: "Ator · Cineasta · Assistente de Direção",
     bio: "Presença, escuta e corpo diante da câmera.",
-    image: "/images/photoshoot/francisco-vidal-photoshoot-05.webp"
+    image: "/images/BLOCO 1-HERO.png/image.png"
   },
 
   reel: {
