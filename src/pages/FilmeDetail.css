@@ -216,13 +216,6 @@
   color: var(--text-muted);
 }
 
-@media (max-width: 640px) {
-  .filme-detail-crew-row {
-    grid-template-columns: 120px 1fr;
-    gap: 12px;
-  }
-}
-
 .filme-detail-stills {
   padding: 0;
   border-top: 1px solid var(--border);
@@ -325,5 +318,6 @@
 @media (max-width: 640px) {
   .filme-detail-hero { padding: 48px 20px; }
   .filme-detail-meta-row { grid-template-columns: 80px 1fr; }
+  .filme-detail-crew-row { grid-template-columns: 120px 1fr; gap: 12px; }
   .filme-stills-grid { grid-template-columns: 1fr; }
 }

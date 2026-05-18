@@ -93,6 +93,7 @@ export const siteData = {
       role: "Fábio",
       director: "Pedro Tavares",
       type: "Cinema",
+      genre: "Longa-metragem, Ficção",
       festivals: "28ª Mostra de Cinema de Tiradentes — Mostra Olhos Livres",
       description: "No segundo dia após a morte de Cristo, humanos, anjos e demônios questionam o futuro da existência enquanto vagam pela Terra agora abandonada.",
       image: "/images/mundo-mortos-poster.png",
@@ -112,6 +113,7 @@ export const siteData = {
         "Cecília Bittencourt"
       ],
       crew: [
+        { role: "Roteiro", name: "Pedro Tavares" },
         { role: "Montagem", name: "Waleska Antunes" },
         { role: "Assistente de Direção", name: "Gabriel Papaléo" },
         { role: "Direção de Fotografia", name: "Vinicius Dratovsky" },
