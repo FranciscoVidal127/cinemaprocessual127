@@ -47,10 +47,16 @@ export function Home() {
             <h2 className="dossier-heading">Francisco Vidal</h2>
             <div className="dossier-text">
               <p>
-                Ator e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua entrada no audiovisual não aconteceu primeiro diante da câmera, mas por dentro da matéria do filme: pela tradução, pela pós-produção, pela montagem e pela escuta do processo. Sua trajetória se constrói por continuidade — do trabalho de bastidor ao set, da assistência à atuação, da experiência prática à formação continuada.
+                Francisco Vidal é ator e cineasta radicado no Rio de Janeiro. Formado em Cinema pela ESPM, sua entrada no audiovisual aconteceu por dentro da matéria do filme: pela tradução, pela pós-produção, pela montagem e pela escuta do processo.
               </p>
               <p>
-                Na atuação, busca presença, escuta e precisão. Interessa-lhe um corpo atento ao outro, ao espaço, ao silêncio e ao ritmo singular de cada direção. Mais do que afirmar uma identidade fixa, Francisco entende o ator como processo: alguém que aprende a chegar, perceber, ajustar-se e sustentar o instante exigido pela cena.
+                A partir do trabalho em <em>O Canto das Amapolas</em>, de Paula Gaitán, aproximou-se de Clara Choveaux, Negro Leo e Gregório Gananian, dando início a uma trajetória construída entre bastidor, criação e presença. Trabalhou na pós-produção de <em>Aquele que Viu o Abismo</em> e, em seguida, passou a colaborar com Gregório Gananian como assistente de direção e ator em <em>O Inspetor Geral</em>, filmado no estado de São Paulo no primeiro semestre de 2024.
+              </p>
+              <p>
+                No segundo semestre de 2024, filmou no Rio de Janeiro <em>O Mundo dos Mortos</em>, de Pedro Tavares, produzido pela 7 a 1 Filmes e pela Cavideo, longa exibido na Mostra Olhos Livres do Festival de Cinema de Tiradentes em 2025. Entre criação e cena, sua pesquisa atravessa duas dimensões complementares: a sensibilidade de quem pensa o cinema por dentro e a disponibilidade de quem se oferece ao acontecimento da câmera.
+              </p>
+              <p>
+                Na atuação, busca presença, escuta e precisão — um corpo atento ao outro, ao espaço, ao silêncio e ao ritmo singular de cada direção. Sua formação continuada, realizada entre a CAL, laboratórios e oficinas especializadas, aprofunda esse percurso: atuação para câmera, construção de personagem, repertório, método, escuta e prontidão para o set.
               </p>
             </div>
           </div>
@@ -67,19 +73,19 @@ export function Home() {
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Foco</span>
-                <span className="highlight-value">Presença, escuta, corpo e câmera</span>
+                <span className="highlight-value">Presença · Escuta · Corpo · Câmera · Processo</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Trabalhos recentes</span>
-                <span className="highlight-value">Música de Invenção (2025) · O Mundo dos Mortos (2025) · O Inspetor Geral (2024)</span>
+                <span className="highlight-value">O Mundo dos Mortos · O Inspetor Geral</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Formação recente</span>
-                <span className="highlight-value">Rafael Infante, Patrick Sampaio, Ricardo Cônti, Heitor Martinez, Joana Medeiros, Julia Burnier</span>
+                <span className="highlight-value">CAL · Rafael Infante · Patrick Sampaio · Joana Medeiros · Julia Burnier · Walter Lima Jr.</span>
               </li>
               <li className="highlight-item">
                 <span className="highlight-label">Disponível para</span>
-                <span className="highlight-value">Curtas, longas, documentários e projetos híbridos</span>
+                <span className="highlight-value">Longas, curtas, projetos híbridos, cinema autoral e audiovisual experimental</span>
               </li>
             </ul>
           </aside>
