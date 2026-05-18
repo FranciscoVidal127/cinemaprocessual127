@@ -99,7 +99,7 @@ export const siteData = {
       genre: "Longa-metragem, Ficção",
       festivals: "28ª Mostra de Cinema de Tiradentes — Mostra Olhos Livres",
       description: "No segundo dia após a morte de Cristo, humanos, anjos e demônios questionam o futuro da existência enquanto vagam pela Terra agora abandonada.",
-      image: "/images/mundo-mortos-poster.png",
+      image: "https://mgvwhsaenmdqffefwkkf.supabase.co/storage/v1/object/public/images/mundo-mortos.jpg",
       productionCompanies: ["7 a 1 Filmes", "Cavideo"],
       producers: ["Pedro Tavares"],
       coproducers: ["João Lanari", "Cavi Borges"],
