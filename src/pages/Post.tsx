@@ -1,14 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import { useLanguage } from '../context/LanguageContext';
 import './Post.css';
 
-function formatDate(raw: string): string {
+function formatDate(raw: string, monthNames: readonly string[]): string {
   if (!raw) return '';
   if (raw.match(/^\d{4}-\d{2}-\d{2}$/)) {
     const [year, month, day] = raw.split('-');
-    const months = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
-    return `${parseInt(day)} de ${months[parseInt(month) - 1]} de ${year}`;
+    return `${parseInt(day)} ${monthNames[parseInt(month) - 1]} ${year}`;
   }
   return raw;
 }
@@ -490,6 +490,7 @@ export function Post() {
   const [readProgress, setReadProgress] = useState(0);
   const [headings, setHeadings] = useState<Heading[]>([]);
   const articleRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     async function loadPost() {
@@ -576,7 +577,7 @@ export function Post() {
     return (
       <div className="post-page">
         <div className="post-loading">
-          <span>Carregando</span>
+          <span>{t.post.loading}</span>
         </div>
       </div>
     );
@@ -585,7 +586,7 @@ export function Post() {
   if (!metadata) {
     return (
       <div className="post-page">
-        <div className="post-not-found">Texto não encontrado.</div>
+        <div className="post-not-found">{t.post.notFound}</div>
       </div>
     );
   }
@@ -604,7 +605,7 @@ export function Post() {
 
       <header className="post-nav">
         <div className="container">
-          <Link to="/escrita" className="post-back">← Escrita</Link>
+          <Link to="/escrita" className="post-back">{t.post.backLink}</Link>
         </div>
       </header>
 
@@ -617,7 +618,7 @@ export function Post() {
               {metadata.date && (
                 <>
                   <span className="essay-eyebrow-sep" aria-hidden="true" />
-                  <span className="essay-date">{formatDate(metadata.date)}</span>
+                  <span className="essay-date">{formatDate(metadata.date, t.monthsFull)}</span>
                 </>
               )}
             </div>
@@ -635,7 +636,7 @@ export function Post() {
                   <span className="essay-eyebrow-sep" aria-hidden="true" />
                 </>
               )}
-              <span className="essay-time">{metadata.readTime} de leitura</span>
+              <span className="essay-time">{metadata.readTime} {t.post.readTime}</span>
             </div>
           </div>
         </div>
@@ -645,9 +646,9 @@ export function Post() {
         </div>
 
         {showTOC && (
-          <nav className="essay-toc" aria-label="Sumário">
+          <nav className="essay-toc" aria-label={t.post.toc}>
             <div className="essay-toc-inner">
-              <p className="essay-toc-label">Sumário</p>
+              <p className="essay-toc-label">{t.post.toc}</p>
               <ol className="essay-toc-list">
                 {headings.map((h) => (
                   <li key={h.id} className={`essay-toc-item level-${h.level}`}>
@@ -665,7 +666,7 @@ export function Post() {
           {sourceUrl && (
             <p className="essay-source-link">
               <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-                Texto original
+                {t.post.originalText}
               </a>
             </p>
           )}
@@ -679,7 +680,7 @@ export function Post() {
               ))}
             </div>
           )}
-          <Link to="/escrita" className="essay-back-link">← Voltar para Escrita</Link>
+          <Link to="/escrita" className="essay-back-link">{t.post.backToWriting}</Link>
         </footer>
 
       </article>

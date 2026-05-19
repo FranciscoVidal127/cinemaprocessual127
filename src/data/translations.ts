@@ -1,0 +1,406 @@
+export const translations = {
+  pt: {
+    // Navigation
+    nav: {
+      sobre: "Sobre",
+      reel: "Reel",
+      filmografia: "Filmografia",
+      fotos: "Fotos",
+      assistenciaDirecao: "Assist. de Direção",
+      escrita: "Escrita",
+      skipToContent: "Pular para o conteúdo",
+    },
+
+    // Hero
+    hero: {
+      subtitle: "Ator, assistente de direção, cineasta.",
+    },
+
+    // Home sections
+    home: {
+      aboutLabel: "SOBRE",
+      profileLabel: "PERFIL",
+      filmographyLabel: "FILMOGRAFIA SELECIONADA",
+      galleryLabel: "GALERIA",
+      formationLabel: "FORMAÇÃO 2025–2026",
+      adLabel: "ASSISTÊNCIA DE DIREÇÃO",
+      writingLabel: "ESCRITA / PENSAMENTO CINEMATOGRÁFICO",
+      contactLabel: "CONTATO",
+      viewReel: "Ver reel",
+      requestMaterial: "Solicitar material →",
+      viewFullFilmography: "Ver filmografia completa →",
+      viewFullGallery: "Ver galeria completa →",
+      viewADWorks: "Ver trabalhos de AD →",
+      viewWritingArchive: "Ver arquivo de textos →",
+      contactHeading: "Vamos conversar",
+      contactAvailability: "Disponível para longas, curtas, documentários e trabalhos híbridos.",
+      writingDesc: "Textos, ensaios e entrevistas sobre cinema, imagem e processo criativo.",
+      adDesc: "Como assistente de direção, Francisco Vidal atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.",
+    },
+
+    // Profile block
+    profile: {
+      base: "Base",
+      baseValue: "Rio de Janeiro",
+      roles: "Funções",
+      rolesValue: "Ator · Assistente de Direção · Cineasta",
+      focus: "Foco",
+      focusValue: "Presença · Escuta · Corpo · Câmera · Processo",
+      recentWork: "Trabalhos recentes",
+      recentWorkValue: "O Mundo dos Mortos · O Inspetor Geral",
+      recentTraining: "Formação recente",
+      recentTrainingValue: "CAL · Rafael Infante · Patrick Sampaio · Joana Medeiros · Julia Burnier · Walter Lima Jr.",
+      availableFor: "Disponível para",
+      availableForValue: "Longas, curtas, projetos híbridos, cinema autoral e audiovisual experimental",
+    },
+
+    // Filmography labels
+    filmography: {
+      pageLabel: "FILMOGRAFIA",
+      year: "Ano",
+      direction: "Direção",
+      role: "Papel",
+      format: "Formato",
+      country: "País",
+      duration: "Duração",
+      productionCompanies: "Produtoras",
+      festival: "Festival",
+      production: "Produção",
+      coproduction: "Coprodução",
+      support: "Apoio",
+      cast: "Elenco",
+      supportingCast: "Elenco Secundário",
+      crew: "Ficha Técnica",
+      filmStills: "Imagens do filme",
+      selectedScenes: "Cenas selecionadas",
+      selectedScenesIntro: "Cenas selecionadas",
+      loading: "Carregando...",
+      notFound: "Filme não encontrado.",
+      backToFilmography: "← Filmografia",
+    },
+
+    // Film metadata values
+    filmMeta: {
+      inProduction: "Em produção",
+      inPostProduction: "Em pós-produção",
+      featureFilmFiction: "Longa-metragem, Ficção",
+      cinema: "Cinema",
+    },
+
+    // Sobre page
+    sobre: {
+      label: "SOBRE",
+      trajectoryLabel: "TRAJETÓRIA",
+      contactText: "Disponível para longas, curtas, documentários e trabalhos que atravessam fronteiras de forma.",
+    },
+
+    // Trajectory dates
+    trajectory: {
+      date2023: "2023",
+      date2023_2024: "2023–2024",
+      dateEarly2024: "Início de 2024",
+      dateFirstHalf2024: "Primeiro semestre de 2024",
+      dateSecondHalf2024: "Segundo semestre de 2024",
+      date2025: "2025",
+      dateMarchDec2025: "Março–dezembro de 2025",
+      dateSecondHalf2025: "Segundo semestre de 2025",
+      dateDec2025: "Dezembro de 2025",
+      dateJan2026: "Janeiro de 2026",
+      dateJanMar2026: "Janeiro–março de 2026",
+      dateApr2026: "Abril de 2026",
+      dateApr2026b: "Abril de 2026",
+      dateCurrent: "Atualmente",
+    },
+
+    // Reel page
+    reelPage: {
+      label: "REEL",
+    },
+
+    // Fotos page
+    fotos: {
+      headerLabel: "GALERIA / ENSAIO / RIO DE JANEIRO / 2025",
+      footerText: "FRANCISCO VIDAL — ENSAIO FOTOGRÁFICO — 2025",
+    },
+
+    // Atuacao page
+    atuacao: {
+      label: "ATUAÇÃO",
+      statement: "Como ator, Francisco Vidal trabalha a partir da escuta, da presenca fisica e da relacao entre corpo, camera e espaco. Sua pesquisa atravessa estados de atencao, silencio, vulnerabilidade e transformacao diante da imagem.",
+      formationLabel: "FORMAÇÃO 2025–2026",
+      contactText: "Para trabalhos como ator — longas, curtas, documentários e projetos experimentais.",
+      filmographyLink: "Filmografia →",
+      inProgress: "Em curso",
+      continuousPractice: "Prática contínua: gravar / assistir / regravar",
+    },
+
+    // Assistencia de Direcao page
+    ad: {
+      pageTitle: "Assistência de Direção",
+      pageIntro: "Organização, comunicação e sustentação prática da mise-en-scène.",
+      leadText: "Como assistente de direção, Francisco atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.",
+      secondText: "A experiência como ator e a familiaridade com o processo criativo do diretor permitem uma mediação singular entre a visão artística e a execução prática — entendendo o ritmo do set e garantindo que o espaço de criação se mantenha protegido.",
+      competenciesTitle: "Competências",
+      competencies: [
+        "Organização do processo de filmagem",
+        "Comunicação equipe-direção",
+        "Acompanhamento e continuidade de set",
+        "Coordenação de elenco e figuração",
+        "Gestão de cronograma de filmagem",
+        "Sustentação prática da mise-en-scène",
+      ],
+      creditsLabel: "Créditos",
+      creditDesc: "Assistência de direção na pós-produção. Longa-metragem de ficção, adaptação de Nikolai Gogol.",
+      contactTitle: "Disponível para novos projetos",
+      contactText: "Aberto a trabalhos de assistência de direção em longas, curtas e séries — com interesse particular em projetos de cinema autoral e processos colaborativos.",
+      viewFilmography: "Ver filmografia completa →",
+    },
+
+    // Escrita page
+    escrita: {
+      pageTitle: "Escrita / Pensamento cinematográfico",
+      pageIntro: "A escrita como outra forma de atenção — ao tempo da imagem, ao gesto do ator, à inteligência do realizador.",
+      searchPlaceholder: "Buscar...",
+      searchAriaLabel: "Buscar textos",
+      loading: "Carregando textos...",
+      empty: "Nenhum texto encontrado.",
+      readLink: "Ler →",
+      comingSoon: "Em breve",
+      all: "Todos",
+    },
+
+    // Post page
+    post: {
+      loading: "Carregando",
+      notFound: "Texto não encontrado.",
+      readTime: "de leitura",
+      toc: "Sumário",
+      originalText: "Texto original",
+      backToWriting: "← Voltar para Escrita",
+      backLink: "← Escrita",
+    },
+
+    // Not Found page
+    notFound: {
+      title: "Página não encontrada",
+      text: "O endereço que você acessou não existe ou foi movido.",
+      backLink: "← Voltar ao início",
+    },
+
+    // Footer
+    footer: {
+      location: "Rio de Janeiro / São Paulo",
+    },
+
+    // Photo categories
+    photoCategories: {
+      corpo: "CORPO",
+      gesto: "GESTO",
+      rosto: "ROSTO",
+      presenca: "PRESENÇA",
+      sombra: "SOMBRA",
+      escuta: "ESCUTA",
+      silencio: "SILÊNCIO",
+      processo: "PROCESSO",
+    },
+
+    // Months
+    months: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
+    monthsFull: ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
+  },
+
+  en: {
+    nav: {
+      sobre: "About",
+      reel: "Reel",
+      filmografia: "Filmography",
+      fotos: "Photos",
+      assistenciaDirecao: "Asst. Direction",
+      escrita: "Writing",
+      skipToContent: "Skip to content",
+    },
+
+    hero: {
+      subtitle: "Actor, assistant director, filmmaker.",
+    },
+
+    home: {
+      aboutLabel: "ABOUT",
+      profileLabel: "PROFILE",
+      filmographyLabel: "SELECTED FILMOGRAPHY",
+      galleryLabel: "GALLERY",
+      formationLabel: "TRAINING 2025–2026",
+      adLabel: "ASSISTANT DIRECTION",
+      writingLabel: "WRITING / CINEMATIC THOUGHT",
+      contactLabel: "CONTACT",
+      viewReel: "Watch reel",
+      requestMaterial: "Request material →",
+      viewFullFilmography: "View full filmography →",
+      viewFullGallery: "View full gallery →",
+      viewADWorks: "View AD work →",
+      viewWritingArchive: "View writing archive →",
+      contactHeading: "Let's talk",
+      contactAvailability: "Available for features, shorts, documentaries and hybrid projects.",
+      writingDesc: "Essays, texts and interviews on cinema, image and creative process.",
+      adDesc: "As assistant director, Francisco Vidal manages the organization of the filming process, communication between director and crew, on-set supervision, and the practical sustaining of the mise-en-scene.",
+    },
+
+    profile: {
+      base: "Based in",
+      baseValue: "Rio de Janeiro",
+      roles: "Roles",
+      rolesValue: "Actor · Assistant Director · Filmmaker",
+      focus: "Focus",
+      focusValue: "Presence · Listening · Body · Camera · Process",
+      recentWork: "Recent work",
+      recentWorkValue: "O Mundo dos Mortos · O Inspetor Geral",
+      recentTraining: "Recent training",
+      recentTrainingValue: "CAL · Rafael Infante · Patrick Sampaio · Joana Medeiros · Julia Burnier · Walter Lima Jr.",
+      availableFor: "Available for",
+      availableForValue: "Features, shorts, hybrid projects, auteur cinema and experimental audiovisual",
+    },
+
+    filmography: {
+      pageLabel: "FILMOGRAPHY",
+      year: "Year",
+      direction: "Direction",
+      role: "Role",
+      format: "Format",
+      country: "Country",
+      duration: "Duration",
+      productionCompanies: "Production Companies",
+      festival: "Festival",
+      production: "Production",
+      coproduction: "Co-production",
+      support: "Support",
+      cast: "Cast",
+      supportingCast: "Supporting Cast",
+      crew: "Crew",
+      filmStills: "Film stills",
+      selectedScenes: "Selected scenes",
+      selectedScenesIntro: "Selected scenes",
+      loading: "Loading...",
+      notFound: "Film not found.",
+      backToFilmography: "← Filmography",
+    },
+
+    filmMeta: {
+      inProduction: "In Production",
+      inPostProduction: "In Post-production",
+      featureFilmFiction: "Feature Film, Fiction",
+      cinema: "Cinema",
+    },
+
+    sobre: {
+      label: "ABOUT",
+      trajectoryLabel: "TRAJECTORY",
+      contactText: "Available for features, shorts, documentaries and work that crosses boundaries of form.",
+    },
+
+    trajectory: {
+      date2023: "2023",
+      date2023_2024: "2023–2024",
+      dateEarly2024: "Early 2024",
+      dateFirstHalf2024: "First half of 2024",
+      dateSecondHalf2024: "Second half of 2024",
+      date2025: "2025",
+      dateMarchDec2025: "March–December 2025",
+      dateSecondHalf2025: "Second half of 2025",
+      dateDec2025: "December 2025",
+      dateJan2026: "January 2026",
+      dateJanMar2026: "January–March 2026",
+      dateApr2026: "April 2026",
+      dateApr2026b: "April 2026",
+      dateCurrent: "Currently",
+    },
+
+    reelPage: {
+      label: "REEL",
+    },
+
+    fotos: {
+      headerLabel: "GALLERY / PHOTO ESSAY / RIO DE JANEIRO / 2025",
+      footerText: "FRANCISCO VIDAL — PHOTO ESSAY — 2025",
+    },
+
+    atuacao: {
+      label: "ACTING",
+      statement: "As an actor, Francisco Vidal works from a place of listening, physical presence and the relationship between body, camera and space. His practice traverses states of attention, silence, vulnerability and transformation before the image.",
+      formationLabel: "TRAINING 2025–2026",
+      contactText: "For acting work — features, shorts, documentaries and experimental projects.",
+      filmographyLink: "Filmography →",
+      inProgress: "Ongoing",
+      continuousPractice: "Continuous practice: record / review / re-record",
+    },
+
+    ad: {
+      pageTitle: "Assistant Direction",
+      pageIntro: "Organization, communication and practical sustaining of the mise-en-scene.",
+      leadText: "As assistant director, Francisco manages the organization of the filming process, communication between director and crew, on-set supervision, and the practical sustaining of the mise-en-scene.",
+      secondText: "His experience as an actor and familiarity with the director's creative process enable a singular mediation between artistic vision and practical execution — understanding the rhythm of the set and ensuring the creative space remains protected.",
+      competenciesTitle: "Skills",
+      competencies: [
+        "Organization of the filming process",
+        "Crew-director communication",
+        "On-set supervision and continuity",
+        "Cast and extras coordination",
+        "Shooting schedule management",
+        "Practical sustaining of the mise-en-scene",
+      ],
+      creditsLabel: "Credits",
+      creditDesc: "Assistant direction in post-production. Fiction feature film, adaptation of Nikolai Gogol.",
+      contactTitle: "Available for new projects",
+      contactText: "Open to assistant direction work on features, shorts and series — with particular interest in auteur cinema and collaborative processes.",
+      viewFilmography: "View full filmography →",
+    },
+
+    escrita: {
+      pageTitle: "Writing / Cinematic Thought",
+      pageIntro: "Writing as another form of attention — to the time of the image, the actor's gesture, the filmmaker's intelligence.",
+      searchPlaceholder: "Search...",
+      searchAriaLabel: "Search texts",
+      loading: "Loading texts...",
+      empty: "No texts found.",
+      readLink: "Read →",
+      comingSoon: "Coming soon",
+      all: "All",
+    },
+
+    post: {
+      loading: "Loading",
+      notFound: "Text not found.",
+      readTime: "read",
+      toc: "Table of Contents",
+      originalText: "Original text",
+      backToWriting: "← Back to Writing",
+      backLink: "← Writing",
+    },
+
+    notFound: {
+      title: "Page not found",
+      text: "The address you visited does not exist or has been moved.",
+      backLink: "← Back to home",
+    },
+
+    footer: {
+      location: "Rio de Janeiro / Sao Paulo",
+    },
+
+    photoCategories: {
+      corpo: "BODY",
+      gesto: "GESTURE",
+      rosto: "FACE",
+      presenca: "PRESENCE",
+      sombra: "SHADOW",
+      escuta: "LISTENING",
+      silencio: "SILENCE",
+      processo: "PROCESS",
+    },
+
+    months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    monthsFull: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  },
+};
+
+export type Language = "pt" | "en";
+export type Translations = typeof translations.pt;

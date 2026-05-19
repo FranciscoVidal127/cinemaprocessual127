@@ -1,18 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import { useLanguage } from '../context/LanguageContext';
 import './Escrita.css';
-
-function formatDate(raw: string): string {
-  if (!raw) return '';
-  const iso = raw.match(/^\d{4}-\d{2}-\d{2}$/);
-  if (iso) {
-    const [year, month, day] = raw.split('-');
-    const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-    return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
-  }
-  return raw;
-}
 
 type Escrito = {
   id: number;
@@ -31,6 +21,7 @@ export function Escrita() {
   const [filter, setFilter] = useState('Todos');
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
+  const { t } = useLanguage();
 
   useEffect(() => {
     async function loadPosts() {
@@ -55,25 +46,33 @@ export function Escrita() {
     loadPosts();
   }, []);
 
-  const categories = ['Todos', ...Array.from(new Set(allEscritos.map(e => e.category)))];
+  const categories = [t.escrita.all, ...Array.from(new Set(allEscritos.map(e => e.category)))];
 
   const filtered = allEscritos.filter(item => {
-    const matchesFilter = filter === 'Todos' || item.category === filter;
+    const matchesFilter = filter === t.escrita.all || item.category === filter;
     const matchesSearch = !searchTerm ||
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
   });
 
+  function formatDate(raw: string): string {
+    if (!raw) return '';
+    const iso = raw.match(/^\d{4}-\d{2}-\d{2}$/);
+    if (iso) {
+      const [year, month, day] = raw.split('-');
+      return `${parseInt(day)} ${t.months[parseInt(month) - 1]} ${year}`;
+    }
+    return raw;
+  }
+
   return (
     <div className="escrita-page">
 
       <header className="page-header">
         <div className="page-header-inner">
-          <h1 className="page-title">Escrita / Pensamento cinematográfico</h1>
-          <p className="page-intro">
-            A escrita como outra forma de atenção — ao tempo da imagem, ao gesto do ator, à inteligência do realizador.
-          </p>
+          <h1 className="page-title">{t.escrita.pageTitle}</h1>
+          <p className="page-intro">{t.escrita.pageIntro}</p>
         </div>
       </header>
 
@@ -94,10 +93,10 @@ export function Escrita() {
             <input
               type="text"
               className="escrita-search"
-              placeholder="Buscar..."
+              placeholder={t.escrita.searchPlaceholder}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              aria-label="Buscar textos"
+              aria-label={t.escrita.searchAriaLabel}
             />
           </div>
         </div>
@@ -106,9 +105,9 @@ export function Escrita() {
       <section className="escrita-archive">
         <div className="container">
           {loading ? (
-            <p className="escrita-loading">Carregando textos...</p>
+            <p className="escrita-loading">{t.escrita.loading}</p>
           ) : filtered.length === 0 ? (
-            <p className="escrita-empty">Nenhum texto encontrado.</p>
+            <p className="escrita-empty">{t.escrita.empty}</p>
           ) : (
             <div className="escrita-list">
               {filtered.map((item, idx) => (
@@ -144,10 +143,10 @@ export function Escrita() {
                   <div className="escrita-entry-cta">
                     {item.slug ? (
                       <Link to={`/post/${item.slug}`} className="escrita-entry-link">
-                        Ler →
+                        {t.escrita.readLink}
                       </Link>
                     ) : (
-                      <span className="escrita-entry-soon">Em breve</span>
+                      <span className="escrita-entry-soon">{t.escrita.comingSoon}</span>
                     )}
                   </div>
                 </article>

@@ -1,15 +1,17 @@
 import { siteData } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
 import { YouTubeEmbed } from '../components/YouTubeEmbed';
 import './Reel.css';
 
 export function Reel() {
   const [featured, ...rest] = siteData.reel.videos;
+  const { t } = useLanguage();
 
   return (
     <div className="reel-page">
 
       <div className="reel-header">
-        <span className="reel-label">REEL</span>
+        <span className="reel-label">{t.reelPage.label}</span>
       </div>
 
       {featured && (

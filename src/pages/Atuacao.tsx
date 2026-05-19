@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { siteData } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
 import { YouTubeEmbed } from '../components/YouTubeEmbed';
 import './Atuacao.css';
 
 export function Atuacao() {
   const featuredReel = siteData.reel.videos[0];
+  const { t } = useLanguage();
 
   return (
     <div className="atuacao-page">
@@ -19,14 +21,12 @@ export function Atuacao() {
           />
         </picture>
         <div className="atuacao-hero-veil" />
-        <span className="atuacao-hero-label">ATUACAO</span>
+        <span className="atuacao-hero-label">{t.atuacao.label}</span>
       </section>
 
       {/* Statement */}
       <section className="atuacao-statement">
-        <p className="atuacao-statement-text">
-          Como ator, Francisco Vidal trabalha a partir da escuta, da presenca fisica e da relacao entre corpo, camera e espaco. Sua pesquisa atravessa estados de atencao, silencio, vulnerabilidade e transformacao diante da imagem.
-        </p>
+        <p className="atuacao-statement-text">{t.atuacao.statement}</p>
       </section>
 
       {/* Reel */}
@@ -77,7 +77,7 @@ export function Atuacao() {
       {/* Formation */}
       <section className="atuacao-formation">
         <div className="atuacao-formation-header">
-          <span className="atuacao-mono">FORMACAO 2025–2026</span>
+          <span className="atuacao-mono">{t.atuacao.formationLabel}</span>
         </div>
         <div className="atuacao-formation-list">
           <div className="atuacao-formation-item">
@@ -106,18 +106,18 @@ export function Atuacao() {
             <span className="atuacao-formation-info">Rafael Infante · 46h</span>
           </div>
           <div className="atuacao-formation-item">
-            <span className="atuacao-formation-date">Em curso</span>
+            <span className="atuacao-formation-date">{t.atuacao.inProgress}</span>
             <span className="atuacao-formation-name">LABO com Patrick Sampaio</span>
-            <span className="atuacao-formation-info">Pratica continua: gravar / assistir / regravar</span>
+            <span className="atuacao-formation-info">{t.atuacao.continuousPractice}</span>
           </div>
         </div>
       </section>
 
       {/* Contact */}
       <section className="atuacao-contact">
-        <p className="atuacao-contact-text">Para trabalhos como ator — longas, curtas, documentarios e projetos experimentais.</p>
+        <p className="atuacao-contact-text">{t.atuacao.contactText}</p>
         <a href="mailto:franciscovidalcs@gmail.com" className="atuacao-contact-email">franciscovidalcs@gmail.com</a>
-        <Link to="/filmografia" className="atuacao-contact-link">Filmografia →</Link>
+        <Link to="/filmografia" className="atuacao-contact-link">{t.atuacao.filmographyLink}</Link>
       </section>
 
     </div>
