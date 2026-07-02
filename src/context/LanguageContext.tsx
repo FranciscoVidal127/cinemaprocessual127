@@ -1,33 +1,25 @@
-import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
-import { translations, type Language, type Translations } from '../data/translations';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { translations, Language, Translations } from '../data/translations';
 
-type LanguageContextValue = {
+interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: Translations;
-};
-
-const LanguageContext = createContext<LanguageContextValue | null>(null);
-
-const STORAGE_KEY = 'lang';
-
-function getInitialLanguage(): Language {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'en' || stored === 'pt') return stored;
-  } catch {}
-  return 'pt';
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-  function setLanguage(lang: Language) {
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguageState] = useState<Language>(() => {
+    const stored = localStorage.getItem('lang');
+    return (stored === 'en' || stored === 'pt') ? stored : 'pt';
+  });
+
+  const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    try {
-      localStorage.setItem(STORAGE_KEY, lang);
-    } catch {}
-  }
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+  };
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -43,7 +35,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 }
 
 export function useLanguage() {
-  const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error('useLanguage must be used within LanguageProvider');
-  return ctx;
+  const context = useContext(LanguageContext);
+  if (!context) throw new Error('useLanguage must be used within LanguageProvider');
+  return context;
 }

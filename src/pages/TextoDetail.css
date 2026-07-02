@@ -1,3 +1,5 @@
+/* ===================== BASE PAGE ===================== */
+
 .texto-detail-page {
   min-height: 100vh;
   background-color: var(--cp-black);
@@ -32,7 +34,7 @@
   left: 0;
   height: 2px;
   background: var(--cp-red);
-  z-index: 100;
+  z-index: 1100;
   transition: width 0.1s ease;
 }
 
@@ -43,7 +45,8 @@
   border-bottom: 1px solid var(--cp-line);
   position: sticky;
   top: 0;
-  background: var(--cp-black);
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(8px);
   z-index: 50;
 }
 
@@ -64,10 +67,7 @@
   text-decoration: none;
   transition: color 0.2s ease;
 }
-
-.texto-back-link:hover {
-  color: var(--cp-ivory);
-}
+.texto-back-link:hover { color: var(--cp-ivory); }
 
 .texto-header-code {
   font-family: var(--font-meta);
@@ -78,7 +78,7 @@
   opacity: 0.6;
 }
 
-/* ===================== ARTICLE ===================== */
+/* ===================== DEFAULT ARTICLE ===================== */
 
 .texto-article {
   padding: 64px 48px 96px;
@@ -135,11 +135,176 @@
   margin-bottom: 1.6em;
 }
 
-.texto-article-content p:first-child {
-  font-size: 19px;
-  line-height: 1.7;
+/* ===================== GODARD TRANSCRIPT PAGE ===================== */
+
+.godard-transcript-page {
+  min-height: 100vh;
+  background-color: var(--cp-black);
+  position: relative;
+}
+
+.godard-article-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 96px) 20px;
+}
+
+/* Hero above the paper */
+.godard-hero {
+  max-width: 780px;
+  margin: 0 auto clamp(32px, 5vw, 64px);
+  text-align: left;
+}
+
+.godard-hero-code {
+  font-family: var(--font-meta);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cp-red);
+  display: block;
+  margin-bottom: 20px;
+}
+
+.godard-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
   color: var(--cp-ivory);
-  opacity: 0.9;
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.godard-hero-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cp-muted);
+  margin-bottom: 20px;
+  max-width: 640px;
+}
+
+.godard-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.godard-hero-author,
+.godard-hero-context,
+.godard-hero-time {
+  font-family: var(--font-meta);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  opacity: 0.7;
+}
+
+.godard-hero-author::after,
+.godard-hero-context::after {
+  content: '·';
+  margin-left: 16px;
+  opacity: 0.4;
+}
+
+/* The Paper */
+.godard-paper {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 88px);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.45), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(120,80,40,0.08), transparent 34%),
+    linear-gradient(135deg, #f5ecd8 0%, #efe2c6 48%, #f7efdf 100%);
+  color: #18130f;
+  border: 1px solid rgba(73, 54, 32, 0.22);
+  box-shadow:
+    0 24px 80px rgba(0,0,0,0.45),
+    inset 0 0 70px rgba(120,80,40,0.09);
+  position: relative;
+  overflow: hidden;
+}
+
+.godard-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.godard-paper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(225deg, rgba(73,54,32,0.12) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Prose inside the paper */
+.godard-prose {
+  max-width: 760px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(1.22rem, 1.85vw, 1.85rem);
+  line-height: 1.68;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 2;
+}
+
+.godard-prose p {
+  margin: 0 0 1.65em;
+}
+
+.godard-prose .godard-signature {
+  font-style: italic;
+  color: rgba(24, 19, 15, 0.6);
+  margin-top: 2.5em;
+  margin-bottom: 0.3em;
+}
+
+.godard-prose .godard-coming-soon {
+  font-style: italic;
+  color: rgba(24, 19, 15, 0.5);
+  text-align: center;
+  padding: 3em 0;
+}
+
+/* Highlights */
+.highlight-red {
+  color: #e5483f;
+  font-weight: 700;
+}
+
+.highlight-blue {
+  color: #4937d6;
+  font-weight: 700;
+}
+
+/* Godard footer */
+.godard-footer {
+  max-width: 920px;
+  margin: 32px auto 0;
+  text-align: center;
+}
+
+.godard-footer-credit {
+  font-family: var(--font-meta);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  opacity: 0.5;
 }
 
 /* ===================== OTHER TEXTS ===================== */
@@ -204,129 +369,6 @@
   color: var(--cp-ivory);
 }
 
-/* ===================== FOOTER ===================== */
-
-.texto-detail-footer {
-  padding: 32px 48px 48px;
-  border-top: 1px solid var(--cp-line);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.texto-footer-link {
-  font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--cp-muted);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.texto-footer-link:hover {
-  color: var(--cp-ivory);
-}
-
-/* ===================== GODARD PAPER TREATMENT ===================== */
-
-.texto-article--paper {
-  background-color: var(--cp-ivory);
-  color: #1a1a1a;
-  position: relative;
-}
-
-.texto-article--paper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper-grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper-grain)'/%3E%3C/svg%3E");
-  opacity: 0.025;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.texto-article--paper .texto-article-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.texto-article--paper .texto-article-meta {
-  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
-  padding-bottom: 16px;
-}
-
-.texto-article--paper .texto-article-category {
-  color: var(--cp-red);
-}
-
-.texto-article--paper .texto-article-source {
-  color: rgba(26, 26, 26, 0.6);
-}
-
-.texto-article--paper .texto-article-title {
-  color: #1a1a1a;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-
-.texto-article--paper .texto-article-content {
-  font-family: var(--font-display);
-  font-size: clamp(19px, 2.5vw, 26px);
-  line-height: 1.55;
-  color: rgba(26, 26, 26, 0.85);
-}
-
-.texto-article--paper .texto-article-content p {
-  margin-bottom: 1.4em;
-  text-indent: 1.5em;
-}
-
-.texto-article--paper .texto-article-content p:first-of-type {
-  text-indent: 0;
-}
-
-.texto-article--paper .godard-credit {
-  font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 1.6;
-  color: rgba(26, 26, 26, 0.6);
-  text-indent: 0 !important;
-  border-top: 1px solid rgba(26, 26, 26, 0.15);
-  padding-top: 1em;
-  margin-top: 2em;
-}
-
-.godard-paper-fold {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, transparent 50%, rgba(26, 26, 26, 0.08) 50%);
-  z-index: 2;
-}
-
-.godard-paper-fold::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(315deg, transparent 50%, rgba(26, 26, 26, 0.04) 50%);
-}
-
-.highlight-red {
-  color: #e34234;
-  font-weight: 700;
-}
-
-.highlight-blue {
-  color: #4937d6;
-  font-weight: 700;
-}
-
 /* ===================== RESPONSIVE ===================== */
 
 @media (max-width: 1024px) {
@@ -344,30 +386,21 @@
     padding: 48px 32px 72px;
   }
 
-  .texto-article-content {
-    font-size: 16px;
-  }
-
-  .texto-article-content p:first-child {
-    font-size: 17px;
-  }
-
   .texto-other {
     padding: 36px 32px;
   }
 
-  .texto-detail-footer {
-    padding: 24px 32px 40px;
+  .godard-paper {
+    padding: clamp(24px, 5vw, 48px);
   }
 
-  /* Paper responsive */
-  .texto-article--paper .texto-article-content {
-    font-size: 19px;
-  }
-
-  .godard-paper-fold {
+  .godard-paper::after {
     width: 36px;
     height: 36px;
+  }
+
+  .godard-prose {
+    font-size: clamp(1.19rem, 2.2vw, 1.38rem);
   }
 }
 
@@ -385,39 +418,47 @@
     margin-bottom: 40px;
   }
 
-  .texto-article-content {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .texto-article-content p:first-child {
-    font-size: 16px;
-  }
-
   .texto-other {
     padding: 32px 20px;
-  }
-
-  .texto-other-label {
-    margin-bottom: 16px;
   }
 
   .texto-other-item {
     padding: 16px 20px;
   }
 
-  .texto-detail-footer {
-    padding: 24px 20px 36px;
+  .godard-article-shell {
+    padding: 24px 12px;
   }
 
-  /* Paper responsive */
-  .texto-article--paper .texto-article-content {
-    font-size: 17px;
-    line-height: 1.6;
+  .godard-hero-title {
+    font-size: 28px;
   }
 
-  .godard-paper-fold {
-    width: 28px;
-    height: 28px;
+  .godard-paper {
+    padding: 24px 20px;
+    border-radius: 0;
+    margin-left: -12px;
+    margin-right: -12px;
+    max-width: calc(100% + 24px);
+  }
+
+  .godard-paper::after {
+    display: none;
+  }
+
+  .godard-prose {
+    font-size: 1.19rem;
+    line-height: 1.62;
+  }
+
+  .godard-hero-meta {
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .godard-hero-author::after,
+  .godard-hero-context::after {
+    display: none;
   }
 }

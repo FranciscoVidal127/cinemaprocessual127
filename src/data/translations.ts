@@ -1,6 +1,5 @@
 export const translations = {
   pt: {
-    // Navigation
     nav: {
       sobre: "Sobre",
       reel: "Reel",
@@ -11,13 +10,9 @@ export const translations = {
       escrita: "Escrita",
       skipToContent: "Pular para o conteúdo",
     },
-
-    // Hero
     hero: {
       subtitle: "Ator, assistente de direção, cineasta.",
     },
-
-    // Home sections
     home: {
       aboutLabel: "SOBRE",
       profileLabel: "PERFIL",
@@ -38,8 +33,6 @@ export const translations = {
       writingDesc: "Textos, ensaios e entrevistas sobre cinema, imagem e processo criativo.",
       adDesc: "Como assistente de direção, Francisco Vidal atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.",
     },
-
-    // Textos section
     textos: {
       eyebrow: "CADERNO DE CINEMA",
       sectionTitle: "Cinema Processual",
@@ -65,22 +58,20 @@ export const translations = {
         entrevista: "Entrevista",
       },
     },
-
-    // Individual texts
     texts: {
-      mekasBrakhage: {
-        title: "Jonas Mekas e Stan Brakhage",
-        category: "Tradução",
-        description: "Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.",
-        archiveCode: "CP-003",
-        source: "Film Culture Reader",
-      },
       bressaneGodard: {
         title: "Júlio Bressane sobre Jean-Luc Godard",
         category: "Transcrição",
         description: "Transcrição de ensaio oral proferido por Júlio Bressane em outubro de 2022, após o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.",
         archiveCode: "CP-002",
         source: "Cinemateca do MAM Rio, outubro de 2022",
+      },
+      mekasBrakhage: {
+        title: "Jonas Mekas e Stan Brakhage",
+        category: "Tradução",
+        description: "Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.",
+        archiveCode: "CP-003",
+        source: "Film Culture Reader",
       },
       cinemaProcessual: {
         title: "Cinema Processual",
@@ -89,8 +80,6 @@ export const translations = {
         archiveCode: "CP-000",
       },
     },
-
-    // Profile block
     profile: {
       base: "Base",
       baseValue: "Rio de Janeiro",
@@ -105,8 +94,6 @@ export const translations = {
       availableFor: "Disponível para",
       availableForValue: "Longas, curtas, projetos híbridos, cinema autoral e audiovisual experimental",
     },
-
-    // Filmography labels
     filmography: {
       pageLabel: "FILMOGRAFIA",
       year: "Ano",
@@ -130,23 +117,17 @@ export const translations = {
       notFound: "Filme não encontrado.",
       backToFilmography: "← Filmografia",
     },
-
-    // Film metadata values
     filmMeta: {
       inProduction: "Em produção",
       inPostProduction: "Em pós-produção",
       featureFilmFiction: "Longa-metragem, Ficção",
       cinema: "Cinema",
     },
-
-    // Sobre page
     sobre: {
       label: "SOBRE",
       trajectoryLabel: "TRAJETÓRIA",
       contactText: "Disponível para longas, curtas, documentários e trabalhos que atravessam fronteiras de forma.",
     },
-
-    // Trajectory dates
     trajectory: {
       date2023: "2023",
       date2023_2024: "2023–2024",
@@ -163,35 +144,25 @@ export const translations = {
       dateApr2026b: "Abril de 2026",
       dateCurrent: "Atualmente",
     },
-
-    // Reel page
-    reelPage: {
-      label: "REEL",
-    },
-
-    // Fotos page
+    reelPage: { label: "REEL" },
     fotos: {
       headerLabel: "GALERIA / ENSAIO / RIO DE JANEIRO / 2025",
       footerText: "FRANCISCO VIDAL — ENSAIO FOTOGRÁFICO — 2025",
     },
-
-    // Atuacao page
     atuacao: {
       label: "ATUAÇÃO",
-      statement: "Como ator, Francisco Vidal trabalha a partir da escuta, da presenca fisica e da relacao entre corpo, camera e espaco. Sua pesquisa atravessa estados de atencao, silencio, vulnerabilidade e transformacao diante da imagem.",
+      statement: "Como ator, Francisco Vidal trabalha a partir da escuta, da presenca fisica e da relacao entre corpo, camera e espaco.",
       formationLabel: "FORMAÇÃO 2025–2026",
       contactText: "Para trabalhos como ator — longas, curtas, documentários e projetos experimentais.",
       filmographyLink: "Filmografia →",
       inProgress: "Em curso",
       continuousPractice: "Prática contínua: gravar / assistir / regravar",
     },
-
-    // Assistencia de Direcao page
     ad: {
       pageTitle: "Assistência de Direção",
       pageIntro: "Organização, comunicação e sustentação prática da mise-en-scène.",
-      leadText: "Como assistente de direção, Francisco atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.",
-      secondText: "A experiência como ator e a familiaridade com o processo criativo do diretor permitem uma mediação singular entre a visão artística e a execução prática — entendendo o ritmo do set e garantindo que o espaço de criação se mantenha protegido.",
+      leadText: "Como assistente de direção, Francisco atua na organização do processo de filmagem.",
+      secondText: "A experiência como ator e a familiaridade com o processo criativo do diretor permitem uma mediação singular.",
       competenciesTitle: "Competências",
       competencies: [
         "Organização do processo de filmagem",
@@ -202,16 +173,14 @@ export const translations = {
         "Sustentação prática da mise-en-scène",
       ],
       creditsLabel: "Créditos",
-      creditDesc: "Assistência de direção na pós-produção. Longa-metragem de ficção, adaptação de Nikolai Gogol.",
+      creditDesc: "Assistência de direção na pós-produção.",
       contactTitle: "Disponível para novos projetos",
-      contactText: "Aberto a trabalhos de assistência de direção em longas, curtas e séries — com interesse particular em projetos de cinema autoral e processos colaborativos.",
+      contactText: "Aberto a trabalhos de assistência de direção em longas, curtas e séries.",
       viewFilmography: "Ver filmografia completa →",
     },
-
-    // Escrita page
     escrita: {
       pageTitle: "Escrita / Pensamento cinematográfico",
-      pageIntro: "A escrita como outra forma de atenção — ao tempo da imagem, ao gesto do ator, à inteligência do realizador.",
+      pageIntro: "A escrita como outra forma de atenção.",
       searchPlaceholder: "Buscar...",
       searchAriaLabel: "Buscar textos",
       loading: "Carregando textos...",
@@ -220,8 +189,6 @@ export const translations = {
       comingSoon: "Em breve",
       all: "Todos",
     },
-
-    // Post page
     post: {
       loading: "Carregando",
       notFound: "Texto não encontrado.",
@@ -231,20 +198,12 @@ export const translations = {
       backToWriting: "← Voltar para Escrita",
       backLink: "← Escrita",
     },
-
-    // Not Found page
     notFound: {
       title: "Página não encontrada",
       text: "O endereço que você acessou não existe ou foi movido.",
       backLink: "← Voltar ao início",
     },
-
-    // Footer
-    footer: {
-      location: "Rio de Janeiro / São Paulo",
-    },
-
-    // Photo categories
+    footer: { location: "Rio de Janeiro / São Paulo" },
     photoCategories: {
       corpo: "CORPO",
       gesto: "GESTO",
@@ -255,8 +214,6 @@ export const translations = {
       silencio: "SILÊNCIO",
       processo: "PROCESSO",
     },
-
-    // Months
     months: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
     monthsFull: ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
   },
@@ -272,11 +229,9 @@ export const translations = {
       escrita: "Writing",
       skipToContent: "Skip to content",
     },
-
     hero: {
       subtitle: "Actor, assistant director, filmmaker.",
     },
-
     home: {
       aboutLabel: "ABOUT",
       profileLabel: "PROFILE",
@@ -295,14 +250,12 @@ export const translations = {
       contactHeading: "Let's talk",
       contactAvailability: "Available for features, shorts, documentaries and hybrid projects.",
       writingDesc: "Essays, texts and interviews on cinema, image and creative process.",
-      adDesc: "As assistant director, Francisco Vidal manages the organization of the filming process, communication between director and crew, on-set supervision, and the practical sustaining of the mise-en-scene.",
+      adDesc: "As assistant director, Francisco Vidal manages the organization of the filming process.",
     },
-
-    // Textos section
     textos: {
       eyebrow: "CINEMA NOTEBOOK",
       sectionTitle: "Cinema Processual",
-      sectionSubtitle: "Essays, translations, interviews and transcriptions on cinema as process, gesture, memory and form. An evolving archive for thinking about films, filmmakers, images and modes of creation.",
+      sectionSubtitle: "Essays, translations, interviews and transcriptions on cinema as process, gesture, memory and form.",
       pageLabel: "TEXTS",
       pageIntro: "The editorial archive of Cinema Processual: translations, transcriptions, essays, interviews and notes on films, filmmakers and modes of creation.",
       pageEyebrow: "ARCHIVE",
@@ -324,16 +277,7 @@ export const translations = {
         entrevista: "Interview",
       },
     },
-
-    // Individual texts
     texts: {
-      mekasBrakhage: {
-        title: "Jonas Mekas and Stan Brakhage",
-        category: "Translation",
-        description: "Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.",
-        archiveCode: "CP-003",
-        source: "Film Culture Reader",
-      },
       bressaneGodard: {
         title: "Julio Bressane on Jean-Luc Godard",
         category: "Transcription",
@@ -341,14 +285,20 @@ export const translations = {
         archiveCode: "CP-002",
         source: "Cinemateca do MAM Rio, October 2022",
       },
+      mekasBrakhage: {
+        title: "Jonas Mekas and Stan Brakhage",
+        category: "Translation",
+        description: "Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.",
+        archiveCode: "CP-003",
+        source: "Film Culture Reader",
+      },
       cinemaProcessual: {
         title: "Cinema Processual",
         category: "Manifesto",
-        description: "Presentation text of the Cinema Processual project: interviews, essays, criticism and production of cinematic writing and expression.",
+        description: "Presentation text of the Cinema Processual project.",
         archiveCode: "CP-000",
       },
     },
-
     profile: {
       base: "Based in",
       baseValue: "Rio de Janeiro",
@@ -363,7 +313,6 @@ export const translations = {
       availableFor: "Available for",
       availableForValue: "Features, shorts, hybrid projects, auteur cinema and experimental audiovisual",
     },
-
     filmography: {
       pageLabel: "FILMOGRAPHY",
       year: "Year",
@@ -387,20 +336,17 @@ export const translations = {
       notFound: "Film not found.",
       backToFilmography: "← Filmography",
     },
-
     filmMeta: {
       inProduction: "In Production",
       inPostProduction: "In Post-production",
       featureFilmFiction: "Feature Film, Fiction",
       cinema: "Cinema",
     },
-
     sobre: {
       label: "ABOUT",
       trajectoryLabel: "TRAJECTORY",
       contactText: "Available for features, shorts, documentaries and work that crosses boundaries of form.",
     },
-
     trajectory: {
       date2023: "2023",
       date2023_2024: "2023–2024",
@@ -417,31 +363,25 @@ export const translations = {
       dateApr2026b: "April 2026",
       dateCurrent: "Currently",
     },
-
-    reelPage: {
-      label: "REEL",
-    },
-
+    reelPage: { label: "REEL" },
     fotos: {
       headerLabel: "GALLERY / PHOTO ESSAY / RIO DE JANEIRO / 2025",
       footerText: "FRANCISCO VIDAL — PHOTO ESSAY — 2025",
     },
-
     atuacao: {
       label: "ACTING",
-      statement: "As an actor, Francisco Vidal works from a place of listening, physical presence and the relationship between body, camera and space. His practice traverses states of attention, silence, vulnerability and transformation before the image.",
+      statement: "As an actor, Francisco Vidal works from a place of listening, physical presence and the relationship between body, camera and space.",
       formationLabel: "TRAINING 2025–2026",
       contactText: "For acting work — features, shorts, documentaries and experimental projects.",
       filmographyLink: "Filmography →",
       inProgress: "Ongoing",
       continuousPractice: "Continuous practice: record / review / re-record",
     },
-
     ad: {
       pageTitle: "Assistant Direction",
       pageIntro: "Organization, communication and practical sustaining of the mise-en-scene.",
-      leadText: "As assistant director, Francisco manages the organization of the filming process, communication between director and crew, on-set supervision, and the practical sustaining of the mise-en-scene.",
-      secondText: "His experience as an actor and familiarity with the director's creative process enable a singular mediation between artistic vision and practical execution — understanding the rhythm of the set and ensuring the creative space remains protected.",
+      leadText: "As assistant director, Francisco manages the organization of the filming process.",
+      secondText: "His experience as an actor and familiarity with the director's creative process enable a singular mediation.",
       competenciesTitle: "Skills",
       competencies: [
         "Organization of the filming process",
@@ -452,15 +392,14 @@ export const translations = {
         "Practical sustaining of the mise-en-scene",
       ],
       creditsLabel: "Credits",
-      creditDesc: "Assistant direction in post-production. Fiction feature film, adaptation of Nikolai Gogol.",
+      creditDesc: "Assistant direction in post-production.",
       contactTitle: "Available for new projects",
-      contactText: "Open to assistant direction work on features, shorts and series — with particular interest in auteur cinema and collaborative processes.",
+      contactText: "Open to assistant direction work on features, shorts and series.",
       viewFilmography: "View full filmography →",
     },
-
     escrita: {
       pageTitle: "Writing / Cinematic Thought",
-      pageIntro: "Writing as another form of attention — to the time of the image, the actor's gesture, the filmmaker's intelligence.",
+      pageIntro: "Writing as another form of attention.",
       searchPlaceholder: "Search...",
       searchAriaLabel: "Search texts",
       loading: "Loading texts...",
@@ -469,7 +408,6 @@ export const translations = {
       comingSoon: "Coming soon",
       all: "All",
     },
-
     post: {
       loading: "Loading",
       notFound: "Text not found.",
@@ -479,17 +417,12 @@ export const translations = {
       backToWriting: "← Back to Writing",
       backLink: "← Writing",
     },
-
     notFound: {
       title: "Page not found",
       text: "The address you visited does not exist or has been moved.",
       backLink: "← Back to home",
     },
-
-    footer: {
-      location: "Rio de Janeiro / Sao Paulo",
-    },
-
+    footer: { location: "Rio de Janeiro / Sao Paulo" },
     photoCategories: {
       corpo: "BODY",
       gesto: "GESTURE",
@@ -500,7 +433,6 @@ export const translations = {
       silencio: "SILENCE",
       processo: "PROCESS",
     },
-
     months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     monthsFull: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
   },

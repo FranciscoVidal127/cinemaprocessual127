@@ -1,56 +1,23 @@
-import { Link } from 'react-router-dom';
-import { siteData } from '../data/content';
 import { useLanguage } from '../context/LanguageContext';
-import './Filmografia.css';
+import { siteData } from '../data/content';
 
 export function Filmografia() {
-  const { language, t } = useLanguage();
-
-  const translateStatus = (status: string | undefined) => {
-    if (!status) return null;
-    if (language === 'en') {
-      if (status === 'Em produção') return t.filmMeta.inProduction;
-      if (status === 'Em pós-produção') return t.filmMeta.inPostProduction;
-    }
-    return status;
-  };
+  const { t } = useLanguage();
 
   return (
-    <div className="filmografia-page">
-
-      <div className="filmografia-header">
-        <span className="filmografia-label">{t.filmography.pageLabel}</span>
-      </div>
-
-      <div className="filmografia-list">
-        {siteData.filmografia.map((filme) => (
-          <Link
-            key={filme.id}
-            to={`/filme/${filme.slug}`}
-            className="filmografia-entry"
-          >
-            <div className="filmografia-entry-poster">
-              <img src={filme.image} alt={filme.title} />
-            </div>
-            <div className="filmografia-entry-body">
-              <h2 className="filmografia-entry-title">{filme.title}</h2>
-              <div className="filmografia-entry-meta-row">
-                <span className="filmografia-entry-year">{filme.year}</span>
-                <span className="filmografia-entry-director">Dir. {filme.director}</span>
-              </div>
-              <span className="filmografia-entry-role">{filme.role}</span>
-              {filme.status && (
-                <span className="filmografia-entry-status">{translateStatus(filme.status)}</span>
-              )}
-              {filme.festivals && (
-                <span className="filmografia-entry-festival">{filme.festivals}</span>
-              )}
-            </div>
-            <span className="filmografia-entry-arrow">&rarr;</span>
-          </Link>
+    <div style={{ minHeight: '100vh', padding: '120px 32px 96px', background: 'var(--cp-black)' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+        <span style={{ fontFamily: 'var(--font-meta)', fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase' as const, color: 'var(--cp-muted)', display: 'block', marginBottom: '24px' }}>
+          {t.filmography.pageLabel}
+        </span>
+        {siteData.filmografia.map(film => (
+          <div key={film.id} style={{ padding: '24px 0', borderBottom: '1px solid var(--cp-line)' }}>
+            <div style={{ fontFamily: 'var(--font-meta)', fontSize: '11px', color: 'var(--cp-muted)', marginBottom: '8px' }}>{film.year} · {film.type}</div>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 400, color: 'var(--cp-ivory)', marginBottom: '4px' }}>{film.title}</h2>
+            <p style={{ fontSize: '14px', color: 'var(--cp-muted)' }}>dir. {film.director} · {film.role}</p>
+          </div>
         ))}
       </div>
-
     </div>
   );
 }

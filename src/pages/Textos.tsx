@@ -11,6 +11,7 @@ const textosDataPt = [
     description: 'Transcrição de ensaio oral proferido por Júlio Bressane em outubro de 2022, após o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.',
     archiveCode: 'CP-002',
     source: 'Cinemateca do MAM Rio, outubro de 2022',
+    readTime: '5 min',
     featured: true,
   },
   {
@@ -40,6 +41,7 @@ const textosDataEn = [
     description: 'Transcription of an oral essay given by Julio Bressane in October 2022, following the death of Jean-Luc Godard, at the Cinemateca do MAM Rio.',
     archiveCode: 'CP-002',
     source: 'Cinemateca do MAM Rio, October 2022',
+    readTime: '5 min',
     featured: true,
   },
   {
@@ -55,7 +57,7 @@ const textosDataEn = [
     slug: 'cinema-processual',
     title: 'Cinema Processual',
     category: 'Manifesto',
-    description: 'Presentation text of the Cinema Processual project: interviews, essays, criticism and production of cinematic writing and expression.',
+    description: 'Presentation text of the Cinema Processual project.',
     archiveCode: 'CP-000',
     featured: false,
   },
@@ -81,7 +83,6 @@ export function Textos() {
     <div className="textos-page">
       <div className="textos-page-grain" aria-hidden="true" />
 
-      {/* Hero editorial */}
       <header className="textos-hero">
         <div className="textos-hero-inner">
           <span className="textos-hero-eyebrow">{t.textos.pageEyebrow}</span>
@@ -90,7 +91,6 @@ export function Textos() {
         </div>
       </header>
 
-      {/* Filters */}
       <nav className="textos-filters" aria-label="Filtrar por categoria">
         <div className="textos-filters-inner">
           {categories.map(cat => (
@@ -105,7 +105,6 @@ export function Textos() {
         </div>
       </nav>
 
-      {/* Archive list */}
       <section className="textos-archive">
         <div className="textos-archive-inner">
           {featured && (
@@ -118,10 +117,11 @@ export function Textos() {
                 <h2 className="textos-entry-title">
                   <Link to={`/texto/${featured.slug}`}>{featured.title}</Link>
                 </h2>
-                {featured.source && (
-                  <span className="textos-entry-source">{featured.source}</span>
-                )}
+                {featured.source && <span className="textos-entry-source">{featured.source}</span>}
                 <p className="textos-entry-desc">{featured.description}</p>
+                {'readTime' in featured && featured.readTime && (
+                  <span className="textos-entry-time">{featured.archiveCode} · 2022 · {featured.readTime}</span>
+                )}
               </div>
               <div className="textos-entry-cta">
                 <Link to={`/texto/${featured.slug}`} className="textos-entry-link">
@@ -144,9 +144,7 @@ export function Textos() {
                     <h2 className="textos-entry-title">
                       <Link to={`/texto/${texto.slug}`}>{texto.title}</Link>
                     </h2>
-                    {texto.source && (
-                      <span className="textos-entry-source">{texto.source}</span>
-                    )}
+                    {texto.source && <span className="textos-entry-source">{texto.source}</span>}
                     <p className="textos-entry-desc">{texto.description}</p>
                   </div>
                   <div className="textos-entry-cta">
