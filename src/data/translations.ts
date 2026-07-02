@@ -41,12 +41,22 @@ export const translations = {
 
     // Textos section
     textos: {
+      eyebrow: "CADERNO DE CINEMA",
       sectionTitle: "Cinema Processual",
-      sectionSubtitle: "Escritos, traduções, entrevistas e transcrições sobre cinema como processo, gesto, memória e forma.",
+      sectionSubtitle: "Escritos, traduções, entrevistas e transcrições sobre cinema como processo, gesto, memória e forma. Um arquivo em construção para pensar filmes, cineastas, imagens e modos de criação.",
       pageLabel: "TEXTOS",
-      pageIntro: "Escritos, traduções, entrevistas e transcrições sobre cinema como processo, gesto, memória e forma.",
+      pageIntro: "Arquivo editorial do Cinema Processual: traduções, transcrições, ensaios, entrevistas e notas sobre filmes, cineastas e modos de criação.",
+      pageEyebrow: "ARQUIVO",
       readButton: "Ler texto",
       viewAll: "Ver todos os textos →",
+      backToArchive: "← Voltar ao arquivo",
+      continueReading: "Continuar lendo",
+      filterAll: "Todos",
+      filterEssay: "Ensaios",
+      filterTranslation: "Traduções",
+      filterTranscription: "Transcrições",
+      filterInterview: "Entrevistas",
+      filterManifesto: "Manifesto",
       categories: {
         traducao: "Tradução",
         transcricao: "Transcrição",
@@ -62,16 +72,21 @@ export const translations = {
         title: "Jonas Mekas e Stan Brakhage",
         category: "Tradução",
         description: "Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.",
+        archiveCode: "CP-002",
+        source: "Film Culture Reader",
       },
       bressaneGodard: {
         title: "Júlio Bressane sobre Jean-Luc Godard",
         category: "Transcrição",
         description: "Transcrição de ensaio oral proferido por Júlio Bressane em outubro de 2022, após o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.",
+        archiveCode: "CP-001",
+        source: "Cinemateca do MAM Rio, outubro de 2022",
       },
       cinemaProcessual: {
         title: "Cinema Processual",
         category: "Manifesto",
         description: "Texto de apresentação do projeto Cinema Processual: entrevistas, ensaios, críticas e produção de escrita e expressão cinematográfica.",
+        archiveCode: "CP-000",
       },
     },
 
@@ -285,12 +300,22 @@ export const translations = {
 
     // Textos section
     textos: {
+      eyebrow: "CINEMA NOTEBOOK",
       sectionTitle: "Cinema Processual",
-      sectionSubtitle: "Writings, translations, interviews and transcriptions on cinema as process, gesture, memory and form.",
+      sectionSubtitle: "Essays, translations, interviews and transcriptions on cinema as process, gesture, memory and form. An evolving archive for thinking about films, filmmakers, images and modes of creation.",
       pageLabel: "TEXTS",
-      pageIntro: "Writings, translations, interviews and transcriptions on cinema as process, gesture, memory and form.",
+      pageIntro: "The editorial archive of Cinema Processual: translations, transcriptions, essays, interviews and notes on films, filmmakers and modes of creation.",
+      pageEyebrow: "ARCHIVE",
       readButton: "Read text",
       viewAll: "View all texts →",
+      backToArchive: "← Back to archive",
+      continueReading: "Continue reading",
+      filterAll: "All",
+      filterEssay: "Essays",
+      filterTranslation: "Translations",
+      filterTranscription: "Transcriptions",
+      filterInterview: "Interviews",
+      filterManifesto: "Manifesto",
       categories: {
         traducao: "Translation",
         transcricao: "Transcription",
@@ -306,16 +331,21 @@ export const translations = {
         title: "Jonas Mekas and Stan Brakhage",
         category: "Translation",
         description: "Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.",
+        archiveCode: "CP-002",
+        source: "Film Culture Reader",
       },
       bressaneGodard: {
         title: "Julio Bressane on Jean-Luc Godard",
         category: "Transcription",
         description: "Transcription of an oral essay given by Julio Bressane in October 2022, following the death of Jean-Luc Godard, at the Cinemateca do MAM Rio.",
+        archiveCode: "CP-001",
+        source: "Cinemateca do MAM Rio, October 2022",
       },
       cinemaProcessual: {
         title: "Cinema Processual",
         category: "Manifesto",
         description: "Presentation text of the Cinema Processual project: interviews, essays, criticism and production of cinematic writing and expression.",
+        archiveCode: "CP-000",
       },
     },
 

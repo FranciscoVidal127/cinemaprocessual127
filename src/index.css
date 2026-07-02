@@ -46,6 +46,17 @@
   --step-1: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
   --step-2: clamp(1.75rem, 1.45rem + 1vw, 2.5rem);
   --step-3: clamp(2.8rem, 1.8rem + 4vw, 6rem);
+
+  /* Cinema Processual identity */
+  --cp-black: #050505;
+  --cp-green: #07110d;
+  --cp-ivory: #eee7d8;
+  --cp-muted: #aaa39a;
+  --cp-red: #9b2f20;
+  --cp-border: rgba(238, 231, 216, 0.16);
+  --cp-line: rgba(238, 231, 216, 0.12);
+  --cp-surface: #0b1711;
+  --cp-elevated: #0f1f18;
 }
 
 * {

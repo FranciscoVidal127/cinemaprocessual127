@@ -645,19 +645,29 @@
 /* ===================== TEXTOS HOME ===================== */
 
 .textos-home {
-  background-color: var(--bg);
-  padding: 80px 48px;
-  border-top: 1px solid var(--line);
+  background-color: var(--cp-black);
+  padding: 96px 48px;
+  border-top: 1px solid var(--cp-line);
   position: relative;
+  overflow: hidden;
 }
 
-.textos-home::before {
-  content: '';
+.textos-home-grain {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.035;
   pointer-events: none;
+}
+
+.textos-home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--cp-border), transparent);
 }
 
 .textos-home-inner {
@@ -665,92 +675,211 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 64px;
+  align-items: start;
 }
 
-.textos-home-header {
-  text-align: center;
-  margin-bottom: 48px;
+.textos-home-editorial {
+  position: sticky;
+  top: 96px;
+}
+
+.textos-home-eyebrow {
+  font-family: var(--font-meta);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  margin-bottom: 20px;
+  display: block;
 }
 
 .textos-home-title {
   font-family: var(--font-display);
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(36px, 5vw, 52px);
   font-weight: 300;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-bottom: 12px;
+  letter-spacing: -0.025em;
+  color: var(--cp-ivory);
+  margin-bottom: 24px;
+  line-height: 1.05;
 }
 
 .textos-home-subtitle {
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-2);
-  max-width: 60ch;
-  margin: 0 auto;
-}
-
-.textos-home-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--cp-muted);
+  max-width: 32ch;
   margin-bottom: 32px;
 }
 
-.texto-card {
-  background-color: var(--surface);
-  border: 1px solid var(--line);
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
+.textos-home-cta {
+  font-family: var(--font-meta);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-ivory);
   text-decoration: none;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--cp-border);
+  transition: border-color 0.2s ease;
+}
+
+.textos-home-cta:hover {
+  border-color: var(--cp-ivory);
+}
+
+.textos-home-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* Featured card - Bressane/Godard spans two columns */
+.texto-card--featured {
+  grid-column: 1 / -1;
+  background-color: var(--cp-surface);
+  border: 1px solid var(--cp-border);
+  padding: 40px 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: start;
+  text-decoration: none;
+  transition: border-color 0.22s ease, background-color 0.22s ease;
   position: relative;
 }
 
-.texto-card:hover {
-  border-color: var(--text-dim);
-  background-color: var(--bg-soft);
+.texto-card--featured:hover {
+  border-color: var(--cp-muted);
+  background-color: var(--cp-elevated);
+}
+
+.texto-card--featured::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 40px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--cp-red), transparent);
+  opacity: 0.6;
+}
+
+.texto-card--secondary {
+  background-color: var(--cp-surface);
+  border: 1px solid var(--cp-border);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: border-color 0.22s ease, background-color 0.22s ease;
+  position: relative;
+}
+
+.texto-card--secondary:hover {
+  border-color: var(--cp-muted);
+  background-color: var(--cp-elevated);
+}
+
+.texto-card--secondary .texto-card-title {
+  font-size: 18px;
+}
+
+.texto-card--secondary .texto-card-desc {
+  font-size: 13px;
+}
+
+.texto-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.texto-card-code {
+  font-family: var(--font-meta);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  opacity: 0.7;
 }
 
 .texto-card-category {
   font-family: var(--font-meta);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--cp-red);
+}
+
+.texto-card--secondary .texto-card-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   margin-bottom: 12px;
 }
 
 .texto-card-title {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 1.25;
-  color: var(--text);
-  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--cp-ivory);
+  margin-bottom: 14px;
 }
 
 .texto-card-desc {
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.6;
-  color: var(--text-2);
+  color: var(--cp-muted);
   flex: 1;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  max-width: 56ch;
+}
+
+.texto-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.texto-card--secondary .texto-card-footer {
+  margin-top: auto;
 }
 
 .texto-card-cta {
   font-family: var(--font-meta);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 10px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-dim);
-  transition: color 0.2s ease;
+  color: var(--cp-ivory);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
 }
 
 .texto-card:hover .texto-card-cta {
-  color: var(--text);
+  opacity: 1;
+}
+
+.texto-card-arrow {
+  font-family: var(--font-meta);
+  font-size: 12px;
+  color: var(--cp-ivory);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.texto-card:hover .texto-card-arrow {
+  opacity: 0.7;
+  transform: translateX(0);
 }
 
 /* ===================== CONTATO ===================== */
@@ -897,8 +1026,27 @@
     padding: 64px 32px;
   }
 
-  .textos-home-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .textos-home-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .textos-home-editorial {
+    position: static;
+  }
+
+  .textos-home-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .texto-card--featured {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+    padding: 32px 28px;
+  }
+
+  .texto-card--featured::before {
+    display: none;
   }
 
   .contato {
@@ -1023,25 +1171,39 @@
     padding: 48px 20px;
   }
 
-  .textos-home-header {
-    margin-bottom: 32px;
+  .textos-home-inner {
+    gap: 36px;
+  }
+
+  .textos-home-eyebrow {
+    font-size: 9px;
   }
 
   .textos-home-title {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .textos-home-subtitle {
-    font-size: 15px;
+    font-size: 14px;
+    max-width: 100%;
   }
 
-  .textos-home-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .textos-home-cards {
+    gap: 12px;
   }
 
-  .texto-card {
+  .texto-card--featured,
+  .texto-card--secondary {
     padding: 24px 20px;
+  }
+
+  .texto-card-title {
+    font-size: 18px;
+  }
+
+  .texto-card-desc {
+    font-size: 13px;
+    margin-bottom: 16px;
   }
 
   .contato {

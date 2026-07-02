@@ -54,6 +54,7 @@ export function Home() {
             <Link to="/sobre" className="cta-link">{t.nav.sobre}</Link>
             <Link to="/reel" className="cta-link">{t.nav.reel}</Link>
             <Link to="/filmografia" className="cta-link">{t.nav.filmografia}</Link>
+            <Link to="/textos" className="cta-link">{t.nav.textos}</Link>
             <Link to="/fotos" className="cta-link">{t.nav.fotos}</Link>
           </nav>
         </div>
@@ -105,32 +106,57 @@ export function Home() {
 
       {/* ============ CINEMA PROCESSUAL — ESCRITOS ============ */}
       <section className="textos-home">
+        <div className="textos-home-grain" aria-hidden="true" />
         <div className="textos-home-inner">
-          <div className="textos-home-header">
+          <div className="textos-home-editorial">
+            <span className="textos-home-eyebrow">{t.textos.eyebrow}</span>
             <h2 className="textos-home-title">{t.textos.sectionTitle}</h2>
             <p className="textos-home-subtitle">{t.textos.sectionSubtitle}</p>
+            <Link to="/textos" className="textos-home-cta">{t.textos.viewAll}</Link>
           </div>
-          <div className="textos-home-grid">
-            <Link to="/texto/mekas-brakhage" className="texto-card">
-              <span className="texto-card-category">{t.texts.mekasBrakhage.category}</span>
-              <h3 className="texto-card-title">{t.texts.mekasBrakhage.title}</h3>
-              <p className="texto-card-desc">{t.texts.mekasBrakhage.description}</p>
-              <span className="texto-card-cta">{t.textos.readButton}</span>
-            </Link>
-            <Link to="/texto/bressane-godard" className="texto-card">
-              <span className="texto-card-category">{t.texts.bressaneGodard.category}</span>
+
+          <div className="textos-home-cards">
+            {/* Featured card - Bressane/Godard */}
+            <Link to="/texto/bressane-godard" className="texto-card texto-card--featured">
+              <div className="texto-card-header">
+                <span className="texto-card-code">{t.texts.bressaneGodard.archiveCode}</span>
+                <span className="texto-card-category">{t.texts.bressaneGodard.category}</span>
+              </div>
               <h3 className="texto-card-title">{t.texts.bressaneGodard.title}</h3>
               <p className="texto-card-desc">{t.texts.bressaneGodard.description}</p>
-              <span className="texto-card-cta">{t.textos.readButton}</span>
+              <div className="texto-card-footer">
+                <span className="texto-card-cta">{t.textos.readButton}</span>
+                <span className="texto-card-arrow" aria-hidden="true">→</span>
+              </div>
             </Link>
-            <Link to="/texto/cinema-processual" className="texto-card">
-              <span className="texto-card-category">{t.texts.cinemaProcessual.category}</span>
+
+            {/* Secondary cards */}
+            <Link to="/texto/mekas-brakhage" className="texto-card texto-card--secondary">
+              <div className="texto-card-header">
+                <span className="texto-card-code">{t.texts.mekasBrakhage.archiveCode}</span>
+                <span className="texto-card-category">{t.texts.mekasBrakhage.category}</span>
+              </div>
+              <h3 className="texto-card-title">{t.texts.mekasBrakhage.title}</h3>
+              <p className="texto-card-desc">{t.texts.mekasBrakhage.description}</p>
+              <div className="texto-card-footer">
+                <span className="texto-card-cta">{t.textos.readButton}</span>
+                <span className="texto-card-arrow" aria-hidden="true">→</span>
+              </div>
+            </Link>
+
+            <Link to="/texto/cinema-processual" className="texto-card texto-card--secondary">
+              <div className="texto-card-header">
+                <span className="texto-card-code">{t.texts.cinemaProcessual.archiveCode}</span>
+                <span className="texto-card-category">{t.texts.cinemaProcessual.category}</span>
+              </div>
               <h3 className="texto-card-title">{t.texts.cinemaProcessual.title}</h3>
               <p className="texto-card-desc">{t.texts.cinemaProcessual.description}</p>
-              <span className="texto-card-cta">{t.textos.readButton}</span>
+              <div className="texto-card-footer">
+                <span className="texto-card-cta">{t.textos.readButton}</span>
+                <span className="texto-card-arrow" aria-hidden="true">→</span>
+              </div>
             </Link>
           </div>
-          <Link to="/textos" className="section-cta">{t.textos.viewAll}</Link>
         </div>
       </section>
 

@@ -1,83 +1,164 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import './Textos.css';
 
-const textosPt = [
-  {
-    slug: 'mekas-brakhage',
-    title: 'Jonas Mekas e Stan Brakhage',
-    category: 'Tradução',
-    description: 'Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.',
-  },
+const textosDataPt = [
   {
     slug: 'bressane-godard',
     title: 'Júlio Bressane sobre Jean-Luc Godard',
     category: 'Transcrição',
     description: 'Transcrição de ensaio oral proferido por Júlio Bressane em outubro de 2022, após o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.',
+    archiveCode: 'CP-001',
+    source: 'Cinemateca do MAM Rio, outubro de 2022',
+    featured: true,
+  },
+  {
+    slug: 'mekas-brakhage',
+    title: 'Jonas Mekas e Stan Brakhage',
+    category: 'Tradução',
+    description: 'Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.',
+    archiveCode: 'CP-002',
+    source: 'Film Culture Reader',
+    featured: false,
   },
   {
     slug: 'cinema-processual',
     title: 'Cinema Processual',
     category: 'Manifesto',
     description: 'Texto de apresentação do projeto Cinema Processual: entrevistas, ensaios, críticas e produção de escrita e expressão cinematográfica.',
+    archiveCode: 'CP-000',
+    featured: false,
   },
 ];
 
-const textosEn = [
-  {
-    slug: 'mekas-brakhage',
-    title: 'Jonas Mekas and Stan Brakhage',
-    category: 'Translation',
-    description: 'Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.',
-  },
+const textosDataEn = [
   {
     slug: 'bressane-godard',
     title: 'Julio Bressane on Jean-Luc Godard',
     category: 'Transcription',
     description: 'Transcription of an oral essay given by Julio Bressane in October 2022, following the death of Jean-Luc Godard, at the Cinemateca do MAM Rio.',
+    archiveCode: 'CP-001',
+    source: 'Cinemateca do MAM Rio, October 2022',
+    featured: true,
+  },
+  {
+    slug: 'mekas-brakhage',
+    title: 'Jonas Mekas and Stan Brakhage',
+    category: 'Translation',
+    description: 'Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.',
+    archiveCode: 'CP-002',
+    source: 'Film Culture Reader',
+    featured: false,
   },
   {
     slug: 'cinema-processual',
     title: 'Cinema Processual',
     category: 'Manifesto',
     description: 'Presentation text of the Cinema Processual project: interviews, essays, criticism and production of cinematic writing and expression.',
+    archiveCode: 'CP-000',
+    featured: false,
   },
 ];
 
+const categoriesPt = ['Todos', 'Transcrição', 'Tradução', 'Manifesto', 'Ensaio', 'Entrevista'];
+const categoriesEn = ['All', 'Transcription', 'Translation', 'Manifesto', 'Essay', 'Interview'];
+
 export function Textos() {
   const { language, t } = useLanguage();
-  const textos = language === 'en' ? textosEn : textosPt;
+  const [filter, setFilter] = useState(language === 'en' ? 'All' : 'Todos');
+
+  const textos = language === 'en' ? textosDataEn : textosDataPt;
+  const categories = language === 'en' ? categoriesEn : categoriesPt;
+
+  const filteredTextos = filter === 'Todos' || filter === 'All'
+    ? textos
+    : textos.filter(texto => texto.category === filter);
+
+  const [featured, ...rest] = filteredTextos;
 
   return (
     <div className="textos-page">
-      <header className="page-header">
-        <div className="page-header-inner">
-          <h1 className="page-title">{t.textos.pageLabel}</h1>
-          <p className="page-intro">{t.textos.pageIntro}</p>
+      <div className="textos-page-grain" aria-hidden="true" />
+
+      {/* Hero editorial */}
+      <header className="textos-hero">
+        <div className="textos-hero-inner">
+          <span className="textos-hero-eyebrow">{t.textos.pageEyebrow}</span>
+          <h1 className="textos-hero-title">{t.textos.pageLabel}</h1>
+          <p className="textos-hero-intro">{t.textos.pageIntro}</p>
         </div>
       </header>
 
-      <section className="textos-list">
-        <div className="container">
-          {textos.map((texto, idx) => (
-            <article key={texto.slug} className="textos-entry">
-              <div className="textos-entry-number">
-                {String(idx + 1).padStart(2, '0')}
+      {/* Filters */}
+      <nav className="textos-filters" aria-label="Filtrar por categoria">
+        <div className="textos-filters-inner">
+          {categories.map(cat => (
+            <button
+              key={cat}
+              className={`textos-filter-btn${filter === cat ? ' textos-filter-btn--active' : ''}`}
+              onClick={() => setFilter(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {/* Archive list */}
+      <section className="textos-archive">
+        <div className="textos-archive-inner">
+          {featured && (
+            <article className="textos-entry textos-entry--featured">
+              <div className="textos-entry-left">
+                <span className="textos-entry-code">{featured.archiveCode}</span>
+                <span className="textos-entry-category">{featured.category}</span>
               </div>
               <div className="textos-entry-body">
-                <span className="textos-entry-category">{texto.category}</span>
                 <h2 className="textos-entry-title">
-                  <Link to={`/texto/${texto.slug}`}>{texto.title}</Link>
+                  <Link to={`/texto/${featured.slug}`}>{featured.title}</Link>
                 </h2>
-                <p className="textos-entry-desc">{texto.description}</p>
+                {featured.source && (
+                  <span className="textos-entry-source">{featured.source}</span>
+                )}
+                <p className="textos-entry-desc">{featured.description}</p>
               </div>
               <div className="textos-entry-cta">
-                <Link to={`/texto/${texto.slug}`} className="textos-entry-link">
+                <Link to={`/texto/${featured.slug}`} className="textos-entry-link">
                   {t.textos.readButton}
+                  <span className="textos-entry-arrow" aria-hidden="true"> →</span>
                 </Link>
               </div>
             </article>
-          ))}
+          )}
+
+          {rest.length > 0 && (
+            <div className="textos-list">
+              {rest.map((texto) => (
+                <article key={texto.slug} className="textos-entry">
+                  <div className="textos-entry-left">
+                    <span className="textos-entry-code">{texto.archiveCode}</span>
+                    <span className="textos-entry-category">{texto.category}</span>
+                  </div>
+                  <div className="textos-entry-body">
+                    <h2 className="textos-entry-title">
+                      <Link to={`/texto/${texto.slug}`}>{texto.title}</Link>
+                    </h2>
+                    {texto.source && (
+                      <span className="textos-entry-source">{texto.source}</span>
+                    )}
+                    <p className="textos-entry-desc">{texto.description}</p>
+                  </div>
+                  <div className="textos-entry-cta">
+                    <Link to={`/texto/${texto.slug}`} className="textos-entry-link">
+                      {t.textos.readButton}
+                      <span className="textos-entry-arrow" aria-hidden="true"> →</span>
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>
