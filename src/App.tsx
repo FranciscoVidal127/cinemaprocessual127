@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { LanguageToggle } from './components/LanguageToggle';
 import { useLanguage } from './context/LanguageContext';
 import { Home } from './pages/Home';
@@ -20,14 +20,32 @@ import './App.css';
 function Header() {
   const { t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > window.innerHeight * 0.7);
+    }
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setScrolled(true);
+    }
+  }, [location.pathname]);
 
   const closeMenu = () => setMenuOpen(false);
 
   const isActive = (path: string) => location.pathname === path || location.pathname.startsWith(path + '/');
 
+  const headerClass = `site-header${scrolled || location.pathname !== '/' ? ' site-header--scrolled' : ''}`;
+
   return (
-    <header className="site-header">
+    <header className={headerClass}>
       <a href="#main" className="skip-link">{t.nav.skipToContent}</a>
       <div className="header-inner">
         <Link to="/" className="header-logo" onClick={closeMenu}>Francisco Vidal</Link>
