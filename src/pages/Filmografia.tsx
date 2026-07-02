@@ -1,23 +1,46 @@
-import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 import { siteData } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
+import './Filmografia.css';
 
 export function Filmografia() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+
+  const filmStatus = (status: string | undefined) => {
+    if (!status) return null;
+    if (language === 'en') {
+      if (status === 'Em produção') return t.filmMeta.inProduction;
+      if (status === 'Em pós-produção') return t.filmMeta.inPostProduction;
+    }
+    return status;
+  };
 
   return (
-    <div style={{ minHeight: '100vh', padding: '120px 32px 96px', background: 'var(--cp-black)' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <span style={{ fontFamily: 'var(--font-meta)', fontSize: '10px', letterSpacing: '0.16em', textTransform: 'uppercase' as const, color: 'var(--cp-muted)', display: 'block', marginBottom: '24px' }}>
-          {t.filmography.pageLabel}
-        </span>
-        {siteData.filmografia.map(film => (
-          <div key={film.id} style={{ padding: '24px 0', borderBottom: '1px solid var(--cp-line)' }}>
-            <div style={{ fontFamily: 'var(--font-meta)', fontSize: '11px', color: 'var(--cp-muted)', marginBottom: '8px' }}>{film.year} · {film.type}</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 400, color: 'var(--cp-ivory)', marginBottom: '4px' }}>{film.title}</h2>
-            <p style={{ fontSize: '14px', color: 'var(--cp-muted)' }}>dir. {film.director} · {film.role}</p>
-          </div>
-        ))}
+    <div className="filmografia-page">
+
+      <div className="filmografia-header">
+        <span className="filmografia-label">{t.filmography.pageLabel}</span>
       </div>
+
+      <section className="filmografia-list">
+        {siteData.filmografia.map((filme) => (
+          <Link to={`/filme/${filme.slug}`} key={filme.id} className="filmografia-item">
+            <div className="filmografia-item-year">{filme.year}</div>
+            <div className="filmografia-item-body">
+              <h2 className="filmografia-item-title">{filme.title}</h2>
+              <p className="filmografia-item-director">dir. {filme.director}</p>
+              <p className="filmografia-item-role">{filme.role}</p>
+              {filme.festivals && (
+                <p className="filmografia-item-festivals">{filme.festivals}</p>
+              )}
+              {filme.status && (
+                <p className="filmografia-item-status">{filmStatus(filme.status)}</p>
+              )}
+            </div>
+          </Link>
+        ))}
+      </section>
+
     </div>
   );
 }

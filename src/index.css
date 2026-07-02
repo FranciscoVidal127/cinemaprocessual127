@@ -1,11 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 :root {
-  --font-display: 'EB Garamond', Georgia, serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-meta: 'JetBrains Mono', 'SF Mono', monospace;
+  /* Core palette (original site variables) */
+  --bg: #0a0a0a;
+  --bg-deep: #050505;
+  --bg-surface: #141414;
+  --text: #e8e0d4;
+  --text-muted: #9a9590;
+  --text-dim: #6b6560;
+  --text-ghost: #3d3835;
+  --text-3: #bbb5ae;
+  --accent: #c0392b;
+  --accent-dim: rgba(192, 57, 43, 0.25);
+  --border: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.04);
   --container: 1200px;
 
+  /* Typography */
+  --font-display: 'EB Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+  --font-meta: 'JetBrains Mono', 'SF Mono', monospace;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Cinema Processual identity */
   --cp-black: #050505;
   --cp-green: #07110d;
   --cp-ivory: #eee7d8;
@@ -30,9 +48,9 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  background: #0a0a0a;
-  color: #e8e0d4;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -58,4 +76,18 @@ button {
 
 ul, ol {
   list-style: none;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #111;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }

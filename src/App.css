@@ -8,7 +8,7 @@
   z-index: 1000;
   background: rgba(10, 10, 10, 0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--border);
 }
 
 .skip-link {
@@ -47,15 +47,15 @@
 }
 
 .nav-link {
-  font-family: var(--font-meta);
-  font-size: 11px;
+  font-family: var(--font-mono);
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--cp-muted);
+  color: var(--text-muted);
   transition: color 0.2s;
 }
 .nav-link:hover,
-.nav-link--active { color: var(--cp-ivory); }
+.nav-link--active { color: var(--text); }
 
 .lang-toggle {
   display: flex;
@@ -63,15 +63,15 @@
   gap: 4px;
 }
 .lang-toggle-btn {
-  font-family: var(--font-meta);
+  font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
-  color: var(--cp-muted);
+  color: var(--text-muted);
   padding: 4px 6px;
   transition: color 0.2s;
 }
-.lang-toggle-btn--active { color: var(--cp-ivory); }
-.lang-toggle-sep { color: var(--cp-muted); opacity: 0.4; font-size: 10px; }
+.lang-toggle-btn--active { color: var(--text); }
+.lang-toggle-sep { color: var(--text-muted); opacity: 0.4; font-size: 10px; }
 
 .hamburger {
   display: none;
@@ -82,20 +82,22 @@
 .hamburger span {
   display: block;
   height: 1.5px;
-  background: var(--cp-ivory);
+  background: var(--text);
   transition: transform 0.2s;
 }
 
 @media (max-width: 768px) {
   .header-nav { display: none; }
   .hamburger { display: flex; }
+  .header-inner { padding: 14px 20px; }
 }
 
 .mobile-menu {
   position: fixed;
   inset: 0;
-  top: 56px;
-  background: rgba(10,10,10,0.97);
+  top: 52px;
+  background: rgba(10,10,10,0.98);
+  backdrop-filter: blur(20px);
   z-index: 999;
   padding: 48px 32px;
 }
@@ -107,13 +109,20 @@
 .mobile-nav a {
   font-family: var(--font-display);
   font-size: 28px;
-  color: var(--cp-ivory);
+  color: var(--text);
+}
+.mobile-divider {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
 }
 
 /* ===================== FOOTER ===================== */
 
 .site-footer {
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid var(--border);
   padding: 32px;
 }
 .footer-inner {
@@ -124,16 +133,15 @@
   align-items: center;
 }
 .footer-name {
-  font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--cp-muted);
+  color: var(--text-muted);
 }
 .footer-location {
-  font-family: var(--font-meta);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: var(--cp-muted);
-  opacity: 0.6;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
 }
