@@ -117,7 +117,7 @@ export function Home() {
 
           <div className="textos-home-cards">
             {/* Featured card - Bressane/Godard */}
-            <Link to="/texto/bressane-godard" className="texto-card texto-card--featured">
+            <Link to="/texto/julio-bressane-sobre-jean-luc-godard" className="texto-card texto-card--featured">
               <div className="texto-card-header">
                 <span className="texto-card-code">{t.texts.bressaneGodard.archiveCode}</span>
                 <span className="texto-card-category">{t.texts.bressaneGodard.category}</span>

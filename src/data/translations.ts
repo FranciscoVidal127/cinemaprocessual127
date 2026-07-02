@@ -72,14 +72,14 @@ export const translations = {
         title: "Jonas Mekas e Stan Brakhage",
         category: "Tradução",
         description: "Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.",
-        archiveCode: "CP-002",
+        archiveCode: "CP-003",
         source: "Film Culture Reader",
       },
       bressaneGodard: {
         title: "Júlio Bressane sobre Jean-Luc Godard",
         category: "Transcrição",
         description: "Transcrição de ensaio oral proferido por Júlio Bressane em outubro de 2022, após o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.",
-        archiveCode: "CP-001",
+        archiveCode: "CP-002",
         source: "Cinemateca do MAM Rio, outubro de 2022",
       },
       cinemaProcessual: {
@@ -331,14 +331,14 @@ export const translations = {
         title: "Jonas Mekas and Stan Brakhage",
         category: "Translation",
         description: "Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.",
-        archiveCode: "CP-002",
+        archiveCode: "CP-003",
         source: "Film Culture Reader",
       },
       bressaneGodard: {
         title: "Julio Bressane on Jean-Luc Godard",
         category: "Transcription",
         description: "Transcription of an oral essay given by Julio Bressane in October 2022, following the death of Jean-Luc Godard, at the Cinemateca do MAM Rio.",
-        archiveCode: "CP-001",
+        archiveCode: "CP-002",
         source: "Cinemateca do MAM Rio, October 2022",
       },
       cinemaProcessual: {

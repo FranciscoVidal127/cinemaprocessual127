@@ -228,6 +228,105 @@
   color: var(--cp-ivory);
 }
 
+/* ===================== GODARD PAPER TREATMENT ===================== */
+
+.texto-article--paper {
+  background-color: var(--cp-ivory);
+  color: #1a1a1a;
+  position: relative;
+}
+
+.texto-article--paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper-grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper-grain)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.texto-article--paper .texto-article-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.texto-article--paper .texto-article-meta {
+  border-bottom: 1px solid rgba(26, 26, 26, 0.12);
+  padding-bottom: 16px;
+}
+
+.texto-article--paper .texto-article-category {
+  color: var(--cp-red);
+}
+
+.texto-article--paper .texto-article-source {
+  color: rgba(26, 26, 26, 0.6);
+}
+
+.texto-article--paper .texto-article-title {
+  color: #1a1a1a;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.texto-article--paper .texto-article-content {
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2.5vw, 26px);
+  line-height: 1.55;
+  color: rgba(26, 26, 26, 0.85);
+}
+
+.texto-article--paper .texto-article-content p {
+  margin-bottom: 1.4em;
+  text-indent: 1.5em;
+}
+
+.texto-article--paper .texto-article-content p:first-of-type {
+  text-indent: 0;
+}
+
+.texto-article--paper .godard-credit {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(26, 26, 26, 0.6);
+  text-indent: 0 !important;
+  border-top: 1px solid rgba(26, 26, 26, 0.15);
+  padding-top: 1em;
+  margin-top: 2em;
+}
+
+.godard-paper-fold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, transparent 50%, rgba(26, 26, 26, 0.08) 50%);
+  z-index: 2;
+}
+
+.godard-paper-fold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(315deg, transparent 50%, rgba(26, 26, 26, 0.04) 50%);
+}
+
+.highlight-red {
+  color: #e34234;
+  font-weight: 700;
+}
+
+.highlight-blue {
+  color: #4937d6;
+  font-weight: 700;
+}
+
 /* ===================== RESPONSIVE ===================== */
 
 @media (max-width: 1024px) {
@@ -259,6 +358,16 @@
 
   .texto-detail-footer {
     padding: 24px 32px 40px;
+  }
+
+  /* Paper responsive */
+  .texto-article--paper .texto-article-content {
+    font-size: 19px;
+  }
+
+  .godard-paper-fold {
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -299,5 +408,16 @@
 
   .texto-detail-footer {
     padding: 24px 20px 36px;
+  }
+
+  /* Paper responsive */
+  .texto-article--paper .texto-article-content {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .godard-paper-fold {
+    width: 28px;
+    height: 28px;
   }
 }
