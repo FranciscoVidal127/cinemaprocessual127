@@ -1,0 +1,145 @@
+.texto-detail {
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.texto-detail-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 48px;
+}
+
+.texto-detail-header {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.texto-back {
+  font-family: var(--font-meta);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.texto-back:hover {
+  color: var(--text);
+}
+
+.texto-article {
+  padding: 64px 0;
+}
+
+.texto-article-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.texto-meta {
+  margin-bottom: 24px;
+}
+
+.texto-category {
+  font-family: var(--font-meta);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.texto-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 48px;
+}
+
+.texto-content {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-1);
+}
+
+.texto-content p {
+  margin-bottom: 1.5em;
+}
+
+.texto-content p:first-child {
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.texto-content em {
+  font-style: italic;
+  color: var(--text-2);
+}
+
+.texto-footer {
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.texto-footer-link {
+  font-family: var(--font-meta);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.texto-footer-link:hover {
+  color: var(--text);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  .texto-article {
+    padding: 48px 0;
+  }
+
+  .texto-content {
+    font-size: 16px;
+  }
+
+  .texto-content p:first-child {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .texto-article {
+    padding: 32px 0;
+  }
+
+  .texto-article-inner {
+    padding: 0 20px;
+  }
+
+  .texto-title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .texto-content {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .texto-content p:first-child {
+    font-size: 16px;
+  }
+}

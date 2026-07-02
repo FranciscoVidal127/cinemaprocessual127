@@ -10,6 +10,8 @@ import { AssistenciaDirecao } from './pages/AssistenciaDirecao';
 import { Filmografia } from './pages/Filmografia';
 import { FilmeDetail } from './pages/FilmeDetail';
 import { Fotos } from './pages/Fotos';
+import { Textos } from './pages/Textos';
+import { TextoDetail } from './pages/TextoDetail';
 import { Escrita } from './pages/Escrita';
 import { Post } from './pages/Post';
 import { NotFound } from './pages/NotFound';
@@ -61,6 +63,7 @@ function Header() {
           <NavLink to="/reel" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>{t.nav.reel}</NavLink>
           <NavLink to="/filmografia" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>{t.nav.filmografia}</NavLink>
           <NavLink to="/fotos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>{t.nav.fotos}</NavLink>
+          <NavLink to="/textos" className={({ isActive }) => isActive ? 'nav-mobile-link active' : 'nav-mobile-link'}>{t.nav.textos}</NavLink>
           <div className="nav-mobile-divider" />
           <NavLink to="/assistencia-de-direcao" className={({ isActive }) => isActive ? 'nav-mobile-link nav-mobile-link--secondary active' : 'nav-mobile-link nav-mobile-link--secondary'}>{t.nav.assistenciaDirecao}</NavLink>
           <NavLink to="/escrita" className={({ isActive }) => isActive ? 'nav-mobile-link nav-mobile-link--secondary active' : 'nav-mobile-link nav-mobile-link--secondary'}>{t.nav.escrita}</NavLink>
@@ -128,6 +131,8 @@ function App() {
         <Route path="/assistencia-de-direcao" element={<Layout><AssistenciaDirecao /></Layout>} />
         <Route path="/filmografia" element={<Layout><Filmografia /></Layout>} />
         <Route path="/fotos" element={<Layout><Fotos /></Layout>} />
+        <Route path="/textos" element={<Layout><Textos /></Layout>} />
+        <Route path="/texto/:slug" element={<Layout><TextoDetail /></Layout>} />
         <Route path="/escrita" element={<Layout><Escrita /></Layout>} />
         <Route path="/filme/:slug" element={<Layout><FilmeDetail /></Layout>} />
         <Route path="/post/:slug" element={<Layout><Post /></Layout>} />

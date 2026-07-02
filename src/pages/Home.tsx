@@ -103,6 +103,37 @@ export function Home() {
         </div>
       </section>
 
+      {/* ============ CINEMA PROCESSUAL — ESCRITOS ============ */}
+      <section className="textos-home">
+        <div className="textos-home-inner">
+          <div className="textos-home-header">
+            <h2 className="textos-home-title">{t.textos.sectionTitle}</h2>
+            <p className="textos-home-subtitle">{t.textos.sectionSubtitle}</p>
+          </div>
+          <div className="textos-home-grid">
+            <Link to="/texto/mekas-brakhage" className="texto-card">
+              <span className="texto-card-category">{t.texts.mekasBrakhage.category}</span>
+              <h3 className="texto-card-title">{t.texts.mekasBrakhage.title}</h3>
+              <p className="texto-card-desc">{t.texts.mekasBrakhage.description}</p>
+              <span className="texto-card-cta">{t.textos.readButton}</span>
+            </Link>
+            <Link to="/texto/bressane-godard" className="texto-card">
+              <span className="texto-card-category">{t.texts.bressaneGodard.category}</span>
+              <h3 className="texto-card-title">{t.texts.bressaneGodard.title}</h3>
+              <p className="texto-card-desc">{t.texts.bressaneGodard.description}</p>
+              <span className="texto-card-cta">{t.textos.readButton}</span>
+            </Link>
+            <Link to="/texto/cinema-processual" className="texto-card">
+              <span className="texto-card-category">{t.texts.cinemaProcessual.category}</span>
+              <h3 className="texto-card-title">{t.texts.cinemaProcessual.title}</h3>
+              <p className="texto-card-desc">{t.texts.cinemaProcessual.description}</p>
+              <span className="texto-card-cta">{t.textos.readButton}</span>
+            </Link>
+          </div>
+          <Link to="/textos" className="section-cta">{t.textos.viewAll}</Link>
+        </div>
+      </section>
+
       {/* ============ REEL ============ */}
       <section className="reel" id="reel">
         <div className="reel-inner">

@@ -6,6 +6,7 @@ export const translations = {
       reel: "Reel",
       filmografia: "Filmografia",
       fotos: "Fotos",
+      textos: "Textos",
       assistenciaDirecao: "Assist. de Direção",
       escrita: "Escrita",
       skipToContent: "Pular para o conteúdo",
@@ -36,6 +37,42 @@ export const translations = {
       contactAvailability: "Disponível para longas, curtas, documentários e trabalhos híbridos.",
       writingDesc: "Textos, ensaios e entrevistas sobre cinema, imagem e processo criativo.",
       adDesc: "Como assistente de direção, Francisco Vidal atua na organização do processo de filmagem, na comunicação entre direção e equipe, no acompanhamento de set e na sustentação prática da mise-en-scène.",
+    },
+
+    // Textos section
+    textos: {
+      sectionTitle: "Cinema Processual",
+      sectionSubtitle: "Escritos, traduções, entrevistas e transcrições sobre cinema como processo, gesto, memória e forma.",
+      pageLabel: "TEXTOS",
+      pageIntro: "Escritos, traduções, entrevistas e transcrições sobre cinema como processo, gesto, memória e forma.",
+      readButton: "Ler texto",
+      viewAll: "Ver todos os textos →",
+      categories: {
+        traducao: "Tradução",
+        transcricao: "Transcrição",
+        manifesto: "Manifesto",
+        ensaio: "Ensaio",
+        entrevista: "Entrevista",
+      },
+    },
+
+    // Individual texts
+    texts: {
+      mekasBrakhage: {
+        title: "Jonas Mekas e Stan Brakhage",
+        category: "Tradução",
+        description: "Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.",
+      },
+      bressaneGodard: {
+        title: "Júlio Bressane sobre Jean-Luc Godard",
+        category: "Transcrição",
+        description: "Transcrição de ensaio oral proferido por Júlio Bressane em outubro de 2022, após o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.",
+      },
+      cinemaProcessual: {
+        title: "Cinema Processual",
+        category: "Manifesto",
+        description: "Texto de apresentação do projeto Cinema Processual: entrevistas, ensaios, críticas e produção de escrita e expressão cinematográfica.",
+      },
     },
 
     // Profile block
@@ -215,6 +252,7 @@ export const translations = {
       reel: "Reel",
       filmografia: "Filmography",
       fotos: "Photos",
+      textos: "Texts",
       assistenciaDirecao: "Asst. Direction",
       escrita: "Writing",
       skipToContent: "Skip to content",
@@ -243,6 +281,42 @@ export const translations = {
       contactAvailability: "Available for features, shorts, documentaries and hybrid projects.",
       writingDesc: "Essays, texts and interviews on cinema, image and creative process.",
       adDesc: "As assistant director, Francisco Vidal manages the organization of the filming process, communication between director and crew, on-set supervision, and the practical sustaining of the mise-en-scene.",
+    },
+
+    // Textos section
+    textos: {
+      sectionTitle: "Cinema Processual",
+      sectionSubtitle: "Writings, translations, interviews and transcriptions on cinema as process, gesture, memory and form.",
+      pageLabel: "TEXTS",
+      pageIntro: "Writings, translations, interviews and transcriptions on cinema as process, gesture, memory and form.",
+      readButton: "Read text",
+      viewAll: "View all texts →",
+      categories: {
+        traducao: "Translation",
+        transcricao: "Transcription",
+        manifesto: "Manifesto",
+        ensaio: "Essay",
+        entrevista: "Interview",
+      },
+    },
+
+    // Individual texts
+    texts: {
+      mekasBrakhage: {
+        title: "Jonas Mekas and Stan Brakhage",
+        category: "Translation",
+        description: "Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.",
+      },
+      bressaneGodard: {
+        title: "Julio Bressane on Jean-Luc Godard",
+        category: "Transcription",
+        description: "Transcription of an oral essay given by Julio Bressane in October 2022, following the death of Jean-Luc Godard, at the Cinemateca do MAM Rio.",
+      },
+      cinemaProcessual: {
+        title: "Cinema Processual",
+        category: "Manifesto",
+        description: "Presentation text of the Cinema Processual project: interviews, essays, criticism and production of cinematic writing and expression.",
+      },
     },
 
     profile: {
