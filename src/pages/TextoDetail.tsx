@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { MekasPage } from './MekasPage';
 import './TextoDetail.css';
 
 interface TextoEntry {
@@ -14,6 +15,7 @@ interface TextoEntry {
   description?: string;
   content: React.ReactNode;
   isGodardPaper?: boolean;
+  isMekasPaper?: boolean;
 }
 
 const textosContentPt: Record<string, TextoEntry> = {
@@ -107,17 +109,16 @@ const textosContentPt: Record<string, TextoEntry> = {
       </>
     ),
   },
-  'mekas-brakhage': {
-    title: 'Jonas Mekas e Stan Brakhage',
+  'jonas-mekas-stan-brakhage': {
+    title: 'Jonas Mekas e/com/sobre Stan Brakhage',
     category: 'Tradução',
     archiveCode: 'CP-003',
-    source: 'Film Culture Reader',
-    content: (
-      <>
-        <p>Jonas Mekas escreveu sobre Stan Brakhage em momentos distintos. Este texto, originalmente publicado no Film Culture Reader, organizado por P. Adams Sitney, apresenta uma reflexão sobre a obra do cineasta americano.</p>
-        <p>O texto completo será publicado em breve.</p>
-      </>
-    ),
+    source: 'Film Culture Reader (1970)',
+    author: 'Jonas Mekas',
+    readTime: '8 min de leitura',
+    description: 'Tradução de um ensaio de Mekas publicado na coletânea Film Culture Reader (1970), organizada por P. Adams Sitney.',
+    isMekasPaper: true,
+    content: null,
   },
   'cinema-processual': {
     title: 'Cinema Processual',
@@ -147,17 +148,16 @@ const textosContentEn: Record<string, TextoEntry> = {
       <p className="godard-coming-soon">English version coming soon.</p>
     ),
   },
-  'mekas-brakhage': {
+  'jonas-mekas-stan-brakhage': {
     title: 'Jonas Mekas and Stan Brakhage',
     category: 'Translation',
     archiveCode: 'CP-003',
-    source: 'Film Culture Reader',
-    content: (
-      <>
-        <p>Jonas Mekas wrote about Stan Brakhage at different moments. This text, originally published in Film Culture Reader, presents a reflection on the work of the American filmmaker.</p>
-        <p>The full text will be published soon.</p>
-      </>
-    ),
+    source: 'Film Culture Reader (1970)',
+    author: 'Jonas Mekas',
+    readTime: '8 min read',
+    description: 'Translation of an essay by Jonas Mekas published in Film Culture Reader (1970), organized by P. Adams Sitney.',
+    isMekasPaper: true,
+    content: null,
   },
   'cinema-processual': {
     title: 'Cinema Processual',
@@ -172,7 +172,7 @@ const textosContentEn: Record<string, TextoEntry> = {
   },
 };
 
-const allSlugs = ['julio-bressane-sobre-jean-luc-godard', 'mekas-brakhage', 'cinema-processual'];
+const allSlugs = ['julio-bressane-sobre-jean-luc-godard', 'jonas-mekas-stan-brakhage', 'cinema-processual'];
 
 export function TextoDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -209,6 +209,10 @@ export function TextoDetail() {
         </div>
       </div>
     );
+  }
+
+  if (texto.isMekasPaper) {
+    return <MekasPage />;
   }
 
   if (texto.isGodardPaper) {
