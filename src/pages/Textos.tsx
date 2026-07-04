@@ -5,10 +5,21 @@ import './Textos.css';
 
 const textosDataPt = [
   {
+    slug: 'arqueologia-de-criacao-parte-1',
+    title: 'Arqueologia de Cria\u00e7\u00e3o',
+    category: 'Entrevista',
+    description: 'Entrevista com Priscylla Bettim e Renato Coelho sobre cinema artesanal, Super 8, Cinedi\u00e1rio e a g\u00eanese de As Florestas da Noite.',
+    archiveCode: 'CP-004',
+    source: 'Cinema Processual, julho de 2026',
+    readTime: '25 min',
+    featured: true,
+    linkPath: '/textos/arqueologia-de-criacao-parte-1',
+  },
+  {
     slug: 'julio-bressane-sobre-jean-luc-godard',
-    title: 'Júlio Bressane sobre Jean-Luc Godard',
-    category: 'Transcrição',
-    description: 'Transcrição de ensaio oral proferido por Júlio Bressane em outubro de 2022, após o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.',
+    title: 'J\u00falio Bressane sobre Jean-Luc Godard',
+    category: 'Transcri\u00e7\u00e3o',
+    description: 'Transcri\u00e7\u00e3o de ensaio oral proferido por J\u00falio Bressane em outubro de 2022, ap\u00f3s o falecimento de Jean-Luc Godard, na Cinemateca do MAM Rio.',
     archiveCode: 'CP-002',
     source: 'Cinemateca do MAM Rio, outubro de 2022',
     readTime: '5 min',
@@ -17,8 +28,8 @@ const textosDataPt = [
   {
     slug: 'jonas-mekas-stan-brakhage',
     title: 'Jonas Mekas e Stan Brakhage',
-    category: 'Tradução',
-    description: 'Tradução de um ensaio de Mekas publicado na coletânea Film Culture Reader (1970), organizada por P. Adams Sitney.',
+    category: 'Tradu\u00e7\u00e3o',
+    description: 'Tradu\u00e7\u00e3o de um ensaio de Mekas publicado na colet\u00e2nea Film Culture Reader (1970), organizada por P. Adams Sitney.',
     archiveCode: 'CP-003',
     source: 'Film Culture Reader (1970)',
     readTime: '8 min',
@@ -28,13 +39,24 @@ const textosDataPt = [
     slug: 'cinema-processual',
     title: 'Cinema Processual',
     category: 'Manifesto',
-    description: 'Texto de apresentação do projeto Cinema Processual: entrevistas, ensaios, críticas e produção de escrita e expressão cinematográfica.',
+    description: 'Texto de apresenta\u00e7\u00e3o do projeto Cinema Processual: entrevistas, ensaios, cr\u00edticas e produ\u00e7\u00e3o de escrita e express\u00e3o cinematogr\u00e1fica.',
     archiveCode: 'CP-000',
     featured: false,
   },
 ];
 
 const textosDataEn = [
+  {
+    slug: 'arqueologia-de-criacao-parte-1',
+    title: 'Archaeology of Creation (in Portuguese)',
+    category: 'Interview',
+    description: 'Interview with Priscylla Bettim and Renato Coelho on artisanal cinema, Super 8, Cinedi\u00e1rio, and the genesis of As Florestas da Noite.',
+    archiveCode: 'CP-004',
+    source: 'Cinema Processual, July 2026',
+    readTime: '25 min',
+    featured: true,
+    linkPath: '/textos/arqueologia-de-criacao-parte-1',
+  },
   {
     slug: 'julio-bressane-sobre-jean-luc-godard',
     title: 'Julio Bressane on Jean-Luc Godard',
@@ -117,18 +139,18 @@ export function Textos() {
               </div>
               <div className="textos-entry-body">
                 <h2 className="textos-entry-title">
-                  <Link to={`/texto/${featured.slug}`}>{featured.title}</Link>
+                  <Link to={'linkPath' in featured && featured.linkPath ? featured.linkPath : `/texto/${featured.slug}`}>{featured.title}</Link>
                 </h2>
                 {featured.source && <span className="textos-entry-source">{featured.source}</span>}
                 <p className="textos-entry-desc">{featured.description}</p>
                 {'readTime' in featured && featured.readTime && (
-                  <span className="textos-entry-time">{featured.archiveCode} · 2022 · {featured.readTime}</span>
+                  <span className="textos-entry-time">{featured.archiveCode} &middot; {featured.readTime}</span>
                 )}
               </div>
               <div className="textos-entry-cta">
-                <Link to={`/texto/${featured.slug}`} className="textos-entry-link">
+                <Link to={'linkPath' in featured && featured.linkPath ? featured.linkPath : `/texto/${featured.slug}`} className="textos-entry-link">
                   {t.textos.readButton}
-                  <span className="textos-entry-arrow" aria-hidden="true"> →</span>
+                  <span className="textos-entry-arrow" aria-hidden="true"> &rarr;</span>
                 </Link>
               </div>
             </article>
@@ -144,15 +166,15 @@ export function Textos() {
                   </div>
                   <div className="textos-entry-body">
                     <h2 className="textos-entry-title">
-                      <Link to={`/texto/${texto.slug}`}>{texto.title}</Link>
+                      <Link to={'linkPath' in texto && texto.linkPath ? texto.linkPath : `/texto/${texto.slug}`}>{texto.title}</Link>
                     </h2>
                     {texto.source && <span className="textos-entry-source">{texto.source}</span>}
                     <p className="textos-entry-desc">{texto.description}</p>
                   </div>
                   <div className="textos-entry-cta">
-                    <Link to={`/texto/${texto.slug}`} className="textos-entry-link">
+                    <Link to={'linkPath' in texto && texto.linkPath ? texto.linkPath : `/texto/${texto.slug}`} className="textos-entry-link">
                       {t.textos.readButton}
-                      <span className="textos-entry-arrow" aria-hidden="true"> →</span>
+                      <span className="textos-entry-arrow" aria-hidden="true"> &rarr;</span>
                     </Link>
                   </div>
                 </article>
