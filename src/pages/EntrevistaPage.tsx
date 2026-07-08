@@ -150,7 +150,9 @@ export function EntrevistaPage() {
           ))}
 
           <div className="entrevista-continua">
-            <p>Continua na Parte II.</p>
+            <Link to="/textos/arqueologia-de-criacao-parte-2" style={{ textDecoration: 'none' }}>
+              <p>Continua na Parte II &rarr;</p>
+            </Link>
           </div>
 
           <section className="entrevista-about">
@@ -159,7 +161,7 @@ export function EntrevistaPage() {
           </section>
 
           <nav className="entrevista-nav">
-            <span className="entrevista-nav-disabled">Parte II &mdash; em breve</span>
+            <Link to="/textos/arqueologia-de-criacao-parte-2" className="entrevista-nav-link">Ler Parte II &rarr;</Link>
           </nav>
         </div>
       </div>

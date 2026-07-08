@@ -15,6 +15,7 @@ import { AssistenciaDirecao } from './pages/AssistenciaDirecao';
 import { Escrita } from './pages/Escrita';
 import { Post } from './pages/Post';
 import { EntrevistaPage } from './pages/EntrevistaPage';
+import { EntrevistaPage2 } from './pages/EntrevistaPage2';
 import { NotFound } from './pages/NotFound';
 import './App.css';
 
@@ -112,6 +113,7 @@ function AppRoutes() {
           <Route path="/fotos" element={<Fotos />} />
           <Route path="/textos" element={<Textos />} />
           <Route path="/textos/arqueologia-de-criacao-parte-1" element={<EntrevistaPage />} />
+          <Route path="/textos/arqueologia-de-criacao-parte-2" element={<EntrevistaPage2 />} />
           <Route path="/texto/:slug" element={<TextoDetail />} />
           <Route path="/atuacao" element={<Atuacao />} />
           <Route path="/assistencia-de-direcao" element={<AssistenciaDirecao />} />

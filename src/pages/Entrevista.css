@@ -194,6 +194,20 @@
   opacity: 0.5;
 }
 
+.entrevista-nav-link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-red);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.entrevista-nav-link:hover {
+  color: var(--cp-ink);
+}
+
 .entrevista-en-notice {
   padding: 120px 48px;
   text-align: center;

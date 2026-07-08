@@ -1,0 +1,329 @@
+.entrevista2-page {
+  min-height: 100vh;
+  background-color: var(--bg-deep);
+  color: var(--cp-ivory);
+}
+
+.entrevista2-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--cp-red);
+  z-index: 1100;
+  transition: width 0.1s ease;
+}
+
+.entrevista2-back {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 20px 48px;
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(238, 231, 216, 0.06);
+}
+
+.entrevista2-back a {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.entrevista2-back a:hover {
+  color: var(--cp-ivory);
+}
+
+.entrevista2-hero {
+  padding: 96px 48px 72px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.entrevista2-eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  margin-bottom: 32px;
+}
+
+.entrevista2-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+  color: var(--cp-ivory);
+  margin-bottom: 20px;
+}
+
+.entrevista2-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 2vw, 22px);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cp-muted);
+  margin-bottom: 32px;
+}
+
+.entrevista2-leadin {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.7;
+  color: rgba(238, 231, 216, 0.75);
+  max-width: 680px;
+  margin-bottom: 24px;
+}
+
+.entrevista2-leadin em {
+  font-style: italic;
+}
+
+.entrevista2-credits {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  opacity: 0.7;
+}
+
+.entrevista2-index {
+  padding: 0 48px 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(238, 231, 216, 0.08);
+}
+
+.entrevista2-index-inner {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.entrevista2-index-link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 8px 0;
+}
+
+.entrevista2-index-link:hover {
+  color: var(--cp-ivory);
+}
+
+.entrevista2-body {
+  padding: 64px 48px 96px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.entrevista2-section {
+  margin-bottom: 0;
+}
+
+.entrevista2-section-separator {
+  padding: 4em 0 2.5em;
+  text-align: left;
+}
+
+.entrevista2-section-separator::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: rgba(238, 231, 216, 0.2);
+  margin-bottom: 24px;
+}
+
+.entrevista2-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--cp-ivory);
+}
+
+.entrevista2-turn {
+  margin-bottom: 2.2em;
+}
+
+.entrevista2-turn--francisco .entrevista2-turn-text {
+  padding-left: 20px;
+  border-left: 2px solid var(--cp-blue);
+}
+
+.entrevista2-speaker {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-right: 0.3em;
+}
+
+.entrevista2-speaker--francisco {
+  color: rgba(100, 130, 220, 0.9);
+}
+
+.entrevista2-speaker--guest {
+  color: rgba(180, 70, 55, 0.9);
+}
+
+.entrevista2-turn-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.7;
+  color: rgba(238, 231, 216, 0.88);
+}
+
+.entrevista2-turn-text p {
+  margin-bottom: 1.3em;
+}
+
+.entrevista2-turn-text p:last-child {
+  margin-bottom: 0;
+}
+
+.entrevista2-turn-text em {
+  font-style: italic;
+}
+
+.entrevista2-pullquote {
+  margin: 3.5em 0;
+  padding-left: 24px;
+  border-left: 3px solid var(--cp-red);
+}
+
+.entrevista2-pullquote p {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--cp-ivory);
+  letter-spacing: -0.01em;
+}
+
+.entrevista2-closing {
+  margin-top: 4em;
+  padding-top: 2em;
+  border-top: 1px solid rgba(238, 231, 216, 0.1);
+}
+
+.entrevista2-closing-note {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--cp-muted);
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.entrevista2-footer-nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid rgba(238, 231, 216, 0.08);
+}
+
+.entrevista2-footer-link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.entrevista2-footer-link:hover {
+  color: var(--cp-ivory);
+}
+
+.entrevista2-en-notice {
+  padding: 120px 48px;
+  text-align: center;
+}
+
+.entrevista2-en-notice p {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--cp-muted);
+  margin-bottom: 24px;
+}
+
+.entrevista2-en-notice a {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cp-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.entrevista2-en-notice a:hover {
+  color: var(--cp-ivory);
+}
+
+@media (max-width: 768px) {
+  .entrevista2-back {
+    padding: 16px 20px;
+  }
+
+  .entrevista2-hero {
+    padding: 64px 20px 48px;
+  }
+
+  .entrevista2-index {
+    padding: 0 20px 32px;
+  }
+
+  .entrevista2-index-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .entrevista2-body {
+    padding: 40px 20px 64px;
+  }
+
+  .entrevista2-turn-text {
+    font-size: 18px;
+  }
+
+  .entrevista2-speaker {
+    font-size: 18px;
+  }
+
+  .entrevista2-turn--francisco .entrevista2-turn-text {
+    padding-left: 14px;
+  }
+
+  .entrevista2-pullquote p {
+    font-size: 20px;
+  }
+
+  .entrevista2-section-separator {
+    padding: 3em 0 1.5em;
+  }
+
+  .entrevista2-footer-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
