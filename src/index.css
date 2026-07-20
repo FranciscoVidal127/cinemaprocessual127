@@ -1,107 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
 
 :root {
-  /* Core palette (kept for dark contexts: hero, fotos, reel, text pages) */
-  --bg: #0a0a0a;
-  --bg-deep: #050505;
-  --bg-surface: #141414;
-  --text: #e8e0d4;
-  --text-muted: #9a9590;
-  --text-dim: #6b6560;
-  --text-ghost: #3d3835;
-  --text-3: #bbb5ae;
-  --accent: #c0392b;
-  --accent-dim: rgba(192, 57, 43, 0.25);
-  --border: rgba(255, 255, 255, 0.06);
-  --line: rgba(255, 255, 255, 0.04);
-  --container: 1200px;
-
-  /* Typography */
-  --font-display: 'EB Garamond', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
-  --font-meta: 'JetBrains Mono', 'SF Mono', monospace;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-
-  /* Cinema Processual identity (dark contexts) */
-  --cp-black: #050505;
-  --cp-green: #07110d;
-  --cp-ivory: #eee7d8;
-  --cp-muted: #aaa39a;
-  --cp-red: #9b2f20;
-  --cp-border: rgba(238, 231, 216, 0.16);
-  --cp-line: rgba(238, 231, 216, 0.12);
-  --cp-surface: #0b1711;
-  --cp-elevated: #0f1f18;
-
-  /* Rhizome palette (new light symbiosis layer) */
-  --cp-rhizome-white: #f4f4f1;
-  --cp-rhizome-gray: #d9d9d4;
-  --cp-rhizome-soft: #ecece8;
-  --cp-rhizome-line: #1c1c1a;
-  --cp-rhizome-muted: #6f706b;
-  --cp-ink: #11110f;
-  --cp-charcoal: #1a1a18;
-  --cp-text-body: #3d3d3a;
-  --cp-text-secondary: #4a4a46;
-  --cp-border-light: rgba(20, 20, 18, 0.16);
-  --cp-border-soft: rgba(20, 20, 18, 0.08);
-  --cp-blue: #2f43b8;
+  --color-primary: #1a1a1a;
+  --color-secondary: #2d2d2d;
+  --color-accent: #c9a96e;
+  --color-accent-light: #e4d4a8;
+  --color-text: #f5f5f5;
+  --color-text-muted: #a3a3a3;
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #141414;
+  --color-border: #2a2a2a;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
 }
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: var(--font-sans);
-  background: var(--cp-rhizome-white);
-  color: var(--cp-ink);
-  line-height: 1.6;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font: inherit;
-  color: inherit;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  background: #111;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
 }

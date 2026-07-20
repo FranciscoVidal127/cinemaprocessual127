@@ -1,73 +1,25 @@
 interface YouTubeEmbedProps {
-  url: string;
-  title: string;
+  url: string
 }
 
-export function YouTubeEmbed({ url, title }: YouTubeEmbedProps) {
-  const getYouTubeId = (url: string): string | null => {
-    if (!url) return null;
+function getYouTubeId(url: string): string | null {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^&?/]+)/)
+  return match ? match[1] : null
+}
 
-    const patterns = [
-      /(?:youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/,
-      /(?:youtu\.be\/)([a-zA-Z0-9_-]{11})/,
-      /(?:youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
-      /(?:youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
-    ];
-
-    for (const pattern of patterns) {
-      const match = url.match(pattern);
-      if (match && match[1]) {
-        return match[1];
-      }
-    }
-
-    return null;
-  };
-
-  const videoId = getYouTubeId(url);
-
-  if (!videoId) {
-    return (
-      <div className="video-wrapper" style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#f5f5f5',
-        flexDirection: 'column',
-        gap: '12px',
-        padding: '24px'
-      }}>
-        <p style={{ color: '#666', fontSize: '15px' }}>Vídeo não disponível</p>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: '#0B4AA2',
-            textDecoration: 'none',
-            fontSize: '14px',
-            fontWeight: '500'
-          }}
-        >
-          Abrir no YouTube →
-        </a>
-      </div>
-    );
-  }
-
-  const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+export default function YouTubeEmbed({ url }: YouTubeEmbedProps) {
+  const videoId = getYouTubeId(url)
+  if (!videoId) return null
 
   return (
-    <div className="video-wrapper">
+    <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-[var(--color-surface-elevated)]">
       <iframe
-        src={embedUrl}
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        src={`https://www.youtube.com/embed/${videoId}`}
+        title="YouTube video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        loading="lazy"
-        style={{ border: 'none' }}
-        referrerPolicy="strict-origin-when-cross-origin"
+        className="absolute inset-0 w-full h-full"
       />
     </div>
-  );
+  )
 }

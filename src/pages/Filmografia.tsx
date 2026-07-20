@@ -1,46 +1,46 @@
-import { Link } from 'react-router-dom';
-import { siteData } from '../data/content';
-import { useLanguage } from '../context/LanguageContext';
-import './Filmografia.css';
+import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
+import { siteData } from '../data/content'
 
-export function Filmografia() {
-  const { language, t } = useLanguage();
-
-  const filmStatus = (status: string | undefined) => {
-    if (!status) return null;
-    if (language === 'en') {
-      if (status === 'Em produção') return t.filmMeta.inProduction;
-      if (status === 'Em pós-produção') return t.filmMeta.inPostProduction;
-    }
-    return status;
-  };
+export default function Filmografia() {
+  const { language, t } = useLanguage()
 
   return (
-    <div className="filmografia-page">
-
-      <div className="filmografia-header">
-        <span className="filmografia-label">{t.filmography.pageLabel}</span>
-      </div>
-
-      <section className="filmografia-list">
+    <div className="max-w-5xl mx-auto px-6 py-16">
+      <h1 className="text-3xl font-light tracking-tight mb-12">{t('filmografia.title')}</h1>
+      <div className="grid gap-8">
         {siteData.filmografia.map((filme) => (
-          <Link to={`/filme/${filme.slug}`} key={filme.id} className="filmografia-item">
-            <div className="filmografia-item-year">{filme.year}</div>
-            <div className="filmografia-item-body">
-              <h2 className="filmografia-item-title">{filme.title}</h2>
-              <p className="filmografia-item-director">dir. {filme.director}</p>
-              <p className="filmografia-item-role">{filme.role}</p>
-              {filme.festivals && (
-                <p className="filmografia-item-festivals">{filme.festivals}</p>
-              )}
+          <Link
+            key={filme.slug}
+            to={`/filmografia/${filme.slug}`}
+            className="group flex flex-col sm:flex-row gap-6 p-6 rounded-lg border border-[var(--color-border)] hover:border-[var(--color-accent)]/40 transition-all hover:bg-[var(--color-surface-elevated)]"
+          >
+            <div className="sm:w-48 shrink-0">
+              <img
+                src={filme.image}
+                alt={filme.title}
+                className={`w-full rounded object-cover ${filme.imagePanoramic ? 'aspect-[21/9]' : 'aspect-[2/3]'}`}
+              />
+            </div>
+            <div className="flex-1 flex flex-col justify-center">
+              <h2 className="text-xl font-light group-hover:text-[var(--color-accent)] transition-colors">
+                {language === 'en' && filme.titleEn ? filme.titleEn : filme.title}
+              </h2>
+              <p className="text-sm text-[var(--color-text-muted)] mt-1">
+                {filme.year} · {filme.director}
+              </p>
+              <p className="text-sm text-[var(--color-text-muted)] mt-2">
+                {language === 'en' ? filme.roleEn : filme.role}
+              </p>
               {filme.status && (
-                <p className="filmografia-item-status">{filmStatus(filme.status)}</p>
+                <span className="inline-block mt-3 text-xs uppercase tracking-widest text-[var(--color-accent)] border border-[var(--color-accent)]/30 px-2 py-0.5 rounded w-fit">
+                  {language === 'en' && filme.statusEn ? filme.statusEn : filme.status}
+                </span>
               )}
             </div>
           </Link>
         ))}
-      </section>
-
+      </div>
     </div>
-  );
+  )
 }

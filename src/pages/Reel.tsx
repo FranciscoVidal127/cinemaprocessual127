@@ -1,37 +1,22 @@
-import { siteData } from '../data/content';
-import { useLanguage } from '../context/LanguageContext';
-import { YouTubeEmbed } from '../components/YouTubeEmbed';
-import './Reel.css';
+import { useLanguage } from '../context/LanguageContext'
+import { siteData } from '../data/content'
 
-export function Reel() {
-  const [featured, ...rest] = siteData.reel.videos;
-  const { t } = useLanguage();
+export default function Reel() {
+  const { t } = useLanguage()
+
+  if (siteData.reel.videos.length === 0) {
+    return (
+      <div className="max-w-4xl mx-auto px-6 py-16 text-center">
+        <h1 className="text-3xl font-light tracking-tight mb-4">{t('reel.title')}</h1>
+        <p className="text-[var(--color-text-muted)]">{t('reel.empty')}</p>
+      </div>
+    )
+  }
 
   return (
-    <div className="reel-page">
-
-      <div className="reel-header">
-        <span className="reel-label">{t.reelPage.label}</span>
-      </div>
-
-      {featured && (
-        <section className="reel-featured">
-          <YouTubeEmbed url={featured} title="Francisco Vidal — Reel" />
-        </section>
-      )}
-
-      {rest.length > 0 && (
-        <section className="reel-grid-section">
-          <div className="reel-grid">
-            {rest.map((videoUrl, index) => (
-              <div key={index} className="reel-item">
-                <YouTubeEmbed url={videoUrl} title={`Francisco Vidal — Cena ${index + 2}`} />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
+    <div className="max-w-4xl mx-auto px-6 py-16">
+      <h1 className="text-3xl font-light tracking-tight mb-8">{t('reel.title')}</h1>
+      {/* Reel videos would render here when available */}
     </div>
-  );
+  )
 }
