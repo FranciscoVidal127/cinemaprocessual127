@@ -1,5 +1,5 @@
 .atuacao-page {
-  background-color: var(--cp-rhizome-white);
+  background-color: var(--bg);
   min-height: 100vh;
   padding-top: 0;
 }
@@ -8,7 +8,7 @@
   font-family: var(--font-mono);
   font-size: 8.5px;
   letter-spacing: 0.2em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-muted);
 }
 
 /* ===================== HERO ===================== */
@@ -51,7 +51,7 @@
 
 .atuacao-statement {
   padding: 96px 48px;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .atuacao-statement-text {
@@ -60,7 +60,7 @@
   font-style: italic;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: var(--cp-text-body);
+  color: var(--text-dim);
   max-width: 44ch;
 }
 
@@ -68,8 +68,8 @@
 
 .atuacao-reel {
   padding: 64px 32px;
-  border-bottom: 1px solid var(--cp-border-light);
-  background-color: #000;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-deep);
 }
 
 .atuacao-reel-header {
@@ -91,7 +91,7 @@
 
 .atuacao-strip {
   background-color: #000;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .atuacao-strip-grid {
@@ -118,7 +118,7 @@
 
 .atuacao-formation {
   padding: 64px 32px;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .atuacao-formation-header {
@@ -128,7 +128,7 @@
 .atuacao-formation-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--cp-border-light);
+  border-top: 1px solid var(--border);
   max-width: 800px;
 }
 
@@ -137,7 +137,7 @@
   grid-template-columns: 200px 1fr auto;
   gap: 16px;
   padding: 16px 0;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
   align-items: baseline;
 }
 
@@ -145,20 +145,20 @@
   font-family: var(--font-mono);
   font-size: 8.5px;
   letter-spacing: 0.1em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
 }
 
 .atuacao-formation-name {
   font-family: var(--font-sans);
   font-size: 14px;
-  color: var(--cp-text-body);
+  color: var(--text-dim);
 }
 
 .atuacao-formation-info {
   font-family: var(--font-mono);
   font-size: 8.5px;
   letter-spacing: 0.08em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   text-align: right;
 }
 
@@ -174,20 +174,21 @@
 .atuacao-contact-text {
   font-family: var(--font-sans);
   font-size: 14px;
-  color: var(--cp-text-secondary);
+  color: var(--text-muted);
   max-width: 40ch;
 }
 
 .atuacao-contact-email {
   font-family: var(--font-display);
   font-size: clamp(18px, 2vw, 26px);
-  color: var(--cp-ink);
+  color: var(--text-dim);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .atuacao-contact-email:hover {
-  color: var(--cp-rhizome-muted);
+  color: var(--text);
+  opacity: 1;
 }
 
 .atuacao-contact-link {
@@ -195,13 +196,14 @@
   font-size: 8.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .atuacao-contact-link:hover {
-  color: var(--cp-ink);
+  color: var(--text-dim);
+  opacity: 1;
 }
 
 /* ===================== RESPONSIVE ===================== */

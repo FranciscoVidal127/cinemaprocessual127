@@ -1,35 +1,18 @@
 .escrita-page {
   min-height: 100vh;
-  background-color: var(--cp-rhizome-white);
+  background-color: var(--bg);
   padding-top: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.escrita-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("/assets/image.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.05;
-  mix-blend-mode: multiply;
-  pointer-events: none;
 }
 
 .escrita-page .page-header {
-  position: relative;
   padding-top: 136px;
 }
 
 /* ===================== CONTROLS ===================== */
 
 .escrita-controls {
-  position: relative;
   padding: 24px 32px 20px;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .escrita-controls-inner {
@@ -51,7 +34,7 @@
   font-family: var(--font-display);
   font-size: 16px;
   font-style: italic;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   background: none;
   border: none;
   padding: 4px 18px 4px 0;
@@ -60,11 +43,11 @@
 }
 
 .escrita-cat-btn:hover {
-  color: var(--cp-text-body);
+  color: var(--text-dim);
 }
 
 .escrita-cat-btn.active {
-  color: var(--cp-ink);
+  color: var(--text);
   font-style: normal;
 }
 
@@ -72,10 +55,10 @@
   font-family: var(--font-display);
   font-size: 16px;
   font-style: italic;
-  color: var(--cp-ink);
+  color: var(--text);
   background: none;
   border: none;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
   padding: 4px 0;
   width: 200px;
   transition: border-color 0.2s ease;
@@ -83,18 +66,17 @@
 
 .escrita-search:focus {
   outline: none;
-  border-bottom-color: var(--cp-ink);
+  border-bottom-color: var(--text-dim);
 }
 
 .escrita-search::placeholder {
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   font-style: italic;
 }
 
 /* ===================== ARCHIVE LIST ===================== */
 
 .escrita-archive {
-  position: relative;
   padding: 48px 32px 120px;
 }
 
@@ -103,14 +85,14 @@
   font-family: var(--font-display);
   font-size: 18px;
   font-style: italic;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   padding: 64px 0;
 }
 
 .escrita-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--cp-border-light);
+  border-top: 1px solid var(--border);
 }
 
 /* ===================== ENTRY ===================== */
@@ -120,7 +102,7 @@
   grid-template-columns: 48px 1fr auto;
   gap: 32px;
   padding: 40px 0;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
   align-items: start;
   text-decoration: none;
   color: inherit;
@@ -139,14 +121,14 @@
   font-family: var(--font-mono);
   font-size: 20px;
   letter-spacing: -0.04em;
-  color: var(--cp-border-light);
+  color: var(--border);
   line-height: 1;
   padding-top: 10px;
   user-select: none;
 }
 
 .escrita-entry:hover .escrita-entry-number {
-  color: var(--cp-rhizome-muted);
+  color: var(--border-strong);
 }
 
 /* ===================== ENTRY BODY ===================== */
@@ -170,14 +152,14 @@
   font-size: 8px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cp-red);
+  color: var(--accent);
 }
 
 .escrita-entry-origem {
   font-family: var(--font-display);
   font-size: 13px;
   font-style: italic;
-  color: var(--cp-text-secondary);
+  color: var(--text-muted);
 }
 
 .escrita-entry-date,
@@ -186,7 +168,7 @@
   font-size: 8px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
 }
 
 .escrita-entry-title {
@@ -195,7 +177,7 @@
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.04;
-  color: var(--cp-ink);
+  color: var(--text);
   margin-bottom: 20px;
 }
 
@@ -205,7 +187,7 @@
 }
 
 .escrita-entry:hover .escrita-entry-title a {
-  color: var(--cp-text-secondary);
+  color: var(--text-dim);
 }
 
 .escrita-entry-excerpt {
@@ -213,10 +195,10 @@
   font-size: 17px;
   font-style: italic;
   line-height: 1.7;
-  color: var(--cp-text-secondary);
+  color: var(--text-muted);
   max-width: 50ch;
   padding-top: 14px;
-  border-top: 1px solid var(--cp-border-light);
+  border-top: 1px solid var(--border);
 }
 
 .escrita-entry-tags {
@@ -231,8 +213,8 @@
   font-size: 7.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
-  border: 1px solid var(--cp-border-light);
+  color: var(--text-ghost);
+  border: 1px solid var(--border);
   padding: 2px 7px;
 }
 
@@ -245,14 +227,14 @@
   font-size: 8px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.2s ease;
 }
 
 .escrita-entry:hover .escrita-entry-link {
-  color: var(--cp-ink);
+  color: var(--text-dim);
 }
 
 .escrita-entry-soon {
@@ -260,8 +242,8 @@
   font-size: 8px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
-  border: 1px solid var(--cp-border-light);
+  color: var(--text-ghost);
+  border: 1px solid var(--border);
   padding: 3px 8px;
   width: fit-content;
   margin-top: 8px;
@@ -281,7 +263,6 @@
 
 @media (max-width: 640px) {
   .escrita-page .page-header { padding-top: 108px; }
-  .escrita-page::before { opacity: 0.03; }
   .escrita-controls { padding: 16px 20px; }
   .escrita-archive { padding: 32px 20px 80px; }
 

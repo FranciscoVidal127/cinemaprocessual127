@@ -1,5 +1,5 @@
 .sobre-page {
-  background-color: var(--cp-rhizome-white);
+  background-color: var(--bg);
   min-height: 100vh;
   padding-top: 0;
 }
@@ -8,7 +8,7 @@
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.2em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-muted);
 }
 
 /* ===================== PORTRAIT ===================== */
@@ -53,27 +53,11 @@
 /* ===================== BIO ===================== */
 
 .sobre-bio {
-  position: relative;
   padding: 80px 48px;
-  border-bottom: 1px solid var(--cp-border-light);
-  overflow: hidden;
-}
-
-.sobre-bio::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("/assets/image.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.04;
-  mix-blend-mode: multiply;
-  pointer-events: none;
+  border-bottom: 1px solid var(--border);
 }
 
 .about-container {
-  position: relative;
   display: flex;
   gap: 3rem;
   align-items: flex-start;
@@ -91,12 +75,12 @@
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.8;
-  color: var(--cp-text-body);
+  color: var(--text-dim);
 }
 
 .sobre-bio-text em {
   font-style: italic;
-  color: var(--cp-ink);
+  color: var(--text);
 }
 
 /* ===================== PROFILE BLOCK ===================== */
@@ -109,7 +93,7 @@
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.22em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-muted);
   margin-bottom: 24px;
   display: block;
 }
@@ -134,22 +118,22 @@
   font-size: 9px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-muted);
 }
 
 .profile-block-item-value {
   font-family: var(--font-sans);
   font-size: 14px;
   line-height: 1.5;
-  color: var(--cp-text-body);
+  color: var(--text-dim);
 }
 
 /* ===================== TRAJECTORY ===================== */
 
 .sobre-trajectory {
   padding: 80px 48px;
-  border-bottom: 1px solid var(--cp-border-light);
-  background-color: var(--cp-rhizome-soft);
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-surface);
 }
 
 .sobre-trajectory-header {
@@ -167,7 +151,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 28px 0;
-  border-bottom: 1px solid var(--cp-border-soft);
+  border-bottom: 1px solid var(--border);
   position: relative;
   padding-left: 24px;
 }
@@ -180,7 +164,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--cp-rhizome-muted);
+  background-color: var(--text-muted);
   opacity: 0.5;
 }
 
@@ -201,7 +185,7 @@
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-dim);
   font-weight: 500;
 }
 
@@ -209,13 +193,13 @@
   font-family: var(--font-sans);
   font-size: 15px;
   line-height: 1.72;
-  color: var(--cp-text-body);
+  color: var(--text-muted);
   margin: 0;
 }
 
 .sobre-trajectory-text em {
   font-style: italic;
-  color: var(--cp-ink);
+  color: var(--text-dim);
 }
 
 /* ===================== CONTACT ===================== */
@@ -230,33 +214,35 @@
 .sobre-contact-body {
   font-family: var(--font-sans);
   font-size: 14px;
-  color: var(--cp-text-secondary);
+  color: var(--text-muted);
   max-width: 40ch;
 }
 
 .sobre-contact-email {
   font-family: var(--font-display);
   font-size: clamp(18px, 2vw, 26px);
-  color: var(--cp-ink);
+  color: var(--text-dim);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .sobre-contact-email:hover {
-  color: var(--cp-rhizome-muted);
+  color: var(--text);
+  opacity: 1;
 }
 
 .sobre-contact-social {
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.12em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .sobre-contact-social:hover {
-  color: var(--cp-ink);
+  color: var(--text-dim);
+  opacity: 1;
 }
 
 /* ===================== RESPONSIVE ===================== */
@@ -264,10 +250,6 @@
 @media (max-width: 860px) {
   .sobre-bio {
     padding: 56px 24px;
-  }
-
-  .sobre-bio::before {
-    opacity: 0.03;
   }
 
   .about-container {
@@ -283,7 +265,7 @@
     width: 100%;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--cp-border-light);
+    border-top: 1px solid var(--border);
   }
 
   .sobre-bio-text {

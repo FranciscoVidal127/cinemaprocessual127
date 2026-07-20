@@ -69,9 +69,9 @@ export const translations = {
       mekasBrakhage: {
         title: "Jonas Mekas e Stan Brakhage",
         category: "Tradução",
-        description: "Tradução de um ensaio de Mekas publicado na coletânea Film Culture Reader (1970), organizada por P. Adams Sitney.",
+        description: "Tradução de ensaio de Jonas Mekas publicado em Film Culture Reader, organizado por P. Adams Sitney.",
         archiveCode: "CP-003",
-        source: "Film Culture Reader (1970)",
+        source: "Film Culture Reader",
       },
       cinemaProcessual: {
         title: "Cinema Processual",
@@ -288,9 +288,9 @@ export const translations = {
       mekasBrakhage: {
         title: "Jonas Mekas and Stan Brakhage",
         category: "Translation",
-        description: "Translation of an essay by Jonas Mekas published in Film Culture Reader (1970), organized by P. Adams Sitney.",
+        description: "Translation of an essay by Jonas Mekas published in Film Culture Reader, organized by P. Adams Sitney.",
         archiveCode: "CP-003",
-        source: "Film Culture Reader (1970)",
+        source: "Film Culture Reader",
       },
       cinemaProcessual: {
         title: "Cinema Processual",

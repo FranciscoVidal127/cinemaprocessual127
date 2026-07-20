@@ -1,135 +1,268 @@
-import { useParams, Link } from 'react-router-dom'
-import { useLanguage } from '../context/LanguageContext'
-import { siteData } from '../data/content'
-import YouTubeEmbed from '../components/YouTubeEmbed'
+import { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { getFilmeBySlug } from '../lib/supabase';
+import { siteData } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
+import { YouTubeEmbed } from '../components/YouTubeEmbed';
+import './FilmeDetail.css';
 
-export default function FilmeDetail() {
-  const { slug } = useParams<{ slug: string }>()
-  const { language, t } = useLanguage()
+export function FilmeDetail() {
+  const { slug } = useParams<{ slug: string }>();
+  const [filme, setFilme] = useState<any | null>(null);
+  const [loading, setLoading] = useState(true);
+  const { language, t } = useLanguage();
 
-  const filme = siteData.filmografia.find((f) => f.slug === slug)
+  useEffect(() => {
+    async function loadFilme() {
+      if (!slug) return;
+      try {
+        const filmeData = await getFilmeBySlug(slug);
+        if (filmeData) {
+          setFilme(filmeData);
+        } else {
+          const staticFilme = siteData.filmografia.find(f => f.slug === slug);
+          if (staticFilme) {
+            setFilme({
+              ...staticFilme,
+              cast: staticFilme.cast || [],
+              stills: staticFilme.stills || [],
+              scenes: staticFilme.scenes || [],
+            });
+          }
+        }
+      } catch {
+        const staticFilme = siteData.filmografia.find(f => f.slug === slug);
+        if (staticFilme) {
+          setFilme({
+            ...staticFilme,
+            cast: staticFilme.cast || [],
+            stills: staticFilme.stills || [],
+            scenes: staticFilme.scenes || [],
+          });
+        }
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadFilme();
+  }, [slug]);
+
+  const translateStatus = (status: string | undefined) => {
+    if (!status) return '';
+    if (language === 'en') {
+      if (status === 'Em produção') return t.filmMeta.inProduction;
+      if (status === 'Em pós-produção') return t.filmMeta.inPostProduction;
+    }
+    return status;
+  };
+
+  const translateGenre = (genre: string | undefined) => {
+    if (!genre) return '';
+    if (language === 'en') {
+      return genre
+        .replace('Longa-metragem', 'Feature Film')
+        .replace('Curta-metragem', 'Short Film')
+        .replace('Ficção', 'Fiction')
+        .replace('Documentário', 'Documentary');
+    }
+    return genre;
+  };
+
+  if (loading) {
+    return (
+      <div className="filme-detail-loading">
+        <div className="container">
+          <p className="filme-detail-loading-text">{t.filmography.loading}</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!filme) {
     return (
-      <div className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <p className="text-[var(--color-text-muted)]">Filme não encontrado.</p>
-        <Link to="/filmografia" className="text-[var(--color-accent)] mt-4 inline-block">
-          ← {t('filmografia.title')}
-        </Link>
+      <div className="filme-detail-loading">
+        <div className="container">
+          <p>{t.filmography.notFound}</p>
+          <Link to="/filmografia" className="filme-back">{t.filmography.backToFilmography}</Link>
+        </div>
       </div>
-    )
+    );
   }
 
-  const title = language === 'en' && filme.titleEn ? filme.titleEn : filme.title
-  const description = language === 'en' ? filme.descriptionEn : filme.description
-  const role = language === 'en' ? filme.roleEn : filme.role
-  const status = language === 'en' && filme.statusEn ? filme.statusEn : filme.status
-
   return (
-    <div className="max-w-4xl mx-auto px-6 py-16">
-      <Link
-        to="/filmografia"
-        className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors mb-8 inline-block"
-      >
-        ← {t('filmografia.title')}
-      </Link>
+    <div className="filme-detail">
 
-      {filme.image && (
-        <img
-          src={filme.image}
-          alt={title}
-          className={`w-full rounded-lg mb-8 object-cover ${
-            filme.imagePanoramic ? 'aspect-[21/9]' : 'aspect-video max-h-96'
-          }`}
-        />
-      )}
+      <header className="filme-detail-header">
+        <div className="container">
+          <Link to="/filmografia" className="filme-back">{t.filmography.backToFilmography}</Link>
+        </div>
+      </header>
 
-      <h1 className="text-3xl md:text-4xl font-light tracking-tight mb-2">{title}</h1>
-      <p className="text-[var(--color-text-muted)] mb-8">
-        {filme.year} · {filme.director}
-      </p>
+      <section className="filme-detail-hero">
+        <div className="container">
+          <div className="filme-detail-grid">
+            <div className="filme-detail-poster">
+              <img src={filme.image} alt={filme.title} />
+            </div>
+            <div className="filme-detail-info">
+              <div className="filme-detail-eyebrow">
+                <span className="label">{filme.type}</span>
+                {filme.status && <span className="filme-detail-status">{translateStatus(filme.status)}</span>}
+              </div>
 
-      {status && (
-        <span className="inline-block mb-6 text-xs uppercase tracking-widest text-[var(--color-accent)] border border-[var(--color-accent)]/30 px-3 py-1 rounded">
-          {status}
-        </span>
-      )}
+              <h1 className="filme-detail-title">{filme.title}</h1>
 
-      <section className="mb-8">
-        <h2 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-2">{t('filme.description')}</h2>
-        <p className="text-[var(--color-text)] leading-relaxed">{description}</p>
+              <div className="filme-detail-meta">
+                <div className="filme-detail-meta-row">
+                  <span className="filme-detail-meta-label">{t.filmography.year}</span>
+                  <span className="filme-detail-meta-value">{filme.year}</span>
+                </div>
+                <div className="filme-detail-meta-row">
+                  <span className="filme-detail-meta-label">{t.filmography.direction}</span>
+                  <span className="filme-detail-meta-value">{filme.director}</span>
+                </div>
+                <div className="filme-detail-meta-row">
+                  <span className="filme-detail-meta-label">{t.filmography.role}</span>
+                  <span className="filme-detail-meta-value">{filme.role}</span>
+                </div>
+                {filme.genre && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">{t.filmography.format}</span>
+                    <span className="filme-detail-meta-value">{translateGenre(filme.genre)}</span>
+                  </div>
+                )}
+                {filme.country && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">{t.filmography.country}</span>
+                    <span className="filme-detail-meta-value">{filme.country}</span>
+                  </div>
+                )}
+                {filme.duration && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">{t.filmography.duration}</span>
+                    <span className="filme-detail-meta-value">{filme.duration}</span>
+                  </div>
+                )}
+                {filme.productionCompanies && filme.productionCompanies.length > 0 && (
+                  <div className="filme-detail-meta-row">
+                    <span className="filme-detail-meta-label">{t.filmography.productionCompanies}</span>
+                    <span className="filme-detail-meta-value">{filme.productionCompanies.join(', ')}</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="filme-detail-divider" />
+
+              {filme.description && (
+                <div className="filme-detail-synopsis">
+                  <p>{filme.description}</p>
+                </div>
+              )}
+
+              {filme.festivals && (
+                <div className="filme-detail-festival">
+                  <span className="label">{t.filmography.festival}</span>
+                  <p>{filme.festivals}</p>
+                </div>
+              )}
+
+              {filme.producers && filme.producers.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">{t.filmography.production}</span>
+                  <p className="filme-detail-crew-names">{filme.producers.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.coproducers && filme.coproducers.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">{t.filmography.coproduction}</span>
+                  <p className="filme-detail-crew-names">{filme.coproducers.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.supporters && filme.supporters.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">{t.filmography.support}</span>
+                  <p className="filme-detail-crew-names">{filme.supporters.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.castPrincipal && filme.castPrincipal.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">{t.filmography.cast}</span>
+                  <p className="filme-detail-crew-names">{filme.castPrincipal.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.castSecundario && filme.castSecundario.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">{t.filmography.supportingCast}</span>
+                  <p className="filme-detail-crew-names">{filme.castSecundario.join(', ')}</p>
+                </div>
+              )}
+
+              {!filme.castPrincipal && filme.cast && filme.cast.length > 0 && (
+                <div className="filme-detail-crew-block">
+                  <span className="label">{t.filmography.cast}</span>
+                  <p className="filme-detail-crew-names">{filme.cast.join(', ')}</p>
+                </div>
+              )}
+
+              {filme.crew && filme.crew.length > 0 && (
+                <div className="filme-detail-crew-section">
+                  <span className="label">{t.filmography.crew}</span>
+                  <div className="filme-detail-crew-list">
+                    {filme.crew.map((member: { role: string; name: string }, idx: number) => (
+                      <div key={idx} className="filme-detail-crew-row">
+                        <span className="filme-detail-crew-role">{member.role}</span>
+                        <span className="filme-detail-crew-name">{member.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       </section>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 mb-8 text-sm">
-        <Detail label={t('filme.role')} value={role} />
-        <Detail label={t('filme.type')} value={filme.type} />
-        {filme.country && <Detail label={t('filme.country')} value={filme.country} />}
-        {filme.duration && <Detail label={t('filme.duration')} value={filme.duration} />}
-        <Detail label={t('filme.production')} value={filme.productionCompanies} />
-        <Detail label={t('filme.producers')} value={filme.producers} />
-        {filme.coproducers && <Detail label={t('filme.coproducers')} value={filme.coproducers} />}
-        {filme.supporters && <Detail label={t('filme.supporters')} value={filme.supporters} />}
-        {filme.festivals && <Detail label={t('filme.festivals')} value={filme.festivals} />}
-      </div>
-
-      {filme.castPrincipal && (
-        <section className="mb-6">
-          <h2 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-2">{t('filme.cast')}</h2>
-          <p className="text-sm text-[var(--color-text)]">{filme.castPrincipal}</p>
-        </section>
-      )}
-
-      {filme.castSecundario && (
-        <section className="mb-6">
-          <h2 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-2">{t('filme.castSecundario')}</h2>
-          <p className="text-sm text-[var(--color-text)]">{filme.castSecundario}</p>
-        </section>
-      )}
-
-      {filme.crew.length > 0 && (
-        <section className="mb-8">
-          <h2 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-4">{t('filme.crew')}</h2>
-          <div className="space-y-1 text-sm">
-            {filme.crew.map((c, i) => (
-              <div key={i} className="flex gap-2">
-                <span className="text-[var(--color-text-muted)] min-w-[200px]">{c.role}</span>
-                <span className="text-[var(--color-text)]">{c.name}</span>
-              </div>
-            ))}
+      {filme.stills && filme.stills.length > 0 && (
+        <section className="filme-detail-stills">
+          <div className="container">
+            <p className="filme-detail-section-title">{t.filmography.filmStills}</p>
+            <div className="filme-stills-grid">
+              {filme.stills.map((still: { src: string; alt: string }, idx: number) => (
+                <div key={idx} className="filme-still">
+                  <img src={still.src} alt={still.alt} loading="lazy" />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}
 
-      {filme.stills.length > 0 && (
-        <section className="mb-8">
-          <h2 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-4">{t('filme.stills')}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {filme.stills.map((src, i) => (
-              <img key={i} src={src} alt={`${title} still ${i + 1}`} className="w-full rounded-lg object-cover aspect-video" />
-            ))}
+      {filme.scenes && filme.scenes.length > 0 && (
+        <section className="filme-detail-scenes">
+          <div className="container">
+            <p className="filme-detail-section-title">{t.filmography.selectedScenes}</p>
+            <p className="filme-scenes-intro">
+              {t.filmography.selectedScenesIntro} — {filme.role} (Francisco Vidal)
+            </p>
+            <div className="filme-scenes-grid">
+              {filme.scenes.map((scene: { title: string; subtitle: string; youtubeUrl: string }, idx: number) => (
+                <div key={idx} className="filme-scene">
+                  <div className="filme-scene-info">
+                    <span className="label">{scene.title}</span>
+                    <p className="filme-scene-subtitle">{scene.subtitle}</p>
+                  </div>
+                  <YouTubeEmbed url={scene.youtubeUrl} title={scene.title} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}
 
-      {filme.scenes.length > 0 && (
-        <section className="mb-8">
-          <h2 className="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-4">{t('filme.scenes')}</h2>
-          <div className="grid gap-6">
-            {filme.scenes.map((url, i) => (
-              <YouTubeEmbed key={i} url={url} />
-            ))}
-          </div>
-        </section>
-      )}
     </div>
-  )
-}
-
-function Detail({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="py-2 border-b border-[var(--color-border)]">
-      <span className="text-[var(--color-text-muted)]">{label}: </span>
-      <span className="text-[var(--color-text)]">{value}</span>
-    </div>
-  )
+  );
 }

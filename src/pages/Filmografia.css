@@ -1,39 +1,22 @@
 .filmografia-page {
-  background-color: var(--cp-rhizome-white);
+  background-color: var(--bg);
   min-height: 100vh;
   padding-top: 72px;
-  position: relative;
-  overflow: hidden;
-}
-
-.filmografia-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("/assets/image.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.05;
-  mix-blend-mode: multiply;
-  pointer-events: none;
 }
 
 .filmografia-header {
-  position: relative;
   padding: 16px 32px;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .filmografia-label {
   font-family: var(--font-mono);
   font-size: 8.5px;
   letter-spacing: 0.22em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
 }
 
 .filmografia-list {
-  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -43,7 +26,7 @@
   grid-template-columns: 140px 1fr 32px;
   gap: 32px;
   padding: 32px;
-  border-bottom: 1px solid var(--cp-border-light);
+  border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
   align-items: center;
@@ -51,7 +34,7 @@
 }
 
 .filmografia-entry:hover {
-  background-color: var(--cp-rhizome-soft);
+  background-color: var(--bg-surface);
 }
 
 .filmografia-entry-poster {
@@ -84,7 +67,7 @@
   font-weight: 300;
   letter-spacing: -0.04em;
   line-height: 0.95;
-  color: var(--cp-ink);
+  color: var(--text);
 }
 
 .filmografia-entry-meta-row {
@@ -98,21 +81,21 @@
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.14em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
 }
 
 .filmografia-entry-director {
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.1em;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
 }
 
 .filmografia-entry-role {
   font-family: var(--font-display);
   font-size: 18px;
   font-style: italic;
-  color: var(--cp-red);
+  color: var(--accent);
   opacity: 0.8;
   letter-spacing: -0.01em;
 }
@@ -122,8 +105,8 @@
   font-size: 8px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
-  border: 1px solid var(--cp-border-light);
+  color: var(--text-ghost);
+  border: 1px solid var(--border);
   padding: 3px 8px;
   width: fit-content;
 }
@@ -133,8 +116,8 @@
   font-size: 8.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--cp-rhizome-muted);
-  border-left: 2px solid var(--cp-red);
+  color: var(--text-muted);
+  border-left: 2px solid var(--accent-dim);
   padding-left: 10px;
   margin-top: 4px;
 }
@@ -142,12 +125,12 @@
 .filmografia-entry-arrow {
   font-family: var(--font-display);
   font-size: 24px;
-  color: var(--cp-rhizome-muted);
+  color: var(--text-ghost);
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .filmografia-entry:hover .filmografia-entry-arrow {
-  color: var(--cp-ink);
+  color: var(--text-dim);
   transform: translateX(4px);
 }
 
@@ -155,7 +138,6 @@
 
 @media (max-width: 860px) {
   .filmografia-page { padding-top: 56px; }
-  .filmografia-page::before { opacity: 0.03; }
 
   .filmografia-entry {
     grid-template-columns: 100px 1fr 24px;
