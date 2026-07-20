@@ -131,7 +131,7 @@ export function Home() {
             </Link>
 
             {/* Secondary cards */}
-            <Link to="/texto/mekas-brakhage" className="texto-card texto-card--secondary">
+            <Link to="/texto/jonas-mekas-stan-brakhage" className="texto-card texto-card--secondary">
               <div className="texto-card-header">
                 <span className="texto-card-code">{t.texts.mekasBrakhage.archiveCode}</span>
                 <span className="texto-card-category">{t.texts.mekasBrakhage.category}</span>
@@ -139,6 +139,7 @@ export function Home() {
               <h3 className="texto-card-title">{t.texts.mekasBrakhage.title}</h3>
               <p className="texto-card-desc">{t.texts.mekasBrakhage.description}</p>
               <div className="texto-card-footer">
+                <span className="texto-card-meta">CP-003 &middot; 1962 &middot; 8 min</span>
                 <span className="texto-card-cta">{t.textos.readButton}</span>
               </div>
             </Link>

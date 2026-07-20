@@ -6,7 +6,7 @@
 
 .fotos-header {
   padding: 16px 32px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(244, 244, 241, 0.08);
 }
 
 .fotos-header-label {
@@ -96,7 +96,7 @@
 
 .fotos-footer {
   padding: 16px 32px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(244, 244, 241, 0.08);
 }
 
 .fotos-footer-text {

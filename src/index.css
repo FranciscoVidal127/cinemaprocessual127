@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 :root {
-  /* Core palette (original site variables) */
+  /* Core palette (kept for dark contexts: hero, fotos, reel, text pages) */
   --bg: #0a0a0a;
   --bg-deep: #050505;
   --bg-surface: #141414;
@@ -23,7 +23,7 @@
   --font-meta: 'JetBrains Mono', 'SF Mono', monospace;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Cinema Processual identity */
+  /* Cinema Processual identity (dark contexts) */
   --cp-black: #050505;
   --cp-green: #07110d;
   --cp-ivory: #eee7d8;
@@ -33,6 +33,20 @@
   --cp-line: rgba(238, 231, 216, 0.12);
   --cp-surface: #0b1711;
   --cp-elevated: #0f1f18;
+
+  /* Rhizome palette (new light symbiosis layer) */
+  --cp-rhizome-white: #f4f4f1;
+  --cp-rhizome-gray: #d9d9d4;
+  --cp-rhizome-soft: #ecece8;
+  --cp-rhizome-line: #1c1c1a;
+  --cp-rhizome-muted: #6f706b;
+  --cp-ink: #11110f;
+  --cp-charcoal: #1a1a18;
+  --cp-text-body: #3d3d3a;
+  --cp-text-secondary: #4a4a46;
+  --cp-border-light: rgba(20, 20, 18, 0.16);
+  --cp-border-soft: rgba(20, 20, 18, 0.08);
+  --cp-blue: #2f43b8;
 }
 
 *, *::before, *::after {
@@ -49,8 +63,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg);
-  color: var(--text);
+  background: var(--cp-rhizome-white);
+  color: var(--cp-ink);
   line-height: 1.6;
   overflow-x: hidden;
 }

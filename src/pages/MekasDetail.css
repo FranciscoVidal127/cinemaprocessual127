@@ -1,0 +1,374 @@
+.mekas-page {
+  min-height: 100vh;
+  background-color: #050505;
+}
+
+.mekas-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 96px) 20px;
+}
+
+/* Hero */
+.mekas-hero {
+  max-width: 780px;
+  margin: 0 auto clamp(32px, 5vw, 56px);
+  text-align: left;
+}
+
+.mekas-hero-code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f0443e;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mekas-hero-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(32px, 5.5vw, 52px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: #e8e4de;
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.mekas-hero-subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #8a8078;
+  margin-bottom: 20px;
+  max-width: 640px;
+}
+
+.mekas-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.mekas-hero-meta span {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a8078;
+  opacity: 0.7;
+}
+
+.mekas-hero-meta span:not(:last-child)::after {
+  content: '\00b7';
+  margin-left: 16px;
+  opacity: 0.4;
+}
+
+/* Panels */
+.mekas-panel {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto clamp(28px, 4vw, 52px);
+  padding: clamp(32px, 6vw, 76px);
+  background:
+    radial-gradient(circle at 16% 10%, rgba(255,255,255,0.34), transparent 30%),
+    radial-gradient(circle at 86% 20%, rgba(130,85,35,0.12), transparent 34%),
+    linear-gradient(135deg, #f5e3b7 0%, #efd8a4 48%, #f2dfad 100%);
+  color: #17130f;
+  border: 1px solid rgba(70,45,18,0.22);
+  box-shadow:
+    0 28px 90px rgba(0,0,0,0.46),
+    inset 0 0 76px rgba(120,78,20,0.10);
+  overflow: hidden;
+}
+
+.mekas-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image:
+    repeating-radial-gradient(circle at 14% 20%, rgba(0,0,0,0.10) 0 1px, transparent 1px 4px);
+  mix-blend-mode: multiply;
+}
+
+.mekas-panel::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, rgba(100,70,30,0.18), rgba(255,255,255,0.18));
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+/* Cover panel */
+.mekas-cover-panel {
+  text-align: center;
+  padding: clamp(48px, 8vw, 120px) clamp(32px, 6vw, 76px);
+}
+
+.mekas-cover-panel::after {
+  display: none;
+}
+
+.mekas-cover-line1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #17130f;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+
+.mekas-cover-line2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  font-style: italic;
+  font-weight: 400;
+  color: #17130f;
+  line-height: 1.3;
+  margin-bottom: 0.2em;
+}
+
+.mekas-cover-line3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #f0443e;
+  line-height: 1.1;
+  margin-bottom: 0.8em;
+}
+
+.mekas-cover-subtitle {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  font-style: italic;
+  font-weight: 700;
+  color: #6836d8;
+  line-height: 1.5;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* Prose */
+.mekas-prose {
+  position: relative;
+  z-index: 2;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.2rem, 2vw, 1.85rem);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: #17130f;
+}
+
+.mekas-prose p {
+  margin: 0 0 1.5em;
+}
+
+.mekas-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Title red */
+.mekas-title-red {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #f0443e;
+  margin-bottom: clamp(24px, 4vw, 48px);
+  position: relative;
+  z-index: 2;
+}
+
+/* Speaker */
+.mekas-speaker {
+  font-weight: 700;
+}
+
+/* Highlights */
+.mekas-red {
+  color: #f0443e;
+  font-weight: 800;
+}
+
+.mekas-blue {
+  color: #0965c8;
+  font-weight: 800;
+}
+
+.mekas-black-bold {
+  font-weight: 800;
+  color: #17130f;
+}
+
+/* S.B. block */
+.mekas-sb-block {
+  position: relative;
+  z-index: 2;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.1rem, 1.75vw, 1.55rem);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  color: #f0443e;
+  font-weight: 800;
+}
+
+.mekas-sb-block p {
+  margin: 0 0 1.5em;
+}
+
+.mekas-sb-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* Signature */
+.mekas-signature {
+  position: relative;
+  z-index: 2;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  color: #17130f;
+  margin-top: clamp(32px, 5vw, 56px);
+  line-height: 1.5;
+}
+
+.mekas-signature p {
+  margin: 0 0 0.3em;
+}
+
+/* Footer */
+.mekas-footer {
+  max-width: 920px;
+  margin: 32px auto 0;
+  text-align: center;
+}
+
+.mekas-footer-credit {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a8078;
+  opacity: 0.5;
+}
+
+/* EN placeholder */
+.mekas-coming-soon {
+  position: relative;
+  z-index: 2;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: rgba(23, 19, 15, 0.5);
+  text-align: center;
+  padding: 3em 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mekas-shell {
+    padding: clamp(24px, 4vw, 48px) 12px;
+  }
+
+  .mekas-panel {
+    padding: clamp(24px, 5vw, 48px);
+  }
+
+  .mekas-panel::after {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mekas-cover-panel {
+    padding: clamp(36px, 6vw, 72px) clamp(24px, 5vw, 48px);
+  }
+
+  .mekas-hero-meta {
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mekas-hero-meta span:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .mekas-shell {
+    padding: 20px 8px;
+  }
+
+  .mekas-panel {
+    padding: 24px 20px;
+    margin-left: -8px;
+    margin-right: -8px;
+    max-width: calc(100% + 16px);
+  }
+
+  .mekas-panel::after {
+    display: none;
+  }
+
+  .mekas-cover-panel {
+    padding: 40px 20px;
+  }
+
+  .mekas-hero-title {
+    font-size: 28px;
+  }
+
+  .mekas-prose {
+    font-size: 1.19rem;
+    line-height: 1.58;
+  }
+
+  .mekas-sb-block {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .mekas-title-red {
+    font-size: 1.6rem;
+  }
+
+  .mekas-cover-line1,
+  .mekas-cover-line3 {
+    font-size: 1.8rem;
+  }
+
+  .mekas-cover-line2 {
+    font-size: 1rem;
+  }
+
+  .mekas-cover-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .mekas-panel {
+    padding: 20px 16px;
+  }
+
+  .mekas-prose {
+    font-size: 1.12rem;
+  }
+
+  .mekas-sb-block {
+    font-size: 1rem;
+  }
+}
